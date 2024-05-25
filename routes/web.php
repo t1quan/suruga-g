@@ -65,11 +65,14 @@ Route::get('/entry/thanks', [WebRegistThanksController::class, 'create'])->defau
 
 //content pages
 //Route::get('/name', [ContentController::class, 'show'])->defaults('path', 'name')->name('name');
+Route::get('/work', [ContentController::class, 'show'])->defaults('path', 'work')->name('work');
+Route::get('/oneday', [ContentController::class, 'show'])->defaults('path', 'oneday')->name('oneday');
+Route::get('/welfare', [ContentController::class, 'show'])->defaults('path', 'welfare')->name('welfare');
 
 // Ajax
-Route::post( '/latestJobs', [LatestJobController::class, 'store'])->name('ajax.latestJobs');
-Route::post( '/sameAreaJobs', [sameAreaJobController::class, 'store'])->name('ajax.sameAreaJobs');
-Route::post( '/recommendJobs', [RecommendJobController::class, 'store'])->name('ajax.recommendJobs');
+Route::post('/latestJobs', [LatestJobController::class, 'store'])->name('ajax.latestJobs');
+Route::post('/sameAreaJobs', [sameAreaJobController::class, 'store'])->name('ajax.sameAreaJobs');
+Route::post('/recommendJobs', [RecommendJobController::class, 'store'])->name('ajax.recommendJobs');
 Route::post('/form/selectZip', [FormController::class, 'selectZip'])->name('ajax.form.selectZip');
 Route::post('/form/selectPref', [FormController::class, 'selectPref'])->name('ajax.form.selectPref');
 

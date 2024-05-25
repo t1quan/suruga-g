@@ -6,134 +6,135 @@
 $contentWidth: 960px;
 
 /* PC版画面最小幅　(これより小さい幅では端から見切れる) */
-$defInnerWidthPc:1200px;
+$defInnerWidthPc: 1200px;
 
 //メニュー高さ設定
-$defMenuHeightPc:80px;//PC時のヘッダーの高さ
-$defMenuHeightSp:70px;//SP時のヘッダーの高さ
+$defMenuHeightPc: 80px; //PC時のヘッダーの高さ
+$defMenuHeightSp: 70px; //SP時のヘッダーの高さ
 
 /* 新着のお仕事情報 */
-$latestJob: block;// block：表示　none：非表示
+$latestJob: block; // block：表示　none：非表示
 
 /* おすすめ求人 */
-$recommendJob: block;// block：表示　none：非表示
+$recommendJob: block; // block：表示　none：非表示
 
 /* お気に入り機能 */
-$favorite: block;// block：表示　none：非表示
+$favorite: block; // block：表示　none：非表示
 
 /* お仕事検索 日本地図マップ */
-$searchBoxMap: none;// block：表示　none：非表示
-
+$searchBoxMap: none; // block：表示　none：非表示
 
 /* TOPコンテンツの設定（NEWライト）
 ------------------------------------------------------ */
-$topContentBox: block;// block：表示　none：非表示
+$topContentBox: block; // block：表示　none：非表示
 
 /* WORKPLACE */
-$workplaceSlideSecond: 6s;// 各スライドの秒数（デフォルト：6s（s=秒））
-$workplaceSlideIndex: 4;// 各スライドの枚数（3 ~ 6 までの数値を指定）
-
+$workplaceSlideSecond: 6s; // 各スライドの秒数（デフォルト：6s（s=秒））
+$workplaceSlideIndex: 4; // 各スライドの枚数（3 ~ 6 までの数値を指定）
 
 /* ヘッダー グローバルメニューの設定（NEWライト）
 ------------------------------------------------------ */
 /* MEMBER */
-$memberNav: block;// block：表示　none：非表示
-$memberNavOrder: 1;// メニューの表示順（デフォルト：1番目）
+$memberNav: block; // block：表示　none：非表示
+$memberNavOrder: 1; // メニューの表示順（デフォルト：1番目）
 
 /* DATA */
-$dataNav: block;// block：表示　none：非表示
-$dataNavOrder: 2;// メニューの表示順（デフォルト：2番目）
+$dataNav: block; // block：表示　none：非表示
+$dataNavOrder: 2; // メニューの表示順（デフォルト：2番目）
 
 /* WELFARE */
-$welfareNav: block;// block：表示　none：非表示
-$welfareNavOrder: 3;// メニューの表示順（デフォルト：3番目）
+$welfareNav: block; // block：表示　none：非表示
+$welfareNavOrder: 3; // メニューの表示順（デフォルト：3番目）
 
 /* ONEDAY */
-$onedayNav: none;// block：表示　none：非表示
-$onedayNavOrder: 4;// メニューの表示順（デフォルト：4番目）
+$onedayNav: none; // block：表示　none：非表示
+$onedayNavOrder: 4; // メニューの表示順（デフォルト：4番目）
 
 /* WORKPLACE */
-$workplaceNav: none;// block：表示　none：非表示
-$workplaceNavOrder: 5;// メニューの表示順（デフォルト：5番目）
+$workplaceNav: none; // block：表示　none：非表示
+$workplaceNavOrder: 5; // メニューの表示順（デフォルト：5番目）
 
 /* FAQ */
-$faqNav: none;// block：表示　none：非表示
-$faqNavOrder: 6;// メニューの表示順（デフォルト：6番目）
-
+$faqNav: none; // block：表示　none：非表示
+$faqNavOrder: 6; // メニューの表示順（デフォルト：6番目）
 
 /* 色関係の設定（配色）
 ------------------------------------------------------ */
 /* メインカラー */
-$bgMainTextColor: $white;// ボタン・見出し文字色
+$bgMainTextColor: $white; // ボタン・見出し文字色
 
 /* サブカラー */
-$subColor: #00A26A;
-$bgSubTextColor: $white;// ボタン・見出し文字色
+$subColor: #363a44;
+$bgSubTextColor: $white; // ボタン・見出し文字色
 
 /* アクセントカラー */
-$accentColor: #5A81BF;
-$bgAccentTextColor: $white;// ボタン・見出し文字色
+$accentColor: #5a81bf;
+$bgAccentTextColor: $white; // ボタン・見出し文字色
 
-$accentColor2: #F7F8FC;
+$accentColor2: #f7f8fc;
 
 /* グラデーションカラー01 */
-$startColor01: #C0E3F2;// 開始色
-$endColor01: #D5FCEC;// 終了色
-$bgGradation01TextColor: $black;// ボタン・見出し文字色
+$startColor01: #c0e3f2; // 開始色
+$endColor01: #d5fcec; // 終了色
+$bgGradation01TextColor: $black; // ボタン・見出し文字色
 $gradationColor01: rgba($startColor01, 1) 0%, rgba($endColor01, 1) 100%;
 
 /* グラデーションカラー02 */
-$startColor02: #87CDEB;// 開始色
-$endColor02: #B4F2DA;// 終了色
-$bgGradation02TextColor: $white;// ボタン・見出し文字色
+$startColor02: #87cdeb; // 開始色
+$endColor02: #b4f2da; // 終了色
+$bgGradation02TextColor: $white; // ボタン・見出し文字色
 $gradationColor02: rgba($startColor02, 1) 0%, rgba($endColor02, 1) 100%;
-
 
 /* 色関係の設定（共通）
 ------------------------------------------------------ */
 /* 全ページ */
-$baseBgColor: $white;// 背景色
-$bgBaseTextColor: $black;// 文字色
+$baseBgColor: $white; // 背景色
+$bgBaseTextColor: $black; // 文字色
 
 /* ヘッダー */
-$headerBgColor: $baseBgColor;// ヘッダー背景色
-$noLogoTextColor: $bgBaseTextColor;// ロゴ画像が無い場合のヘッダー企業名の文字色
-$pcLastMenuBgColor: $mainColor;// 「お仕事検索」背景色（PCのみ）
-$pcLastMenuTextColor: $bgMainTextColor;// 「お仕事検索」文字色（PCのみ）
-$pcLastMenuBorderColor: transparent;// 「お仕事検索」枠線の色（PCのみ）
-$spHeaderMenuBgColor: rgba(0,0,0,0.7);// グローバルメニュー背景色（スマホのみ）
-$spHeaderMenuTextColor: $white;// グローバルメニュー文字色（スマホのみ）
-$spHeaderMenuBorderColor: $mainColor;// グローバルメニュー上下の線の色（スマホのみ）
+$headerBgColor: $baseBgColor; // ヘッダー背景色
+$noLogoTextColor: $bgBaseTextColor; // ロゴ画像が無い場合のヘッダー企業名の文字色
+$pcLastMenuBgColor: $mainColor; // 「お仕事検索」背景色（PCのみ）
+$pcLastMenuTextColor: $bgMainTextColor; // 「お仕事検索」文字色（PCのみ）
+$pcLastMenuBorderColor: transparent; // 「お仕事検索」枠線の色（PCのみ）
+$spHeaderMenuBgColor: rgba(
+    0,
+    0,
+    0,
+    0.7
+); // グローバルメニュー背景色（スマホのみ）
+$spHeaderMenuTextColor: $white; // グローバルメニュー文字色（スマホのみ）
+$spHeaderMenuBorderColor: $mainColor; // グローバルメニュー上下の線の色（スマホのみ）
 
 /* フッター */
-$footerBgColor: $black;// フッター背景色
-$footerTextColor: $white;// フッター文字色
+$footerBgColor: $black; // フッター背景色
+$footerTextColor: $white; // フッター文字色
 
 /* お仕事検索 */
-$searchBoxBgColor: $baseBgColor;// 背景色
-$searchBoxTabInactiveBgColor: $baseBgColor;// タブメニュー背景色
-$searchBoxTabInactiveTextColor: $bgBaseTextColor;// タブメニュー文字色
-$searchBoxTabActiveBgColor: $mainColor;// タブメニュー背景色（active時）
-$searchBoxTabActiveTextColor: $white;// タブメニュー文字色（active時）
-$searchBoxTitleColor: $bgBaseTextColor;// 見出し文字色
+$searchBoxBgColor: $baseBgColor; // 背景色
+$searchBoxTabInactiveBgColor: $baseBgColor; // タブメニュー背景色
+$searchBoxTabInactiveTextColor: $bgBaseTextColor; // タブメニュー文字色
+$searchBoxTabActiveBgColor: $mainColor; // タブメニュー背景色（active時）
+$searchBoxTabActiveTextColor: $white; // タブメニュー文字色（active時）
+$searchBoxTitleColor: $bgBaseTextColor; // 見出し文字色
 //$searchBoxBtnBgColor: $mainColor;// 選択ボタン背景色
-$searchBoxBtnBgColor: #DDDDDD;// 選択ボタン背景色
+$searchBoxBtnBgColor: #dddddd; // 選択ボタン背景色
 //$searchBoxBtnTextColor: $white;// 選択ボタン文字色
-$searchBoxBtnTextColor: $black;// 選択ボタン文字色
-$searchSubmitBtnColor: $subColor;// 検索ボタン背景色
-$searchSubmitBtnFontColor: $bgSubTextColor;// 検索ボタン文字色
-$searchSubmitBtnBorderColor: transparent;// 検索ボタン枠線
+$searchBoxBtnTextColor: $black; // 選択ボタン文字色
+$searchSubmitBtnColor: $subColor; // 検索ボタン背景色
+$searchSubmitBtnFontColor: $bgSubTextColor; // 検索ボタン文字色
+$searchSubmitBtnBorderColor: transparent; // 検索ボタン枠線
 //$searchQuickBoxBgColor: linear-gradient(90deg, $gradationColor02);// 「お仕事クイック検索」背景色(NEWライト版デフォルトカラー)
-$searchQuickBoxBgColor: $mainColor;// 「お仕事クイック検索」背景色
-$searchQuickBoxHeadColor: $bgGradation02TextColor;// 「お仕事クイック検索」見出し文字色
-$searchBoxFollowBtnBgColor: $mainColor;// 追従ボタン背景色（スマホのみ）
-$searchBoxFollowBtnTextColor: $bgMainTextColor;// 追従ボタン文字色（スマホのみ）
-$searchBoxMapBtnBgColor: $white;// 日本地図マップ ボタン背景色
-$searchBoxMapBtnTextColor: $black;// 日本地図マップ ボタン文字色
-$searchBoxMapBtnBorderColor: #A4A4A4;// 日本地図マップ ボタン枠線
-$searchBoxMapBtnActiveBgColor: $mainColor;// 日本地図マップ ボタン背景色（active時）
-$searchBoxMapBtnActiveTextColor: $bgMainTextColor;// 日本地図マップ ボタン文字色（active時）
-$searchBoxMapBgColor: rgba($mainColor, .75);// 日本地図マップ 背景色
+$searchQuickBoxBgColor: $mainColor; // 「お仕事クイック検索」背景色
+$searchQuickBoxHeadColor: $bgGradation02TextColor; // 「お仕事クイック検索」見出し文字色
+$searchBoxFollowBtnBgColor: $mainColor; // 追従ボタン背景色（スマホのみ）
+$searchBoxFollowBtnTextColor: $bgMainTextColor; // 追従ボタン文字色（スマホのみ）
+$searchBoxMapBtnBgColor: $white; // 日本地図マップ ボタン背景色
+$searchBoxMapBtnTextColor: $black; // 日本地図マップ ボタン文字色
+$searchBoxMapBtnBorderColor: #a4a4a4; // 日本地図マップ ボタン枠線
+$searchBoxMapBtnActiveBgColor: $mainColor; // 日本地図マップ ボタン背景色（active時）
+$searchBoxMapBtnActiveTextColor: $bgMainTextColor; // 日本地図マップ ボタン文字色（active時）
+$searchBoxMapBgColor: rgba($mainColor, 0.75); // 日本地図マップ 背景色
 
 // 雇用形態背景カラー
 //$seisyainColor: #DE1014;
@@ -146,149 +147,166 @@ $searchBoxMapBgColor: rgba($mainColor, .75);// 日本地図マップ 背景色
 //$internColor: #81CB5C;
 //$etcColor: #81CB5C;
 
-$seisyainColor: #EAAB80;
-$keiyakusyainColor: #EAAB80;
-$parttimeColor: #EAAB80;
-$hakensyainColor: #EAAB80;
-$syoukaiyoteiColor: #EAAB80;
-$tokuteihakenColor: #EAAB80;
-$syokugyousyoukaiColor: #EAAB80;
-$internColor: #EAAB80;
-$etcColor: #EAAB80;
+$seisyainColor: #eaab80;
+$keiyakusyainColor: #eaab80;
+$parttimeColor: #eaab80;
+$hakensyainColor: #eaab80;
+$syoukaiyoteiColor: #eaab80;
+$tokuteihakenColor: #eaab80;
+$syokugyousyoukaiColor: #eaab80;
+$internColor: #eaab80;
+$etcColor: #eaab80;
 
 /* 求人一覧ページ */
-$searchTitleColor: $black;// 求人見出し文字色
-$searchTextColor: $black;// その他見出し文字色
-$jobSearchBtnBgColor: $subColor;// 「再検索」ボタン背景色
-$jobSearchBtnTextColor: $bgSubTextColor;// 「再検索」ボタン文字色
-$goDetailBtnBgColor: $mainColor;// 「詳しく見る」ボタン背景色
-$goDetailBtnTextColor: $bgSubTextColor;// 「詳しく見る」ボタン文字色
+$searchTitleColor: $black; // 求人見出し文字色
+$searchTextColor: $black; // その他見出し文字色
+$jobSearchBtnBgColor: $subColor; // 「再検索」ボタン背景色
+$jobSearchBtnTextColor: $bgSubTextColor; // 「再検索」ボタン文字色
+$goDetailBtnBgColor: $mainColor; // 「詳しく見る」ボタン背景色
+$goDetailBtnTextColor: $bgSubTextColor; // 「詳しく見る」ボタン文字色
 
 /* 求人詳細ページ・求人応募フォーム */
-$jobTitleBgColor: $mainColor;// 求人詳細ページ求人見出し背景色
-$jobInformationBgColor: #F7F8FC;// 求人詳細ページインフォメーション背景色
-$jobInformationTextColor: $black;// 求人詳細ページインフォメーション文字色
-$jobDetailThBorderColor: #D4D1D1; //求人詳細ページ案件詳細THボーダーカラー
+$jobTitleBgColor: $mainColor; // 求人詳細ページ求人見出し背景色
+$jobInformationBgColor: #f7f8fc; // 求人詳細ページインフォメーション背景色
+$jobInformationTextColor: $black; // 求人詳細ページインフォメーション文字色
+$jobDetailThBorderColor: #d4d1d1; //求人詳細ページ案件詳細THボーダーカラー
 $jobDetailThBgColor: $gray; //求人詳細ページ案件詳細TH背景色
 $jobDetailThTextColor: $black; //求人詳細ページ案件詳細TH文字色
-$jobDetailTdBorderColor: #D4D1D1; //求人詳細ページ案件詳細TD区切り線ボーダー色
+$jobDetailTdBorderColor: #d4d1d1; //求人詳細ページ案件詳細TD区切り線ボーダー色
 
-$searchIndexBtnBgColor: #DFE1DB; //検索一覧へ戻るボタンの背景色
+$searchIndexBtnBgColor: #dfe1db; //検索一覧へ戻るボタンの背景色
 $searchIndexBtnTextColor: $baseTextColor; //検索一覧へ戻るボタンの文字色
-$goApplyBtnsBgColor: $accentColor;// 「WEBから応募する」ボタン背景色
-$goApplyBtnsTextColor: $bgSubTextColor;// 「WEBから応募する」ボタン文字色
-$btnTelSubmitColor: $subColor;// 「電話で応募する」ボタン背景色
-$btnTelSubmitTextColor: $bgAccentTextColor;// 「電話で応募する」ボタン文字色
-$jobModalBodyBgColor: $mainColor;// 「電話で応募する」ポップアップ背景色
-$jobModalCallTelnoColor: #ff901e;// 「電話で応募する」ポップアップ 電話番号・お仕事No文字色
+$goApplyBtnsBgColor: $accentColor; // 「WEBから応募する」ボタン背景色
+$goApplyBtnsTextColor: $bgSubTextColor; // 「WEBから応募する」ボタン文字色
+$btnTelSubmitColor: $subColor; // 「電話で応募する」ボタン背景色
+$btnTelSubmitTextColor: $bgAccentTextColor; // 「電話で応募する」ボタン文字色
+$jobModalBodyBgColor: $mainColor; // 「電話で応募する」ポップアップ背景色
+$jobModalCallTelnoColor: #ff901e; // 「電話で応募する」ポップアップ 電話番号・お仕事No文字色
 $searchGoConcierBtnBgColor: $autoTertiaryColor; //相談(見学)ボタン背景色
 
-$sameAreaJobBgColor: #efefef;// 同じエリアのお仕事 背景色
-$sameAreaJobTitleColor: $mainColor;// 同じエリアのお仕事 見出し文字色
-$sameAreaJobTextColor: $black;// 同じエリアのお仕事 各項目文字色
-$sameAreaJobBorderColor: $mainColor;// 同じエリアのお仕事 各項目下線の色
+$sameAreaJobBgColor: #efefef; // 同じエリアのお仕事 背景色
+$sameAreaJobTitleColor: $mainColor; // 同じエリアのお仕事 見出し文字色
+$sameAreaJobTextColor: $black; // 同じエリアのお仕事 各項目文字色
+$sameAreaJobBorderColor: $mainColor; // 同じエリアのお仕事 各項目下線の色
 
-$applyBgColor: $mainColor;// 求人応募フォーム 見出し背景色
-$applyTextColor: $bgMainTextColor;// 求人応募フォーム 見出し文字色
+$applyBgColor: $mainColor; // 求人応募フォーム 見出し背景色
+$applyTextColor: $bgMainTextColor; // 求人応募フォーム 見出し文字色
 
-$formInputBgColorBase: $baseColorPale;//求人応募フォーム入力部分背景色(select,input)
+$formInputBgColorBase: $baseColorPale; //求人応募フォーム入力部分背景色(select,input)
 $thBgColor: $gray; //求人応募フォームテーブルヘッダーの背景色
-$tableBorderColor: #D4D1D1; //求人応募フォームテーブルの下線、囲み線色
+$tableBorderColor: #d4d1d1; //求人応募フォームテーブルの下線、囲み線色
 
-$submitBtnBgColor: $accentColor;// 「内容を確認する」「この内容で応募」「応募した求人情報を確認する」ボタン背景色
-$submitBtnTextColor: $bgSubTextColor;// 「内容を確認する」「この内容で応募」「応募した求人情報を確認する」ボタン文字色
+$submitBtnBgColor: $accentColor; // 「内容を確認する」「この内容で応募」「応募した求人情報を確認する」ボタン背景色
+$submitBtnTextColor: $bgSubTextColor; // 「内容を確認する」「この内容で応募」「応募した求人情報を確認する」ボタン文字色
 $backBtnColor: $gray; //「戻る」ボタン背景色
 
 /* 新着のお仕事情報 */
-$latestJobBgColor: #f8f8f8;//リスト形式の場合の背景色
-$latestJobMoreButtonBgColor: $mainColor;// 「MORE」ボタン背景色（hover時）
-$latestJobMoreButtonTextColor: $bgMainTextColor;// 「MORE」ボタン文字色（hover時）
+$latestJobBgColor: #f8f8f8; //リスト形式の場合の背景色
+$latestJobMoreButtonBgColor: $mainColor; // 「MORE」ボタン背景色（hover時）
+$latestJobMoreButtonTextColor: $bgMainTextColor; // 「MORE」ボタン文字色（hover時）
 
 /* おすすめ求人 */
-$recommendJobTitleColor: $black;// おすすめ求人見出し文字色
+$recommendJobTitleColor: $black; // おすすめ求人見出し文字色
 //$recommendJobButtonColor: $bgBaseTextColor;// 前・次ボタンの色
-$recommendJobButtonColor: $white;// 前・次ボタンの色
-$recommendJobInfoAddBgColor: $black;// 「詳しく見る」背景色
-$recommendJobInfoAddTextColor: $bgMainTextColor;// 「詳しく見る」文字色
+$recommendJobButtonColor: $white; // 前・次ボタンの色
+$recommendJobInfoAddBgColor: $black; // 「詳しく見る」背景色
+$recommendJobInfoAddTextColor: $bgMainTextColor; // 「詳しく見る」文字色
 
 /* お気に入り機能 */
-$favoriteTitleColor: $white;// お気に入りページ見出し文字色
-$favoriteMenuBgColor: #f5f7f8;// ヘッダーメニュー背景色
-$favoriteMenuTextColor: $black;// ヘッダーメニュー文字色
-$favoriteCountBgColor: #ca123a;// ヘッダーメニュー カウント数字背景色
+$favoriteTitleColor: $white; // お気に入りページ見出し文字色
+$favoriteMenuBgColor: #f5f7f8; // ヘッダーメニュー背景色
+$favoriteMenuTextColor: $black; // ヘッダーメニュー文字色
+$favoriteCountBgColor: #ca123a; // ヘッダーメニュー カウント数字背景色
 //$favoriteCountTextColor: $white;// ヘッダーメニュー カウント数字文字色
-$favoriteCountTextColor: $subColor;// ヘッダーメニュー カウント数字文字色
-$favoriteBtnBgColor: $white;// 求人ページ お気に入りボタン背景色
+$favoriteCountTextColor: $subColor; // ヘッダーメニュー カウント数字文字色
+$favoriteBtnBgColor: $white; // 求人ページ お気に入りボタン背景色
 //$favoriteBtnActiveBgColor: #f07b4c;// 求人ページ お気に入りボタン背景色（「お気に入り済」時）
-$favoriteBtnActiveBgColor: $subColor;// 求人ページ お気に入りボタン背景色（「お気に入り済」時）
-$favoriteBtnTextColor: $subColor;// 求人ページ お気に入りボタン文字色
-$favoriteBtnActiveTextColor: $white;// 求人ページ お気に入りボタン文字色（「お気に入り済」時）
-$favoriteBtnBorderColor: $subColor;// 求人ページ お気に入りボタン枠線
+$favoriteBtnActiveBgColor: $subColor; // 求人ページ お気に入りボタン背景色（「お気に入り済」時）
+$favoriteBtnTextColor: $subColor; // 求人ページ お気に入りボタン文字色
+$favoriteBtnActiveTextColor: $white; // 求人ページ お気に入りボタン文字色（「お気に入り済」時）
+$favoriteBtnBorderColor: $subColor; // 求人ページ お気に入りボタン枠線
 //$favoriteHeartColor: #f07b4c;// ハートアイコンの色
-$favoriteHeartColor: $subColor;// ハートアイコンの色
-$favoriteActiveHeartColor: $white;// ハートアイコンの色（「お気に入り済」時）
+$favoriteHeartColor: $subColor; // ハートアイコンの色
+$favoriteActiveHeartColor: $white; // ハートアイコンの色（「お気に入り済」時）
 
 /* その他 */
-$pageTopBgColor: $white;// ページトップボタン背景色
-$topContentStarColor: rgba(#fcf8a0, 0);// 流れ星の色（数値で透明度を指定：0（完全に透明）～1（完全に不透明））
-
+$pageTopBgColor: #fec400; // ページトップボタン背景色
+$topContentStarColor: rgba(
+    #fcf8a0,
+    0
+); // 流れ星の色（数値で透明度を指定：0（完全に透明）～1（完全に不透明））
 
 /* 色関係の設定（TOPコンテンツ（NEWライト））
 ------------------------------------------------------ */
 /* MESSAGE */
-$messageBgColor: linear-gradient(90deg, $gradationColor01);// 背景色
-$messageTextColor: $bgGradation01TextColor;// 本文文字色
+$messageBgColor: linear-gradient(90deg, $gradationColor01); // 背景色
+$messageTextColor: $bgGradation01TextColor; // 本文文字色
 
 /* MOVIE */
-$movieHeadingColor: $bgBaseTextColor;// MOVIE見出し文字色
-$movieBgColor: linear-gradient(90deg, $gradationColor01);// 細長い長方形の背景色
+$movieHeadingColor: $bgBaseTextColor; // MOVIE見出し文字色
+$movieBgColor: linear-gradient(
+    90deg,
+    $gradationColor01
+); // 細長い長方形の背景色
 
 /* MEMBER */
-$memberHeadingColor: $bgBaseTextColor;// MEMBER見出し文字色
-$memberDataTextColor: $black;// 社員プロフィール文字色
-$memberInterviewBgColor: $white;// 社員インタビュー背景色
-$memberInterviewTitleColor: $subColor;// 社員インタビュー見出し文字色
-$memberInterviewBodyColor: $black;// 社員インタビュー本文文字色
+$memberHeadingColor: $bgBaseTextColor; // MEMBER見出し文字色
+$memberDataTextColor: $black; // 社員プロフィール文字色
+$memberInterviewBgColor: $white; // 社員インタビュー背景色
+$memberInterviewTitleColor: $subColor; // 社員インタビュー見出し文字色
+$memberInterviewBodyColor: $black; // 社員インタビュー本文文字色
 
 /* DATA */
-$dataHeadingColor: $bgBaseTextColor;// DATA見出し文字色
-$dataBgColor: transparent;// コンテンツ背景色
+$dataHeadingColor: $bgBaseTextColor; // DATA見出し文字色
+$dataBgColor: transparent; // コンテンツ背景色
 
 /* WELFARE */
-$welfareHeadingColor: $bgBaseTextColor;// WELFARE見出し文字色
-$welfareBgColor: #F7F8FC;// コンテンツ背景色
-$welfareButtonBgColor: $white;// ボタン背景色
-$welfareButtonOpenBgColor: linear-gradient(180deg, $gradationColor01);// ボタン（open時）背景色
-$welfareButtonTriangleColor: $endColor01;// ボタン（open時）三角形の色
-$welfareButtonTextColor: $black;// ボタン文字色
-$welfareButtonOpenTextColor: #0186D3;// ボタン（open時）文字色
-$welfareButtonIconBgColor: $mainColor;// ボタンアイコン（＋－）背景色
-$welfareButtonIconColor: $bgMainTextColor;// ボタンアイコン（＋－）の色
-$welfareBoxBgColor: $white;// 本文背景色
-$welfareBoxTextColor: $black;// 本文文字色
+$welfareHeadingColor: $bgBaseTextColor; // WELFARE見出し文字色
+$welfareBgColor: #f7f8fc; // コンテンツ背景色
+$welfareButtonBgColor: $white; // ボタン背景色
+$welfareButtonOpenBgColor: linear-gradient(
+    180deg,
+    $gradationColor01
+); // ボタン（open時）背景色
+$welfareButtonTriangleColor: $endColor01; // ボタン（open時）三角形の色
+$welfareButtonTextColor: $black; // ボタン文字色
+$welfareButtonOpenTextColor: #0186d3; // ボタン（open時）文字色
+$welfareButtonIconBgColor: $mainColor; // ボタンアイコン（＋－）背景色
+$welfareButtonIconColor: $bgMainTextColor; // ボタンアイコン（＋－）の色
+$welfareBoxBgColor: $white; // 本文背景色
+$welfareBoxTextColor: $black; // 本文文字色
 
 /* ONEDAY */
-$onedayHeadingColor: $bgBaseTextColor;// ONEDAY見出し文字色
-$onedayBgColor: #F6F9FC;// コンテンツ背景色
-$onedayHeadBgColor: #FAFAFA;// 自己紹介or見出し背景色
-$onedayHeadTextColor: $black;// 自己紹介or見出し文字色
-$onedayHeadShadowColor: linear-gradient(0deg, $gradationColor01);// 自己紹介or見出し背景シャドウの色
-$onedayHeadSquareColor: linear-gradient(-45deg, $gradationColor01);// 自己紹介or見出し近くにある長方形の色
-$onedayHeadBorderColor: $mainColor;// 自己紹介 名前と本文の間にある横線の色
-$onedayFlowBorderColor: $mainColor;// 1日の流れ 横線の色（PCのみ）
-$onedayTimeTextColor: $mainColor;// 1日の流れ 時間文字色
-$onedayTextColor: $black;// 1日の流れ 本文文字色
-$onedayStartGorlTextColor: $subColor;// 1日の流れ Start&Gorl文字色
+$onedayHeadingColor: $bgBaseTextColor; // ONEDAY見出し文字色
+$onedayBgColor: #f6f9fc; // コンテンツ背景色
+$onedayHeadBgColor: #fafafa; // 自己紹介or見出し背景色
+$onedayHeadTextColor: $black; // 自己紹介or見出し文字色
+$onedayHeadShadowColor: linear-gradient(
+    0deg,
+    $gradationColor01
+); // 自己紹介or見出し背景シャドウの色
+$onedayHeadSquareColor: linear-gradient(
+    -45deg,
+    $gradationColor01
+); // 自己紹介or見出し近くにある長方形の色
+$onedayHeadBorderColor: $mainColor; // 自己紹介 名前と本文の間にある横線の色
+$onedayFlowBorderColor: $mainColor; // 1日の流れ 横線の色（PCのみ）
+$onedayTimeTextColor: $mainColor; // 1日の流れ 時間文字色
+$onedayTextColor: $black; // 1日の流れ 本文文字色
+$onedayStartGorlTextColor: $subColor; // 1日の流れ Start&Gorl文字色
 
 /* WORKPLACE */
-$workplaceHeadingColor: $bgBaseTextColor;// WORKPLACE見出し文字色
+$workplaceHeadingColor: $bgBaseTextColor; // WORKPLACE見出し文字色
 
 /* FAQ */
-$faqHeadingColor: $bgBaseTextColor;// FAQ見出し文字色
-$faqBgColor: $white;// コンテンツ背景色
-$faqQuestionBgColor: linear-gradient(90deg, $gradationColor02);// 質問（Q.）背景色
-$faqQuestionTextColor: $white;// 質問（Q.）文字色
-$faqAnswerBgColor: $white;// 回答（A.）背景色
-$faqAnswerTextColor: $black;// 回答（A.）文字色
-$faqAnswerIconColor: $mainColor;// 回答（A.）アイコンの色
-$faqAnswerBorderColor: $gray;// 回答（A.）枠線の色
+$faqHeadingColor: $bgBaseTextColor; // FAQ見出し文字色
+$faqBgColor: $white; // コンテンツ背景色
+$faqQuestionBgColor: linear-gradient(
+    90deg,
+    $gradationColor02
+); // 質問（Q.）背景色
+$faqQuestionTextColor: $white; // 質問（Q.）文字色
+$faqAnswerBgColor: $white; // 回答（A.）背景色
+$faqAnswerTextColor: $black; // 回答（A.）文字色
+$faqAnswerIconColor: $mainColor; // 回答（A.）アイコンの色
+$faqAnswerBorderColor: $gray; // 回答（A.）枠線の色

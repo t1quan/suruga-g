@@ -1,4 +1,4 @@
-<div id="oneday" class="contentOneday">
+{{--<div id="oneday" class="contentOneday">
     <div class="contentOnedayWrapper">
         <div class="contentOnedayInner">
             <div class="contentOnedayBg">
@@ -15,12 +15,33 @@
                     <span class="linkText">READ MORE</span>
                     <i class="fas fa-arrow-right"></i>
                     <a href="{{Route('xxxx')}}"></a>
-                </div>
+</div>
+</div>
+<div class="contentOnedayMovieBox">
+    <a href="https://d1ekkmgtajtxvf.cloudfront.net/public_iframe_html/EHfkrHSxJUyuBTu2MTcMpmWPqJ9ZD2WTFT1uo0IUMx01nxEQE2M0FKZ4rSSznUIBZTEJATf5MJWzoxu5D0HkFS9BpaqaHIWxLxA5HTkGIUIHHmD0BRuQJy9eL014ZP1YBIIPoGIDFKWgpQWWZQquH3WgHQSSJyqmMl4hYTu0qUOmBv8iMQSyqJIbqzWkMTZkowxhL2kiqJEzpz9hqP5hMKDiZQNkY2I2nKW5Y2cmY2I2nKW5YaOfLKyypv5gnJ4hnaZfYQNfZGL3AwNkZGp4ZN%3D%3D/index.html" class="movie_img" data-lity>
+        <i class="far fa-play-circle"></i>
+    </a>
+</div>
+</div>
+</div>
+</div>--}}
+
+
+<div class="sc-oneday">
+    <div class="container_inner">
+        <div class="oneday_container">
+            <div class="oneday_head">
+                <h2 class="content_title">
+                    <span class="en">ONEDAY</span>
+                    <span class="ja">社員の1日</span>
+                </h2>
+                <p class="text">駿河生産プラットフォームで働く<br class="SPbr" />社員の1日をご紹介します。</p>
             </div>
-            <div class="contentOnedayMovieBox">
-                <a href="https://d1ekkmgtajtxvf.cloudfront.net/public_iframe_html/EHfkrHSxJUyuBTu2MTcMpmWPqJ9ZD2WTFT1uo0IUMx01nxEQE2M0FKZ4rSSznUIBZTEJATf5MJWzoxu5D0HkFS9BpaqaHIWxLxA5HTkGIUIHHmD0BRuQJy9eL014ZP1YBIIPoGIDFKWgpQWWZQquH3WgHQSSJyqmMl4hYTu0qUOmBv8iMQSyqJIbqzWkMTZkowxhL2kiqJEzpz9hqP5hMKDiZQNkY2I2nKW5Y2cmY2I2nKW5YaOfLKyypv5gnJ4hnaZfYQNfZGL3AwNkZGp4ZN%3D%3D/index.html" class="movie_img" data-lity>
-                    <i class="far fa-play-circle"></i>
-                </a>
+            <div class="oneday_content">
+                <div class="oneday_box">
+                    <div class="oneday_box-img"></div>
+                    <div class="oneday_box-text"></div>
+                </div>
             </div>
         </div>
     </div>

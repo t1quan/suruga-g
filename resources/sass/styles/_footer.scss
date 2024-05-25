@@ -2,370 +2,374 @@
 footer
 ------------------------------------------------------------*/
 #footer {
-  &.footer {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 20px 0;
-    background: $footerBgColor;
-    color: $footerTextColor;
-
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 0;
+    &.footer {
+        position: relative;
         width: 100%;
-        height: 44px;
+        margin: 0;
+        padding: 20px 0;
         background: $footerBgColor;
-        //background: #4169E1;
-        z-index: 0;
+        color: $footerTextColor;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 44px;
+            background: $footerBgColor;
+            //background: #4169E1;
+            z-index: 0;
+            @include xs {
+                //height: 44px;
+                height: 70px;
+            }
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .pageTop {
+        display: none;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        z-index: 9998;
+        @include minWidthXs {
+            width: 80px;
+            height: 80px;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+
+    .pageTopAnchor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        //color: $bgAccentTextColor;
+        color: $black;
+        background: $pageTopBgColor;
+        // border: 1px solid $black;
+        transition: all 0.3s ease;
         @include xs {
-          //height: 44px;
-          height: 70px;
+            width: 40px;
+            height: 40px;
+        }
+
+        i {
+            color: $black;
+            transition: all 0.3s ease;
+        }
+
+        span {
+            font-family: "prohibition", sans-serif;
+            font-weight: 400;
+            font-size: rem(18);
+            font-style: normal;
+            line-height: 1;
+            margin-top: 0.4rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            @include xs {
+                margin-top: 0;
+                font-size: rem(16);
+            }
+        }
+
+        &::before,
+        &::after {
+            //content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $black;
+        }
+
+        &::before {
+            background: $pageTopBgColor;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        &::after {
+            background-color: $white;
+            z-index: -2;
+        }
+
+        @include minWidthXs {
+            &:hover {
+                background: #fedb66;
+                // i,
+                // span {
+                //     color: $white;
+                // }
+                //&::before {
+                //  opacity: .5;
+                //}
+            }
         }
     }
-  }
 
-  * {
-    box-sizing: border-box;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-
-  .pageTop {
-    display: none;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 40px;
-    height: 40px;
-    z-index: 9998;
-    @include minWidthXs {
-      width: 60px;
-      height: 60px;
-      right: 20px;
-      bottom: 20px;
-    }
-  }
-
-  .pageTopAnchor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    //color: $bgAccentTextColor;
-    color: $black;
-    background: $pageTopBgColor;
-    border: 1px solid $black;
-    transition: all 0.3s ease;
-    @include xs {
-      width: 40px;
-      height: 40px;
-    }
-
-    i {
-      color: $black;
-      transition: all 0.3s ease;
-    }
-
-    span {
-      font-family: "prohibition", sans-serif;
-      font-weight: 400;
-      font-size: rem(18);
-      font-style: normal;
-      line-height: 1;
-      margin-top: 0.4rem;
-      transition: all 0.3s ease;
-      @include xs {
-        margin-top: 0;
-        font-size: rem(16);
-      }
-    }
-
-    &::before,
-    &::after {
-      //content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 1px solid $black;
-    }
-
-    &::before {
-      background: $pageTopBgColor;
-      transition: opacity .3s;
-      z-index: -1;
-    }
-
-    &::after {
-      background-color: $white;
-      z-index: -2;
-    }
-
-    @include minWidthXs {
-      &:hover {
-        background: $black;
-        i,span {
-          color: $white;
-        }
-        //&::before {
-        //  opacity: .5;
-        //}
-      }
-    }
-  }
-
-  #searchJobsBtn {
-    display: none;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: 9997;
-    background-color: rgba(#8C8C8C, .6);
-    width: 100%;
-
-    .searchJobsBtn-bnr {
-      padding: 12px;
-      text-align: center;
-
-      a {
-        display: block;
+    #searchJobsBtn {
+        display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 9997;
+        background-color: rgba(#8c8c8c, 0.6);
         width: 100%;
+
+        .searchJobsBtn-bnr {
+            padding: 12px;
+            text-align: center;
+
+            a {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                padding: 5px 10px;
+                background: $searchBoxFollowBtnBgColor;
+
+                .en,
+                .ja {
+                    display: block;
+                    color: $searchBoxFollowBtnTextColor;
+                    font-weight: 500;
+                    line-height: 1;
+                }
+
+                .en {
+                    margin-bottom: 5px;
+                    font-size: rem(24);
+                }
+
+                .ja {
+                    font-size: rem(13);
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .footerLayout {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: calc(100% - 24px);
+        max-width: $contentWidth;
         margin: 0 auto;
-        padding: 5px 10px;
-        background: $searchBoxFollowBtnBgColor;
-
-        .en,
-        .ja {
-          display: block;
-          color: $searchBoxFollowBtnTextColor;
-          font-weight: 500;
-          line-height: 1;
+        @include minWidthXs {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-bottom: 70px;
         }
+    }
 
-        .en {
-          margin-bottom: 5px;
-          font-size: rem(24);
-        }
-
-        .ja {
-          font-size: rem(13);
+    .footerCorpInfo {
+        display: flex;
+        flex-direction: column;
+        @include minWidthXs {
+            width: 360px;
+            //align-self: flex-start;
         }
 
         img {
-          max-width: 100%;
-          height: auto;
-          vertical-align: middle;
+            //ロゴのスタイル
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            line-height: 1;
+            object-fit: contain;
         }
-      }
-    }
-  }
-
-  .footerLayout {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: calc(100% - 24px);
-    max-width: $contentWidth;
-    margin: 0 auto;
-    @include minWidthXs {
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      padding-bottom: 70px;
-    }
-  }
-
-  .footerCorpInfo {
-    display: flex;
-    flex-direction: column;
-    @include minWidthXs {
-      width: 360px;
-      //align-self: flex-start;
     }
 
-    img { //ロゴのスタイル
-          max-width: 100%;
-          height: auto;
-          vertical-align: middle;
-          line-height: 1;
-          object-fit: contain;
-      }
-  }
+    .footerTitle {
+        margin-bottom: 1rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "採用サイト";
+            color: $footerTextColor;
+            padding-left: 0.5rem;
+            @include minWidthXs {
+                font-size: rem(16);
+            }
+            @include xs {
+                font-size: rem(15);
+            }
+        }
+    }
 
-  .footerTitle {
-    margin-bottom: 1rem;
-    position: relative;
-    &::after {
-        position: absolute;
-        content: "採用サイト";
-        color: $footerTextColor;
-        padding-left: 0.5rem;
+    .footerAddress {
+        font-size: rem(14);
+        line-height: 1.78;
         @include minWidthXs {
             font-size: rem(16);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+
+    .blankIconImg {
+        display: inline-block;
+        padding: 5px 0 0 10px;
+        color: $spHeaderMenuTextColor;
+        font-size: rem(12);
+        line-height: 1;
+        vertical-align: top;
+    }
+
+    .blankIcon {
+        // todo アイコンつけたい場合とつけたくない場合を制御できるようにすること
+        display: flex;
+        &::after {
+            height: 13px;
+            width: 15px;
+            font-family: "Font Awesome 5 Free";
+            content: "\f35d";
+            font-weight: 600;
+            font-size: 0.81rem;
+        }
+    }
+
+    .footerRemoteNav,
+    .copyright {
+        min-height: 0;
+        @include minWidthXs {
+        }
+    }
+
+    .footerRemoteNav {
+        //padding-bottom: 40px;
+        padding-bottom: 20px;
+        @include minWidthXs {
+            padding-bottom: 0;
+        }
+
+        .letter {
+            font-size: rem(14);
+            line-height: 1.5;
+            font-weight: 500;
+            &::after {
+                position: static;
+                font-size: rem(14);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .footerRemoteNavList {
+        display: grid;
+        grid-auto-flow: column;
+
+        @include minWidthXs {
+            margin-top: 30px;
+            grid-template-columns: 140px 160px;
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        @include xs {
+            display: none;
+        }
+
+        .footerRemoteNavItem {
+            @include minWidthXs {
+                width: 100%;
+                padding-bottom: 20px;
+                //border-right: 1px solid #F7F8FC;
+                &.end {
+                    margin-bottom: 10px;
+                    padding-bottom: 0;
+                }
+                &.one {
+                    //padding-right: 10px;
+                    &.end {
+                        grid-row: 2 / 6;
+                    }
+                }
+                &.two {
+                    padding-left: 20px;
+                    //padding-right: 20px;
+                }
+                &.three {
+                    padding-left: 40px;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .footerBlankRemoteNavList {
+        @include minWidthXs {
+            //display: none;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
         }
         @include xs {
-            font-size: rem(15);
+            //display: none;
+            //display: block;
+            display: flex;
+            justify-content: center;
+            margin: 30px 0 0;
+            position: relative;
+            z-index: 1;
+            .remoteNav {
+                display: flex;
+                justify-content: center;
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
-  }
 
-  .footerAddress{
-    font-size: rem(14);
-    line-height: 1.78;
-    @include minWidthXs{
-      font-size: rem(16);
-      font-weight: 400;
-      line-height: 1.5;
-    }
-  }
+    .copyright {
+        @include minWidthXs {
+            text-align: left;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
 
-  .blankIconImg {
-    display: inline-block;
-    padding: 5px 0 0 10px;
-    color: $spHeaderMenuTextColor;
-    font-size: rem(12);
-    line-height: 1;
-    vertical-align: top;
-  }
+        @include xs {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
 
-  .blankIcon { // todo アイコンつけたい場合とつけたくない場合を制御できるようにすること
-    display: flex;
-    &::after {
-      height: 13px;
-      width: 15px;
-      font-family: "Font Awesome 5 Free";
-      content: '\f35d';
-      font-weight: 600;
-      font-size: .81rem;
-    }
-  }
-
-  .footerRemoteNav,
-  .copyright {
-    min-height: 0;
-    @include minWidthXs {
-    }
-  }
-
-  .footerRemoteNav {
-    //padding-bottom: 40px;
-    padding-bottom: 20px;
-    @include minWidthXs {
-      padding-bottom: 0;
-    }
-
-    .letter {
-        font-size: rem(14);
-        line-height: 1.5;
-        font-weight: 500;
-        &::after {
-            position: static;
-            font-size: rem(14);
-            margin-left: 10px;
+        small {
+            font-style: normal;
+            font-size: rem(12);
+            line-height: 1.5;
+            @include minWidthXs {
+                font-size: rem(14);
+            }
         }
     }
-  }
-
-  .footerRemoteNavList {
-    display: grid;
-    grid-auto-flow: column;
-
-    @include minWidthXs {
-      margin-top: 30px;
-      grid-template-columns: 140px 160px;
-      grid-template-rows: repeat(4, 1fr);
-    }
-
-    @include xs {
-      display: none;
-    }
-
-  .footerRemoteNavItem {
-    @include minWidthXs {
-        width: 100%;
-        padding-bottom: 20px;
-        //border-right: 1px solid #F7F8FC;
-        &.end {
-          margin-bottom: 10px;
-          padding-bottom: 0;
-        }
-        &.one {
-          //padding-right: 10px;
-          &.end {
-              grid-row: 2 / 6;
-          }
-        }
-        &.two {
-          padding-left: 20px;
-          //padding-right: 20px;
-        }
-        &.three {
-          padding-left: 40px;
-          border: none;
-        }
-      }
-    }
-  }
-
-  .footerBlankRemoteNavList {
-      @include minWidthXs {
-          //display: none;
-          display: flex;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          z-index: 1;
-      }
-      @include xs {
-          //display: none;
-          //display: block;
-          display: flex;
-          justify-content: center;
-          margin: 30px 0 0;
-          position: relative;
-          z-index: 1;
-          .remoteNav {
-              display: flex;
-              justify-content: center;
-              &:not(:last-of-type) {
-                  margin-bottom: 10px;
-              }
-          }
-      }
-  }
-
-  .copyright {
-    @include minWidthXs {
-      text-align: left;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      z-index: 1;
-    }
-
-    @include xs {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      z-index: 1;
-    }
-
-    small {
-      font-style: normal;
-      font-size: rem(12);
-      line-height: 1.5;
-      @include minWidthXs{
-        font-size: rem(14);
-      }
-    }
-  }
 }

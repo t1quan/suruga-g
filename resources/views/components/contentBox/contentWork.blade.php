@@ -1,4 +1,4 @@
-<div id="work" class="contentWork">
+{{--<div id="work" class="contentWork">
     <div class="contentWorkWrapper">
         <div class="contentWorkInner">
             <div class="contentWorkBg"></div>
@@ -19,99 +19,102 @@
             <div class="contentWorkBox">
                 <div class="contentWorkData">
                     <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_01_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_01_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_01_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja small">トラック・<br class="SPbr">トレーラ<br class="PCbr">ドライバー</span>
-                            <span class="en">TRUCKER</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
+<picture>
+    <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_01_sp.jpg')}} 2x">
+    <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_01_pc.jpg')}}">
+    <img src="{{asset('images/contentBox/work/work_01_pc.jpg')}}" alt="">
+</picture>
+<div class="occupation">
+    <span class="ja small">トラック・<br class="SPbr">トレーラ<br class="PCbr">ドライバー</span>
+    <span class="en">TRUCKER</span>
+    <div class="linkBtn">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+</div>
+</a>
+</div>
+<div class="contentWorkData">
+    <a href="{{Route('xxxx')}}">
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_02_sp.jpg')}} 2x">
+            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_02_pc.jpg')}}">
+            <img src="{{asset('images/contentBox/work/work_02_pc.jpg')}}" alt="">
+        </picture>
+        <div class="occupation">
+            <span class="ja">荷扱作業員</span>
+            <span class="en">STEVEDORE</span>
+            <div class="linkBtn">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="contentWorkData">
+    <a href="{{Route('xxxx')}}">
+        <picture>
+            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_03_sp.jpg')}} 2x">
+            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_03_pc.jpg')}}">
+            <img src="{{asset('images/contentBox/work/work_03_pc.jpg')}}" alt="">
+        </picture>
+        <div class="occupation">
+            <span class="ja">車両整備士</span>
+            <span class="en">MECHANIC</span>
+            <div class="linkBtn">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+</div>
+</div>
+</div>--}}
+
+
+
+<div class="sc-work">
+    <div class="container_inner">
+        <div class="work_container">
+            <div class="work_content">
+                <h2 class="content_title">
+                    <span class="en">OUR WORK</span>
+                    <span class="ja">部門紹介</span>
+                </h2>
+                <p class="text">駿河生産プラットフォームは、ミスミグループのマザー工場として商品の製造を担っています。商品のほとんどが受注生産で、ほぼ単品での設計製造販売でありながら、高品質・低コスト・確実短納期でお客様にお届けできる点が強みです。</p>
+                <a href="{{Route('work')}}" class="work_btn">部門紹介をすべて見る</a>
+            </div>
+            <div class="work_img">
+                <div class="work_img-item">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_01_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_01_pc.png')}}">
+                        <img src="{{asset('images/contentBox/work/topWork_01_pc.png')}}" alt="">
+                    </picture>
+                    <a class="work_img-link" href="{{Route('work')}}">FA部品事業</a>
                 </div>
-                <div class="contentWorkData">
-                    <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_02_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_02_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_02_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja">荷扱作業員</span>
-                            <span class="en">STEVEDORE</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
+                <div class="work_img-item">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_02_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_02_pc.png')}}">
+                        <img src="{{asset('images/contentBox/work/topWork_02_pc.png')}}" alt="">
+                    </picture>
+                    <a class="work_img-link" href="{{Route('work')}}">金型部品事業</a>
                 </div>
-                <div class="contentWorkData">
-                    <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_03_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_03_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_03_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja">車両整備士</span>
-                            <span class="en">MECHANIC</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
+                <div class="work_img-item">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_03_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_03_pc.png')}}">
+                        <img src="{{asset('images/contentBox/work/topWork_03_pc.png')}}" alt="">
+                    </picture>
+                    <a class="work_img-link" href="{{Route('work')}}">meviy部品事業</a>
                 </div>
-                <div class="contentWorkData">
-                    <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_04_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_04_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_04_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja">輸送部門</span>
-                            <span class="en">TRANSPORT</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="contentWorkData">
-                    <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_05_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_05_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_05_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja">資材営業部門</span>
-                            <span class="en">SALES</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="contentWorkData">
-                    <a href="{{Route('xxxx')}}">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/work_06_sp.jpg')}} 2x">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/work_06_pc.jpg')}}">
-                            <img src="{{asset('images/contentBox/work/work_06_pc.jpg')}}" alt="">
-                        </picture>
-                        <div class="occupation">
-                            <span class="ja">管理部門</span>
-                            <span class="en">GENERAL</span>
-                            <div class="linkBtn">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </div>
-                    </a>
+                <div class="work_img-item">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_04_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_04_pc.png')}}">
+                        <img src="{{asset('images/contentBox/work/topWork_04_pc.png')}}" alt="">
+                    </picture>
+                    <a class="work_img-link" href="{{Route('work')}}">製造サポート部</a>
                 </div>
             </div>
         </div>

@@ -4,16 +4,16 @@
 
 @section('content')
 
-    <div id="contentArea">
+<div id="contentArea">
 
-        {{--html埋め込み部分 start--}}
+    {{--html埋め込み部分 start--}}
 
-        <main id="main_wrap">
+    <main id="main_wrap">
 
-        </main>
+    </main>
 
-        {{--html埋め込み部分 end--}}
+    {{--html埋め込み部分 end--}}
 
-    </div>
+</div>
 
 @endsection

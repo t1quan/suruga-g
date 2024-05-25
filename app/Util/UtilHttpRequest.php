@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Util;
 
 use App\Core\Logger\Logger;
@@ -39,8 +40,7 @@ class UtilHttpRequest
         string $endpoint,
         string $token = null,
         array|object $data = null
-    ): array|object|bool
-    {
+    ): array|object|bool {
         if (!self::checkMethod($method)) {
             return false;
         }
@@ -68,14 +68,13 @@ class UtilHttpRequest
 
         if ($contents === false) {
             $error = error_get_last();
-            if($error) {
+            if ($error) {
                 throw new ErrorException($error['message'], $error['type']);
             }
             return false;
         }
 
         return json_decode($contents);
-
     }
 
     /**
@@ -86,8 +85,7 @@ class UtilHttpRequest
         string $endpoint,
         string $token = null,
         array|object $data = null
-    ): bool|string
-    {
+    ): bool|string {
         if (!self::checkMethod($method)) {
             return false;
         }
@@ -102,8 +100,8 @@ class UtilHttpRequest
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => $method,
             CURLOPT_HTTPHEADER => array(
-                'Content-Type:application/json' ,
-                'Authorization: Bearer '. $token
+                'Content-Type:application/json',
+                'Authorization: Bearer ' . $token
             ),
         ];
 
@@ -145,7 +143,7 @@ class UtilHttpRequest
     private static function checkMethod($method): bool
     {
         if (!is_string($method) or !in_array(strtoupper($method), self::$methodList)) {
-            Logger::errorThrowable('request method '. $method . 'is undefined.');
+            Logger::errorThrowable('request method ' . $method . 'is undefined.');
             return false;
         }
         return true;

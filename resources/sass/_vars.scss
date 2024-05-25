@@ -1,6 +1,6 @@
 //scss用DIR設定 url()用パス設定　corp_configとは別にcss用にここで設定
-$imgDir: "../../../public/images/";//css内で呼び出す画像images/ディレクトリ
-$fontsDir: "../fonts/fonts_smart/";//css内で呼び出す画像fontsディレクトリ//webFontを定義している;相対パスで指定しているが./css/から見てのfontsフォルダ（../fonts/となるので注意）
+$imgDir: "../../../public/images/"; //css内で呼び出す画像images/ディレクトリ
+$fontsDir: "../fonts/fonts_smart/"; //css内で呼び出す画像fontsディレクトリ//webFontを定義している;相対パスで指定しているが./css/から見てのfontsフォルダ（../fonts/となるので注意）
 
 //レスポンシブ幅設定
 //下記用途に合わせてBreakPointを設定（今回はXsとsmmdを使用）
@@ -19,95 +19,99 @@ $xs: 767px; //sp ~767px
     の様に記述する。上記はxsなので、上の変数に設定した~767px等がBPとなる
 ・ブレイクポイントを変更する際は上記の変数値を変更すればOK
 */
-@mixin md { // pc；992~1119px 今回未使用
-  @media (max-width: ($md)) {
-    @content;
-  }
+@mixin md {
+    // pc；992~1119px 今回未使用
+    @media (max-width: ($md)) {
+        @content;
+    }
 }
-@mixin sm { // タブレット；768~991px 今回未使用
-  @media (max-width: ($sm)) {
-    @content;
-  }
+@mixin sm {
+    // タブレット；768~991px 今回未使用
+    @media (max-width: ($sm)) {
+        @content;
+    }
 }
-@mixin xs { //sp ~767px　置き換え前の値 737px; //参考値480px;  // スマホ
-  @media (max-width: ($xs)) {
-    @content;
-  }
+@mixin xs {
+    //sp ~767px　置き換え前の値 737px; //参考値480px;  // スマホ
+    @media (max-width: ($xs)) {
+        @content;
+    }
 }
 //イレギュラーなブレークポイントとして使用
-@mixin smmd { //xs~mdの幅（xs+1px=768 ~ 1280)（tabletを特定する画面幅を想定）
-  @media screen and (min-width: $xs+1px) and (max-width: $md+1px) {
-    @content;
-  }
+@mixin smmd {
+    //xs~mdの幅（xs+1px=768 ~ 1280)（tabletを特定する画面幅を想定）
+    @media screen and (min-width: $xs+1px) and (max-width: $md+1px) {
+        @content;
+    }
 }
-@mixin minWidthXs { //xsより幅が大きい場合のメディア暮理切り替え(tablet,pc画面を想定）
-  @media screen and (min-width: $xs+1px) {
-    @content;
-  }
+@mixin minWidthXs {
+    //xsより幅が大きい場合のメディア暮理切り替え(tablet,pc画面を想定）
+    @media screen and (min-width: $xs+1px) {
+        @content;
+    }
 }
 
 //行送り設定
-$lineHeightLowBase:1.0;//Low行
-$lineHeightNomalBase:1.5;//Nomal行
-$lineHeightHighBase:2.0;//Nomalより高い行
+$lineHeightLowBase: 1; //Low行
+$lineHeightNomalBase: 1.5; //Nomal行
+$lineHeightHighBase: 2; //Nomalより高い行
 
 //font-size設定
-$baseFontSize:100%;// 62.5%;
+$baseFontSize: 100%; // 62.5%;
 // Xx最小：XxSmall----------------------------------
 //$fontSizeXxSmall:0.625rem;//10px相当
-$fontSizeXxSmall:0.6875rem;//11px相当
+$fontSizeXxSmall: 0.6875rem; //11px相当
 
 // X小：Xsmall-------------------------------------
 //$fontSizeXSmall:0.6875rem;//11px相当
-$fontSizeXSmall:0.75rem;//12px相当
+$fontSizeXSmall: 0.75rem; //12px相当
 //$fontSizeXSmall:0.8125rem;//13px相当
 
 // 小：small-------------------------------------
 //$fontSizeSmall:0.75rem;//12px相当
-$fontSizeSmall:0.8125rem;//13px相当
+$fontSizeSmall: 0.8125rem; //13px相当
 //$fontSizeSmall: 0.875rem;//14px相当
 
 // 普通：Nomal------------------------------------
-$fontSizeNomal: 0.875rem;//14px相当
+$fontSizeNomal: 0.875rem; //14px相当
 //$fontSizeNomal: 1.0rem;//16px相当
 
 // 大：large--------------------------------------
-$fontSizeLarge: 1.0rem;//16px相当
+$fontSizeLarge: 1rem; //16px相当
 //$$fontSizeLarge: 1.0625rem;//17px相当
 //$fontSizeLarge: 1.125rem;//18px相当
 
 // X大：$fontSizeXLarge-----------------------------------
-$fontSizeXLarge: 1.125rem;//18px相当
+$fontSizeXLarge: 1.125rem; //18px相当
 //$fontSizeXLarger: 1.25rem;//20px相当
 
 // Xx大：$fontSizeXxLarge-----------------------------------
 //$fontSizeXxLarge: 1.125rem;//18px相当
-$fontSizeXxLarge: 1.25rem;//20px相当
+$fontSizeXxLarge: 1.25rem; //20px相当
 
 // Xxx大：$fontSizeXxxLarge-----------------------------------
 //$fontSizeXxxLarge: 1.375rem;//22px相当
-$fontSizeXxxLarge: 1.50rem;//24px相当
+$fontSizeXxxLarge: 1.5rem; //24px相当
 
 // Xxxx大：$fontSizeXxxxLarge-----------------------------------
 //$fontSizeXxxxLarge: 1.625rem;//26px相当
-$fontSizeXxxxLarge: 1.75rem;//28px相当
+$fontSizeXxxxLarge: 1.75rem; //28px相当
 
 // Xxxxx大：$fontSizeXxxxxLarge-----------------------------------
 //$fontSizeXxxxxLarge: 1.875rem;//30px相当
-$fontSizeXxxxxLarge: 2.00rem;//32px相当
+$fontSizeXxxxxLarge: 2rem; //32px相当
 
 // 特大：$fontSizeBig-----------------------------------
 //$fontSizeBig: 2.25rem;//36px相当
-$fontSizeBig: 2.50rem;//40px相当
+$fontSizeBig: 2.5rem; //40px相当
 
 // 特大：$fontSizeXBig-----------------------------------
-$fontSizeXBig: 2.75rem;//44px相当
+$fontSizeXBig: 2.75rem; //44px相当
 //$fontSizeXBig: 3.00rem;//48px相当
 
 // 特大：$fontSizeXxBig-----------------------------------
 //$fontSizeXBig: 2.75rem;//44px相当
-$fontSizeXBig: 3.00rem;//48px相当
-
+$fontSizeXBig: 3rem; //48px相当
 
 //colorPallet;使用する色を作成して使用
 //$yellow-green: #b0eb00;
@@ -117,8 +121,8 @@ $fontSizeXBig: 3.00rem;//48px相当
 //$cyan: #00b0b3;
 //$transparent-cyan: #24fbff;
 //$periwinkle: #8a7dff;
-$lightGray: #D9D9D9;
-$gray: #DDDDDD;
+$lightGray: #d9d9d9;
+$gray: #dddddd;
 //$darkish-gray: #444;
 //$dark-gray: #363636;
 //$darker-gray: #303030;
@@ -126,99 +130,127 @@ $gray: #DDDDDD;
 //$darkester-gray: #111;
 $white: #ffffff;
 $black: #000000;
-$orange:#ecbb38;
+$orange: #ecbb38;
 
 // 幅設定
 //$defInnerWidth:960px; //インナー幅（SP版と共有化するためのもの）
 
 //ベースフォント指定
 //$baseFont: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Helvetica, sans-serif;//SC版フォント設定
-$baseFont: 'Noto Sans JP', futura-pt, 'Century Gothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 游ゴシック体, YuGothic,"Yu Gothic Medium", 游ゴシック, 'Yu Gothic', メイリオ, Meiryo, sans-serif;//winMac考慮済　標準Font設定//遊ゴシック優先設定
+// $baseFont: "Noto Sans JP", futura-pt, "Century Gothic", "ヒラギノ角ゴ ProN W3",
+//     "Hiragino Kaku Gothic ProN", 游ゴシック体, YuGothic, "Yu Gothic Medium",
+//     游ゴシック, "Yu Gothic", メイリオ, Meiryo, sans-serif; //winMac考慮済　標準Font設定//遊ゴシック優先設定
 //$baseFont: "HiraKakuPro-W6", "ヒラギノ角ゴ Pro W6", Meiryo, "メイリオ", Osaka, "MS PGothic", arial, helvetica, sans-serif;//gallery版オリジナルフォント設定
+$baseFont: "Noto CJK";
 
 ////　基本色設定
-$baseColor: #665ABF;//基調色(Gmenuの帯背景)
-$mainColor: $baseColor;//メインカラー
-$baseTextColor: #221815;//ベースのテキストカラー
-$invertBaseTextColor: #ffffff;//ベーステキストカラーの反転色
+$baseColor: #0376ff; //基調色(Gmenuの帯背景)
+$mainColor: $baseColor; //メインカラー
+$baseTextColor: #221815; //ベースのテキストカラー
+$invertBaseTextColor: #ffffff; //ベーステキストカラーの反転色
 
 //$baseBgColorTransparent: linear-gradient(90deg, rgba(20, 151, 255, 0.80) 0, rgba(43, 51, 178, 0.80) 100%);//ベースの背景色;半透明版
-$headerMenuBgColor:#FFF;//#FFFD;//hedaerMenuの背景色
-$spMenuBgColor: #FFF;//#FFFD;#FFFD;//rgba(21, 21, 21, 0.8);
-$bodyBgColor:#FFFFFF; //body背景色；全頁共通
+$headerMenuBgColor: #fff; //#FFFD;//hedaerMenuの背景色
+$spMenuBgColor: #fff; //#FFFD;#FFFD;//rgba(21, 21, 21, 0.8);
+$bodyBgColor: #ffffff; //body背景色；全頁共通
 
 //使用パレット
 //メニュー用
-$subColorRed: #f11c;//search用
-$subColorBlue: #004ba5;//NEW用
-$subColorOrange: #f18136;//検索ボタン用
-$subColorGreen: #75bc19;//用（未使用）
-$subColorLightGray: #e7e7e7;//検索ボタン用
-$subColorDarkGray: #3f3f3f;//#1c1c1c;//検索ボタン用
-$subColorBrown: #864409;//people用
-$subColorDarkBrown: #1E100E;//footerBg
+$subColorRed: #f11c; //search用
+$subColorBlue: #004ba5; //NEW用
+$subColorOrange: #f18136; //検索ボタン用
+$subColorGreen: #75bc19; //用（未使用）
+$subColorLightGray: #e7e7e7; //検索ボタン用
+$subColorDarkGray: #3f3f3f; //#1c1c1c;//検索ボタン用
+$subColorBrown: #864409; //people用
+$subColorDarkBrown: #1e100e; //footerBg
 
 //そのほか
-$subColorLightBlue: #0077c2;//検索タブカラー用
-$subColorCyan:#00c0e9;//NEW用//letestJobテキストカラー用
-$subColorLightCyan: #00D6CF;//グローバルメニュー用
-$subColorGreen:#00DD66;//
-$subColorLightGreen:#07DC8C;//
+$subColorLightBlue: #0077c2; //検索タブカラー用
+$subColorCyan: #00c0e9; //NEW用//letestJobテキストカラー用
+$subColorLightCyan: #00d6cf; //グローバルメニュー用
+$subColorGreen: #00dd66; //
+$subColorLightGreen: #07dc8c; //
 
 //未使用
-$subColorBlue: #005EB3;//
-$subColorBrown: #864409;//
-$subColorDarkBrown: #1E100E;//
-$subColorCyan:#00c0e9;//
-$subColorLightCyan: #00D6CF;//
-$subColorLightGreen:#07DC8C;//
-
+$subColorBlue: #005eb3; //
+$subColorBrown: #864409; //
+$subColorDarkBrown: #1e100e; //
+$subColorCyan: #00c0e9; //
+$subColorLightCyan: #00d6cf; //
+$subColorLightGreen: #07dc8c; //
 
 //自動配色パレット
-$autoAccentColor:  adjust-color($baseColor, $hue:180deg,$saturation:-30%);//baseColorから補色を出力;彩度は要調整
+$autoAccentColor: adjust-color(
+    $baseColor,
+    $hue: 180deg,
+    $saturation: -30%
+); //baseColorから補色を出力;彩度は要調整
 
 // 背景色設定
 //$bodyBgColor:#FFFFFF; //body背景色；全頁共通
-$footerBgColor:$subColorDarkGray;//footer背景色；全頁共通
-$searchBoxBgColor:$baseColor;//searchBox背景色；全頁共通
+$footerBgColor: $subColorDarkGray; //footer背景色；全頁共通
+$searchBoxBgColor: $baseColor; //searchBox背景色；全頁共通
 //$spMenuBgColor: rgba(21, 21, 21, 0.8);
 //アイコン類カラー
-$targetBlankIconColor:$baseColor;//js-clickitemBlank用のアイコンカラー（Font Awesome)
+$targetBlankIconColor: $baseColor; //js-clickitemBlank用のアイコンカラー（Font Awesome)
 
 //カテゴリ別カラー（メニュー等で使用）
 //smart版用
-$subColorSearch:$subColorOrange;//Search用
-$subColorBusiness: $subColorBlue;//Business用
-$subColorPeople: $subColorBlue;//People用
-$subColorData: $subColorGreen;//Data用
-$subColorFooterBg: $white;//#1c1c1c;//Footer背景色
+$subColorSearch: $subColorOrange; //Search用
+$subColorBusiness: $subColorBlue; //Business用
+$subColorPeople: $subColorBlue; //People用
+$subColorData: $subColorGreen; //Data用
+$subColorFooterBg: $white; //#1c1c1c;//Footer背景色
 
 //box版用
-$subColorWorkplace: $subColorBlue;//Workplace用
-$subColorFaq: $subColorOrange;//Faq用
-$subColorPickup: $subColorGreen;//Pickup用
-$subColorNew: $subColorBlue;//New用
+$subColorWorkplace: $subColorBlue; //Workplace用
+$subColorFaq: $subColorOrange; //Faq用
+$subColorPickup: $subColorGreen; //Pickup用
+$subColorNew: $subColorBlue; //New用
 //$subColorCompany: #b1f8cf;//Company用
 //$subColorCharm: #cddd00;//Charm用
 //$subColorStaff: #f9d420;;//Staff用
 
-
 //自動配色用（Baseカラー等から調和色を生成）//テスト中
 //$baseColorLight:scale-color($baseColor, $saturation: -30%, $lightness: 60%, $alpha: 100%); //見出しのborderカラーの設定(BaseColorを元に淡い色）//
-$baseColorLight:scale-color($baseColor, $saturation: -68%, $lightness: 32%, $alpha: 100%); //見出しのborderカラーの設定(BaseColorを元に淡い色）//
+$baseColorLight: scale-color(
+    $baseColor,
+    $saturation: -68%,
+    $lightness: 32%,
+    $alpha: 100%
+); //見出しのborderカラーの設定(BaseColorを元に淡い色）//
 $baseColorPale: rgba($baseColorLight, 0.15); //pBorderColorを元に薄く
-$baseColorDark:darken($baseColor, 4%);//見出しのborderカラーの設定(BaseColorを元に暗く）//
+$baseColorDark: darken(
+    $baseColor,
+    4%
+); //見出しのborderカラーの設定(BaseColorを元に暗く）//
 
 //$autoAccentColor:  adjust-hue($baseColor, 180deg);//baseColorから補色を出力
 //$autoSecondaryColor:  complement($baseColor);//baseColorから補色を出力
 //$autoAssortColor:  saturate($baseColor, 15%);//baseColorからアソートカラーを出力
 //$autoTertiaryColor:  adjust-color($baseColor, $hue:30deg,$saturation:15%);//baseColorから類似色を出力
-$autoTertiaryColor:  adjust-color($baseColor, $hue:15deg,$saturation:0%);//baseColorから隣接色を出力
-$autoAssortColor:  adjust-color($baseColor, $hue:30deg,$saturation:0%);//baseColorから類似色を出力
-$autoDullColor:  adjust-color($baseColor, $hue:-15deg,$saturation:-25%);//baseColorからダルトーン色を出力
-$autoAccentColor:  adjust-color($baseColor, $hue:180deg,$saturation:15%);//baseColorから補色を出力
+$autoTertiaryColor: adjust-color(
+    $baseColor,
+    $hue: 15deg,
+    $saturation: 0%
+); //baseColorから隣接色を出力
+$autoAssortColor: adjust-color(
+    $baseColor,
+    $hue: 30deg,
+    $saturation: 0%
+); //baseColorから類似色を出力
+$autoDullColor: adjust-color(
+    $baseColor,
+    $hue: -15deg,
+    $saturation: -25%
+); //baseColorからダルトーン色を出力
+$autoAccentColor: adjust-color(
+    $baseColor,
+    $hue: 180deg,
+    $saturation: 15%
+); //baseColorから補色を出力
 //$autoTertiaryColor: adjust-color(hsl(25, 100%, 80%), $lightness: -30%, $alpha: -0.4);//記述例
-
 
 ////自動配色ひな形
 ////$pBorderColor:darken($baseColor, 4%);//見出しのborderカラーの設定(BaseColorを元に暗く）//
