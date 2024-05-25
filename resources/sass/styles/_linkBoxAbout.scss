@@ -1,0 +1,183 @@
+@mixin contentWidth {
+  width: 100%;
+  max-width: $defInnerWidthPc;
+  margin-right: auto;
+  margin-left: auto;
+  @include xs {
+    padding-left: calc(100vw / 750 * 70);
+    padding-right: calc(100vw / 750 * 70);
+  }
+  @include minWidthXs {
+    width: 100%;
+  }
+}
+
+#linkBoxAbout {
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+  @include minWidthXs {
+    padding: 60px 0;
+  }
+  
+  .linkBoxWrapper {
+    position: relative;
+    background-color: $accentColor2;
+    padding: 40px 0 48px;
+  }
+
+  .linkBoxInner {
+    position: relative;
+    z-index: 0;
+    @include contentWidth;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    .contentHeading {
+      @include contentWidth;
+      @include xs {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .en {
+        font-family: "prohibition", sans-serif;
+        font-weight: 400;
+        font-size: calc(100vw / 750 * 70);
+        font-style: normal;
+        line-height: 1.23;
+        letter-spacing: 0.08em;
+        @include minWidthXs {
+          font-size: rem(70);
+        }
+      }
+
+      .ja {
+        display: block;
+        position: relative;
+        margin-top: calc(100vw / 750 * 16);
+        padding-left: calc(100vw / 750 * 70);
+        font-size: calc(100vw / 750 * 24);
+        line-height: 1.4;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: calc(100vw / 750 * 50);
+          height: calc(100vw / 750 * 10);
+          transform: translateY(-50%);
+          background-image: url("#{$imgDir}/common/horizontal_ellipsis.png");
+          background-size: contain;
+        }
+        @include minWidthXs {
+          margin-top: 16px;
+          padding-left: 60px;
+          font-size: rem(24);
+          font-weight: 700;
+          line-height: 1.46;
+          letter-spacing: 0.08em;
+          &::after {
+            top: 55%;
+            width: 50px;
+            height: 10px;
+          }
+        }
+      }
+    }
+
+    .linkBoxContent, .linkBoxText {
+      margin-top: -30px;
+      @include xs {
+        margin-top: calc(100vw / 750 * 50);
+      }
+    }
+
+    .linkBoxContent {
+      display: flex;
+      width: 510px;
+      height: 190px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px 50px;
+      background-color: $white;
+      @include xs {
+        padding: calc(100vw / 750 * 40) calc(100vw / 750 * 80) calc(100vw / 750 * 40) calc(100vw / 750 * 62);
+        width: 100%;
+        height: calc(100vw / 750 * 200);
+      }
+      .lineIcon {
+        position: relative;
+        width: calc(100vw / 750 * 250);
+        height: calc(100vw / 750 * 60);
+        background-size: contain;
+
+        background-image: url("#{$imgDir}linkBox/LINE_002_0_sp.png");
+        @include minWidthXs {
+          width: 250px;
+          height: 60px;
+          background-image: url("#{$imgDir}linkBox/LINE_002_0_pc.png");
+
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.3s;
+            opacity: 0;
+            background-size: contain;
+            background-image: url("#{$imgDir}linkBox/LINE_002_hover_pc.png");
+          }
+
+          &:hover {
+            cursor: pointer;
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .QRCode {
+        width: calc(100vw / 750 * 120);
+        height: calc(100vw / 750 * 120);
+        background-size: contain;
+        background-image: url("#{$imgDir}linkBox/qr_sp.png");
+        @include minWidthXs {
+          width: 120px;
+          height: 120px;
+          background-image: url("#{$imgDir}linkBox/qr_pc.png");
+        }
+      }
+    }
+
+    .linkBoxText{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      @include minWidthXs {
+        width: 630px;
+      }
+      .descriptionText {
+        max-width: 630px;
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 2.2;
+        @include xs {
+          font-size: calc(100vw / 750 * 26);
+        }
+      }
+    }
+  }
+}

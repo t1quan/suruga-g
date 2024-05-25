@@ -1,0 +1,153 @@
+//共通設定読み込み
+@import "resources/sass/pages/common";
+
+#entry_thanks {
+  //レイアウト読み込み
+  @import "resources/sass/layouts/layoutEntryThanks";
+
+  //ページ内要素
+  @import "resources/sass/styles/notFoundJobDetail";
+  @import "resources/sass/styles/formThanks"; //apply,concier用の汎用完了フォームスタイル
+
+  #entryArea {
+    margin: 100px 0 80px;
+    @include xs {
+      margin: 35px 0 30px;
+    }
+  }
+
+  header {
+    .entry-title { //応募タイトル
+      background: $white;
+      color: $black;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+      height: 160px;
+      display: block;
+      text-align: center;
+
+      @include xs {
+        height: 120px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+        img{//タイトルの画像レスポンシブイメージ
+          width:100%;
+          text-align: center;
+        }
+      }
+      .en {
+        font-family: "prohibition", sans-serif;
+        font-weight: 400;
+        font-size: rem(60);
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.05em;
+        @include xs {
+          font-size: rem(35);
+        }
+      }
+      .ja {
+        margin-top: 20px;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: 1.5;
+        @include xs {
+          margin-top: 10px;
+          font-size: rem(12);
+        }
+      }
+    }
+    .entry-introduction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 126px;
+      background: $accentColor;
+      color: $white;
+      margin-top: 90px;
+      @include xs {
+        height: 63px;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .inner {
+    width: calc(100% - 24px);
+    max-width: $defInnerWidthPc;
+    margin: 0 auto;
+    padding-top: 60px;
+    @include xs {
+      width: 100%;
+      max-width: 100%;
+      padding-top: 40px;
+    }
+
+    .step_guide {
+      position: relative;
+      display: block;
+      max-width: $defInnerWidthPc;
+      margin: 0 auto;
+      padding-left: 50px;
+      color: $accentColor;
+      font-size: rem(18);
+      line-height: 1.5;
+      @include xs {
+        max-width: 100%;
+        width: calc(100% - 24px);
+        padding-left: 20px;
+      }
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: $accentColor;
+      }
+      &::before {
+        top: 4px;
+      }
+      &::after {
+        bottom: 4px;
+      }
+    }
+
+    .mod_jobDetailJob {
+      margin-top: 44px;
+      padding-left: 50px;
+      @include xs {
+        padding: 0 12px;
+      }
+    }
+
+    .notice {
+      line-height: 2.25;
+
+      .contact_info {
+        line-height: 1.67;
+        text-align: right;
+      }
+    }
+
+    .applyBtns {
+      display: none;
+    }
+
+    i {
+      margin: 0;
+      font-weight: bold;
+      font-size: $fontSizeNomal;//93%;
+      display: inline-block;
+      padding: 0 10px;
+      @include xs {
+        padding: 0;
+      }
+    }
+  }
+
+}

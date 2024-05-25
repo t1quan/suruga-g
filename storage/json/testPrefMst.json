@@ -1,0 +1,68 @@
+{
+  "code": 200,
+  "message": "都道府県マスタを取得しました。",
+  "data":
+  {
+    "pref":
+    [
+      {
+        "name": "北海道",
+        "value": 1,
+        "parent": 1,
+        "children": [
+          {
+            "name": "函館市",
+            "value": 202,
+            "parent": 1
+          }
+        ]
+
+      },
+
+      {
+        "name": "東京都",
+        "value": 13,
+        "parent": 2,
+        "children": [
+          {
+            "name": "千代田区",
+            "value": 101,
+            "parent": 13
+          },
+
+          {
+            "name": "港区",
+            "value": 103,
+            "parent": 13
+          }
+        ]
+      },
+
+      {
+        "name": "神奈川県",
+        "value": 14,
+        "parent": 2,
+        "children": [
+          {
+            "name": "藤沢市",
+            "value": 205,
+            "parent": 14
+          }
+        ]
+      },
+
+      {
+        "name": "長野県",
+        "value": 20,
+        "parent": 3,
+        "children": [
+          {
+            "name": "長野市",
+            "value": 201,
+            "parent": 20
+          }
+        ]
+      }
+    ]
+  }
+}

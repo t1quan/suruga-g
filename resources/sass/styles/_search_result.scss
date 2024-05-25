@@ -1,0 +1,271 @@
+section.jobSummary {
+  //求人案件要約部分囲み
+  border: 2px solid $gray; //1ピクセル版
+  border-radius: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  @include xs {
+    margin: 20px auto;
+    padding: 5px 0;
+  }
+  div.summary02 {
+    border: none; //tenichiPulsのスタイル消し
+    div.summaryCompanyNameArea {
+      margin: 0 auto 0 10px;
+      div.company_name {
+        //複数企業名表示部分
+        font-weight: 500;
+        color: $baseTextColor;
+        line-height: 1.4;
+        padding: 5px 0 10px 0;
+      }
+    }
+    div.summaryTitleArea {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      .corpMei {
+        display: none;
+        color: #333333;
+        a {
+          &.corpMei {
+            h3 {
+            }
+          }
+        }
+      }
+      div.jobTitle {
+        //求人案件タイトル
+        margin: 0;
+        padding: 5px 10px;
+        overflow: hidden;
+        width: auto;
+        position: relative;
+        float: left;
+        line-height: 2rem;
+        max-width: 85%;
+        @include xs {
+          max-width: 100%;
+        }
+        a.title {
+          //求人案件タイトルの文字色
+          color: $searchTitleColor;
+          font-weight: 800;
+          h3 {
+            margin: 0;
+            padding: 0;
+            //line-height: 120%;
+            font-size:$fontSizeXLarge;//1.125rem
+            @include xs {
+              line-height: 1.25;
+              font-size:$fontSizeLarge;//1rem
+            }
+          }
+        }
+      }
+      div.koy {
+        float: right;
+        width: auto;
+        line-height: 2.62rem;//アイコンを上揃えにする際は外す
+        @include xs {
+          line-height: inherit;
+          position: relative;
+          width: 100%;
+          display: block;
+          text-align: right;
+        }
+        i {
+          background: #666666; //アイコンインジケーターの背景色
+          color: white;
+          padding: 5px 10px;
+          border-radius: 0;
+          line-height: 2;
+          overflow: hidden;
+          margin: 0 10px 0 0;
+          font-style: normal;
+          font-size: $fontSizeSmall;
+          @include xs {
+            font-size: 0.88rem;
+            margin: 0 5px 0 0;
+          }
+
+          &.indicator1,
+          &.koyKeitai01 { //正社員
+            background-color: $seisyainColor;
+          }
+          &.indicator2,
+          &.koyKeitai02 { //契約社員
+            background-color: $keiyakusyainColor;
+          }
+          &.indicator3,
+          &.koyKeitai03 { //パートアルバイト
+            background-color: $parttimeColor;
+          }
+          &.indicator4,
+          &.koyKeitai04 { //派遣社員
+            background-color: $hakensyainColor;
+          }
+          &.indicator5,
+          &.koyKeitai05 { //紹介予定派遣
+            background-color: $syoukaiyoteiColor;
+          }
+          &.indicator6,
+          &.koyKeitai06 { //特定派遣
+            background-color: $tokuteihakenColor;
+          }
+          &.indicator7,
+          &.koyKeitai07 { //職業紹介
+            background-color: $syokugyousyoukaiColor;
+          }
+          &.indicator8,
+          &.koyKeitai08 { //インターンシップ
+            background-color: $internColor;
+          }
+          &.indicator99,
+          &.koyKeitai99 { //その他
+            background-color: $etcColor;
+          }
+        }
+        //i
+      }
+      //koy
+    }
+    //summaryTitleArea
+    div.summaryCatchArea {
+      margin: 0 12px;
+      div.catch_copy {
+        //求人案件見出しキャッチコピー
+        font-weight: 500;
+        color: $baseTextColor;
+        line-height: 1.4rem;
+        padding: 5px 0 10px 0;
+      }
+    }
+    //summaryCatchArea
+    div.summaryJobDataArea {
+      overflow: hidden;
+      margin: 0;
+      div.summaryImgArea {
+        height: 250px;
+        width: 35%;
+        margin: 1% 2% 2px 2%;
+        overflow: hidden;
+        float: left;
+        border: 1px solid #D9D9D9;
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include xs {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+      div.summaryJobDataList {
+        margin: 1% 2% 2% 0;
+        float: left;
+        width: 58%;
+        @include xs {
+          float: none;
+          width: auto;
+          margin: 5px 5px 10px;
+        }
+        &.summaryFull { //左にイメージがない場合付与されるクラス（文字のみ全幅にするためのもの）
+          float: none;
+          width: 96% !important;
+          margin: 0 auto !important;
+        }
+        //summaryFull
+        ul {
+          li.data {
+            padding: 8px 10px 5px 10px;
+            border-bottom: 1px dotted #c0c0c0;
+            overflow: hidden;
+            span.item {
+              background: none repeat scroll 0 0 $gray;
+              color: $black;
+              display: block;
+              font-size: $fontSizeXxSmall;//11px
+              padding: 2px 0;
+              text-align: center;
+              line-height: 1.2rem;
+              width: 15%;
+              min-width: 60px;
+              float: left;
+              @include xs {
+                min-width: 70px;
+                margin: 0 0 5px 0;
+                float: none;
+              }
+            }
+            //item
+            span.text {
+              font-size: $fontSizeSmall;//13px
+              line-height: $lineHeightNomalBase;
+              width: 84%;
+              display: block;
+              float: left;
+              padding: 0 15px 0 15px;
+              word-break: break-all;
+              @include xs {
+                min-width: 52px;
+                width: 100%;
+                padding: 0 0;
+                float: none;
+              }
+            }
+          }
+          //data
+        }
+        //ul
+      }
+      //summaryJobDataList
+    }
+    //summaryJobDataArea
+    div.summaryJobBtns {
+      padding: 0 0 20px 0;
+      .detailBtn {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        @include xs {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      .goJob {
+        @extend %btnGrayBase;
+        display: block;
+        background: $goDetailBtnBgColor;
+        color: $goDetailBtnTextColor;
+        cursor: pointer;
+        transition: all .3s;
+        font-size: rem(14);
+        i {
+          padding-left: 1rem;
+        }
+      }
+      //goJob
+
+      @import "_favoriteBtn.scss"; //お気に入りボタンの共通スタイル
+
+    }
+
+    div.adNumField {
+      float: right;
+      font-size: $fontSizeXSmall;//12px
+      padding: 0 10px 0 0;
+    }
+
+    //summaryJobBtns
+  }
+  //summary02
+}

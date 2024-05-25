@@ -1,0 +1,111 @@
+//_box_layoutSearch
+//レイアウトスタイル　Box版　Search（求人検索）ページ
+//レイアウトスタイルはページごとに用意する
+
+#searchLayout {
+  min-width:$defInnerWidthPc;//navとコンテンツの合計幅でスクロールバーを出す設定
+
+  @include xs {
+    min-width:320px;//navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+
+    grid-template://グリッドの定義
+        "searchNav" $defMenuHeightPc
+        "searchTopImgBox" auto
+        "searchBody" auto
+        "searchSearchBox" auto
+        "searchLatestJobBox" auto
+        "maintenanceNotice" 1fr
+        "searchFooter" auto / minmax($defInnerWidthPc, 100%);
+
+    @include xs {
+      grid-template:
+        "searchNav" $defMenuHeightSp
+        "searchTopImgBox" auto
+        "searchBody" auto
+        "searchSearchBox" auto
+        "searchLatestJobBox" auto
+        "maintenanceNotice" 1fr
+        "searchFooter" auto / 100%;
+    }
+  }
+
+  #searchTopImgBox{
+    grid-area: searchTopImgBox;
+    min-width:825px;//PC時の最小幅設定
+    margin-bottom: 0;
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+
+    #searchTopImg{//サーチTOP画像
+      display: none;
+      .searchTopImgWrapper{
+        width: 100%;
+        @include xs {
+
+
+        }
+        .searchTopMv{
+          background-image: url("#{$imgDir}common/search_h1_pc.jpg");
+          //border: 1px solid red;
+          @include varBgImg(3840,1080);//varBgImg(表示画像の幅,高さ）
+          @include xs {
+            background-image: url("#{$imgDir}common/search_h1_sp.jpg");
+            @include varBgImg(1420,460);//varBgImg(表示画像の幅,高さ）
+          }
+        }//searchTopImg
+      }//searchTopImgWrapper
+    }//searchTopImg
+
+  }//searchTopImgBox
+
+  #searchNav {
+    grid-area: searchNav; //表示エリアの名前
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #searchBody{
+    grid-area: searchBody;
+    min-width:825px;//PC時の最小幅設定
+    //width: 100%;
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #searchSearchBox{
+    grid-area: searchSearchBox;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:98%;
+    }
+  }
+
+  #searchLatestJobBox{
+    grid-area: searchLatestJobBox;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #maintenanceNotice {
+    grid-area: maintenanceNotice;
+  }
+
+  #cmnFooter{
+    grid-area: searchFooter;
+  }
+
+  #searchJobsBtn {
+    display: none !important;
+  }
+}//searchLayout

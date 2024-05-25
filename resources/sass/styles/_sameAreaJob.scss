@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*============================
+#newInfoArea
+============================*/
+#sameAreaJob {
+  display: none; //jsでの表示制御用
+  background: $sameAreaJobBgColor;
+}
+div#box_sameAreaJobContent {
+  width: calc(100% - 24px);
+  max-width: $contentWidth;
+  margin: 0 auto;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+
+  @include xs {
+    width: 100%;
+    padding: 10px 10px 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  &.topNews {
+    @include xs {
+      margin: 0;
+    }
+  }
+  h2 {
+    font-size: 3.75rem;
+    color: $baseColor;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -80px;
+    @include xs {
+      font-size: $fontSizeBig;
+      margin-top: -40px;
+      margin-bottom: -20px;
+    }
+  }
+  /*============================
+  #newInfoBox
+  ============================*/
+  #sameAreaJobBox {
+    margin-bottom: 20px;
+    padding: 12px 0 10px 0;
+    @include xs {
+      padding: 0;
+    }
+
+    .sameAreaJobTitle {//汎用タイトル 画像左寄せ版
+      margin: 50px auto 10px auto;
+      height: auto;
+      overflow: hidden;
+      &:before {
+        content: "同じエリアのお仕事";
+        float: left;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        overflow: hidden;
+        height: auto;
+        font-weight: 600;
+        color: $sameAreaJobTitleColor;
+        @include xs {
+          font-size: 1.3rem;
+        }
+      }
+      &:after {
+        content: "";
+        float: left;
+        font-size: 1.1rem;
+        line-height: 2;
+        overflow: hidden;
+        height: auto;
+        margin: 12px 0 0 20px;
+        font-weight: 100;
+      }
+      @include xs {
+        margin: 0;
+        padding: 20px 0 10px 0;
+      }
+    }
+
+
+    ul {
+      margin-bottom: 30px;
+      @include xs {
+        height: inherit;
+        margin-bottom: 20px;
+      }
+      li {
+        border-bottom: 1px solid $sameAreaJobBorderColor;
+        @include xs {
+          border-bottom: 1px solid $sameAreaJobBorderColor;
+          padding: 20px 0 20px 0;
+        }
+        a {
+          display: block;
+          padding: 10px 0 10px 0;//1行ごとのパディング
+          color: $sameAreaJobTextColor;
+          &:hover {
+            opacity: .7;
+          }
+          @include xs {
+            padding: 0 5px;
+            letter-spacing: normal;
+            background-size: 6px 12px;
+            background: none;
+          }
+          div {
+            display: inline-block;
+            letter-spacing: normal;
+            vertical-align: middle;
+            @include xs {
+              margin-right: 0;
+            }
+          }
+          .newInfoDate {
+            font-size: $fontSizeSmall;
+            padding: 0;
+            width: 90px;
+            line-height: 2;
+
+            @include xs {
+              width: 100%;
+            }
+          }
+          .newInfoTag {
+            width: 75%;
+            text-align: left;
+            font-size: $fontSizeNomal;
+            padding: 0 15px;
+            @include xs {
+              font-size: $fontSizeSmall;//13px
+              padding: 0;
+              width: 100%;
+              text-align: left;
+            }
+          }
+          .newInfoDetail {
+            font-size: $fontSizeNomal;
+            padding: 0 15px 0 93px;
+            width: 100%;
+            word-break: break-all; //word-breakなし
+
+            //省略設定
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            @include xs {
+              //display: none;
+              padding: 0;
+              font-size: $fontSizeSmall;
+              white-space: normal;
+            }
+            span {
+              display: block;
+              padding: 0 15px;
+              @include xs {
+                padding: 0;
+              }
+            }
+          }
+        }//a
+      }
+      //li
+    }
+    //ul
+  }
+  //newInfoBox
+  div.linkReadMore {
+    text-align: center;
+    a {
+      color: $baseColor;
+      font-weight: bold;
+      font-size: $fontSizeNomal;
+      &:hover {
+        opacity: .7;
+      }
+      @include xs {
+        display: inline-block;
+        padding-left: 20px;
+        background: url(#{$imgDir}common/ico_menu_arrow.png) no-repeat left center;
+        background-size: 8px auto;
+      }
+    }//a
+  }//linkreadmore
+}//newInfoArea

@@ -1,0 +1,51 @@
+//concier_confirmLayout
+//レイアウトスタイル　相談フォーム内容確認ページ
+//レイアウトスタイルはページごとに用意する
+
+#concier_confirmLayout {
+  min-width:$defInnerWidthPc;//navとコンテンツの合計幅でスクロールバーを出す設定
+
+  @include xs {
+    min-width:320px;//navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+  
+  .container {
+    display: grid;
+    overflow: hidden;
+    
+    grid-template://グリッドの定義
+        "concierConfirmNav" $defMenuHeightPc
+        "concierConfirmContent" auto
+        "concierConfirmfooter" auto/ minmax($defInnerWidthPc, 100%);
+  
+    @include xs { //sp時nav領域をなくす
+      grid-template:
+        "concierConfirmNav" $defMenuHeightSp
+        "concierConfirmContent" auto
+        "concierConfirmfooter" auto / 100%;
+    }
+  }
+  #concier_confirmNav {//nav部分
+    grid-area: concierConfirmNav; //表示エリアの名前
+  }
+
+  #concierConfirm{
+    grid-area: concierConfirmContent;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+  
+  #searchBox{
+    grid-area: concierConfirmSearchBox;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+    display: none;
+  }
+  #cmnFooter{
+    grid-area: concierConfirmfooter;
+  }
+}//concierConfirmLayout

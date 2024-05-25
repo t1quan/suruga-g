@@ -1,0 +1,39 @@
+{
+  "code": 200,
+  "message": "市区町村マスタを取得しました。",
+  "data":
+  {
+    "city":
+    [
+      {
+        "name": "函館市",
+        "value": 202,
+        "parent": 1
+      },
+
+      {
+        "name": "千代田区",
+        "value": 101,
+        "parent": 13
+      },
+
+      {
+        "name": "港区",
+        "value": 103,
+        "parent": 13
+      },
+
+      {
+        "name": "藤沢市",
+        "value": 205,
+        "parent": 14
+      },
+
+      {
+        "name": "長野市",
+        "value": 201,
+        "parent": 20
+      }
+    ]
+  }
+}

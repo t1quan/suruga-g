@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+#specialFeature{//特集求人ID
+
+  .specialFeatureBox{
+    padding: 30px 0 0 0;
+    @include xs {
+      height: inherit;
+      padding: 10px 0 25px 0;
+    }
+
+    .specialFeatureWrapper{
+      .specialFeatureHeader{
+        display: none;
+        //@include searchBoxHeader_styleC;
+        //padding: 20px 0 30px 0;
+        //@include xs {
+        //  padding: 0 0 10px 0;
+        //}
+      }//specialFeatureHeader
+
+      .specialFeatureBody{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        //justify-content: space-evenly;//均等
+        justify-content: space-between;//左右隙間なし自動割り付け
+        width: $contentWidth;//左右20px空き
+        margin: auto;
+        @include xs {
+          width: calc(100% - 24px);
+        }
+
+        .bnr06,
+        .bnr05,
+        .bnr04,
+        .bnr03,
+        .bnr02,
+        .bnr01{
+          overflow: hidden;
+          width: 300px;
+          margin: 0 0 30px 0;
+          @include xs{
+            //width: 30vw;
+            //width: 32.0%;
+            width: 49%;
+            margin: 0 0 2% 0;
+          }
+
+          .specialFeatureBnrBox{
+            .specialFeatureBnr{
+              .bnrImg{
+                @include varBgImg(300,160);
+                @include xs {
+                  @include varBgImg(350,200);
+                }
+              }
+            }//specialFeatureBnr
+          }//specialFeatureBnrBox
+        }
+
+        .bnr01{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs01_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs01_sp.jpg);
+            }//xs
+          }
+        }
+        .bnr02{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs02_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs02_sp.jpg);
+            }//xs
+
+          }
+        }
+        .bnr03{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs03_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs03_sp.jpg);
+            }//xs
+          }
+        }
+        .bnr04{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs04_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs04_sp.jpg);
+            }//xs
+          }
+        }
+        .bnr05{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs05_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs05_sp.jpg);
+            }//xs
+          }
+        }
+        .bnr06{
+          .bnrImg{
+            background-image: url(#{$imgDir}common/top_btn_searchjobs06_pc.jpg);
+            @include xs {
+              background-image: url(#{$imgDir}common/top_btn_searchjobs06_sp.jpg);
+            }//xs
+          }
+        }
+      }//specialFeatureBody
+    }//specialFeatureWrapper
+  }//specialFeatureBox
+}//#specialFeature

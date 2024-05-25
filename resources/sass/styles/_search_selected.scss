@@ -1,0 +1,389 @@
+.mod_jobSearchBox {
+  box-sizing: border-box;
+  .jobSearchBoxTitle {
+    font-size: 1.5rem;
+  }
+  .jobSearchFormTgl {
+    background-color: $gray;
+    color: $black;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2.5;
+    letter-spacing: .2em;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    height: 40px;
+    margin: 40px auto;
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    &:hover {
+      opacity: .7;
+      @include xs {
+        opacity: 1;
+      }
+    }
+    &.close {
+      &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(#{$imgDir}arrow/arrow_down_black_pc.png);
+        background-position: right 16px center;
+        background-size: auto;
+        @include xs {
+          background-image: url(#{$imgDir}arrow/arrow_down_black_sp.png);
+          background-size: 16px auto;
+        }
+      }
+    }
+    &.open {
+      &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(#{$imgDir}arrow/arrow_up_black_pc.png);
+        background-position: right 16px center;
+        background-size: auto;
+        @include xs {
+          background-image: url(#{$imgDir}arrow/arrow_up_black_sp.png);
+          background-size: 16px auto;
+        }
+      }
+    }
+  }
+  //jobSearchBoxTitle
+  #jobSearchForm {
+    display: none;
+    border: none !important;
+    .searchCondHead {
+      border: 2px solid #d7d7d7;
+      padding: 20px;
+      color: $bgBaseTextColor;
+      .searchCondBoxTitle{
+        margin: 5px 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .searchCondHeadCorp,
+      .searchCondHeadLocation,
+      .searchCondHeadJob,
+      .searchCondHeadKoyo,
+      .searchCondHeadTokucho,
+      .searchCondHeadKyuyo,
+      .searchCondHeadKeyword {
+        display: inline-block;
+        width: 100%;
+        .searchHeadLabel {
+          font-size: 1.0rem;
+          float: left;
+          &::after{
+            content: "："
+          }
+        }
+        .searchHeadContent {
+          display: inline-block;
+          font-size: 1rem;
+          float: left;
+        }
+      }
+    }
+    .searchCondList {
+      border: 2px solid #d7d7d7;
+      margin-top: 30px;
+      & :last-child{
+        border-bottom: none;
+      }
+
+      .searchCondListCorp,
+      .searchCondListLocation,
+      .searchCondListJob,
+      .searchCondListKoyo,
+      .searchCondListTokucho,
+      .searchCondListKyuyo {
+        border-bottom: 1px solid #d0d0d0;
+
+        .searchListLabel {
+          width: 100%;
+          line-height: 3;
+          background-color: #d9d9d9;
+          padding: 0 16px;
+          cursor: pointer;
+          transition: opacity .3s;
+          &:hover {
+            opacity: .5;
+            @include xs {
+              opacity: 1;
+            }
+          }
+        }
+        .close {
+          background-image: url(#{$imgDir}arrow/arrow_down_black_sp.png);
+          background-position: right 16px center;
+          background-size: 12px 6px;
+          @include xs {
+          background-image: url(#{$imgDir}arrow/arrow_down_black_sp.png);
+            background-size: 16px auto;
+          }
+        }
+        .open {
+          background-image: url(#{$imgDir}arrow/arrow_up_black_sp.png);
+          background-position: right 16px center;
+          background-size: 12px 6px;
+          @include xs {
+          background-image: url(#{$imgDir}arrow/arrow_up_black_sp.png);
+            background-size: 16px auto;
+          }
+        }
+        .searchListBody{
+          display: none;
+          padding: 24px 0;
+          @include xs {
+            padding: 0;
+          }
+          a{
+            pointer-events: none;
+            color: $bgBaseTextColor;
+            display: inline-block;
+          }
+
+          ul {
+            &:first-child {
+              li.parent {
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+        ul {
+          padding: 0 24px;
+          @include xs {
+            padding: 0;
+          }
+
+          li.parent {
+            clear: both;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            border: none;
+            margin-top: 24px;
+            label {
+              cursor: pointer;
+              position: relative;
+              display: inline-block;
+              margin: 8px 32px 8px 0;
+              padding-left: 1.25em;
+              font-weight: 700;
+              @include xs {
+                margin: 12px;
+                padding-left: 1.5em;
+                font-size: rem(14);
+              }
+            }
+            @include xs {
+              border: 1px solid #d7d7d7;
+              margin-top: 0;
+            }
+            ul {
+              width: 100%;
+              box-sizing: border-box;
+              padding: 0 0 0 24px;
+              overflow:auto; // 高さを出す
+              border: none;
+              @include xs {
+                padding: 0;
+              }
+              li.child {
+                float: left;
+                box-sizing: border-box;
+                border: none;
+                label {
+                  cursor: pointer;
+                  position: relative;
+                  display: inline-block;
+                  font-weight: 500;
+                  @include xs {
+                    margin: 12px 24px;
+                    font-size: rem(13);
+                  }
+                }
+                @include xs {
+                  float: none;
+                  border-top: 1px solid #d7d7d7;
+                }
+
+                select {
+                  background-color: $white;
+                  background-image: url(#{$imgDir}arrow/ico_link_arrow_down.png);
+                  background-repeat: no-repeat;
+                  background-position: center right;
+                  background-size: 25px 36px;
+                  border: 1px solid #d7d7d7;
+                  height: 36px;
+                  line-height: 1;
+                  padding: 5px 32px 5px 5px;
+                }
+
+                #mod-kyuyo-1{
+                  margin-right: 20px;
+                }
+
+                #sb-kw {
+                  width: 915px;
+                  font-size: $fontSizeLarge;//1.5rem;
+                  vertical-align: middle;
+                  border: 1px solid $lightGray;
+                  line-height: 1.2;
+                  padding: 10px;
+                  margin: 30px 0;
+
+                  @include xs {
+                    line-height: 1.5;
+                    width: calc(100% - 20px);
+
+                  }
+                }
+              }
+            }
+            input[type=checkbox] {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              z-index: 0;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .searchCondListKeyword {
+        padding: 16px;
+        color: $bgBaseTextColor;
+        .formHead{
+          width: 112px;
+          float: left;
+          line-height: 3;
+        }
+        .formtBody{
+          input{
+            width: calc(100% - 112px);
+            @include xs {
+              width: 100%;
+            }
+            border: 1px solid #d0d0d0;
+            background: white;
+            padding: 10px 16px;
+            &:focus-visible {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .jobSearchTbl {
+    width: 100%;
+    tbody {
+      tr {
+        padding: 3px 0;
+        th {
+          padding: 6px 4px 6px 16px;
+          font-weight: bold;
+          width: 90px;
+        }
+        td {
+          border-bottom: 1px dotted #dcdcdc;
+          padding: 6px 4px;
+          span {
+            label {
+              padding-right: 10px;
+              input {
+                margin: 0 10px 0 0;
+              }
+            }
+          }
+        }
+        &:first-child {
+          th {
+            padding-top: 12px;
+          }
+          td {
+            padding-top: 12px;
+          }
+        }
+      }
+      .selectbtn {
+        background-color: #eee;
+        border-radius: 5px 5px 5px 5px;
+        color: #444;
+        font-weight: bold;
+        font-size: $fontSizeXSmall;
+        border: 1px solid #C6C6C6;
+        padding: 6px 5px;
+        margin: 5px 0;
+        min-width: 80px;
+        &:hover {
+          color: #555;
+          background-color: #bbb;
+          background-size: 100%;
+          cursor: pointer;
+        }
+      }
+      //selectbtn
+    }
+    //tbody
+  }
+  //jobSearchTbl
+
+  .jobSearchSubmitArea {
+    //検索条件のsubmit部分
+    border: none;
+    height: auto;
+    margin: 20px 0 0 0;
+    line-height: 56px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+
+    .jobSearchBtn {
+      @extend %formReset;
+      display: inline-block;
+      background: $jobSearchBtnBgColor !important;
+      transition: all .3s;
+      color: $jobSearchBtnTextColor;
+      font-weight: 500;
+      padding: 10px;
+      line-height: 1.4;
+      letter-spacing: 0.1rem;
+      text-shadow: none;
+      box-shadow: none;
+      width: 260px;
+      height: auto;
+      font-size: 1.15rem;
+      @include xs {
+        width: 80%;
+        max-width: 300px;
+        font-size: $fontSizeNomal;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  //jobSearchSubmitArea
+}
+//mod_jobSearchBox

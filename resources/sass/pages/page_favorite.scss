@@ -1,0 +1,135 @@
+//共通設定読み込み
+@import "resources/sass/pages/common";
+#favorite {
+  //レイアウト読み込み
+  @import "resources/sass/layouts/layoutFavorite";
+
+  .favoriteTitle {
+    //max-width: $contentWidth;
+    margin: 0 auto 50px;
+    padding: 25px 0;
+    text-align: center;
+    background-color: #665ABF;
+
+    @include minWidthXs {
+      padding: 32px 0 38px;
+    }
+    .en,
+    .ja {
+      display: block;
+      color: $favoriteTitleColor;
+      //font-weight: 500;
+      //line-height: 1;
+    }
+    //.en {
+    //  margin-bottom: 10px;
+    //  font-size: rem(38);
+    //  @include minWidthXs {
+    //    font-size: rem(54);
+    //  }
+    //}
+    //.ja {
+    //  font-size: rem(15);
+    //  font-weight: 700;
+    //  @include minWidthXs {
+    //    font-size: rem(22);
+    //  }
+    //}
+    .en {
+      font-family: "prohibition", sans-serif;
+      font-weight: 400;
+      font-size: rem(70);
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: 0.05em;
+      @include xs {
+        font-size: rem(38);
+      }
+    }
+    .ja {
+      margin-top: 10px;
+      font-size: rem(24);
+      font-weight: 700;
+      line-height: 1.5;
+      //&::after {
+      //  content: "";
+      //  background-image: url("#{$imgDir}/common/horizontal_ellipsis.png");
+      //  background-size: contain;
+      //  width: 50px;
+      //  height: 10px;
+      //  display: block;
+      //  margin: 20px auto 0;
+      //}
+      @include xs {
+        margin-top: 10px;
+        font-size: rem(15);
+        //&::after {
+        //  width: calc(100vw / 750 * 50);
+        //  height: calc(100vw / 750 * 10);
+        //  margin-top: 10px;
+        //}
+      }
+    }
+  }
+
+  .favoriteZero {
+    padding-top: 50px;
+    @include xs {
+      padding-top: 0;
+    }
+    .alert {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #666;
+
+      &:not(:last-of-type) {
+        padding-bottom: 0.5em;
+      }
+
+      @include xs {
+        font-size: 0.9375rem;
+      }
+    }
+
+  }
+
+  #wrapJobList {
+    width: 100%;
+    margin: 0 auto;
+    @include xs {
+      margin: 10px auto;
+    }
+
+    #jobListArea {
+      color: $baseTextColor;
+      padding-top: 0;
+      @include xs {
+        padding: 0 0 40px 0;
+      }
+      .inner {
+        //width: calc(100% - 24px);
+        //max-width: $contentWidth;
+        width: 100%;
+        margin: 0 auto;
+
+        section.mod_jobSearch,
+        section.mod_jobSummariesJob { //共通スタイル
+          width: 100%;
+          max-width: $contentWidth;
+          margin: 0 auto 30px auto;
+          overflow: hidden;
+          @include xs {
+            width: calc(100% - 24px)
+          }
+        }
+
+        section.mod_jobSummariesJob {
+          @import "resources/sass/styles/search_pager"; //pager部分
+          @import "resources/sass/styles/search_result"; //求人一覧部分
+        }
+      }
+    }
+  }
+}

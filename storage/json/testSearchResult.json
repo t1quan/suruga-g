@@ -1,0 +1,175 @@
+{
+
+  "code": 200,
+  "message": "求人検索の結果を取得しました。",
+  "data":
+  [
+    {
+      "jobId": 33617,
+      "jobNo": "鶴見-121-20221207",
+      "updatedAt": "2022-08-02",
+      "koyKeitaiCd": 2,
+      "koyKeitaiBiko": "雇用形態備考テキストテキスト\nテキスト\nテキスト",
+      "corpCd": 205901,
+      "corpName": "株式会社天職市場",
+      "jobTitle": "サンプル求人タイトル",
+      "catchCopy": "サンプル求人キャッチコピー",
+      "jobNaiyo": "サンプル求人内容テキストテキスト\nテキスト\nテキスト",
+      "jobCategoryGroupCode": 12,
+      "jobCategoryCode": 1213,
+      "workingTimes": "9:00 ~ 18:00\n勤務時間テキストテキスト\nテキスト\nテキスト",
+      "mainGazoFilePath": null,
+      "mainGazoCaption": "メイン画像説明",
+      "kinmuti":
+      [
+        {
+          "num": 1,
+          "kinmutiName": "勤務地名称1",
+          "prefCode": 13,
+          "cityCode": 101,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": [
+            {
+              "prefCode": 13,
+              "prefName": "浜松町",
+              "lineCode": 2827,
+              "lineName": "JR東日本",
+              "stationCode": 5300,
+              "stationName": "浜松町"
+            }
+          ]
+        },
+
+        {
+          "num": 2,
+          "kinmutiName": "勤務地名称2",
+          "prefCode": 1,
+          "cityCode": 202,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": null
+        },
+
+        {
+          "num": 3,
+          "kinmutiName": "勤務地名称3",
+          "prefCode": 20,
+          "cityCode": 201,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": null
+        }
+      ],
+      "salaryClassCode": 3,
+      "salaryMin": 220000,
+      "salaryMax": 350000,
+      "remarks": "応募TEL：090-1111-1111"
+    },
+
+    {
+      "jobId": 12345678,
+      "jobNo": "2022ABC-456",
+      "updatedAt": "2022-09-15",
+      "koyKeitaiCd": 2,
+      "koyKeitaiBiko": "雇用形態備考テキストテキスト\nテキスト\nテキスト",
+      "corpCd": 9001,
+      "corpName": "株式会社天職市場",
+      "jobTitle": "サンプル求人タイトル",
+      "catchCopy": "サンプル求人キャッチコピー",
+      "jobNaiyo": "サンプル求人内容テキストテキスト\nテキスト\nテキスト",
+      "jobCategoryGroupCode": 12,
+      "jobCategoryCode": 1213,
+      "workingTimes": "9:00 ~ 18:00\n勤務時間テキストテキスト\nテキスト\nテキスト",
+      "mainGazoFilePath": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220802114017.jpg",
+      "mainGazoCaption": "メイン画像説明",
+      "kinmuti":
+      [
+        {
+          "num": 1,
+          "kinmutiName": "勤務地名称1",
+          "prefCode": 13,
+          "cityCode": 101,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": [
+            {
+              "prefCode": 13,
+              "prefName": "浜松町",
+              "lineCode": 2827,
+              "lineName": "JR東日本",
+              "stationCode": 5300,
+              "stationName": "浜松町"
+            }
+          ]
+        }
+      ],
+      "salaryClassCode": 3,
+      "salaryMin": 220000,
+      "salaryMax": 350000,
+      "remarks": "応募TEL：070-0000-0000"
+    },
+    {
+      "jobId": 12345678,
+      "jobNo": "2022ABC",
+      "updatedAt": "2022-10-01",
+      "koyKeitaiCd": 2,
+      "koyKeitaiBiko": "雇用形態備考テキストテキスト\nテキスト\nテキスト",
+      "corpCd": 9001,
+      "corpName": "株式会社天職市場",
+      "jobTitle": "サンプル求人タイトル",
+      "catchCopy": "サンプル求人キャッチコピー",
+      "jobNaiyo": "サンプル求人内容テキストテキスト\nテキスト\nテキスト",
+      "jobCategoryGroupCode": 12,
+      "jobCategoryCode": 1213,
+      "workingTimes": "9:00 ~ 18:00\n勤務時間テキストテキスト\nテキスト\nテキスト",
+      "mainGazoFilePath": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220802114017.jpg",
+      "mainGazoCaption": "メイン画像説明",
+      "kinmuti":
+      [
+        {
+          "num": 1,
+          "kinmutiName": "勤務地名称1",
+          "prefCode": 13,
+          "cityCode": 101,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": [
+            {
+              "prefCode": 13,
+              "prefName": "浜松町",
+              "lineCode": 2827,
+              "lineName": "JR東日本",
+              "stationCode": 5300,
+              "stationName": "浜松町"
+            }
+          ]
+        },
+
+        {
+          "num": 2,
+          "kinmutiName": "勤務地名称2",
+          "prefCode": 1,
+          "cityCode": 202,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": null
+        },
+
+        {
+          "num": 3,
+          "kinmutiName": "勤務地名称3",
+          "prefCode": 20,
+          "cityCode": 201,
+          "kinmutiAddress": "町域テキストテキスト",
+          "kotu": "交通手段テキストテキスト",
+          "stations": null
+        }
+      ],
+      "salaryClassCode": 3,
+      "salaryMin": 220000,
+      "salaryMax": 350000,
+      "remarks": null
+    }
+  ]
+}

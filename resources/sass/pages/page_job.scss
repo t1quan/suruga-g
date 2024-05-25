@@ -1,0 +1,1218 @@
+@charset "UTF-8";
+
+//共通設定読み込み
+@import "resources/sass/pages/common";
+
+//placeholder
+%innerWidthMA {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  @include minWidthXs {
+    max-width: $contentWidth;
+  }
+}
+%btnReset {
+  // ボタンの見た目をリセット
+  margin: 0;
+  background: none;
+  background-color: $searchIndexBtnBgColor;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  //リセットしきれていないプロパティの分を設定
+  position: relative;
+  text-decoration: none;
+  //リセットしきれていないプロパティの分ここまで
+  text-shadow: none;
+  box-shadow: none;
+  line-height: 1;
+  font-weight: 500;
+  color: $searchIndexBtnTextColor;
+  font-size: $fontSizeNomal;
+  padding: 12px 40px 12px 80px;
+  transition: all .3s;
+  display: inline-block;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 16px;
+    height: 8px;
+    background-image: url(#{$imgDir}arrow/arrow_down_black_pc.png);
+    background-size: contain;
+    transform: translateY(-50%) rotate(90deg) scale(.75);
+    z-index: 1;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  //&:hover
+}
+%jobModalBase { //Modalウィンドウのベーススタイル
+  display: none;
+  a {
+    color: #0978C5;
+    text-decoration: none;
+    font: inherit;
+    font-size: $fontSizeSmall;//13px<0.81rem
+    line-height: $lineHeightNomalBase;
+  }
+  div.jobModalBody {
+    position: fixed;
+    z-index: 10000;
+    border-radius: 8px 8px 8px 8px;
+    width: 760px;
+    left: 50%;
+    top: 0;
+    background: $jobModalBodyBgColor;
+    margin-top: 120px;
+    overflow: hidden;
+    div.jobModalBodyInner {
+      position: relative;
+      background: white;
+      margin: 28px 4px 4px 4px;
+      p {
+        margin: 0;
+        line-height: 1.7;
+        &.jobModalTitle {
+          font-weight: bold;
+          color: $bgMainTextColor;
+          position: absolute;
+          font-size: $fontSizeNomal;
+          left: 8px;
+          top: -25px;
+        }
+        //jobModalTitle
+        &.jobModalClose {
+          font-weight: bold;
+          color: $bgMainTextColor;
+          position: absolute;
+          font-size: $fontSizeNomal;
+          right: 8px;
+          top: -25px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        //jobModalClose
+      }
+      //p
+      div.jobModalInputArea {
+        > ul {
+          margin: 0;
+          padding: 2px 6px;
+          > li {
+            margin: 0;
+            padding: 2px 6px;
+          }
+        }
+        div.jobModalInputAreaInner {
+          padding: 8px 6px 0 6px;
+          background: none repeat scroll 0 0 #DCDCDC;
+          div.call_announce_box {
+            background-color: #FFF;
+            padding: 20px 0;
+            color: $black;
+            p {
+              &.call_text {
+                font-size: $fontSizeLarge;
+                padding-left: 17px;
+              }
+              &.call_telno {
+                font-size: $fontSizeLarge;
+                padding-left: 17px;
+                font-weight: bold;
+                color: $jobModalCallTelnoColor;
+                margin-bottom: 15px;
+                text-decoration: underline;
+              }
+              &.call_jobno {
+                font-size: $fontSizeLarge;
+                padding-left: 17px;
+                font-weight: bold;
+                color: $jobModalCallTelnoColor;
+                text-decoration: underline;
+              }
+            }
+            //p
+          }
+          //call_announce_box
+          div.jobModalInputAreaFooter {
+            clear: both;
+            position: relative;
+            text-align: center;
+            height: 64px;
+            overflow: hidden;
+            div.jobModalBtnBox {
+              padding-top: 12px;
+              .jobModalOk {
+                margin-right: 10px;
+                background-color: #ed1e24;
+                background-size: 10px 100%;
+                border-color: #cc1e21 #d82023 #d82023 #cc1e21;
+                border-radius: 100px 100px 100px 100px;
+                border-style: solid;
+                border-width: 1px;
+                box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.7) inset;
+                color: #fff;
+                display: inline-block;
+                font-size: $fontSizeXxLarge;//1.25rem<20px;
+                font-weight: bold;
+                height: 2em;
+                letter-spacing: 0.5em;
+                padding: 0 29px 0 38px;
+                position: relative;
+                text-decoration: none;
+                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+                &:hover {
+                  background-color: #fc4447;
+                  background-size: 100% auto;
+                  color: #fff;
+                  cursor: pointer;
+                }
+                &:active {
+                  background: linear-gradient(#fc4447, #ed1e24) repeat scroll 0 0 transparent;
+                  box-shadow: none;
+                  cursor: pointer;
+                }
+              }
+              //.jobModalOk
+              .jobModalClear {
+                background-color: #999;
+                color: #fff;
+                display: inline-block;
+                font-size: $fontSizeXLarge;
+                font-weight: 500;
+                letter-spacing: 0;
+                padding: 10px 20px;
+                line-height: 1;
+                position: relative;
+                text-decoration: none;
+                outline: none;
+                cursor: pointer;
+                transition: opacity .3s;
+                &:hover {
+                  opacity: .5;
+                }
+                &:active {
+                }
+              }
+              //jobModalClear
+            }
+            //jobModalBtnBox
+          }
+        }
+        //jobModalInputAreaInner
+      }
+      //jobModalInputArea
+    }
+    //jobModalBodyInnner
+  }
+  //jobModalBody
+  .jobModalBK {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    left: 0;
+    top: 0;
+  }
+  //jobModalBK
+}
+//%jobModalBodyBase
+
+#job {
+  //レイアウト読み込み
+  @import "resources/sass/layouts/layoutJobDetail";
+
+  //ページ内要素
+  @import "resources/sass/styles/sameAreaJob";
+  @import "resources/sass/styles/notFoundJobDetail";
+
+  #wrapJobDetail {
+    width: 100%;
+    margin: 0 auto;
+    @include xs {
+      margin: 10px auto;
+    }
+    /*============================
+    #jobListArea
+    ============================*/
+    #jobListArea {
+      font-size: $fontSizeSmall; //求人詳細画面のベースフォントサイズ
+      padding-top: 20px;
+      @include xs {
+        padding: 0 0 40px 0;
+      }
+      p {
+        margin: 0;
+        line-height: 1.7;
+      }
+      div.inner {
+        width: calc(100% - 24px);
+        max-width: $contentWidth;
+        margin: 0 auto;
+        @include xs {
+        }
+        section.mod_jobDetailJob {
+          //求人案件詳細ページのスタイル
+          padding: 0 0 70px 0; //検索一覧に戻るボタン下部の隙間がない対策
+          overflow: visible;
+          @include xs {
+            padding: 0 0 20px 0;
+          }
+          //PC・SP版
+          div.spLayout, //見た目のスタイルはPCと共用（要素の表示・非表示のみ切り替え）
+          div.pcLayout {
+            div.jobBtns { //1個目の一覧へ戻るボタン
+              a {
+                position: relative;
+                font-weight: bold;
+                font-size: $fontSizeNomal;
+                display: inline-block;
+                text-align: center;
+                margin: 0 10px 0 0;
+                &.goJoblist {
+                  @extend %btnReset;
+                }
+                //goJoblist
+              }
+              //a
+              &.jobTopBtn {
+                margin: 20px auto;
+                @extend %innerWidthMA;
+              }
+              //jobTopBtn
+            }
+            //jobBtns
+            header {
+              border-bottom: none;
+              @extend %innerWidthMA;
+              h1.title_bg {
+                background: $jobTitleBgColor;
+                color: $bgMainTextColor;
+                padding: 8px 0 8px 20px;
+                line-height: 120%;
+                font-size: $fontSizeXLarge;
+                height: 1.6rem;
+                display: inline-table;
+                vertical-align: middle;
+                width: 100%;
+                max-width: $contentWidth;
+                margin: 0 auto;
+                @include xs {
+                  padding: 10px;
+                }
+              }
+            }
+            //header
+            div.horizontalTabBody {
+              /*============================
+              #jobone
+              ============================*/
+              div#jobone {
+                aside.jobBtns { //2個目の一覧へ戻るボタン
+                  margin: 20px auto;
+                  > a.goJoblist {
+                    @extend %btnReset;
+                  }
+                }
+                //aside.jobBtns
+                i {
+                  display: inline-block;
+                  font-size: $fontSizeSmall;
+                  font-style: normal;
+                  margin: 0 0 5px 0;
+
+              &.indicator1 { //正社員
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $seisyainColor;
+              }
+              &.indicator2 { //契約社員
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $keiyakusyainColor;
+              }
+              &.indicator3 { //パートアルバイト
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $parttimeColor;
+              }
+              &.indicator4 { //派遣社員
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $hakensyainColor;
+              }
+              &.indicator5 { //紹介予定派遣
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $syoukaiyoteiColor;
+              }
+              &.indicator6 { //特定派遣
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $tokuteihakenColor;
+              }
+              &.indicator7 { //職業紹介
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $syokugyousyoukaiColor;
+              }
+              &.indicator8 { //インターンシップ
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $internColor;
+              }
+              &.indicator99 { //その他
+                padding: 5px 10px;
+                border-radius: 0;
+                color: white;
+                background-color: $etcColor;
+              }
+
+                }
+                section.area_header {
+                  @extend %innerWidthMA;
+                  position: relative;
+                  margin: 8px 0 12px 0;
+                  overflow: hidden;
+                }
+                div.employment {
+                  float: left;
+                  i.indicatorRegular {
+                  }
+                }
+                div.updated {
+                  float: left;
+                  font-size: $fontSizeSmall;
+                  margin-top: 2px;
+                  margin-left: 8px;
+                  text-align: right;
+                  @include xs {
+                    float: none;
+                    margin-right: 5px;
+                  }
+                }
+                div.company_name {
+                  clear: both;
+                  font-weight: 700;
+                  font-size: 1.125rem;
+                  margin: 22px 0 0;
+                }
+                section.area_introduction {
+                  @extend %innerWidthMA;
+                  position: relative;
+                  overflow: hidden;
+                  display: block;
+                  @include xs {
+                    padding: 0 0 30px 0;
+                  }
+                  div.introduction_left {
+                    //Job詳細ページの本文中左側の画像表示領域の設定
+                    width: 340px;
+                    margin: 2% 0 2px;
+                    overflow: hidden;
+                    float: left;
+                    display: flex;
+                    flex-direction: column;
+                    div.main_gazo {
+                      padding: 4px;
+                      color: $black;
+                      margin: 0 0 10px;
+                      border: 1px solid #E4E7E7;
+                      background: white;
+                      text-align: center;
+                      min-height: 250px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      img {
+                        &.self_parameter_text {
+                          position: relative;
+                          left: 34px;
+                        }
+                        &.self_parameter_gauge {
+                          max-width: none;
+                          position: relative;
+                          left: 56px;
+                        }
+                      }
+                    }
+                    //main_gazo
+                    div.main_text {
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+                      word-break: break-all;
+                      word-wrap: break-word;
+                      min-height: 0;
+                    }
+                    div.self_barometer {
+                      position: relative;
+                      height: 110px;
+                      padding-top: 10px;
+                      img.self_barometer_logo {
+                        max-width: 54px;
+                        position: absolute;
+                      }
+                      div.self_parameter_list {
+                        left: 60px;
+                        top: 0;
+                        position: relative;
+                        div.self_parameter {
+                          margin-bottom: 3px;
+                          height: 22px;
+                          img.self_parameter_text {
+                            position: relative;
+                            left: 5px;
+                          }
+                          img.self_parameter_gauge {
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div.introduction_right {
+                    float: none;
+                    width: auto;
+                    margin: 0;
+                    @include minWidthXs {
+                      margin: 1% 0 2%;
+                      float: right;
+                      width: calc(100% - (340px + 30px));
+                    }
+                    table {
+                      width: 100%;
+                      //jobdetail右側スペック表のボーダー等
+                      border-top: 1px solid $jobDetailThBorderColor;
+                      border-left: 1px solid $jobDetailThBorderColor;
+                      border-right: 1px solid $jobDetailThBorderColor;
+                      border-collapse: collapse;
+                      color: $black;
+                      @include xs {
+                        border: 1px solid $jobDetailThBorderColor;
+                      }
+                      tbody {
+                        tr {
+                          &:last-child {
+                            border-bottom: 1px solid $jobDetailThBorderColor;
+                          }
+                          th {
+                            border-bottom: 1px solid $jobDetailTdBorderColor;
+                            background-image: none;
+                            font-weight: 500;
+                            padding: 10px;
+                            text-align: center;
+                            vertical-align: top;
+                            width: 20%;
+                            background-color: $jobDetailThBgColor;
+                            color: $jobDetailThTextColor;
+                            @include xs {
+                              display: block;
+                              width: 100%;
+                            }
+                          }
+                          td {
+                            border-bottom: 1px solid $jobDetailTdBorderColor;
+                            padding: 10px;
+                            width: 80%;
+                            word-break: break-all;
+                            word-wrap: break-word;
+                            background: white;
+                            @include xs {
+                              display: block;
+                              width: 100%;
+                              overflow: hidden;
+                            }
+                            i.indicatorRegular {
+                            }
+                            div.inTokuchoArea {
+                              width: 100%;
+                              div.tokucho_job_block {
+                                float: left;
+                                margin: 0;
+                                min-width: 8%;
+                                padding: 2px 8px 2px 0;
+                                i.indicatorFeature {
+                                  background: none;
+                                  color: #666666;
+                                  margin: 0;
+                                  padding: 0;
+                                  div.tokucho_icon_image {
+                                    float: left;
+                                    img {
+                                      max-width: 100%;
+                                      vertical-align: text-bottom;
+                                    }
+                                  }
+                                  div.tokucho_icon_text {
+                                    float: left;
+                                    font-size: $fontSizeXxSmall;//11px;
+                                    margin-top: 4px;
+                                    margin-left: 3px;
+                                    white-space: nowrap;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  div.introduction_all { //画像なし案件表組
+                    table {
+                      width: 100%;
+                      border-top: 1px solid $jobDetailThBorderColor;
+                      border-left: 1px solid $jobDetailThBorderColor;
+                      border-right: 1px solid $jobDetailThBorderColor;
+                      border-collapse: collapse;
+                      color: $black;
+                      tbody {
+                        tr {
+                          th {
+                            background: none repeat-x scroll 0 0 $jobDetailThBgColor;
+                            border-bottom: 1px solid $jobDetailThBorderColor;
+                            font-weight: 500;
+                            padding: 10px;
+                            text-align: center;
+                            vertical-align: top;
+                            width: 20%;
+                            color: $jobDetailThTextColor;
+                            @include xs {
+                              display: block;
+                              width: 100%;
+                            }
+                          }
+                          //.introduction_all
+                          td {
+                            background-color: white;
+                            padding: 10px;
+                            border-bottom: 1px solid $jobDetailTdBorderColor;
+                            @include xs {
+                              display: block;
+                              width: 100%;
+                              overflow: hidden;
+                            }
+                            div.inTokuchoArea {
+                              width: 100%;
+                              div.tokucho_job_block {
+                                float: left;
+                                margin: 0;
+                                min-width: 8%;
+                                padding: 2px 8px 2px 0;
+                                i.indicatorFeature {
+                                  background: none;
+                                  color: #666666;
+                                  margin: 0;
+                                  padding: 0;
+                                  div.tokucho_icon_image {
+                                    float: left;
+                                    img {
+                                      max-width: 100%;
+                                      vertical-align: text-bottom;
+                                    }
+                                  }
+                                  div.tokucho_icon_text {
+                                    float: left;
+                                    font-size: $fontSizeXxSmall;//11px;
+                                    margin-top: 4px;
+                                    margin-left: 3px;
+                                    white-space: nowrap;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          //td
+                        }
+                        //tr
+                      }
+                      //tbody
+                    }
+                    //table
+                  }
+                  //introduction_all
+                }
+                .applyTelBtns,
+                .applyBtns {
+                  text-align: center;
+                  overflow: visible;
+                  height: auto;
+                  position: relative;
+                  box-sizing: border-box;
+                  padding: 20px 10px 50px;
+                  @include xs {
+                    overflow: hidden;
+                    padding: 5px 0px;
+                  }
+                  a {
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    margin: 0 10px 0 0;
+                    padding: 10px;
+                    color: #0978C5;
+                  }
+                  .goApply {
+                    @extend %btnGrayBase;
+                    background: $goApplyBtnsBgColor;
+                    line-height: 1.5;
+                    transition: all .3s;
+                    color: $goApplyBtnsTextColor;
+                    font-size: rem(14);
+                    i {
+                      padding-left: 0.5rem;
+                    }
+
+                    @include xs {
+                      margin: auto;
+                      cursor: pointer;
+                      font-size: $fontSizeNomal;
+                      padding: 10px;
+                    }
+                    &:hover {
+                      opacity: 0.7;
+                    }
+                    &.telDialog {
+                      background: $btnTelSubmitColor;
+                      color: $btnTelSubmitTextColor;
+                    }
+                    &.concier {
+                      background-color: $searchGoConcierBtnBgColor;
+                      //position: absolute;
+                      bottom: 1px;
+                      right: 5px;
+                    }
+                  }
+                  a.concierFixedBtn {
+                    display: block;
+                    position: fixed;
+                    right: 10px;
+                    top: 50%;
+                    background-image: url(#{$imgDir}concier/concier_btn_pc.png);
+                    background-size: auto;
+                    width: 102px;
+                    height: 102px;
+                    z-index: 2;
+
+                    &:hover {
+                      opacity: .7;
+                    }
+                  }
+                  a.isConcier {
+                    font-size: $fontSizeSmall;
+                    cursor: pointer;
+                    &:before {
+                      content: url(#{$imgDir}concier/help-concier.png);
+                      vertical-align: sub;
+                      margin-right: 2px;
+                    }
+                  }
+                  //isConcider
+                  div.concierDetailModal {
+                    display: none;
+                    position: absolute;
+                    top: 105px;
+                    right: 25px;
+                    border: 3px solid #7A8A92;
+                    background-color: #EBF5FF;
+                    border-radius: 7px;
+                    box-sizing: border-box;
+                    padding: 9px 8px;
+                    width: 476px;
+                    height: auto;
+                    text-align: left;
+                    z-index: 10;
+                    span.close {
+                      display: block;
+                      background-color: #0095D1;
+                      position: absolute;
+                      right: -3px;
+                      top: -12px;
+                      color: white;
+                      border-radius: 10px;
+                      padding: 4.5px 12px;
+                      font-size: $fontSizeXxSmall;
+                      &:hover {
+                        cursor: pointer;
+                        background-color: lighten(#0095D1, 20%);
+                      }
+                    }
+                    //close
+                    p.concierDetail {
+                      color: #000000;
+                      font-size: $fontSizeXSmall;
+                    }
+                  }
+                  //concierDetailModal
+                }//aside.applyBtns,//aside.applyTelBtns
+                .applyBtns {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: center;
+                }
+
+                div.adNumField {
+                  display:block;
+                  width: 100%;
+                  text-align: right;
+                  padding: 20px 0 0 0;
+                  @include xs {
+                    position: relative;
+                    text-align: right;
+                    margin: 0;
+                  }
+                }//div.adNumField
+
+                aside.applyBtns { //applyBtn追記
+                  @extend %innerWidthMA; //インナー幅（960px）Margin 0 autoを設定
+                }
+                aside.applyTelBtns { //TelBtn追記
+                  .goApply {
+                    background-color: $btnTelSubmitColor;
+                    color: $btnTelSubmitTextColor;
+                  }
+                }
+                //applyTelBtns //TelBtn追記
+                section.area_information {
+                  position: relative;
+                  left: 50%;
+                  width: 100vw;
+                  min-width: $defInnerWidthPc;
+                  padding: 60px 0;
+                  transform: translateX(-50%);
+                  color: $jobInformationTextColor;
+                  @include xs {
+                    //margin: 10px 0 0 0;
+                    //padding: 10px 5px 0 5px;
+                    min-width: inherit;
+                    margin: 30px 0 0 0;
+                    padding: 30px 12px;
+                  }
+                  &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $jobInformationBgColor;
+                    z-index: -1;
+                  }
+                  div.areaInformationInner {
+                    @extend %innerWidthMA;
+                    width: calc(100% - 24px);
+                    div.catch {
+                      font-size: $fontSizeNomal;
+                      font-weight: bold;
+                      margin-bottom: 16px;
+                      @include xs {
+                      }
+                    }
+                    div.information {
+                      line-height: 20px;
+                      margin-top: 30px;
+                      @include xs {
+                        padding: 0 8px;
+                      }
+                    }
+                    div.sub_gazo_area {
+                      display: flex;
+                      flex-wrap: wrap;
+                      @include xs {
+                        display: block;
+                      }
+                      .sub_gazo_box {
+                        width: calc(((100% - 60px) / 3) - .01px);
+                        margin-top: 60px;
+                        margin-right: 30px;
+                        box-sizing: border-box;
+                        &:nth-of-type(3n+3),
+                        &:last-of-type:not(:root) {
+                          margin-right: 0;
+                        }
+                        @include xs {
+                          display: block;
+                          width: 100%;
+                          margin-right: 0;
+                          padding: 5px;
+                        }
+                        .sub_gazo {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          height: 224px;
+                          text-align: center;
+                          box-sizing: border-box;
+                          background: $white;
+                          border: 4px solid #F0F0F0;
+                          outline: 1px solid #D9D9D9;
+                          overflow: hidden;
+                          p {
+                          }
+                          img {
+                            max-width: 300px;
+                            max-height: 224px;
+                            width: 100%;
+                            padding: 10px 5px;
+                          }
+                        }
+                        .sub_text {
+                          margin-top: 10px;
+                        }
+                      }
+                    }
+                  }
+                  //areaInformationInner
+                }
+                //area_Information
+                section.naviMovie {
+                  @extend %innerWidthMA;
+                  width: calc(100% - 24px);
+                  margin-top: 50px;
+                  border: 1px solid $baseColor;
+                  .naviMovieTitle{
+                    background-color: $baseColor;
+                    padding-left: 10px;
+                    color: $bgMainTextColor;
+                    font-size: 1.2rem;
+                    line-height: 2;
+                    &::before {
+                      content: '\f144';
+                      padding-right: 10px;
+                      color: $bgMainTextColor;
+                      font-family: "Font Awesome 5 Free";
+                      font-size: 1.2rem;
+                      font-weight: 600;
+                      line-height: 1;
+                    }
+                  }
+                  .naviMovieTag {
+                    padding: 10px;
+                    width: 100%;
+                    max-width: $contentWidth;
+                    height: calc((#{$contentWidth} * 9 / 16) + 50px);
+
+                    @if $contentWidth > $defInnerWidthPc {
+                      @media screen and (min-width:$defInnerWidthPc) and (max-width:($contentWidth + 24px)) {
+                        height: calc(((100vw - 24px) * 9 / 16 + 50px));
+                      }
+                      @media screen and (min-width:$xs) and (max-width:$defInnerWidthPc) {
+                        height: calc(((#{$defInnerWidthPc} - 24px) * 9 / 16 + 50px));
+                      }
+                    }
+
+                    @include xs {
+                      max-width: 100%;
+                      height: calc((100vw * 9 / 16) + 25px);
+                    }
+
+                    iframe {
+                      width: 100%;
+                      height: 100%;
+                    }
+
+                  }
+                  .naviMovieCaption {
+                    padding: 10px;
+                  }
+                  @include xs {
+                    width: calc( 100% - 20px);
+                    margin: 20px 10px 30px;
+                    box-sizing: border-box;
+                  }
+                }
+                section.area_detail {
+                  @extend %innerWidthMA;
+                  margin-top: 50px;
+                  margin-bottom: 50px;
+                  @include xs {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                  }
+                  table {
+                    width: 100%;
+                    border-top: 1px solid $jobDetailThBorderColor;
+                    border-left: 1px solid $jobDetailThBorderColor;
+                    border-right: 1px solid $jobDetailThBorderColor;
+                    border-collapse: collapse;
+                    color: $black;
+                    @include xs {
+                      border: 1px solid $jobDetailThBorderColor;
+                    }
+                    tbody {
+                      tr {
+                        &:last-child {
+                          border-bottom: 1px solid $jobDetailThBorderColor;
+                        }
+                        th {
+                          border-bottom: 1px solid $jobDetailThBorderColor;
+                          background-color: $jobDetailThBgColor;
+                          background-image: none;
+                          font-weight: 500;
+                          padding: 10px;
+                          text-align: center;
+                          vertical-align: top;
+                          width: 20%;
+                          color: $jobDetailThTextColor;
+                          @include xs {
+                            display: block;
+                            width: 100%;
+                          }
+                        }
+                        //th
+                        td {
+                          border-bottom: 1px solid $jobDetailTdBorderColor;
+                          padding: 10px;
+                          width: 80%;
+                          word-break: break-all;
+                          word-wrap: break-word;
+                          background: white;
+                          @include xs {
+                            display: block;
+                            width: 100%;
+                          }
+                        }
+                        //td
+                      }
+                      //tr
+                    }
+                    //tbody
+                  }
+                  //table
+                }
+                //area_detail
+                aside.jobBtns {
+                  a.goJoblist {
+                  }
+                }
+                div.jobModal.teldal {
+                  @extend %jobModalBase
+                }
+                //teldal
+                @include xs {
+                  aside.concierBtns {
+                    max-width: 300px;
+                    position: relative;
+                    text-align: left;
+                    margin: auto;
+                    padding: 5px 0px;
+                    .concierFixedBtn {
+                      background-image: url(#{$imgDir}concier/concier_btn_sp.png);
+                      background-repeat: no-repeat;
+                      background-size: contain;
+                      background-position: center center;
+                      position: fixed;
+                      display: block;
+                      width: 64px;
+                      height: 65px;
+                      left: 5px;
+                      bottom: 5px;
+                      z-index: 2;
+                    }
+                    .goConcier {
+                      display: inline-block;
+                      background: none;
+                      background-color: $searchGoConcierBtnBgColor;
+                      color: white;
+                      width: 200px;
+                      height: 41px;
+                      line-height: 41px;
+                      text-shadow: none;
+                      box-shadow: none;
+                      margin-left: auto;
+                      margin-right: auto;
+                      float: left;
+                      font-size: $fontSizeNomal;
+                      text-align: center;
+                      background-position: right 5px center;
+                      background-repeat: no-repeat;
+                      border-radius: 5px;
+                      padding: 0 10px;
+                    }
+                    .isConcier {
+                      margin-left: 10px;
+                      margin-right: auto;
+                      line-height: 41px;
+                      display: inline-block;
+                      @include xs {
+                        color: #0978C5;
+                        text-decoration: none;
+                      }
+                      &:before {
+                        content: url(#{$imgDir}concier/help-concier.png);
+                        vertical-align: sub;
+                        margin-right: 2px;
+                      }
+                    }
+                    .concierDetailModal {
+                      display: none;
+                      text-align: left;
+                      position: absolute;
+                      right: 0;
+                      top: 110%;
+                      width: 100%;
+                      border: 1.5px solid #7A8A92;
+                      background-color: #EBF5FF;
+                      border-radius: 7px;
+                      box-sizing: border-box;
+                      padding: 4.5px 4px;
+                      z-index: 1;
+                      .close {
+                        display: block;
+                        background-color: #0095D1;
+                        position: absolute;
+                        right: -1.5px;
+                        top: -16px;
+                        color: white;
+                        border-radius: 10px;
+                        padding: 4.5px 12px;
+                        font-size: $fontSizeXxSmall;
+                        &:hover {
+                          cursor: pointer;
+                          background-color: lighten(#0095D1, 20%);
+                        }
+                      }
+                      .concierDetail {
+                        color: #000000;
+                        font-size: $fontSizeXSmall;
+                      }
+                    }
+                  }
+                  //conciderBtn
+                }
+                //SP幅時のスタイルここまで
+                @include xs {
+                  section.JobImgField {
+                    width: 100vw;
+                    margin: 0 calc(50% - 50vw);
+
+                    #JobImg {
+                      width: 100%;
+                      padding: 30px 0 10px 0;
+                      position: relative;
+                      overflow: auto;
+                      ul {
+                        list-style: none;
+                        display: table;
+                        margin: 0;
+                        padding: 0;
+                        width: 400%;
+                        height: 100%;
+                        li {
+                          width: 25%;
+                          text-align: center;
+                          display: table-cell;
+                          vertical-align: middle;
+                          max-height: 300px;
+                          padding: 0 12px;
+                          img {
+                          }
+                          .caption {
+                            display: block;
+                            font-size: $fontSizeXSmall;
+                            word-break: break-all;
+                            padding-top: 10px;
+                          }
+                        }
+                      }
+                    }
+                    div.ImgControl {
+                      display: block;
+                      width: 100%;
+                      height: 30px;
+                      position: relative;
+                      #ImgPrevBtn {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        text-indent: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        background: url(#{$imgDir}arrow/arrow_l_gray.png) no-repeat scroll 0 0;
+                        position: absolute;
+                        top: 0;
+                        left: 10px;
+                        @include xs {
+                          width: 15px;
+                          height: 15px;
+                          background-size: contain;
+                        }
+                      }
+                      #ImgNextBtn {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        text-indent: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        background: url(#{$imgDir}arrow/arrow_r_gray.png) no-repeat scroll 0 0;
+                        position: absolute;
+                        top: 0;
+                        right: 10px;
+                        @include xs {
+                          width: 15px;
+                          height: 15px;
+                          background-size: contain;
+                        }
+                      }
+                      #ImgCount {
+                        display: block;
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                      }
+                    }
+                    //JobImgField
+                  }
+                  //xs
+                }
+                @include xs {
+                  .Job_detail_title { //sp版のみ表示する
+                    font-weight: bold;
+                    margin: 30px 0 0 0;
+                    padding: 10px 0 10px 15px;
+                    position: relative;
+                    text-align: left;
+                    background: $jobTitleBgColor;
+                    color: $bgMainTextColor;
+                    border: 1px solid $jobTitleBgColor;
+                  }
+                }
+              }
+              //#jobone
+            }
+            //horizontalTabBody
+          }
+          //pcLayout、SPLayoutのスタイル共通部分
+          //PC版、SP版の共通スタイルここまで
+        }
+        //mod_jobDetailJob
+      }
+      //.inner
+    }
+    //#jobListArea
+  }
+  //#wrapJobDetail
+}

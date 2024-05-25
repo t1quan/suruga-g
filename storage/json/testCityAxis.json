@@ -1,0 +1,48 @@
+{
+
+  "code": 200,
+  "message": "検索軸を取得しました。",
+  "data":
+
+  {
+
+    "city":
+    [
+      {
+        "name": "函館市",
+        "value": 202,
+        "cnt": 10,
+        "parent": 1
+      },
+
+      {
+        "name": "千代田区",
+        "value": 101,
+        "cnt": 3,
+        "parent": 13
+      },
+
+      {
+        "name": "港区",
+        "value": 103,
+        "cnt": 4,
+        "parent": 13
+      },
+
+      {
+        "name": "藤沢市",
+        "value": 205,
+        "cnt": 5,
+        "parent": 14
+      },
+
+      {
+        "name": "長野市",
+        "value": 201,
+        "cnt": 3,
+        "parent": 20
+      }
+    ]
+  }
+
+}

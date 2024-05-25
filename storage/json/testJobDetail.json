@@ -1,0 +1,137 @@
+{
+  "code": 200,
+  "message": "求人検索の結果を取得しました。",
+  "data": {
+    "jobId": 17880958,
+    "jobNo": "2022ABC-123",
+    "koyKeitaiCd": 2,
+    "koyKeitaiBiko": "試用期間3ヶ月（待遇変更なし）",
+    "corpCd": 205901,
+    "corpName": "株式会社天職市場",
+    "jobTitle": "サンプル求人タイトル",
+    "catchCopy": "サンプル求人キャッチコピー",
+    "information": "サンプル求人インフォメーション",
+    "updatedAt": "2022-08-02",
+    "jobNaiyo": "サンプル求人内容テキストテキスト\nテキスト\nテキスト",
+    "jobCategoryGroupCode": 12,
+    "jobCategoryCode": 1213,
+    "workingTimes": "9:00 ~ 18:00\n勤務時間テキストテキスト\nテキスト\nテキスト",
+    "holiday": "休日休暇テキストテキスト\nテキスト\nテキスト",
+    "kinmuti": [
+      {
+        "num": 1,
+        "kinmutiName": "勤務地名称１",
+        "prefCode": 20,
+        "cityCode": 201,
+        "kinmutiAddress": "町域テキスト１",
+        "kotu": "交通手段テキスト１",
+        "stations": [
+          {
+            "prefCode": 13,
+            "prefName": "東京都",
+            "lineCode": 2827,
+            "lineName": "JR東日本",
+            "stationCode": 5300,
+            "stationName": "浜松町"
+          },
+          {
+            "prefCode": 13,
+            "prefName": "東京都",
+            "lineCode": 2827,
+            "lineName": "JR東日本",
+            "stationCode": 5300,
+            "stationName": "浜松町"
+          },
+          {
+            "prefCode": 13,
+            "prefName": "東京都",
+            "lineCode": 2827,
+            "lineName": "JR東日本",
+            "stationCode": 5300,
+            "stationName": "浜松町"
+          }
+        ]
+      },
+      {
+        "num": 2,
+        "kinmutiName": "勤務地名称２",
+        "prefCode": 14,
+        "cityCode": 205,
+        "kinmutiAddress": "町域テキスト２",
+        "kotu": "交通手段テキスト２",
+        "stations": [
+          {
+            "prefCode": 14,
+            "prefName": "神奈川県",
+            "lineCode": 2827,
+            "lineName": "JR東日本",
+            "stationCode": 5300,
+            "stationName": "浜松町"
+          }
+        ]
+      }],
+    "salaryClassCode": 3,
+    "salaryMin": 220000,
+    "salaryMax": 350000,
+    "salaryRemarks": "給与備考テキストテキスト\nテキスト\nテキスト",
+    "monthlySalary": "月収例テキストテキスト\nテキスト\nテキスト",
+    "annualSalary": "年収例テキストテキスト\nテキスト\nテキスト",
+    "taiguFukurikosei": "待遇テキストテキスト\nテキスト\nテキスト",
+    "ouboSikaku": "応募資格テキストテキスト\nテキスト\nテキスト",
+    "senkoTejun": "選考手順テキストテキスト\nテキスト\nテキスト",
+    "mensetsuAddr": "面接地住所テキストテキスト\nテキスト\nテキスト",
+    "appealPoint": "アピールポイントテキストテキスト\nテキスト\nテキスト",
+    "daigomi": "醍醐味テキストテキスト\nテキスト\nテキスト",
+    "kibishisa": "厳しさテキストテキスト\nテキスト\nテキスト",
+    "katuyaku": "活躍テキストテキスト\nテキスト\nテキスト",
+    "bosyuHaikei": "募集背景テキストテキスト\nテキスト\nテキスト",
+    "remarks": "「交通費支給」\n応募TEL：090-0000-0000\n「新卒」\n「設計開発」\nオススメ",
+    "video": {
+      "videoId": 1,
+      "thumbnailUrl": "/path/to/image",
+      "embedIframe": "<script type=\"text/javascript\">var Eviry=Eviry||{};Eviry.Player||(Eviry.Player={});Eviry.Player.embedkey=\"EK1iMAAeVZfwsEBNKQ4uj7TlwH25yDyjbw1tvAS69ewAv4V2SDhmI3fbhcMYRf5wggeePENcAt1uAHOfs2kdWUPzqGEUVCT8BDPmBpzVOuD7zM.\"</script><script type=\"text/javascript\" src=\"https://d1euehvbqdc1n9.cloudfront.net/001/eviry/js/eviry.player.min.js\"></script>",
+      "videoCaption": "動画キャプションテキストテキスト\nテキスト\nテキスト"
+    },
+    "images": [
+
+      {
+        "url": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220802114017.jpg",
+        "caption": "メイン画像説明"
+      },
+      {
+        "url": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220712113547.jpg",
+        "caption": "自然豊かな場所にあります"
+      },
+      {
+        "url": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220712124414.jpg",
+        "caption": "スグに覚えられますよ"
+      },
+      {
+        "url": "//ten.1049.cc/images/uploads/company/corp_207116/corp_20220712115319.jpg",
+        "caption": "果物用のクッション材です"
+      }
+
+    ],
+    "tokucho": [
+      1,2,3
+    ],
+    "selfParams": [
+
+      {
+        "selfParamCode": 101,
+        "percentCode": 1
+      },
+
+      {
+        "selfParamCode": 103,
+        "percentCode": 3
+      },
+
+      {
+        "selfParamCode": 105,
+        "percentCode": 4
+      }
+
+    ]
+  }
+}

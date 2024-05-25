@@ -1,0 +1,1360 @@
+// =======================================================
+// ミックスイン
+// =======================================================
+@mixin img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@mixin text {
+  font-weight: 500;
+  line-height: 2;
+  word-break: break-word;
+}
+
+@mixin contentWidth {
+  //width: calc(100% - (100vw / 750 * 140));
+  width: 100%;
+  max-width: $defInnerWidthPc;
+  margin-right: auto;
+  margin-left: auto;
+  @include minWidthXs {
+    width: 100%;
+  }
+  @include xs {
+    padding-left: calc(100vw / 750 * 70);
+    padding-right: calc(100vw / 750 * 50);
+  }
+}
+
+@mixin linkStyle {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+  border: 2px solid $black;
+  background-color: $white;
+  transition: all 0.3s;
+  @include xs {
+    width: calc(100vw / 750 * 400);
+    height: calc(100vw / 750 * 70);
+  }
+  .linkText {
+    margin-left: 100px;
+    margin-right: 50px;
+    font-family: "prohibition", sans-serif;
+    font-weight: 400;
+    font-size: rem(20);
+    font-style: normal;
+    line-height: 1.25;
+    transition: all 0.3s;
+    @include xs {
+      margin-left: calc(100vw / 750 * 95);
+      margin-right: calc(100vw / 750 * 95);
+      font-size: calc(100vw / 750 * 26);
+    }
+  }
+  i {
+    transition: all 0.3s;
+  }
+  //@include minWidthXs {
+    &:hover {
+      cursor: pointer;
+      background-color: $black;
+      .linkText, i {
+        color: $white;
+      }
+      i {
+        transform: translateX(100%);
+        @include xs {
+          transform: translateX(calc(100vw / 750 * 24));
+        }
+      }
+    }
+  //}
+}
+
+@mixin movieStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100vw / 750 * 510);
+  height: calc(100vw / 750 * 280);
+  background: $white;
+  @include minWidthXs {
+    width: 510px;
+    height: 280px;
+  }
+  .movie_img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    i.far {
+      color: $white;
+      font-size: 4rem;
+      @include xs {
+        font-size: calc(100vw / 750 * 64);
+      }
+      &::before {
+        opacity: 0.9;
+      }
+    }
+    //@include minWidthXs {
+      transition: all 0.3s ease;
+      &:hover {
+        opacity: 0.9;
+      //}
+    }
+  }
+}
+
+// =======================================================
+// キーフレームアニメーション
+// =======================================================
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 100px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+// =======================================================
+// TOPコンテンツ共通スタイル
+// =======================================================
+.topContentBox {
+  display: $topContentBox;
+  position: relative;
+  width: 100%;
+
+  img {
+    @include img;
+  }
+
+  .animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+
+  .fadeInUp,
+  .animatedFadeInUp {
+    opacity: 0;
+  }
+
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+
+  .js-clickitem {
+    @include minWidthXs {
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .contentHeading {
+    @include contentWidth;
+    margin-bottom: calc(100vw / 750 * 30);
+    @include minWidthXs {
+      margin-bottom: 30px;
+    }
+    @include xs {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .en {
+      font-family: "prohibition", sans-serif;
+      font-weight: 400;
+      font-size: calc(100vw / 750 * 70);
+      font-style: normal;
+      line-height: 1.23;
+      letter-spacing: 0.08em;
+      @include minWidthXs {
+        font-size: rem(70);
+      }
+    }
+
+    .ja {
+      display: block;
+      position: relative;
+      margin-top: calc(100vw / 750 * 16);
+      padding-left: calc(100vw / 750 * 70);
+      font-size: calc(100vw / 750 * 24);
+      line-height: 1.4;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: calc(100vw / 750 * 50);
+        height: calc(100vw / 750 * 10);
+        transform: translateY(-50%);
+        background-image: url("#{$imgDir}/common/horizontal_ellipsis.png");
+        background-size: contain;
+      }
+      @include minWidthXs {
+        margin-top: 16px;
+        padding-left: 60px;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: 1.46;
+        letter-spacing: 0.08em;
+        &::after {
+          top: 55%;
+          width: 50px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* MOVIE
+------------------------------------------------------ */
+#movie {
+  &.contentMovie {
+    position: relative;
+    padding: calc(100vw / 750 * 40) 0 calc(100vw / 750 * 120);
+    @include minWidthXs {
+      padding: 40px 0 140px;
+    }
+  }
+
+  .contentMovieWrapper {
+    position: relative;
+  }
+
+  .contentMovieInner {
+    position: relative;
+    z-index: 0;
+    @include contentWidth;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: $accentColor2;
+      @include minWidthXs {
+        top: -40px;
+        right: 0;
+        width: calc(100% - 140px);
+        height: calc(100% + 40px + 140px);
+      }
+      @include xs {
+        top: calc(100vw / 750 * (-40));
+        right: 0;
+        width: calc(100vw / 750 * 610);
+        height: calc(100vw / 750 * 1420);
+      }
+    }
+
+    .contentMovieBg {
+      display: inline-block;
+      position: absolute;
+      top: 100px;
+      right: calc((100vw - #{$defInnerWidthPc}) / (-2));
+      z-index: 1;
+      width: calc(750px + ((100vw - #{$defInnerWidthPc}) / 2));
+      height: 620px;
+      background-image: url("#{$imgDir}/contentBox/aboutus_001_bgphoto_pc.jpg");
+      background-position: top left;
+      background-size: cover;
+      @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+        right: 0;
+        width: 750px;
+      }
+      @include xs {
+        top: calc(100vw / 750 * 100);
+        right: 0;
+        width: calc(100vw / 750 * 540);
+        height: calc(100vw / 750 * 1210);
+        background-image: url("#{$imgDir}/contentBox/aboutus_001_bgphoto_sp.jpg");
+      }
+      @media screen and (min-width: 1921px) {
+        width: calc(100vw / 1920 * 1110);
+      }
+      .contentMovieLogo {
+        display: inline-block;
+        position: absolute;
+        object-fit: contain;
+        @include minWidthXs {
+          width: calc(100vw / 1920 * 626);
+          height: calc(100vw / 1920 * 112);
+          right: 15px;
+          bottom: 0;
+          min-width: 391px;
+          min-height: 70px;
+        }
+        @include xs {
+          width: calc(100vw / 750 * 425);
+          height: calc(100vw / 750 * 82);
+          right: 0;
+          bottom: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .contentHeading {
+      width: 100%;
+      z-index: 1;
+    }
+
+    .contentMovieBox {
+      @include movieStyle;
+      position: relative;
+      z-index: 1;
+      .movie_img {
+        background-image: url("#{$imgDir}/contentBox/30movie_01_pc.jpg");
+        @include xs {
+          background-image: url("#{$imgDir}/contentBox/30movie_01_sp.jpg");
+        }
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 140px;
+        right: 120px;
+        z-index: -1;
+        width: calc(390px + ((100vw - #{$defInnerWidthPc}) / 2));
+        height: 280px;
+        background: $mainColor;
+        @include minWidthXs {
+          min-width: 470px;
+        }
+        @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+          width: 390px;
+        }
+        @include xs {
+          top: calc(100vw / 750 * 140);
+          left: calc(100vw / 750 * (-70));
+          right: unset;
+          width: calc(100vw / 750 * 440);
+          height: calc(100vw / 750 * 280);
+        }
+      }
+    }
+
+    .contentMovieText{
+      width: 100%;
+      z-index: 2;
+      @include minWidthXs {
+        width: 630px;
+      }
+      @include xs {
+        margin-top: calc(100vw / 750 * 210);
+      }
+
+      .mainText {
+        max-width: 630px;
+        font-weight: 700;
+        font-size: rem(30);
+        line-height: 1.875;
+        @include xs {
+          font-size: calc(100vw / 750 * 32);
+        }
+      }
+      .descriptionText {
+        max-width: 630px;
+        margin-top: 45px;
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 2.2;
+        text-align: justify;
+        @include xs {
+          font-size: calc(100vw / 750 * 26);
+          margin-top: calc(100vw / 750 * 25);
+          line-height: 1.92;
+        }
+      }
+    }
+  }
+}
+
+/* MEMBERS
+------------------------------------------------------ */
+#members {
+  &.contentMembers {
+    position: relative;
+    padding: calc(100vw / 750 * 40) 0 calc(100vw / 750 * 204);
+    @include minWidthXs {
+      padding: 40px 0 245px;
+    }
+  }
+
+  .contentMembersWrapper {
+    position: relative;
+  }
+
+  .contentMembersInner {
+    position: relative;
+    z-index: 0;
+    @include contentWidth;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: $accentColor2;
+      @include minWidthXs {
+        top: -40px;
+        right: 0;
+        width: calc(100% - 140px);
+        height: calc(100% + 40px + 245px);
+      }
+      @include xs {
+        top: calc(100vw / 750 * (-40));
+        right: 0;
+        width: calc(100vw / 750 * 610);
+        height: calc(100vw / 750 * 2695);
+      }
+    }
+
+    .contentMembersBg {
+      display: inline-block;
+      position: absolute;
+      top: 110px;
+      right: calc((100vw - #{$defInnerWidthPc}) / (-2));
+      z-index: 1;
+      width: calc(750px + ((100vw - #{$defInnerWidthPc}) / 2));
+      height: 1630px;
+      background-image: url("#{$imgDir}/contentBox/members/members_001_bgphoto_pc.jpg");
+      background-position: top left;
+      @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+        right: 0;
+        width: 750px;
+      }
+      background-size: cover;
+      @include xs {
+        top: calc(100vw / 750 * 75);
+        right: 0;
+        width: calc(100vw / 750 * 540);
+        height: calc(100vw / 750 * 2510);
+        background-image: url("#{$imgDir}/contentBox/members/members_001_bgphoto_sp.jpg");
+      }
+      @media screen and (min-width: 1921px) {
+        width: calc(100vw / 1920 * 1110);
+      }
+    }
+
+    .contentHeading {
+      width: 100%;
+      z-index: 1;
+      @include xs {
+        padding-left: calc(100vw / 750 * 70) !important;
+      }
+    }
+
+    .contentMembersMovieBox {
+      @include movieStyle;
+      position: relative;
+      z-index: 1;
+      @include xs {
+        margin-left: calc(100vw / 750 * 70);
+      }
+      .movie_img {
+        background-image: url("#{$imgDir}/contentBox/30movie_02_pc.jpg");
+        @include xs {
+          background-image: url("#{$imgDir}/contentBox/30movie_02_sp.jpg");
+        }
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 140px;
+        right: 120px;
+        z-index: -1;
+        width: calc(390px + ((100vw - #{$defInnerWidthPc}) / 2));
+        height: 280px;
+        background: $mainColor;
+        @include minWidthXs {
+          min-width: 470px;
+        }
+        @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+          width: 390px;
+        }
+        @include xs {
+          top: calc(100vw / 750 * 140);
+          left: calc(100vw / 750 * (-70));
+          right: unset;
+          width: calc(100vw / 750 * 440);
+          height: calc(100vw / 750 * 280);
+        }
+      }
+    }
+
+    .contentMembersText{
+      width: 100%;
+      z-index: 2;
+      @include minWidthXs {
+        width: 630px;
+      }
+      @include xs {
+        margin-top: calc(100vw / 750 * 210);
+        padding-left: calc(100vw / 750 * 70);
+        padding-right: calc(100vw / 750 * 50);
+      }
+      .descriptionText {
+        max-width: 630px;
+        margin-top: 65px;
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 2.2;
+        text-align: justify;
+        @include xs {
+          font-size: calc(100vw / 750 * 26);
+          margin-top: 0;
+          line-height: 1.92;
+        }
+      }
+    }
+    .contentMembersBox {
+      width: 100%;
+      padding-left: 50px;
+      margin-top: calc(200px - 54px);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      z-index: 1;
+      @include xs {
+        width: calc(100% - (100vw / 750 * 48));
+        margin: calc(100vw / 750 * 90) auto 0;
+        padding-left: 0;
+      }
+      .contentMembersData {
+        display: inline-block;
+        position: relative;
+        width: 340px;
+        height: 460px;
+        background-color: $white;
+        object-fit: contain;
+        background-size: contain;
+
+        &:first-of-type {
+          background-image: url("#{$imgDir}/contentBox/members/member01_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member01_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member01_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member01_01_pc.png");
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          background-image: url("#{$imgDir}/contentBox/members/member02_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member02_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member02_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member02_01_pc.png");
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          background-image: url("#{$imgDir}/contentBox/members/member03_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member03_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member03_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member03_01_pc.png");
+            }
+          }
+        }
+        &:nth-of-type(4) {
+          background-image: url("#{$imgDir}/contentBox/members/member04_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member04_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member04_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member04_01_pc.png");
+            }
+          }
+        }
+        &:nth-of-type(5) {
+          background-image: url("#{$imgDir}/contentBox/members/member05_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member05_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member05_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member05_01_pc.png");
+            }
+          }
+        }
+        &:nth-of-type(6) {
+          background-image: url("#{$imgDir}/contentBox/members/member06_00_sp.png");
+          &::after {
+            background-image: url("#{$imgDir}/contentBox/members/member06_01_sp.png");
+          }
+          @include minWidthXs {
+            background-image: url("#{$imgDir}/contentBox/members/member06_00_pc.png");
+            &::after {
+              background-image: url("#{$imgDir}/contentBox/members/member06_01_pc.png");
+            }
+          }
+        }
+
+        //PC・SP共通
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition-duration: 0.2s;
+          background-color: $white;
+          opacity: 0;
+          background-size: contain;
+        }
+
+        @include minWidthXs {
+          opacity: 1;
+          margin-top: 54px;
+
+          //&::after {
+          //  content: "";
+          //  position: absolute;
+          //  z-index: 0;
+          //  top: 0;
+          //  left: 0;
+          //  width: 100%;
+          //  height: 100%;
+          //  transition-duration: 0.2s;
+          //  background-color: $white;
+          //  opacity: 0;
+          //  background-size: contain;
+          //}
+
+          //&:hover {
+          //  cursor: pointer;
+          //  &::after {
+          //    opacity: 1;
+          //  }
+          //  .border-1, .border-2 {
+          //    width: calc(100% - 65px);
+          //    height: calc(100% - 65px);
+          //  }
+          //}
+
+          &:nth-of-type(3n -1) {
+            top: -100px;
+          }
+          &:nth-of-type(3n) {
+            top: -200px;
+          }
+        }
+        @include xs {
+          width: calc(100vw / 750 * 340);
+          height: calc(100vw / 750 * 460);
+          margin-top: calc(100vw / 750 * 70);
+          &:nth-of-type(2n) {
+            top: calc(100vw / 750 * (-70));
+          }
+        }
+
+        //PC・SP共通
+        &:hover {
+          cursor: pointer;
+          &::after {
+            opacity: 1;
+          }
+          .border-1, .border-2 {
+            width: calc(100% - 65px);
+            height: calc(100% - 65px);
+            @include xs {
+              width: calc(100% - (100vw / 750 * 30));
+              height: calc(100% - (100vw / 750 * 30));
+            }
+          }
+        }
+
+        .border-1, .border-2 {
+          display: inline-block;
+          width: 65px;
+          height: 65px;
+          position: absolute;
+          z-index: 2;
+          transition: all 0.4s ease;
+        }
+
+        .border-1 {
+          top: 0;
+          left: 0;
+          border-top: 2px solid $black;
+          border-left: 2px solid $black;
+        }
+
+        .border-2 {
+          bottom: 0;
+          right: 0;
+          border-bottom: 2px solid $black;
+          border-right: 2px solid $black;
+        }
+
+        .occupation {
+          position: absolute;
+          left: 0;
+          bottom: 20px;
+          z-index: 1;
+          .ja, .en {
+            padding-left: 20px;
+            background: rgba(255,255,255,0.8);
+            @include xs {
+              padding-left: calc(100vw / 750 * 20);
+            }
+          }
+          .ja {
+            font-size: rem(30);
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            padding-right: 9px;
+            margin-right: 10px;
+            @include xs {
+              margin-right: 0;
+              font-size: calc(100vw / 750 * 30);
+              padding-right: calc(100vw / 750 * 9);
+            }
+            .sub {
+              font-size: rem(22);
+              @include xs {
+                font-size: calc(100vw / 750 * 22);
+              }
+            }
+          }
+          .en {
+            font-family: "prohibition", sans-serif;
+            font-weight: 400;
+            font-size: rem(26);
+            font-style: normal;
+            line-height: 1.5;
+            color: $mainColor;
+            padding-right: 30px;
+            @include xs {
+              font-size: calc(100vw / 750 * 26);
+              //padding-right: calc(100vw / 750 * 96);
+            }
+          }
+        }
+
+        .linkBtn {
+          position: absolute;
+          bottom: 12px;
+          right: 23px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          z-index: 1;
+          background: rgba(255,255,255,0.7);
+          border-radius: 50%;
+          @include xs {
+            bottom: calc(100vw / 750 * 12);
+            right: calc(100vw / 750 * 23);
+          }
+        }
+      }
+    }
+
+    .contentMembersLogo {
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      object-fit: contain;
+      @include minWidthXs {
+        width: 626px;
+        height: 112px;
+        left: 186px;
+        bottom: -122px;
+        transform: translateY(100%);
+      }
+      @include xs {
+        width: calc(100vw / 750 * 425);
+        height: calc(100vw / 750 * 82);
+        left: 50%;
+        bottom: calc(100vw / 750 * (-82));
+        transform: translate(-50%, 100%);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* DATA
+------------------------------------------------------ */
+#data {
+  &.contentData {
+    //background: $dataBgColor;
+    padding: calc(100vw / 750 * 30) 0 calc(100vw / 750 * 100);
+    @include minWidthXs {
+      padding: 40px 0 140px;
+      height: 770px;
+      background: url("#{$imgDir}contentBox/data/data_001_bgphoto_pc.jpg");
+      background-size: cover;
+    }
+    @include xs {
+      background: url("#{$imgDir}contentBox/data/data_001_bgphoto_sp.jpg");
+      background-size: cover;
+    }
+  }
+
+  .contentHeading {
+    color: $dataHeadingColor;
+    text-align: center;
+    @include xs {
+      margin-bottom: calc(100vw / 750 * 50);
+    }
+    .ja {
+      padding-left: 0;
+      @include minWidthXs {
+        margin-top: 30px;
+      }
+      &::after {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: calc(100vw / 750 * (-45));
+        @include minWidthXs {
+          top: -50px;
+        }
+      }
+    }
+  }
+
+  .contentDataInner {
+    @include contentWidth;
+    @include xs {
+      padding: 0;
+    }
+  }
+
+  .contentDataBox {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 336px;
+    //height: 300px;
+    justify-content: space-between;
+    .data {
+      display: inline-block;
+      width: 375px;
+      //width: 340px;
+      object-fit: contain;
+      //object-fit: cover;
+      @include xs {
+        width: calc(100vw / 750 * 385);
+        height: calc(100vw / 750 * 340);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @include xs {
+      height: calc(100vw / 750 * 353);
+      & > .data {
+        display: none;
+      }
+    }
+  }
+
+  .swiperDataSlide {
+    display: none;
+    @include xs {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .contentLinkBtn {
+    @include linkStyle;
+    margin: 50px auto 0;
+    @include xs {
+      margin-top: calc(100vw / 750 * 48);
+    }
+  }
+}
+
+/* ONEDAY
+------------------------------------------------------ */
+#oneday {
+  &.contentOneday {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 calc(100vw / 750 * 70);
+    @include minWidthXs {
+      margin-top: 60px;
+      padding: 0;
+    }
+  }
+
+  .contentHeading {
+    color: $onedayHeadingColor;
+    @include contentWidth;
+  }
+
+  .contentOnedayWrapper {
+    position: relative;
+    @include minWidthXs {
+      background-color: $accentColor2;
+      height: 540px;
+    }
+  }
+
+  .contentOnedayInner {
+    position: relative;
+    z-index: 0;
+    @include contentWidth;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 40px;
+    @include xs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding-top: calc(100vw / 750 * 68);
+    }
+
+    .contentOnedayBg {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: calc((100vw - #{$defInnerWidthPc}) / (-2));
+      z-index: 1;
+      width: calc(100vw / 1920 * 1560);
+      min-width: $defInnerWidthPc;
+      height: 540px;
+      background-image: url("#{$imgDir}/contentBox/oneday/oneday_001_bgphoto_pc.jpg");
+      background-position: top left;
+      background-size: cover;
+      @media screen and (min-width: 1921px) {
+        width: calc(100vw / 1920 * 1560);
+      }
+      @media screen and (max-width: $defInnerWidthPc)  {
+        left: 0;
+      }
+      @include xs {
+        min-width: unset;
+        width: 100%;
+        height: calc(100vw / 750 * 872);
+        background-image: url("#{$imgDir}/contentBox/oneday/oneday_001_bgphoto_sp.jpg");
+        background-size: contain;
+      }
+    }
+
+    .contentHeading {
+      width: 100%;
+      z-index: 1;
+      margin-bottom: 0;
+    }
+
+    .contentOnedayMovieBox {
+      @include movieStyle;
+      position: relative;
+      z-index: 1;
+      @include minWidthXs {
+        top: -40px;
+      }
+      @include xs {
+        margin-top: calc(100vw / 750 * 170);
+        left: calc(100vw / 750 * 70);
+      }
+      .movie_img {
+        background-image: url("#{$imgDir}/contentBox/30movie_03_pc.jpg");
+        @include xs {
+          background-image: url("#{$imgDir}/contentBox/30movie_03_sp.jpg");
+        }
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -65px;
+        left: 120px;
+        z-index: -1;
+        width: calc(390px + ((100vw - #{$defInnerWidthPc}) / 2));
+        height: 420px;
+        background: $mainColor;
+        @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+          width: 390px;
+        }
+        @include xs {
+          top: calc(100vw / 750 * (-70));
+          left: calc(100vw / 750 * 140);
+          width: calc(100vw / 750 * 470);
+          height: calc(100vw / 750 * 420);
+        }
+      }
+    }
+
+    .contentOnedayText{
+      width: 100%;
+      z-index: 2;
+      @include minWidthXs {
+        width: 630px;
+      }
+      .descriptionText {
+        max-width: 630px;
+        margin-top: 50px;
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 2.2;
+        text-align: justify;
+        @include xs {
+          margin-top: calc(100vw / 750 * 50);
+          font-size: calc(100vw / 750 * 26);
+          line-height: 1.92;
+        }
+      }
+      .contentLinkBtn {
+        @include linkStyle;
+        margin-top: 127px;
+        @include xs {
+          margin: calc(100vw / 750 * 100) auto 0;
+        }
+      }
+    }
+  }
+}
+
+/* WORK
+------------------------------------------------------ */
+#work {
+  &.contentWork {
+    position: relative;
+    padding: 50px 0;
+    @include minWidthXs {
+      padding: 40px 0 140px;
+      margin-top: 60px;
+    }
+  }
+
+  .contentWorkWrapper {
+    position: relative;
+  }
+
+  .contentWorkInner {
+    position: relative;
+    z-index: 0;
+    @include contentWidth;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding-left: calc(100vw / 750 * 70);
+      padding-right: calc(100vw / 750 * 70);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: $accentColor2;
+      @include minWidthXs {
+        top: -40px;
+        right: 0;
+        width: calc(100% - 140px);
+        height: calc(100% + 40px + 140px);
+      }
+      @include xs {
+        top: calc(100vw / 750 * (-40));
+        right: calc(100vw / 750 * 25);
+        width: calc(100vw / 750 * 700);
+        height: calc(100vw / 750 * 1954);
+      }
+    }
+
+    .contentWorkBg {
+      display: inline-block;
+      position: absolute;
+      top: 110px;
+      right: calc((100vw - #{$defInnerWidthPc}) / (-2));
+      z-index: 1;
+      width: calc(750px + ((100vw - #{$defInnerWidthPc}) / 2));
+      height: 1140px;
+      background-image: url("#{$imgDir}/contentBox/work/work_001_bg_pc.png");
+      background-position: top left;
+      background-size: cover;
+      @media screen and (min-width: $xs+1px) and (max-width: $defInnerWidthPc)  {
+        right: 0;
+        width: 750px;
+      }
+      @include xs {
+        top: calc(100vw / 750 * 302);
+        right: 0;
+        width: calc(100vw / 750 * 610);
+        height: calc(100vw / 750 * 1404);
+        background-image: url("#{$imgDir}/contentBox/work/work_001_bg_sp.png");
+      }
+      @media screen and (min-width: 1921px) {
+        width: calc(100vw / 1920 * 1110);
+      }
+    }
+
+    .contentHeading {
+      width: 100%;
+      z-index: 1;
+    }
+
+    .contentWorkMovieBox {
+      @include movieStyle;
+      position: relative;
+      z-index: 1;
+      .movie_img {
+        background-image: url("#{$imgDir}/contentBox/30movie_04_pc.jpg");
+        @include xs {
+          background-image: url("#{$imgDir}/contentBox/30movie_04_sp.jpg");
+        }
+      }
+    }
+
+    .contentWorkText{
+      width: 100%;
+      z-index: 2;
+      @include minWidthXs {
+        width: 630px;
+      }
+      .descriptionText {
+        max-width: 630px;
+        margin-top: 65px;
+        font-size: rem(18);
+        font-weight: 500;
+        line-height: 2.2;
+        color: $white;
+        text-align: justify;
+        @include xs {
+          font-size: calc(100vw / 750 * 26);
+          margin-top: calc(100vw / 750 * 70);
+          line-height: 1.92;
+          padding-left: calc(100vw / 750 * 140);
+          padding-right: calc(100vw / 750 * 10);
+        }
+      }
+    }
+    .contentWorkBox {
+      width: 100%;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      z-index: 1;
+      @include xs {
+        margin-top: calc(100vw / 750 * 60);
+      }
+      .contentWorkData {
+        display: inline-block;
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: $white;
+        object-fit: contain;
+        overflow: hidden;
+        @include xs {
+          width: calc(100vw / 750 * 305);
+          height: calc(100vw / 750 * 305);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .occupation {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          @include xs {
+            top: 0;
+            height: 100%;
+            transform: unset;
+          }
+          .ja, .en {
+            background: rgba(0,0,0,0.6);
+            color: $white;
+            display: block;
+            padding-left: 74px;
+            @include xs {
+              background: inherit;
+              padding-left: calc(100vw / 750 * 20);
+              &.small {
+                padding-left: calc(100vw / 750 * 9);
+              }
+            }
+          }
+          .ja {
+            font-size: rem(30);
+            font-weight: 700;
+            line-height: 1.5;
+            @include minWidthXs {
+              letter-spacing: 0.1em;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.6);
+                opacity: 0;
+                transition: opacity 0s, height 1s ease;
+              }
+            }
+            @include xs {
+              font-size: calc(100vw / 750 * 36);
+              &.small {
+                font-size: calc(100vw / 750 * 32);
+              }
+            }
+          }
+          .en {
+            font-family: "prohibition", sans-serif;
+            font-weight: 400;
+            font-size: rem(20);
+            font-style: normal;
+            line-height: 2;
+            letter-spacing: 0.1em;
+            @include minWidthXs {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.6);
+                opacity: 0;
+                transition: opacity 0s, height 1s ease;
+              }
+            }
+            @include xs {
+              font-size: calc(100vw / 750 * 24);
+            }
+          }
+
+          .linkBtn {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: 2px solid $white;
+            border-radius: 50%;
+            color: $white;
+            @include minWidthXs {
+              top: 50%;
+              right: 75px;
+              transform: translateY(-50%);
+              transition: all 0.3s;
+            }
+            @include xs {
+              bottom: 0;
+              right: calc(100vw / 750 * 21);
+              transform: translateY(calc(100vw / 750 * (-30)));
+            }
+          }
+        }
+        @include minWidthXs {
+          &:hover {
+            cursor: pointer;
+            .ja {
+              background-color: inherit;
+              &::after {
+                opacity: 1;
+                height: 400px;
+              }
+            }
+            .en {
+              background-color: inherit;
+              &::after {
+                opacity: 1;
+                height: 400px;
+              }
+            }
+            .linkBtn {
+              transform: translateY(-50%) scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

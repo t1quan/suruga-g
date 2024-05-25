@@ -1,0 +1,346 @@
+#concier {
+
+  #concierArea {
+    margin: 60px 0 40px;
+    @include xs {
+      margin: 12px 0 40px;
+    }
+  }
+
+  .inner {
+    width: calc(100% - 24px);
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    header {
+      .entry-title { //応募タイトル
+        background: $applyBgColor;
+        color: $bgMainTextColor;
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        padding: 5px 0 5px 15px;
+        width: 100%;
+        @include xs {
+          padding: 10px;
+          font-weight: 600;
+          font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+          img{//タイトルの画像レスポンシブイメージ
+            width:100%;
+            text-align: center;
+          }
+        }
+      }
+      //entry-title
+      .concier_navi { //ページの進捗ナビ部分
+        margin: 10px auto 0 auto;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          li {
+            box-sizing: border-box;
+            width: calc(((100% - 28px) / 3) - .01px);
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            &.text {
+              color: $black;
+              background: $gray;
+              font-size: $fontSizeNomal;//14px;
+              font-weight: 700;
+              text-align: center;
+              padding: 5px 0 5px 0;
+              @include xs {
+                font-size: $fontSizeXxSmall;
+              }
+              &.current {
+                color: $bgMainTextColor;
+                background: $applyBgColor;
+                background-image: none;
+              }
+              //&current
+            }
+            //&text
+            &.navi_sep {
+              text-align: center;
+              width: 0;
+              height: 0;
+              margin: 0 5px;
+              border-style: solid;
+              border-width: 5.5px 0 5.5px 9px;
+              border-color: transparent transparent transparent #757575;
+              //xs
+            }
+            //navi_sep
+          }
+          //li
+        }
+        //ul
+      }
+      //concier_navi
+      div {
+        h3 {
+          font-size: $fontSizeXLarge;//18px<108%;
+          font-weight: bold;
+          color: $bgBaseTextColor;
+          padding: 10px 0;
+          @include xs {
+            font-size: $fontSizeNomal;
+            //padding:0;
+          }//xs
+
+          a {
+            border-left: 5px solid $applyBgColor;
+            font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+            padding-left: 10px;
+            font-weight: bold;
+            color: $bgBaseTextColor;
+            display: block;
+            margin: 0;
+            @include xs {
+              font-size: inherit;
+              margin: 10px 0;
+              padding: 5px;
+            }//xs
+          }//a
+        }//h3
+      }//div
+      small { //必須項目注意書きテキスト
+        //float: right;
+        @include xs {
+          float: none;
+          text-align: right;
+          display: block;
+          //xs
+        }
+        //small
+      }
+      //header
+    }
+
+    i {
+      margin: 0;
+      font-weight: bold;
+      font-size: $fontSizeNomal;
+      display: inline-block;
+      padding: 0 10px;
+      @include xs {
+        padding: 0;
+      }
+      &.required { //必須項目インジケーター
+        color: red; // 元の色#ff901e;
+        &.PCdisp {
+          display: inline-block;
+        }
+        &.SPdisp {
+          display: none;
+        }
+        @include xs {
+          color: transparent;
+          margin-bottom: -20px;
+          display: block;
+          &:after {
+            content: '必須';
+            color: white;
+            background-color: red;
+            font-weight: normal;
+            box-sizing: border-box;
+            width: 32px;
+            font-size: $fontSizeXxSmall;//11px
+            font-style: normal;
+            padding: 2px 5px 2px 5px;
+            text-align: center;
+            height: auto;
+            position: absolute;
+            display: block;
+            top: 5px;
+            right: 5%;
+          }
+          &.PCdisp {
+            display: none;
+          }
+          &.SPdisp {
+            display: block;
+          }
+        }
+        //xs
+      }
+    }
+  }
+
+  //todo 相談フォーム実装時に形を合わせる
+  .mod_concier {
+    .concier_navi{//todo header内の進捗バーと重複するクラス名のため変更する
+      margin: 0;
+      padding: 0;
+      border: 0;
+      .concier_description_title {
+        width: 90%;
+        margin: 0 0 5px 0;
+        padding-left: 5px;
+        word-break: break-all;
+        word-wrap: break-word;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-left: 3px solid #fc578f;
+      }
+      .concier_description_str{
+        width: 90%;
+        margin: 0 0 15px 10px;
+        word-break: break-all;
+        word-wrap: break-word;
+        @include xs {
+          margin: 0 auto 15px auto;
+        }
+      }
+      .framemovie01 {
+        width: 960px;
+        margin: 0 auto 30px auto;
+        @include xs {
+          width: 300px;
+          margin: 0 auto 20px auto;
+        }
+        a {
+          display: block;
+          width:100%;
+          .movie {
+            background-image: url("#{$imgDir}movie/movie1_pc.jpg");
+            @include varBgImg(960, 540);
+            @include xs {
+              background-image: url("#{$imgDir}moive/movie1_sp.jpg");
+              @include varBgImg(300, 169);
+            }
+          }
+        }
+      }
+      .concier_description_ul {
+        display: table;
+        margin: 0 auto 6px auto;
+        font-size: 1.1rem;
+        font-weight: bold;
+        background-image: linear-gradient(transparent 60%, #feabc7 50%);
+        @include xs {
+          display: table;
+          margin: 0 auto 6px auto;
+          font-size: 1.0rem;
+          font-weight: bold;
+          background-image: linear-gradient(transparent 60%, #feabc7 50%);
+        }
+      }
+    }
+
+    #concierReview{//企業見学感想accordion用
+      .reviewWrapper{
+        margin: 20px auto 60px auto;
+        .reviewBox{
+          background-color: $applyBgColor;
+          border-color: 3px solid $applyBgColor;
+          border-radius: 6px;
+          overflow: hidden;
+          &:before{//上線設定
+            content:"";
+            display:block;
+            height:5px;
+            width:100%;
+            background-color:$applyBgColor;
+          }
+          &:after {//下線設定
+            content:"";
+            display:block;
+            height:4px;
+            width:100%;
+            background-color:$applyBgColor;
+            @include xs {
+              height: 0.3vh;
+            }
+          }
+          .reviewHeader{
+            color: white;
+            margin: auto;
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 4px;
+            line-height: 2.1;
+
+            &:after{//CLOSE時
+              content: '';
+              display: inline-block;
+              background-image: url("#{$imgDir}../img/arrow_d.png");
+              width: 30px;
+              height: 30px;
+              position: relative;
+              right: 5px;
+              top: 6px;
+            }
+
+            &.is-active{//OPEN時
+              &:after{
+                content: '';
+                display: inline-block;
+                background-image: url("#{$imgDir}../img/arrow_u.png");
+                width: 30px;
+                height: 30px;
+                position: relative;
+                right: 5px;
+                top: 6px;
+              }
+            }//is-active
+          }//reviewHeader
+          .reviewBody{//review本体
+            display: none;//初期状態
+
+            color: black;
+            background-color: white;
+            width: 99%;
+            margin: auto;
+            .reviewBodyContent{
+              ul.reviewItems{
+                li{
+                  padding: 40px 60px;
+                  line-height: 1.6;
+                  font-size: 1rem;
+
+                  @include xs {
+                    padding: 4% 5%;
+                    font-size: 0.88rem;
+                    line-height: 1.4;
+                  }
+                  &:nth-child(even){
+                    background-color: #eee;
+                  }
+                }//li
+              }//reviewItems
+            }//reviewBodyContent
+          }//reviewBody
+        }//reviewBox
+      }//reviewWrapper
+    }
+
+    .jobTitle {
+      padding: 8px;
+      h3{
+        border-left: 5px solid #ff860e;
+        font-size: 1.25rem;
+        padding-left: 10px;
+        font-weight: bold;
+        color: #333333;
+        display: block;
+        margin: 0;
+        @include xs {
+          font-size: $fontSizeNomal;
+        }
+      }
+    }
+  }
+
+  @import "resources/sass/styles/form"; //apply,concier用の汎用入力フォームスタイル
+
+}

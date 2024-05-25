@@ -1,0 +1,467 @@
+{
+  "code": 200,
+  "message": "マスタを取得しました。",
+  "data":
+
+  {
+
+    "pref":
+    [
+      {
+        "name": "北海道",
+        "value": 1,
+        "parent": 1,
+        "children": [
+          {
+            "name": "函館市",
+            "value": 202,
+            "parent": 1
+          }
+        ]
+
+      },
+
+      {
+        "name": "東京都",
+        "value": 13,
+        "parent": 2,
+        "children": [
+          {
+            "name": "千代田区",
+            "value": 101,
+            "parent": 13
+          },
+
+          {
+            "name": "港区",
+            "value": 103,
+            "parent": 13
+          }
+        ]
+      },
+
+      {
+        "name": "神奈川県",
+        "value": 14,
+        "parent": 2,
+        "children": [
+          {
+            "name": "藤沢市",
+            "value": 205,
+            "parent": 14
+          }
+        ]
+      },
+
+      {
+        "name": "長野県",
+        "value": 20,
+        "parent": 3,
+        "children": [
+          {
+            "name": "長野市",
+            "value": 201,
+            "parent": 20
+          }
+        ]
+      }
+    ],
+
+    "city":
+    [
+      {
+        "name": "函館市",
+        "value": 202,
+        "parent": 1
+      },
+
+      {
+        "name": "千代田区",
+        "value": 101,
+        "parent": 13
+      },
+
+      {
+        "name": "港区",
+        "value": 103,
+        "parent": 13
+      },
+
+      {
+        "name": "藤沢市",
+        "value": 205,
+        "parent": 14
+      },
+
+      {
+        "name": "長野市",
+        "value": 201,
+        "parent": 20
+      }
+    ],
+
+    "jobbc":
+    [
+      {
+        "name": "営業",
+        "value": 1,
+        "children": [
+          {
+            "name": "代理店営業",
+            "value": 130,
+            "parent": 1
+          }
+        ]
+      },
+
+      {
+        "name": "医療・介護・福祉",
+        "value": 11,
+        "children": [
+          {
+            "name": "薬剤師",
+            "value": 930,
+            "parent": 11
+          }
+        ]
+      },
+
+      {
+        "name": "物流・配送・軽作業",
+        "value": 12,
+        "children": [
+          {
+            "name": "軽作業",
+            "value": 1213,
+            "parent": 12
+          }
+        ]
+      }
+    ],
+
+    "koy":
+    [
+      {
+        "name": "正社員",
+        "value": 1
+      },
+
+      {
+        "name": "契約社員",
+        "value": 2
+      },
+
+      {
+        "name": "アルバイト・パート",
+        "value": 3
+      },
+
+      {
+        "name": "派遣社員",
+        "value": 4
+      }
+    ],
+
+    "gender":
+    [
+      {
+        "name": "男性",
+        "value": 0
+      },
+
+      {
+        "name": "女性",
+        "value": 1
+      },
+
+      {
+        "name": "その他",
+        "value": 2
+      }
+    ],
+
+    "occupation":
+    [
+      {
+        "name": "会社員",
+        "value": 1
+      },
+
+      {
+        "name": "派遣社員",
+        "value": 2
+      },
+
+      {
+        "name": "パート・アルバイト",
+        "value": 3
+      },
+
+      {
+        "name": "大学生",
+        "value": 7
+      }
+    ],
+
+    "langConversation":
+    [
+      {
+        "name": "日常会話レベル",
+        "value": 0
+      },
+
+      {
+        "name": "ビジネス会話レベル",
+        "value": 1
+      },
+
+      {
+        "name": "ネイティブレベル",
+        "value": 2
+      }
+    ],
+
+    "langBusiness":
+    [
+      {
+        "name": "文書読解",
+        "value": 0
+      },
+
+      {
+        "name": "ビジネス文書作成",
+        "value": 1
+      },
+
+      {
+        "name": "翻訳・通訳",
+        "value": 2
+      }
+    ],
+
+    "lang":
+    [
+      {
+        "name": "中国語",
+        "value": 0
+      },
+
+      {
+        "name": "韓国語",
+        "value": 1
+      },
+
+      {
+        "name": "フランス語",
+        "value": 2
+      },
+
+      {
+        "name": "スペイン語",
+        "value": 3
+      }
+    ],
+
+    "englishSkillRank":
+    [
+      {
+        "name": "1級",
+        "value": 0
+      },
+
+      {
+        "name": "準1級",
+        "value": 1
+      },
+
+      {
+        "name": "2級",
+        "value": 2
+      },
+
+      {
+        "name": "準2級",
+        "value": 3
+      },
+
+      {
+        "name": "5級",
+        "value": 6
+      }
+    ],
+
+    "skillRank":
+    [
+      {
+        "name": "初級",
+        "value": 0
+      },
+
+      {
+        "name": "中級",
+        "value": 1
+      },
+
+      {
+        "name": "上級",
+        "value": 2
+      }
+    ],
+
+    "changeCnt":
+    [
+      {
+        "name": "0回",
+        "value": 0
+      },
+
+      {
+        "name": "1回",
+        "value": 1
+      },
+
+      {
+        "name": "2回",
+        "value": 2
+      },
+
+      {
+        "name": "5回以上",
+        "value": 3
+      }
+    ],
+
+    "management":
+    [
+      {
+        "name": "なし",
+        "value": 0
+      },
+
+      {
+        "name": "5人未満",
+        "value": 1
+      },
+
+      {
+        "name": "6～10人",
+        "value": 2
+      },
+
+      {
+        "name": "11～20人",
+        "value": 3
+      },
+
+      {
+        "name": "20人以上",
+        "value": 4
+      }
+    ],
+
+    "industry":
+    [
+      {
+        "name": "IT・通信・インターネット",
+        "value": 0
+      },
+
+      {
+        "name": "サービス",
+        "value": 1
+      },
+
+      {
+        "name": "広告・出版・メディア",
+        "value": 2
+      }
+    ],
+
+    "expYear":
+    [
+      {
+        "name": "1年未満",
+        "value": 0
+      },
+
+      {
+        "name": "1年",
+        "value": 1
+      },
+
+      {
+        "name": "2年",
+        "value": 2
+      },
+
+      {
+        "name": "5年以上",
+        "value": 5
+      }
+    ],
+
+    "school":
+    [
+      {
+        "name": "高等学校",
+        "value": 0
+      },
+
+      {
+        "name": "高等専門学校",
+        "value": 1
+      },
+
+      {
+        "name": "専門学校",
+        "value": 2
+      },
+
+      {
+        "name": "大学",
+        "value": 4
+      }
+    ],
+
+    "education":
+    [
+      {
+        "name": "在学中",
+        "value": 0
+      },
+
+      {
+        "name": "卒業予定",
+        "value": 1
+      },
+
+      {
+        "name": "卒業",
+        "value": 2
+      },
+
+      {
+        "name": "中退",
+        "value": 3
+      }
+    ],
+
+    "marriage":
+    [
+      {
+        "name": "不明",
+        "value": 0
+      },
+
+      {
+        "name": "未婚",
+        "value": 1
+      },
+
+      {
+        "name": "既婚",
+        "value": 2
+      }
+    ]
+  }
+}

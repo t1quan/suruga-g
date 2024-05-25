@@ -1,0 +1,279 @@
+form[id*="Confirm"] {
+  padding: 0;
+
+  table { //table共通スタイル
+    width: 100%;
+    font-size: $fontSizeNomal;//100%;
+    border-top: 1px solid $tableBorderColor;
+    border-left: 1px solid $tableBorderColor;
+    border-right: 1px solid $tableBorderColor;
+    margin: 0 0 20px 0;
+    display: block; //アニメーション開閉時に必要なプロパティ
+    border-collapse: collapse;
+    background: $white;
+    color: $black;
+    &.close {
+      display: block;
+    }
+    @include xs {
+      width: 100%;
+      border-bottom: 1px solid $tableBorderColor;
+    }
+    a {
+      color: $black;
+    }
+    tbody { //table>tbody共通
+      display: block; //table幅が内容物の幅(=auto）になってしまうため設定
+      @include xs {
+        width: 100%;
+      }
+      tr { //フォーム入力小見出し背景色
+        display: flex;
+        @include xs {
+          padding: 0 0 0 0;
+          background: #e9e9e9; //フォーム入力小見出し背景色
+          overflow: hidden;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+        }
+        //xs
+        th { //フォーム内入力項目名
+          display: block;
+          width: 230px;
+          padding: 20px 0;
+          background: $thBgColor;
+          font-weight: 500;
+          text-align: center;
+          border-bottom: 1px solid $tableBorderColor;
+          vertical-align: top;
+          box-sizing: border-box;
+          @include xs {
+            width: 100%;
+            font-weight: normal;
+            text-align: left;
+            border-bottom: none;
+            background: transparent;
+            font-size: $fontSizeNomal;//<14px
+            position: relative;
+            line-height: 1.5;
+            margin: 5px 0 5px 0;
+            padding: 5px 10px;
+          }
+          //xs
+          .notice { //最大5件まで
+            font-size: $fontSizeSmall;
+          }
+        }
+        //th
+        td {
+          display: block;
+          &.multi {
+            display: flex;
+            flex-direction: row;
+          }
+          width: calc(100% - 230px);
+          padding: 10px;
+          border-bottom: 1px solid $tableBorderColor;
+          word-break: break-all;
+          word-wrap: break-word;
+          background: white;
+          @include xs {
+            display: block !important;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            padding: 15px 10px;
+            overflow: hidden;
+            border-bottom: 0 solid $tableBorderColor;
+          }
+          & > div { //経験職種のセレクトボックス2個縦積みの入れ物
+            margin: 0 0 5px 0;
+            &:last-child {
+              margin: 0;
+            }
+            @include xs {
+              border: orange;
+              margin: 0 auto 5px auto;
+              overflow: hidden;
+              &:first-child {
+                margin: 0 auto 5px auto;
+              }
+              &:last-child {
+                margin: 0 auto;
+              }
+            }
+          }
+          dl {
+            .multi-item {
+              display: flex;
+              &+dt {
+                margin-top: 10px;
+              }
+              &:not(:last-of-type) {
+                margin-bottom: 10px;
+              }
+              @include xs {
+                display: block;
+              }
+            }
+
+            dt {
+              font-weight: normal;
+              text-align: left;
+              width: auto;
+              min-width: 8rem; //職歴dd内の小見出し幅揃え
+              @include xs {
+                width: auto;
+                clear: both;
+                float: none;
+                text-align: left;
+              }
+              //dt
+            }
+            dd {
+              @include xs {
+                padding: 0;
+                position: relative;
+                width: 100%;
+                margin: 0 0 5px 0;
+              }
+              span {
+                min-width: 1rem;
+                line-height: 2;
+                height: 34px;
+                text-align: center;
+                display: inline-block; //pc版は左つめinlineなりゆき
+                @include xs {
+                  float: left;
+                  //xs
+                }
+                //span
+              }
+              //dd
+            }
+            //dl
+          }
+          span.error { //存在しない年月日の際のエラー表示
+            font-weight: bold;
+            color: #F00;
+            font-size: 14px;
+          }
+          //td
+        }
+        //tr
+      }
+      //tbody
+    }
+
+    .hidden, &.hidden {
+      display: none;
+    }
+    //table
+  }
+
+  .workExperience {
+    td {
+      display: block !important;
+      .workExperienceBody {
+        margin: 0;
+        &:nth-child(even) {
+          background: #F4F4F4;
+        }
+        dl {
+          //上下下線に対するパディング
+          padding: 10px 0;
+          overflow: hidden;
+        }
+        &:only-of-type {
+          dl {
+            @include xs {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    //workExperience
+  }
+  .jobExperience {
+    @include minWidthXs {
+      dd {
+        margin-left: 1em;
+      }
+    }
+  }
+  .industry {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  aside[class$="Btns"] {
+    clear: both;
+    text-align: center;
+    overflow: hidden;
+    width: 640px; //PC版個人情報Box幅
+    margin: 60px auto 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include xs {
+      width: 96%; //applyBtnの幅
+      margin: 30px auto 30px auto;
+    }
+
+    a.back {
+      ////戻るボタン（フォーム入力ページ）
+      @extend %backBtnBase;
+      width: 170px;
+      @include xs {
+        padding: 10px;
+        width: 32%;
+      }
+
+      &:before {
+        content: '\f053';
+        display: none;
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 5%;
+        font-size: $fontSizeXxxxxLarge; //31px;
+        font-weight: bold;
+        @include xs {
+          width: 1rem;
+          height: 1rem;
+          font-size: $fontSizeLarge;
+          margin: auto 0;
+          line-height: 1;
+        }
+      }
+
+      //a.back
+    }
+
+    button[class^="submit"] {
+      @extend %submitBtnBase;
+      color: $submitBtnTextColor;
+      @include xs {
+        width: calc(100% - (32% + 20px));
+        max-width: 300px;
+      }
+      &:after {
+        display: none;//矢印を消す
+        content: '\f054';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        font-size: $fontSizeXxxxxLarge;//31px;
+        font-weight: bold;
+      }
+    }
+  }
+}

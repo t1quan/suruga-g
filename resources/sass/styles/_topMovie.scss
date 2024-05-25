@@ -1,0 +1,65 @@
+////////////////////////////////////////
+// #topMovie
+////////////////////////////////////////
+
+//#topMovieここから
+#topMovie{
+  width: $contentWidth;
+  margin: auto;
+
+  .topMovieWrapper{
+    margin:80px auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    max-width: 960px;
+    height: 100%;
+    text-align: center;
+    iframe{
+      width: 800px;
+      height: 450px;
+    }
+
+    .movieTitleBox {
+      width: 294px; //タイトルの大きさ
+      padding: 60px 0;
+      margin: 0 auto;
+      @include xs {
+        width: 190px;
+        padding: 30px 0;
+        margin: 0 auto;
+      }
+      .movieTitleImage { //mixin可変幅背景の高さを自動セットして表示
+        background-image: url("#{$imgDir}movie/top_movie_title.png");
+        @include varBgImg(294, 84); //varBgImg(表示画像の幅,高さ）
+        @include xs {
+          background-image: url("#{$imgDir}movie/top_movie_title_sp.png");
+          @include varBgImg(190, 49); //varBgImg(表示画像の幅,高さ）
+        }
+      }
+    }//titleBox
+
+  }
+
+  @include xs {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+  
+    .topMovieWrapper{
+      margin: 0 auto;
+      padding: 10px 0 10px;
+  
+      width: 95%;
+      display: block;
+      position: relative;
+      max-width: 640px;
+      height: 100%;
+      iframe{
+        width: 100%;
+        height: calc((100vw *0.96)*0.52);
+      }
+    }
+  }
+
+}//#topMovie
+//--------------------ここまで

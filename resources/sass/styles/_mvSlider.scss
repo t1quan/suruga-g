@@ -1,0 +1,104 @@
+#mvSlider { //全頁共通の設定
+
+  overflow: hidden;
+  width: 100%;
+
+  .mvWrapper {
+    position: relative;
+    @include xs {
+      margin: 0;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 800;
+      bottom: 0;
+      width: 100%;
+      height: 124px;
+      background: $bodyBgColor;
+      @include xs {
+        display: none;
+      }
+    }
+
+    .mvInner {//メインビジュアルの配置用BOX
+      width:100%;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+
+      .mvPicture, .mvVideo {
+        @include imgCenter;
+        min-width:$defInnerWidthPc;//画像の縮小時最小幅（このサイズで止まる）
+        height: auto;
+        vertical-align: middle;
+
+        @include xs { //sp時
+          min-width:320px;//縮小時最小幅
+        }
+      }
+
+      .scrollDownGuide {
+        display: none;
+        @include minWidthXs {
+          display: inline-block;
+          position: absolute;
+          bottom: 174px;
+          left: calc(100vw / 1920 * 60);
+          width: 150px;
+          height: 40px;
+          border-bottom: 2px solid $white;
+          font-family: "prohibition", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: $white;
+          letter-spacing: 0.03em;
+          line-height: 1.25;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+  }
+  .mainVisualTitleBox{
+    background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg.png);
+    background-size: contain;
+    background-position: left bottom;
+
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    bottom: 5%;
+    width: 90%;
+    height: auto;
+
+    z-index: 1;
+    @include varBgImg(1621,263);
+
+
+    @include xs { //sp時
+      background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg_sp.png);
+      @include varBgImg(728,171);
+      bottom: 10%;
+    }
+
+    img{//レスポンシブイメージ
+      @include imgCenter;
+    }
+
+    .mainVisualTitleLead{
+      width: 50%;
+      margin: 12% auto 6% auto;
+    }
+
+    .mainVisualTitleBody{
+      width: 70%;
+      margin: auto;
+    }
+
+  }
+
+}
+

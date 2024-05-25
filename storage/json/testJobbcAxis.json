@@ -1,0 +1,55 @@
+{
+
+  "code": 200,
+  "message": "検索軸を取得しました。",
+  "data":
+
+  {
+
+    "jobbc":
+    [
+      {
+        "name": "営業",
+        "value": 1,
+        "cnt": 15,
+        "children": [
+          {
+            "name": "代理店営業",
+            "value": 130,
+            "cnt": 15,
+            "parent": 1
+          }
+        ]
+      },
+
+      {
+        "name": "医療・介護・福祉",
+        "value": 11,
+        "cnt": 5,
+        "children": [
+          {
+            "name": "薬剤師",
+            "value": 930,
+            "cnt": 5,
+            "parent": 11
+          }
+        ]
+      },
+
+      {
+        "name": "物流・配送・軽作業",
+        "value": 12,
+        "cnt": 8,
+        "children": [
+          {
+            "name": "軽作業",
+            "value": 1213,
+            "cnt": 8,
+            "parent": 12
+          }
+        ]
+      }
+    ]
+  }
+
+}

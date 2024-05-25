@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@use "sass:math";
+//@import url(//use.fontawesome.com/releases/v5.3.1/css/all.css);
+//設定、変数読み込み
+//変数
+@import "_vars.scss";
+@import "_setting.scss";
+@import "_placeHolder.scss";//PlaceHolder
+
+//初期化
+//reset.cssからの継承
+// 基本スタイルのカスタマイズ部分
+/* settings
+------------------------------------------------------ */
+html, body {
+  width: 100%;
+  font-family: $baseFont;
+  font-weight: 500;
+  font-style: normal;
+  -webkit-text-size-adjust: none;
+  background: $baseBgColor;
+  line-height: 1.5;
+  //color: $baseTextColor;
+  color: $bgBaseTextColor;
+}
+
+body {
+  min-width: $defInnerWidthPc;
+  @include xs {
+    min-width: initial;
+  }
+}
+a {
+  text-decoration: none;
+  color: $bgBaseTextColor;
+  outline: none;
+}
+a:hover {
+  cursor:pointer;
+}
+
+* {box-sizing: border-box;}
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.text {
+  margin-bottom: 1em;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.notes {
+  display: inline-block;
+  position: relative;
+  margin-left: 1em;
+}
+
+.notes::before {
+  content: '\0203B';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -1em;
+}
+
+.js-fadein {
+  opacity: 0;
+  transform: translate(0, 20px);
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+//#content { //fixメニュー対策の上マージンとコンテンツ最小幅
+//  padding-bottom: 6px;
+//  min-width: $contentWidth;
+//  @include xs {
+//    padding-top: 10px;//メニューの高さに合わせて入れる
+//    min-width: 100%;
+//  }
+//}
+
+.PCdisp{//pc時表示
+  display: block;
+  @include xs {
+    display:none;
+  }
+}
+.SPdisp{//sp時表示
+  display: none;
+  @include xs {
+    display:block;
+  }
+}
+.SPbr {
+  display: none;
+  @include xs {
+    display: inline;
+  }
+}
+.PCbr {
+  display: inline;
+  @include xs {
+    display: none;
+  }
+}
+
+@function rem($pixels, $context: 16) {// フォントサイズ自動計算
+  @return math.div($pixels , $context) * 1rem;
+}
+
+//js-clickitemをマルチクラスとして付与すると要素内a要素が検索されて、リンクとして機能する
+.js-clickitemBlank,//blank用
+.js-clickitem {//js-clickitem共通スタイル
+  cursor: pointer;
+  transition: opacity .3s;
+  &:hover {
+    opacity: .5;
+    @include xs {
+      opacity: 1;
+    }
+  }
+
+}
+.js-clickitemBlankIcon{//外部リンクアイコン付用のスタイル
+  cursor: pointer;
+  transition: opacity .3s;
+  &:hover {
+    opacity: .5;
+    @include xs {
+      opacity: 1;
+    }
+  }
+  &:after {
+    //content: '';
+    display: inline-block;
+    position: absolute;
+    height: 13px;
+    width: 15px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -10px;//肩付位置調整（今回はFooter項目用に変更）
+    right: -5px;//右肩位置調整用
+    margin: 0 0 0 5px;
+    //A.画像版
+    //background-image: url("#{$imgDir}common/tbLinkIcon.png");
+    //background-image: url("#{$imgDir}common/tbLinkIcon.svg");
+    //B.マスク画像版
+    //background-color: currentColor;
+    //-webkit-mask-image: url("#{$imgDir}common/tbLinkIcon.svg");
+    //mask-image: url("#{$imgDir}common/tbLinkIcon.svg");
+    //mask-size: contain;
+    //C.fontawesome版
+    font-family: "Font Awesome 5 Free";
+    content: '\f35d';
+    font-weight: 600;
+    font-size: 0.81rem;
+    @include xs {
+      top: 8px;
+    }
+  }
+}
+
+.blankIconImg{//外部リンクアイコン単独使用のスタイル
+  display: flex;
+  color: $baseColor;//外部リンクアイコンのカラー
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 0 0 5px;
+
+  &:after {
+    content: '';
+    height: 13px;
+    width: 15px;
+    //A.画像版
+    //background-image: url("#{$imgDir}common/tbLinkIcon.png");
+    //background-image: url("#{$imgDir}common/tbLinkIcon.svg");
+
+    //C.fontawesome版
+    font-family: "Font Awesome 5 Free";
+    content: '\f35d';
+    font-weight: 600;
+    font-size: 0.81rem;
+    @include xs {
+      //top: 8px;
+
+    }
+  }
+}
+
+.lity {
+  z-index: 10000 !important;
+
+  .lity-container {
+    width: calc(100% - 24px);
+    max-width: $contentWidth;
+  }
+}
+
+@include minWidthXs {
+  .PClayout, .pcLayout {
+    display:block;
+  }
+  .SPlayout, .spLayout {
+    display:none !important;
+  }
+}
+
+@include xs {
+  .PClayout, .pcLayout {
+    display:none !important;
+  }
+  .SPlayout, .spLayout {
+    display:block;
+  }
+  br.SPlayout{
+    display: inline;
+  }
+}
+
+//**************************
+
+//webFontの設定
+@font-face {
+  font-family: "Athelas Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Athelas Regular"), url("#{$fontsDir}/Athelas-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Futura Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Futura Medium"), url("#{$fontsDir}Futura-Medium.woff") format("woff"), url("#{$fontsDir}Futura-Medium.ttf") format("truetype");
+}
+
+.en-font__fm {//futura書体指定用(webフォント呼び出し例）
+  font-family:"Futura Medium";
+  font-weight:bold;
+  letter-spacing: 2px;
+}

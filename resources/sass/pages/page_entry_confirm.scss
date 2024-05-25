@@ -1,0 +1,326 @@
+//共通設定読み込み
+@import "resources/sass/pages/common";
+
+#entry_confirm {
+  //レイアウト読み込み
+  @import "resources/sass/layouts/layoutEntryConfirm";
+
+  //ページ内要素
+  @import "resources/sass/styles/notFoundJobDetail";
+  @import "resources/sass/styles/formConfirm"; //entry,concier用の汎用確認フォームスタイル
+
+  #entryArea {
+    margin: 100px 0 60px;
+    @include xs {
+      margin: 35px 0 30px;
+    }
+  }
+
+  header {
+    .entry-title { //応募タイトル
+      background: $white;
+      color: $black;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+      height: 160px;
+      display: block;
+      text-align: center;
+
+      @include xs {
+        height: 120px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+        img{//タイトルの画像レスポンシブイメージ
+          width:100%;
+          text-align: center;
+        }
+      }
+      .en {
+        font-family: "prohibition", sans-serif;
+        font-weight: 400;
+        font-size: rem(60);
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.05em;
+        @include xs {
+          font-size: rem(35);
+        }
+      }
+      .ja {
+        margin-top: 20px;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: 1.5;
+        @include xs {
+          margin-top: 10px;
+          font-size: rem(12);
+        }
+      }
+    }
+    .entry-introduction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 126px;
+      background: $accentColor;
+      color: $white;
+      margin-top: 90px;
+      @include xs {
+        height: 63px;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .inner {
+    width: 100%;
+    background-color: $white;
+    padding-top: 60px;
+    @include xs {
+      padding-top: 40px;
+    }
+
+    .step_guide {
+      position: relative;
+      display: block;
+      max-width: $defInnerWidthPc;
+      margin: 0 auto;
+      padding-left: 50px;
+      color: $accentColor;
+      font-size: rem(18);
+      line-height: 1.5;
+      @include xs {
+        max-width: 100%;
+        width: calc(100% - 24px);
+        padding-left: 20px;
+      }
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: $accentColor;
+      }
+      &::before {
+        top: 4px;
+      }
+      &::after {
+        bottom: 4px;
+      }
+    }
+
+    .mod_jobDetailJob {
+      width: calc(100% - 24px);
+      max-width: $contentWidth;
+      margin: 0 auto;
+      @include xs {
+        width: 100%;
+      }
+    }
+
+    form[id^=entry] {
+      small {
+        display: none;
+      }
+      .toggleSwitchApply {
+        display: none;
+      }
+      > section {
+        @include xs {
+          padding: 0 12px;
+        }
+      }
+
+      table {
+        margin-bottom: 0;
+        border: none;
+        tr {
+          display: block;
+          padding-top: calc(32px - 20px);
+          background-color: $white;
+          @include xs {
+            margin-bottom: 0;
+            padding-top: calc(30px - 10px);
+          }
+
+          &.address {
+            .multi-item {
+              &:not(:first-of-type):not(:last-of-type) {
+                width: max-content;
+                float: left;
+              }
+            }
+            dt {
+              display: none;
+            }
+          }
+
+          &:last-of-type {
+            padding-bottom: 100px;
+            @include xs {
+              padding-bottom: 50px;
+            }
+          }
+          th, td {
+            font-size: rem(16);
+            @include minWidthXs {
+              font-size: rem(18);
+            }
+          }
+          th {
+            width: 100%;
+            text-align: left;
+            border-bottom: none;
+            font-size: rem(18);
+            background-color: $white;
+            color: $accentColor;
+            font-weight: 700;
+            @include minWidthXs {
+              padding-left: 0;
+            }
+          }
+          td {
+            width: 100%;
+            background-color: #DEE6F2;
+            border-bottom: none;
+            @include minWidthXs {
+              padding: 1rem 40px;
+            }
+
+            &.multi {
+              @include xs {
+                display: flex !important;
+                .fields {
+                  width: calc((100% - (100vw / 750 * 20)) / 2);
+                  &:not(:last-of-type) {
+                    margin-right: calc(100vw / 750 * 20) !important;
+                  }
+                  &.name {
+                    label {
+                      min-width: unset;
+                      width: 3rem;
+                    }
+                  }
+                }
+              }
+            }
+
+            .multi-item {
+              @include xs {
+                display: flex;
+                dt {
+                  min-width: 6rem;
+                  label {
+                    padding: calc(0.5rem + 2px) 0;
+                    min-width: 100%;
+                  }
+                }
+                dd {
+                  margin-bottom: 0;
+                  .fields {
+                    span.error {
+                      padding-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+            span.error {
+              font-size: rem(18);
+              @include xs {
+                font-size: rem(16);
+              }
+            }
+          }
+        }
+      }
+
+      .applyBtns {
+        width: 100vw !important; //確認ボタンエリア　フォーム内100%をはみ出させる
+        transform: translateX(calc((100vw - #{$contentWidth}) / (-2)));
+        margin: 0 !important;
+        padding: 20px 0 60px;
+        background-color: $white;
+        @media screen and (max-width: $contentWidth) {
+          width: 100%;
+          transform: unset;
+        }
+        @include xs {
+          flex-direction: column;
+          align-items: center;
+          padding: 10px 0 30px;
+        }
+        a.back, button.submitApply {
+          @include xs {
+            margin: 0;
+            padding: 18px 10px;
+            width: calc(100% - 45px);
+            max-width: 330px;
+            font-size: rem(20);
+          }
+        }
+        button.submitApply {
+          @include xs {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    i {
+      margin: 0;
+      font-weight: bold;
+      font-size: $fontSizeNomal;
+      display: inline-block;
+      padding: 0 10px;
+      @include xs {
+        padding: 0;
+      }
+      &.required { //必須項目インジケーター
+        &.PCdisp {
+          display: inline-block;
+        }
+        &.SPdisp {
+          display: none;
+        }
+        color: transparent;
+        @include minWidthXs {
+          position: relative;
+        }
+        @include xs {
+          display: inline;
+        }
+        &:after {
+          content: '必須';
+          color: white;
+          background-color: #AE2640;
+          font-weight: normal;
+          box-sizing: border-box;
+          font-style: normal;
+          text-align: center;
+          height: auto;
+          position: absolute;
+          display: block;
+          width: 50px;
+          top: -5px;
+          left: 35px;
+          font-size: rem(16);
+          line-height: 1.5;
+          padding: 2px 5px 2px 5px;
+          @include xs {
+            position: relative;
+            display: inline;
+            top: 0;
+            left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+}

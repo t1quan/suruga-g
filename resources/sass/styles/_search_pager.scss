@@ -1,0 +1,88 @@
+////////////////////////////////////////
+/* pagerスタイル
+*/
+nav { //pagerのNav
+  overflow: hidden;
+  margin: 0 0 5px 0;
+  width: 100%;
+  padding: 0;
+  font-size: $fontSizeNomal; //ページャー内の基本フォントサイズ
+  @include xs {
+    margin: 0 0 0 0;
+  }
+  .count {
+    float: left;
+    color: $bgBaseTextColor;
+    @include xs {
+      //display: none;
+      float: none;
+      margin-bottom: 20px;
+    }
+    em {
+      font-size: $fontSizeXxLarge;
+      color: $searchTextColor;
+      margin: 0 5px 0 0;
+      line-height: $lineHeightLowBase;
+    }
+  }
+  .new_pagenation { //ページネーション数字部分
+    float: right;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    @include xs {
+      width: auto;
+      display: table;
+      margin: auto;
+      float: right;//右寄せ表示
+
+    }
+    a.page_first { //ページャー数字の１
+      @extend %pagerBoxBase; ////ページャー入れ物スタイル共通
+      @extend %pagerNumberBase; //数字スタイル共通
+    }
+    ul { //ページャー数字自動採番箇所
+      @extend %pagerBoxBase; ////ページャー入れ物スタイル共通
+      li { //ページャー数字Indスタイル
+        @extend %pagerNumberBase; //数字スタイル共通
+        &.first {
+          border-left: 1px solid #D9D9D9;
+          span {
+            background: none repeat scroll 0 0 $searchTextColor;
+            width: 100%;
+            color: $bgMainTextColor;
+            display: block;
+          }
+        }
+        //&.first
+        a {
+        }
+        //a
+      }
+      //li
+    }
+    //ul
+    span { //数字個別
+      float: left;
+      display: block;
+      text-align: center;
+    }
+  }
+  //newpagenation
+  .page_arrow {
+    display: none;
+  }
+  .page_prev_n,
+  .page_next_n { //次の20件、前の20件共通
+    border: 1px solid #D9D9D9;
+    float: left;
+    padding: 0 5px;
+    //margin: 0 5px 0 5px;
+    margin: 0 0 0 5px;
+  }
+  //}//nav xs
+}
+//nav
+
+
+

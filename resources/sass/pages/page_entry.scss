@@ -1,0 +1,459 @@
+//共通設定読み込み
+@import "resources/sass/pages/common";
+
+#entry {
+  //レイアウト読み込み
+  @import "../layouts/layoutEntryForm";
+
+  //ページ内要素
+  @import "resources/sass/styles/notFoundJobDetail";
+  @import "resources/sass/styles/form"; //apply,concier用の汎用入力フォームスタイル
+
+  #entryArea {
+    margin: 100px 0 60px;
+    @include xs {
+      margin: 35px 0 30px;
+    }
+  }
+
+  header {
+    .entry-title { //応募タイトル
+      background: $white;
+      color: $black;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+      height: 160px;
+      display: block;
+      text-align: center;
+
+      @include xs {
+        height: 120px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+        img{//タイトルの画像レスポンシブイメージ
+          width:100%;
+          text-align: center;
+        }
+      }
+      .en {
+        font-family: "prohibition", sans-serif;
+        font-weight: 400;
+        font-size: rem(60);
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 0.05em;
+        @include xs {
+          font-size: rem(35);
+        }
+      }
+      .ja {
+        margin-top: 20px;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: 1.5;
+        &::after {
+          content: "";
+          background-image: url("#{$imgDir}/common/horizontal_ellipsis.png");
+          background-size: contain;
+          width: 50px;
+          height: 10px;
+          display: block;
+          margin: 20px auto 0;
+        }
+        @include xs {
+          margin-top: 10px;
+          font-size: rem(12);
+          &::after {
+            width: calc(100vw / 750 * 50);
+            height: calc(100vw / 750 * 10);
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .entry-introduction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 126px;
+      background: $accentColor;
+      color: $white;
+      margin-top: 90px;
+      font-size: rem(18);
+      @include xs {
+        height: 63px;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .inner {
+    width: 100%;
+    background-color: #F7F8FC;
+    @include xs {
+      padding-top: 20px;
+    }
+
+    .mod_jobDetailJob {
+      width: calc(100% - 24px);
+      max-width: $defInnerWidthPc;
+      margin: 0 auto;
+      @include xs {
+        width: 100%;
+      }
+    }
+
+    form {
+      small {
+        display: none;
+      }
+      .toggleSwitchApply {
+        display: none;
+      }
+      > section {
+        @include xs {
+          padding: 0 12px;
+        }
+      }
+
+      table {
+        margin-bottom: 0;
+        border: none;
+        tr {
+          display: block;
+          padding-top: calc(60px - 20px);
+          background-color: #F7F8FC;
+          @include xs {
+            margin-bottom: 0;
+            padding-top: calc(30px - 10px);
+          }
+          &:last-of-type {
+            padding-bottom: 60px;
+            @include xs {
+              padding-bottom: calc(40px - 10px);
+            }
+          }
+          th, td {
+            background-color: #F7F8FC;
+            font-size: rem(16);
+            @include minWidthXs {
+              font-size: rem(18);
+              padding-left: 42px;
+            }
+          }
+          th {
+            width: 100%;
+            text-align: left;
+            border-bottom: none;
+            font-size: rem(18);
+            color: $mainColor;
+            font-weight: 700;
+            position: relative;
+            &::before, &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background-color: $mainColor;
+              @include xs {
+                width: 4px;
+                height: 4px;
+              }
+            }
+            &::before {
+              top: 24px;
+              @include xs {
+                top: 13px;
+              }
+            }
+            &::after {
+              bottom: 23px;
+              @include xs {
+                bottom: 12px;
+              }
+            }
+          }
+          td {
+            width: 100%;
+            border-bottom: none;
+
+            &.multi {
+              @include xs {
+                display: flex !important;
+                .fields {
+                  width: calc((100% - (100vw / 750 * 20)) / 2);
+                  &:not(:last-of-type) {
+                    margin-right: calc(100vw / 750 * 20) !important;
+                  }
+                  &.name {
+                    label {
+                      min-width: unset;
+                      width: 3rem;
+                    }
+                    input, select {
+                      min-width: unset;
+                    }
+                    input {
+                      width: calc(100% - 3rem) !important;
+                      float: right;
+                    }
+                  }
+                }
+              }
+            }
+
+            .multi-item {
+              @include xs {
+                display: flex;
+                dt {
+                  min-width: 6rem;
+                  label {
+                    padding: calc(0.5rem + 2px) 0;
+                    min-width: 100%;
+                  }
+                }
+                dd {
+                  margin-bottom: 0;
+                  .fields {
+                    span.error {
+                      padding-top: 0;
+                    }
+                  }
+                }
+              }
+            }
+
+            span.error {
+              font-size: 1.125rem;
+              @include xs {
+                font-size: 1rem;
+              }
+            }
+
+            dl {
+              dt {
+                label {
+                  padding: 1.125rem 0 0 0;
+                }
+              }
+              i.required {
+                &::after {
+                  @include minWidthXs {
+                    top: 1.125rem;
+                  }
+                }
+              }
+            }
+
+          }
+
+          &.birthday {
+            td.multi {
+              display: block;
+              @include xs {
+                display: flex;
+              }
+              .fields {
+                display: block;
+                padding: 20px 0 0 0;
+                &:first-of-type {
+                  padding-top: 0;
+                }
+                @include xs {
+                  padding: 0;
+                  width: 45%;
+                  &:not(:last-of-type) {
+                    margin-right: 0 !important;
+                  }
+                  &:not(:first-of-type) {
+                    width: 27.5%;
+                  }
+                  label {
+                    padding: 0.5rem 0 0.5rem 5px;
+                  }
+                  select#dobYear,
+                  select#dobDay,
+                  select#dobMonth,
+                  {
+                    width: calc(100% - 1.5rem);
+                  }
+                }
+              }
+            }
+          }
+
+        }
+        input, select {
+          border: 1px solid #CBCBCC;
+          border-radius: 5px;
+          cursor: pointer;
+          @include minWidthXs {
+            width: 480px !important;
+            &:hover {
+              &:not(:focus) {
+                border: 1px solid $black;
+              }
+            }
+          }
+          padding: 1.125rem;
+          @include xs {
+            font-size: 1rem;
+            height: 40px;
+            padding: 0.5rem;
+          }
+        }
+
+        input#zipCode {
+          @include xs {
+            width: 50%;
+            min-width: 8rem;
+          }
+        }
+
+        select {
+          background-image: url("#{$imgDir}/arrow/feather-arrow-up-circle.png");
+          background-size: 30px 30px;
+          background-position: right 1.125rem center;
+          @include xs {
+            background-size: 1rem 1rem;
+            background-position: right 0.3rem center;
+          }
+        }
+
+        label {
+          @include xs {
+            font-size: 1rem;
+            padding: 0.5rem 0;
+          }
+        }
+
+        label[for*="last"] {
+          padding-left: 0;
+        }
+
+        .indicatorZip {
+          color: $white;
+          background-color: $accentColor;
+          span {
+            display: none;
+          }
+          @include minWidthXs {
+            margin-top: 0.9rem;
+            margin-left: 100px;
+          }
+        }
+
+        .notice {
+          font-size: 1rem;
+          line-height: 1.875;
+          padding-top: 20px;
+          font-weight: 500;
+          @include xs {
+            font-size: rem(14);
+            line-height: 1.45;
+            padding-top: 10px;
+          }
+        }
+
+      }
+
+      .applyBtns {
+        width: 100vw; //確認ボタンエリア　フォーム内100%をはみ出させる
+        transform: translateX(calc((100vw - #{$defInnerWidthPc}) / (-2)));
+        margin: 0;
+        padding: 60px 0;
+        background-color: $white;
+        @media screen and (max-width: $defInnerWidthPc) {
+          width: 100%;
+          transform: unset;
+        }
+        @include xs {
+          padding: 30px 0;
+        }
+        .rule_kojin_field {
+          padding: 0 0 36px 0;
+          @include xs {
+            padding: 0 0 30px 0;
+          }
+          .checkbox-label.agree {
+            @include xs {
+              font-size: 1rem;
+            }
+          }
+          a.anc_kojin_text {
+            @include minWidthXs {
+              padding-left: 80px;
+            }
+            @include xs {
+              margin-top: 8px;
+            }
+          }
+        }
+        button.confirmApply {
+          background: $mainColor;
+          @include xs {
+            width: calc(100% - 45px);
+            max-width: 330px;
+            font-size: rem(20);
+          }
+        }
+      }
+    }
+
+    i {
+      margin: 0;
+      font-weight: bold;
+      font-size: $fontSizeNomal;
+      display: inline-block;
+      padding: 0 10px;
+      @include xs {
+        padding: 0;
+      }
+      &.required { //必須項目インジケーター
+        &.PCdisp {
+          display: inline-block;
+        }
+        &.SPdisp {
+          display: none;
+        }
+        color: transparent;
+        @include minWidthXs {
+          position: relative;
+        }
+        @include xs {
+          display: inline;
+        }
+        &:after {
+          content: '必須';
+          color: white;
+          background-color: #AE2640;
+          font-weight: normal;
+          box-sizing: border-box;
+          font-style: normal;
+          text-align: center;
+          height: auto;
+          position: absolute;
+          display: block;
+          width: 50px;
+          top: -5px;
+          left: 35px;
+          font-size: rem(16);
+          line-height: 1.5;
+          padding: 2px 5px 2px 5px;
+          @include xs {
+            position: relative;
+            display: inline;
+            top: 0;
+            left: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,79 @@
+{
+
+  "code": 200,
+  "message": "検索軸を取得しました。",
+  "data":
+
+  {
+
+    "pref":
+    [
+      {
+        "name": "北海道",
+        "value": 1,
+        "cnt": 10,
+        "parent": 1,
+        "children": [
+          {
+            "name": "函館市",
+            "value": 202,
+            "parent": 1,
+            "cnt": 10
+          }
+        ]
+      },
+
+      {
+        "name": "東京都",
+        "value": 13,
+        "cnt": 7,
+        "parent": 2,
+        "children": [
+          {
+            "name": "千代田区",
+            "value": 101,
+            "cnt": 3,
+            "parent": 13
+          },
+          {
+            "name": "港区",
+            "value": 103,
+            "cnt": 4,
+            "parent": 13
+          }
+        ]
+      },
+
+      {
+        "name": "神奈川県",
+        "value": 14,
+        "cnt": 5,
+        "parent": 2,
+        "children": [
+          {
+            "name": "藤沢市",
+            "value": 205,
+            "cnt": 5,
+            "parent": 14
+          }
+        ]
+      },
+
+      {
+        "name": "長野県",
+        "value": 20,
+        "cnt": 3,
+        "parent": 3,
+        "children": [
+          {
+            "name": "長野市",
+            "value": 201,
+            "cnt": 3,
+            "parent": 20
+          }
+        ]
+      }
+    ]
+  }
+
+}

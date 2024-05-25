@@ -1,0 +1,34 @@
+#notFoundJobDetail { //該当求人の掲載期間終了などでjob_id検索でヒットしなかった場合
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 60px;
+
+  .alert {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #666;
+    line-height: 2;
+
+    @include xs {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+    }
+  }
+  .goSearchBtns {
+    margin-top: 1em;
+    .goSearchJob {
+      @extend %submitBtnBase;
+      text-align: center;
+      font-size: $fontSizeNomal;
+      margin: 0 auto;
+      width: 300px;
+      padding: 15px 0;
+      color: $bgSubTextColor;
+    }
+  }
+}

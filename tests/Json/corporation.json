@@ -1,0 +1,403 @@
+{
+  "clientId": 123456789,
+  "env": "dev",
+  "releaseDate": "2022-01-01 09:30:00",
+  "version": "1.0.2",
+  "corporations": [
+    {
+      "corpCd": 205901,
+      "corpShortName": "天職市場",
+      "corpFullName": "株式会社天職市場",
+      "applyTel": "99-9999-9999",
+      "ga": "UA-99999999-99",
+      "title": "天職市場",
+      "description": "株式会社天職市場は企業の生産性向上と個人の職能向上に役立つ直接採用支援プログラムを推進します。",
+      "zip": "〒999-9999",
+      "address": "東京都新宿区西新宿",
+      "tel": "99-9999-9999",
+      "fax": "0120-51-1049",
+      "links": [
+        {
+          "type": "corpSite",
+          "url": "https://www.1049.cc",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "about",
+          "url": "https://www.1049.cc/about/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "privacy",
+          "url": "https://www.1049.cc/privacy/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "contact",
+          "url": "https://www.1049.cc/contact/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        }
+      ],
+      "mainVisual": {
+        "type": "slider",
+        "images": [
+          {
+            "page": "top",
+            "filePath": "/path/to/image1"
+          },
+          {
+            "page": "top",
+            "filePath": "/path/to/image2"
+          }
+        ]
+      },
+      "style": {
+        "type": "s101",
+        "css": "/path/to/file"
+      },
+      "form": {
+        "apply": {
+          "formtype": 1,
+          "type": "register",
+          "jobId": "ApplyはRequestから参照",
+          "mailSettings": {
+            "templateUser": 1,
+            "templateManager": 2
+          }
+        },
+        "contact": {
+          "type": "mail or register",
+          "jobId": 78901,
+          "formtype": 1,
+          "validator": {
+
+          },
+          "mailSettings": {
+            "templateUser": 7,
+            "templateManager": 8
+          }
+        }
+      }
+    },
+    {
+      "corpCd": 99999,
+      "corpShortName": "テスト環境",
+      "corpFullName": "株式会社テスト環境",
+      "applyTel": "99-9999-9999",
+      "ga": "UA-99999999-99",
+      "title": "天職市場",
+      "description": "株式会社テスト環境の採用情報サイトです。当社は、採用事業を行っています。一緒に働きませんか？",
+      "zipCode": "〒160-0023",
+      "addr": "東京都新宿区西新宿1丁目8-1 新宿ビルディング",
+      "tel": "0120-52-1049",
+      "fax": "0120-51-1049",
+      "links": [
+        {
+          "type": "corpSite",
+          "url": "https://www.1049.cc",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "about",
+          "url": "https://www.1049.cc/about/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "privacy",
+          "url": "https://www.1049.cc/privacy/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "contact",
+          "url": "https://www.1049.cc/contact/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        }
+      ],
+      "mainVisual": {
+        "type": "simple",
+        "images": [
+          {
+            "page": "top",
+            "filePath": "/path/to/image3"
+          }
+        ]
+      },
+      "style": {
+        "type": "s101",
+        "css": "/path/to/file"
+      },
+      "concierAddress": "sample@example.com",
+      "concierJobId": 12345,
+      "formtype": 1
+    }
+  ],
+  "frontendSettings": {
+    "title": "タイトル",
+    "sub": {
+      "title": "サブタイトル"
+    },
+    "cpnameType": 1,
+    "arrayCorpCd": [
+      205901,
+      99999
+    ],
+    "plan": 1,
+    "cssStyle": {
+      "type": "speed",
+      "css": "custom.css"
+    },
+    "searchAxisRequiredList": [
+      "pref",
+      "jobbc",
+      "koy"
+    ],
+    "isCustomArea": true,
+    "customAreaSections": [
+      {
+        "type": "pref",
+        "list": [
+          {
+            "name": "北信",
+            "value": "20101[]20207[]20212",
+            "type": "city",
+            "children": [
+              {
+                "name": "長野市",
+                "value": 20101,
+                "type": "city"
+              },
+              {
+                "name": "須坂市",
+                "value": 20207,
+                "type": "city"
+              },
+              {
+                "name": "飯山市",
+                "value": 20212,
+                "type": "city"
+              }
+            ]
+          },
+          {
+            "name": "東信",
+            "value": "20103[]20208",
+            "type": "city",
+            "children": [
+              {
+                "name": "上田市",
+                "value": 20103,
+                "type": "city"
+              },
+              {
+                "name": "小諸市",
+                "value": 20208,
+                "type": "city"
+              }
+            ]
+          },
+          {
+            "name": "東京都",
+            "value": 13103,
+            "type": "city",
+            "children": [
+              {
+                "name": "港区",
+                "value": 13103,
+                "type": "city"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "area",
+        "list": [
+          {
+            "name": "長野県",
+            "value": "20201[]20207[]20212[]20103[]20208",
+            "type": "city",
+            "children": [
+              {
+                "name": "北信",
+                "value": "20201[]20207[]20212",
+                "type": "city"
+              },
+              {
+                "name": "東信",
+                "value": "20103[]20208",
+                "type": "city"
+              }
+            ]
+          },
+          {
+            "name": "東京都",
+            "value": "13103",
+            "type": "city",
+            "children": [
+              {
+                "name": "港区",
+                "value": "13103",
+                "type": "city"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isCustomJob": true,
+    "customJobSections": [
+      {
+        "type": "jobbc",
+        "list": [
+          {
+            "name": "薬剤師",
+            "value": "930[]940[]950[]1199",
+            "type": "job",
+            "children": [
+              {
+                "name": "薬剤師",
+                "value": 930,
+                "type": "job"
+              },
+              {
+                "name": "技術(化学・医療・食品)",
+                "value": 940,
+                "type": "job"
+              },
+              {
+                "name": "品質・生産管理(化学・医療・食品)",
+                "value": 950,
+                "type": "job"
+              },
+              {
+                "name": "その他",
+                "value": 1199,
+                "type": "job"
+              }
+            ]
+          },
+          {
+            "name": "医療系フリーワード",
+            "value": "医療 医師 薬剤師 看護助手",
+            "type": "kw",
+            "children": [
+              {
+                "name": "医療",
+                "value": "医療",
+                "type": "kw"
+              },
+              {
+                "name": "医師",
+                "value": "医師",
+                "type": "kw"
+              },
+              {
+                "name": "薬剤師",
+                "value": "薬剤師",
+                "type": "kw"
+              },
+              {
+                "name": "看護助手",
+                "value": "看護助手",
+                "type": "kw"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "areaSearchType": true,
+    "quickTypes": {
+      "list":  ["pref", "jobbc", "freeword"]
+    },
+    "isDispLatestJob": true,
+    "isDispRecommendJob": true,
+    "isDispEqualJob": true,
+    "isTelChanged": false,
+    "formPattern": 1,
+    "policy": {
+      "isSetUrl": false,
+      "url": "https://www.1049.cc/privacy",
+      "text": "【個人情報保護方針】\n１．個人情報の取得と利用目的\n　弊社は、個人情報保護方針に定めた事項（個人情報に関する法令及び個人情報保護方針に基づくコンプライアンス･プログラ\n　ム）を遵守し、利用者の個人情報の適切な保護と利用に努めます。\n　また、必要に応じてコンプライアンス・プログラムの継続的な見直し改善を行います。"
+    },
+    "favoriteJobManagerCodes": "123[]456[]789",
+    "nav": [
+      {
+        "label": "",
+        "url": "http://localhost:8000/",
+        "target": "",
+        "class": "navItem homeIcon",
+        "icon": "/img/icon/home.svg"
+      },
+      {
+        "label": "お仕事を探す",
+        "url": "http://localhost:8000/search/",
+        "target": "",
+        "class": "navItem searchIcon",
+        "icon": ""
+      }
+    ],
+    "favorite": {
+      "title": {
+        "ja": "お気に入りの仕事"
+      }
+    },
+    "pager": {
+      "linkMax": 3
+    }
+  },
+  "backendSettings": {
+    "news": {
+      "term": 7,
+      "limit": 3,
+      "sort": [
+        {
+          "field": "updatedAt",
+          "order": "desc"
+        },
+        {
+          "field": "jobId",
+          "order": "asc"
+        }
+      ]
+    },
+    "equal": {
+      "limit": 3,
+      "sort": [
+        {
+          "field": "updatedAt",
+          "order": "desc"
+        },
+        {
+          "field": "jobId",
+          "order": "asc"
+        }
+      ]
+    },
+    "recommend": {
+      "limit": 5,
+      "sort": [
+        {
+          "field": "recommend",
+          "order": "desc"
+        }
+      ]
+    }
+  }
+}

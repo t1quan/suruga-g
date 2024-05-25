@@ -1,0 +1,61 @@
+{
+
+  "code": 200,
+  "message": "検索軸を取得しました。",
+  "data":
+
+  {
+
+    "area":
+    [
+      {
+        "name": "北海道・東北",
+        "value": 1,
+        "cnt": 10,
+        "children": [
+          {
+            "name": "北海道",
+            "value": 1,
+            "cnt": 10,
+            "parent": 1
+          }
+        ]
+      },
+
+      {
+        "name": "関東",
+        "value": 2,
+        "cnt": 12,
+        "children": [
+          {
+            "name": "東京都",
+            "value": 13,
+            "parent": 2,
+            "cnt": 7
+          },
+          {
+            "name": "神奈川県",
+            "value": 14,
+            "parent": 2,
+            "cnt": 5
+          }
+        ]
+      },
+
+      {
+        "name": "甲信越・北陸",
+        "value": 3,
+        "cnt": 3,
+        "children": [
+          {
+            "name": "長野県",
+            "value": 20,
+            "parent": 3,
+            "cnt": 3
+          }
+        ]
+      }
+    ]
+  }
+
+}

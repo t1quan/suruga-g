@@ -1,0 +1,13 @@
+{
+  "code": 200,
+  "message": "住所情報を取得しました。",
+  "data":
+  {
+    "zipCode": "3800804",
+    "prefCode": 20,
+    "cityCode": 201,
+    "prefName": "長野県",
+    "cityName": "長野市",
+    "street":"荒屋"
+  }
+}

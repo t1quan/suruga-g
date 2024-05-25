@@ -1,0 +1,297 @@
+@charset "UTF-8";
+// =======================================================
+// latestJob
+// =======================================================
+.latestJob {
+  display: none;
+  padding: 15px calc(100vw / 750 * 40) 35px;
+  background: $baseBgColor;
+  @include minWidthXs {
+    padding: 35px 0;
+  }
+}
+
+.latestJobInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 24px);
+  max-width: $contentWidth;
+  margin: 0 auto;
+  @include xs {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.latestJobTitle {
+  width: 100%;
+  margin-bottom: 15px;
+  @include minWidthXs {
+    width: 120px;
+    margin-bottom: 0;
+  }
+
+  .en,
+  .ja {
+    display: block;
+    color: $bgBaseTextColor;
+    line-height: 1;
+  }
+
+  .en {
+    font-family: "prohibition", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-size: rem(16);
+    @include minWidthXs {
+      font-size: rem(24);
+    }
+  }
+
+  .ja {
+    display: none;
+    font-size: rem(12);
+    font-weight: 500;
+    @include minWidthXs {
+      font-size: rem(14);
+    }
+  }
+}
+
+.latestJobBox {
+  //width: calc(100% - (70px + 20px));
+  width: 100%;
+  overflow: hidden;
+  @include minWidthXs {
+    width: calc(100% - (180px * 2));
+  }
+}
+
+.latestJobItem, .notJob {
+  font-size: rem(13);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include minWidthXs {
+    font-size: rem(14);
+  }
+
+  a {
+    color: $bgBaseTextColor;
+    transition: opacity .3s;
+    @include minWidthXs {
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+.latestJobDate {
+  display: block;
+  width: 100%;
+  @include minWidthXs {
+    display: inline;
+    width: auto;
+    margin-right: 1em;
+  }
+}
+
+.latestJobMoreButton {
+  display: block;
+  width: 70px;
+  //padding: 6px 4px;
+  padding: 0 4px;
+  //border: solid 1px $latestJobMoreButtonBgColor;
+  color: $bgBaseTextColor;
+  font-family: "prohibition", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-align: center;
+  //transition-property: background, color;
+  //transition-duration: .3s;
+  transition: all 0.3s ease;
+  &:hover {
+    //background: $latestJobMoreButtonBgColor;
+    //color: $latestJobMoreButtonTextColor;
+    cursor: pointer;
+    .buttonText {
+      opacity: 0.6;
+      &::after {
+        transform: translateX(30px);
+        @include xs {
+          transform: translateX(25px);
+        }
+      }
+    }
+  }
+  @include minWidthXs {
+    width: 90px;
+    border-width: 2px;
+  }
+  @include xs {
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+
+  .buttonText {
+    font-size: rem(13);
+    &::after {
+      content: '\f061';
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      transform: translateX(20px);
+      font-family: "Font Awesome 5 Free";
+      font-size: rem(11);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    @include minWidthXs {
+      font-size: rem(16);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/*============================
+  #newInfoBox
+  スピードグレード版
+  ============================*/
+#latestJobBox {
+    max-width: $contentWidth;
+    margin: 0 auto 20px;
+    padding: 12px 0 10px 0;
+    @include xs {
+        padding: 10px 10px 20px;
+    }
+
+    .latestJobTitle {//汎用タイトル 画像左寄せ版
+        width: 100%;
+        margin: 50px auto 10px auto;
+        height: auto;
+        overflow: hidden;
+        &:before {
+            content: "新着のお仕事情報";
+            float: left;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            overflow: hidden;
+            height: auto;
+            font-weight: 600;
+            color: $baseColor;
+            @include xs {
+                font-size: 1.3rem;
+            }
+        }
+        &:after {
+            content: "";
+            float: left;
+            font-size: 1.1rem;
+            line-height: 2;
+            overflow: hidden;
+            height: auto;
+            margin: 12px 0 0 20px;
+            font-weight: 100;
+        }
+        @include xs {
+            margin: 0;
+            padding: 20px 0 10px 0;
+        }
+    }
+
+
+    ul {
+        margin-bottom: 30px;
+        @include xs {
+            height: inherit;
+            margin-bottom: 20px;
+        }
+        li {
+            border-bottom: 1px solid $baseColor;
+            @include xs {
+                border-bottom: 1px solid $baseColor;
+                padding: 20px 0 20px 0;
+            }
+            a {
+                display: block;
+                padding: 10px 0 10px 0;//1行ごとのパディング
+                &:hover {
+                    opacity: .7;
+                }
+                @include xs {
+                    padding: 0 20px 0 5px;
+                    letter-spacing: normal;
+                    background-size: 6px 12px;
+                    background: none;
+                }
+                div {
+                    display: inline-block;
+                    letter-spacing: normal;
+                    vertical-align: middle;
+                    @include xs {
+                        margin-right: 0;
+                    }
+                }
+                .newInfoDate {
+                    font-size: $fontSizeSmall;
+                    color: $baseTextColor;
+                    padding: 0;
+                    width: 90px;
+                    line-height: 2;
+
+                    @include xs {
+                        width: 100%;
+                    }
+                }
+                .newInfoTag {
+                    color: $baseTextColor;
+                    width: 75%;
+                    text-align: left;
+                    font-size: $fontSizeNomal;
+                    padding: 0 15px;
+                    @include xs {
+                        font-size: $fontSizeSmall;//13px
+                        padding: 0;
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+                .newInfoDetail {
+                    color: $baseTextColor;
+                    font-size: $fontSizeNomal;
+                    padding: 0 15px 0 93px;
+                    width: 100%;
+                    word-break: break-all; //word-breakなし
+
+                    //省略設定
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                    @include xs {
+                        padding: 0;
+                        font-size: $fontSizeSmall;
+                        white-space: normal;
+                    }
+                    span {
+                        display: block;
+                        padding: 0 15px;
+                        @include xs {
+                            padding: 0;
+                        }
+                    }
+                }
+            }//a
+        }
+        //li
+    }
+    //ul
+}
+//newInfoBox

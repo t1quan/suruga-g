@@ -1,0 +1,777 @@
+/*------------------------------------------------------------
+common
+------------------------------------------------------------*/
+
+body{
+    font-family: 'Noto Sans JP', 'Century Gothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 游ゴシック体, YuGothic, "Yu Gothic Medium", 游ゴシック, 'Yu Gothic', メイリオ, Meiryo, sans-serif;
+}
+
+#member {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+#member * {
+    box-sizing: border-box;
+}
+
+#member a {
+    transition: opacity .3s;
+}
+
+#member a[href^="tel:"] {
+    display: inline-block;
+    transition: none;
+}
+
+#member a:hover {
+    text-decoration: none;
+}
+
+#member a:focus-visible {
+    outline: none;
+}
+
+#member img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+#member .js-fadein {
+    opacity: 0;
+    transform: translate(0, 120px);
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+}
+
+#member .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.text:last-of-type {
+    margin-bottom: 0;
+}
+
+#member .pc-br {
+    display: none;
+}
+
+#member .sp-br{
+    display: block;
+}
+
+#member .inner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+#member .ttl-en,
+#member .number,
+#member .en,
+#member .num{
+    font-family: prohibition, sans-serif;
+}
+
+
+.member-container{
+    display: none;
+}
+.member-container.is-active{
+    display: block;
+}
+
+
+/*main-banner*/
+#member .main-banner{
+    position: relative;
+}
+#member .main-banner .heading-main{
+    padding-top: 60px;
+    padding-bottom: 64px;
+}
+#member .main-banner .heading-main .heading{
+    position: relative;
+}
+#member .main-banner .heading-main .heading:after{
+    content: "";
+    position: absolute;
+    background-image: url("../images/member/member_dots_ttl_sp.png");
+    background-size: 100%;
+    width: 25px;
+    height: 5px;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#member .main-banner .heading-main .ttl-en{
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+}
+#member .main-banner .heading-main .ttl-ja{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+#member .main-banner .main-image img{
+    width: 100%;
+}
+
+
+
+/*boxDescription*/
+#member .boxDescription{
+    position: relative;
+    margin-top: -75px;
+    padding: 0 6px;
+    z-index: 2;
+}
+#member .boxDescription .description-container{
+    background: #fff;
+    padding: 20px 20px 15px;
+}
+#member .boxDescription .description-container .ttl-ja{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    margin-bottom: 4px;
+}
+#member .boxDescription .description-container .ttl-ja small{
+    font-size: 16px;
+}
+#member .boxDescription .description-container .ttl-en{
+    font-size: 15px;
+    line-height: 20px;
+    color: #665ABF;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+#member .boxDescription .description-container .info-work{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 17px;
+}
+#member .boxDescription .description-container .info-work p{
+    display: inline-block;
+}
+#member .boxDescription .description-container .info-work p.position{
+    padding-left: 11px;
+}
+#member .boxDescription .description-container .text{
+    font-size: 13px;
+    line-height: 25px;
+}
+
+
+
+#member .member-main{
+    padding-top: 30px;
+}
+#member .member-main .memberItem-info{
+    padding: 0 25px;
+    margin-bottom: 27px;
+}
+#member .member-main p.ttl-top{
+    font-size: 12px;
+    line-height: 18px;
+    color: #665ABF;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+#member .member-main p.ttl-top:before{
+    content: "";
+    position: absolute;
+    background-image: url("../images/member/member_icon_dots_sp.png");
+    background-size: 100%;
+    width: 4px;
+    height: 10px;
+    top: 4px;
+    left: -20px;
+}
+#member .member-main h3.title{
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+#member .member-main p.text{
+    font-size: 13px;
+    line-height: 25px;
+    text-align: justify;
+}
+
+#member .member-main .memberInfo-image .memberImage img{
+    width: 100%;
+}
+#member .member-main .memberInfo-image .memberImage{
+    margin-bottom: 31px;
+}
+#member .member-main .memberInfo-image .textContent{
+    padding: 0 12px;
+}
+
+
+/*message-block*/
+#member .message-block{
+    background: #F7F8FC;
+    padding-top: 20px;
+    padding-bottom: 48px;
+    position: relative;
+    min-height: 288px;
+}
+#member .message-block .imageContent{
+    display: none;
+}
+#member .message-block p.title{
+    font-size: 12px;
+    line-height: 18px;
+    color: #665ABF;
+    font-weight: bold;
+    position: relative;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+#member .message-block p.title:before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/member/member_icon_dots_sp.png");
+    background-size: 100%;
+    width: 4px;
+    height: 10px;
+    top: 4px;
+    left: -20px;
+}
+#member .message-block .text{
+    font-size: 13px;
+    line-height: 25px;
+    text-align: justify;
+}
+#member .message-block .massageContent{
+    padding: 0 25px;
+}
+#member .message-block .img-float{
+    width: 110px;
+    height: 100px;
+    float: right;
+    position: relative;
+    margin-right: -10px;
+    margin-top: 11px;
+    padding-left: 10px;
+}
+#member .message-block .img-float:after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: -15px;
+    right: -15px;
+    background: #fff;
+}
+#member .message-block .img-float img{
+    position: relative;
+    z-index: 2;
+}
+#member .message-block .hasTag{
+    position: absolute;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "austin-pen", sans-serif;
+    font-weight: 400;
+    color: rgba(102,90,191,.70);
+    bottom: -13px;
+    right: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+/*member-tabs*/
+#member .member-tabs{
+    padding-top: 73px;
+    padding-bottom: 60px;
+}
+#member .member-tabs .heading-tab{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-left: 2px;
+    margin-bottom: 22px;
+}
+#member .member-tabs .tabContent{
+    background: #F7F8FC;
+    padding-top: 20px;
+    padding-bottom: 22px;
+}
+#member .member-tabs .memberList{
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 20px;
+}
+#member .member-tabs .memberItem{
+    background: #fff;
+    position: relative;
+}
+#member .member-tabs .memberItem:before{
+    content: "";
+    position: absolute;
+    width: 28%;
+    border-top: 1px solid #000;
+    transition: .3s;
+    top: 0;
+    left: 0;
+}
+#member .member-tabs .memberItem:hover:before{
+    width: calc(100% - 7px);
+}
+#member .member-tabs .memberItem:after{
+    content: "";
+    position: absolute;
+    height: 23%;
+    border-left: 1px solid #000;
+    transition: .3s;
+    top: 0;
+    left: 0;
+}
+#member .member-tabs .memberItem:hover:after{
+    height: calc(100% - 7px);
+}
+#member .member-tabs .memberItem .memberInfo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 8px 0px 0 5px;
+}
+#member .member-tabs .memberItem .memberInfo .ttl{
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+}
+#member .member-tabs .memberItem .memberInfo .ttl small{
+    font-size: 9px;
+}
+#member .member-tabs .memberItem .memberInfo .work{
+    font-size: 12px;
+    line-height: 16px;
+    color: #665ABF;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-left: 2px;
+}
+#member .member-tabs .memberItem:hover .imageTab .image img{
+    width: 100%;
+}
+#member .member-tabs .memberItem .imageTab .imgHover{
+    display: none;
+}
+#member .member-tabs .memberItem:hover .imageTab .imgHover{
+    display: block;
+}
+#member .member-tabs .memberItem:hover .imageTab .image:not(.imgHover){
+    display: none;
+}
+#member .member-tabs .memberItem a{
+    display: block;
+    color: #000;
+}
+
+
+#member .member-tabs .memberItem .icon-arrow{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    bottom: 5px;
+    right: 5px;
+}
+#member .member-tabs .memberItem .icon-arrow .line-arrow{
+    position: absolute;
+    height: 10px;
+    border-left: 1px solid #000;
+    top: -4px;
+    left: 4px;
+    transition: .3s;
+}
+#member .member-tabs .memberItem:hover .icon-arrow .line-arrow{
+    border-left-color: #665ABF;
+    height: 14px;
+}
+#member .member-tabs .memberItem .icon-arrow svg{
+    position: absolute;
+    left: -1px;
+    top: 1px;
+    transition: .3s;
+    width: 11px;
+    height: auto;
+}
+#member .member-tabs .memberItem .icon-arrow svg path{
+    transition: .3s;
+}
+#member .member-tabs .memberItem:hover .icon-arrow svg path{
+    stroke: #665ABF;
+}
+#member .member-tabs .memberItem:hover .icon-arrow svg{
+    top: 5px;
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+    #member .inner {
+        padding: 0 20px;
+    }
+    #member .pc-br{
+        display: block;
+    }
+
+
+    /*main-banner*/
+    #member .main-banner .heading-main {
+        padding-top: 101px;
+        padding-bottom: 119px;
+    }
+
+    #member .main-banner .heading-main .ttl-en {
+        font-size: 60px;
+        line-height: 75px;
+        letter-spacing: 5px;
+        padding-left: 5px;
+        margin-bottom: 19px;
+    }
+
+    #member .main-banner .heading-main .ttl-ja {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 2px;
+    }
+
+    #member .main-banner .heading-main .heading:after {
+        background-image: url("../images/member/member_dots_ttl_pc.png");
+        width: 47px;
+        height: 8px;
+        bottom: -27px;
+    }
+
+
+    /*boxDescription*/
+    #member .boxDescription {
+        position: relative;
+        margin-top: -51px;
+        padding: 0 6px;
+        z-index: 2;
+    }
+    #member .boxDescription .description-container {
+        padding: 57px 70px 42px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #member .boxDescription .memberInfo{
+        width: 410px;
+        padding-top: 4px;
+    }
+    #member .boxDescription .infoText{
+        width: calc(100% - 410px);
+        padding-left: 20px;
+    }
+    #member .boxDescription .description-container .ttl-ja {
+        font-size: 32px;
+        line-height: 47px;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #member .boxDescription .description-container .ttl-ja small {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #member .boxDescription .description-container .ttl-en {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        margin-bottom: 0;
+        display: inline-block;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    #member .boxDescription .description-container .info-work {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.8px;
+        margin-bottom: 17px;
+    }
+    #member .boxDescription .description-container .info-work p {
+        display: block;
+        margin-bottom: 11px;
+    }
+    #member .boxDescription .description-container .info-work p.position {
+        padding-left: 0;
+    }
+    #member .boxDescription .description-container .work{
+        margin-bottom: 18px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #member .boxDescription .description-container .text {
+        font-size: 18px;
+        line-height: 34px;
+        text-align: justify;
+    }
+
+
+
+    /*member-main*/
+    #member .member-main {
+        padding-top: 66px;
+    }
+    #member .member-main p.ttl-top {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.7px;
+        margin-bottom: 34px;
+    }
+    #member .member-main p.ttl-top:before {
+        background-image: url("../images/member/member_icon_dots_pc.png");
+        width: 8px;
+        height: 20px;
+        left: -50px;
+    }
+    #member .member-main h3.title {
+        font-size: 30px;
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+    #member .member-main p.text {
+        font-size: 18px;
+        line-height: 40px;
+    }
+    #member .member-main .memberItem-info {
+        padding: 0 45px 0 70px;
+        margin-bottom: 73px;
+    }
+
+    #member .member-main .memberInfo-image{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+    #member .member-main .memberInfo-image .memberImage {
+        margin-bottom: 0;
+        width: 40.63%;
+    }
+    #member .member-main .memberInfo-image .textContent {
+        padding: 0;
+        width: 59.37%;
+    }
+    #member .member-main .memberInfo-image01 .memberItem-info{
+        padding: 20px 20px 0 90px;
+        margin-bottom: 0;
+        max-width: 750px;
+    }
+    #member .member-main .memberInfo-image02 .memberItem-info{
+        padding: 20px 75px 0 40px;
+        max-width: 750px;
+        margin: 0 0 0 auto;
+    }
+    #member .member-main .memberInfo-image.memberInfo-image02 .textContent{
+        padding-left: 20px;
+    }
+
+
+
+    #member .message-block{
+        background: transparent;
+    }
+    #member .message-block .massageContent {
+        padding: 61px 81px 75px 69px;
+        background: #F7F8FC;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+    }
+    #member .message-block .img-float{
+        display: none;
+    }
+    #member .message-block .imageContent {
+        display: block;
+        width: 200px;
+        position: relative;
+        padding-top: 29px;
+    }
+    #member .message-block .imageContent:after{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        right: -30px;
+        bottom: -30px;
+    }
+    #member .message-block .imageContent img{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+    #member .message-block .textContent{
+        width: calc(100% - 200px);
+        padding-left: 150px;
+    }
+    #member .message-block p.title {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.8px;
+        margin-bottom: 32px;
+    }
+    #member .message-block .text {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    #member .message-block p.title:before {
+        background-image: url("../images/member/member_icon_dots_pc.png");
+        width: 8px;
+        height: 20px;
+        left: -50px;
+    }
+    #member .message-block .hasTag {
+        position: absolute;
+        font-size: 60px;
+        line-height: 60px;
+        font-family: "austin-pen", sans-serif;
+        color: rgba(102,90,191,.30);
+        bottom: -28px;
+        right: 22px;
+        letter-spacing: 2px;
+    }
+
+
+    /*member-tabs*/
+    #member .member-tabs {
+        padding-top: 117px;
+        padding-bottom: 120px;
+    }
+    #member .member-tabs .heading-tab {
+        font-size: 60px;
+        line-height: 75px;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 5px;
+        padding-left: 6px;
+        margin-bottom: 42px;
+    }
+    #member .member-tabs .memberList {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    #member .member-tabs .memberItem .memberInfo .ttl {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 3px;
+    }
+    #member .member-tabs .memberItem .memberInfo .work {
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.8px;
+        padding-left: 4px;
+    }
+    #member .member-tabs .memberItem:after {
+        height: 20%;
+    }
+    #member .member-tabs .memberItem:hover:after {
+        height: calc(100% - 16px);
+    }
+    #member .member-tabs .memberItem:before {
+        width: 31%;
+    }
+    #member .member-tabs .memberItem:hover:before{
+        width: calc(100% - 16px);
+    }
+    #member .member-tabs .memberItem .memberInfo {
+        padding: 16px 0px 0 6px;
+    }
+    #member .member-tabs .memberItem:nth-child(n+2) .memberInfo .ttl {
+        padding-left: 5px;
+    }
+    #member .member-tabs .memberItem .memberInfo .ttl small {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+    #member .member-tabs .memberItem .icon-arrow{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: #fff;
+        bottom: 7px;
+        right: 7px;
+    }
+    #member .member-tabs .memberItem .icon-arrow .line-arrow{
+        position: absolute;
+        height: 21px;
+        border-left: 2px solid #000;
+        top: -6px;
+        left: 7px;
+        transition: .3s;
+    }
+    #member .member-tabs .memberItem:hover .icon-arrow .line-arrow{
+        border-left-color: #665ABF;
+        height: 26px;
+    }
+    #member .member-tabs .memberItem .icon-arrow svg{
+        position: absolute;
+        left: -4px;
+        top: 3px;
+        width: auto;
+        transition: .3s;
+    }
+    #member .member-tabs .memberItem .icon-arrow svg path{
+        transition: .3s;
+    }
+    #member .member-tabs .memberItem:hover .icon-arrow svg path{
+        stroke: #665ABF;
+    }
+    #member .member-tabs .memberItem:hover .icon-arrow svg{
+        top: 8px;
+    }
+
+
+
+
+
+
+}
+

@@ -1,0 +1,105 @@
+//_smart_layoutTop
+//レイアウトスタイル　smart版　TOPページ
+
+#topLayout {
+  min-width: $defInnerWidthPc; //navとコンテンツの合計幅でスクロールバーを出す設定
+
+  @include xs {
+    min-width: 320px; //navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+
+  .container {
+    //height: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template: //グリッドの定義
+            "topNav" $defMenuHeightPc
+            "topMvSlider" auto
+            "topMovie" auto
+            "topLatestJob" auto
+            "template01" auto
+            "topLinkBoxAbout" auto
+            "topSearchBox" auto
+            "topRecommendJob" auto
+            "maintenanceNotice" 1fr
+            "topFooter" auto / minmax($defInnerWidthPc, 100%);
+
+    @include xs {
+      grid-template:
+            "topNav" $defMenuHeightSp
+            "topMvSlider" auto
+            "topMovie" auto
+            "topLatestJob" auto
+            "template01" auto
+            "topLinkBoxAbout" auto
+            "topSearchBox" auto
+            "topRecommendJob" auto
+            "maintenanceNotice" 1fr
+            "topFooter" auto / 100%;
+    }
+  }
+
+  #topNav {
+    grid-area: topNav; //表示エリアの名前
+  }
+
+  #topMvSlider {
+    grid-area: topMvSlider;
+    background-color: white;
+    width: 100%;
+    margin: 0 0 0 0; //Mv下余白レイアウト
+  }
+
+  #topLatestJob { //新着求人　セクション
+    grid-area: topLatestJob;
+    min-width: 825px; //PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width: 100%;
+    }
+  }
+
+  #topMovie {
+    grid-area: topMovie;
+    background-color: $white;
+    width: 100%;
+  }
+
+  #topLinkBoxAbout { //linkBox　aboutセクション
+    grid-area: topLinkBoxAbout;
+    min-width: 825px; //PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width: 100%;
+    }
+  }
+  #template01 { //contentsBox
+    grid-area: template01;
+    min-width: 825px; //PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width: 100%;
+    }
+  }
+
+  #topRecommendJob { //linkBox　aboutセクション
+    grid-area: topRecommendJob;
+    min-width: 825px; //PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width: 100%;
+    }
+  }
+
+  #topSearchBox {
+    grid-area: topSearchBox;
+    min-width: 825px; //PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width: 100%;
+    }
+  }
+
+  #maintenanceNotice {
+    grid-area: maintenanceNotice;
+  }
+
+  #cmnFooter {
+    grid-area: topFooter;
+  }
+}

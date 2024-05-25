@@ -1,0 +1,50 @@
+//concier_thanksLayout
+//レイアウトスタイル　相談フォーム送信完了ページ
+//レイアウトスタイルはページごとに用意する
+
+#concier_thanksLayout {
+  min-width:$defInnerWidthPc;//navとコンテンツの合計幅でスクロールバーを出す設定
+
+  @include xs {
+    min-width:320px;//navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+  
+  .container {
+    display: grid;
+    overflow: hidden;
+    
+    grid-template://グリッドの定義
+        "concierThanksNav" $defMenuHeightPc
+        "concierThanksContent" auto
+        "concierThanksfooter" auto/ minmax($defInnerWidthPc, 100%);
+  
+    @include xs {
+      grid-template:
+        "concierThanksNav" $defMenuHeightSp
+        "concierThanksContent" auto
+        "concierThanksfooter" auto / 100%;
+    }
+  }
+  #concier_thanksNav {//nav部分
+    grid-area: concierThanksNav; //表示エリアの名前
+  }
+
+  #concierThanks{
+    grid-area: concierThanksContent;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+  
+  #searchBox{
+    grid-area: concierThanksSearchBox;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+  #cmnFooter{
+    grid-area: concierThanksfooter;
+  }
+}//concierThanksLayout

@@ -1,0 +1,31 @@
+#maintenanceNotice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .inner {
+    width: calc(100% - 24px);
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    .alert {
+      text-align: center;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: #666;
+
+        &:not(:last-of-type) {
+          padding-bottom: 0.5em;
+        }
+
+        @include xs {
+          font-size: 0.9375rem;
+        }
+      }
+    }
+
+  }
+}

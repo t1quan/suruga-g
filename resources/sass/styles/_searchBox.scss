@@ -1,0 +1,852 @@
+//#searchList,
+#search,
+#searchBox {
+  //ボタン内のinput非表示に
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+  }
+  color: $searchBoxBtnTextColor;
+  padding: 0 0 0 0; //左右余白を設定
+
+  //@include xs {
+  //  margin-top: -70px;
+  //  padding: 70px 0 0 0;
+  //}
+
+  .searchBoxBg {
+    background: $searchQuickBoxBgColor;
+  }
+
+  .searchBoxWrapper {
+    margin: auto;
+    overflow: visible;
+  }
+  
+  .searchBoxTitle {
+    width: calc(100% - 24px);
+    max-width: $contentWidth;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    @include xs {
+      padding: 25px 0;
+    }
+    .en,
+    .ja {
+      display: block;
+      color: $searchQuickBoxHeadColor;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .en {
+      font-family: "prohibition", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      font-size: rem(70);
+      @include xs {
+        font-size: rem(38);
+      }
+    }
+    .ja {
+      font-size: rem(24);
+      font-weight: 700;
+      @include xs {
+        font-size: rem(15);
+      }
+    }
+  }
+
+  // Bodyの全体に対する指定
+  .searchBoxBody {
+    .searchBoxBodyWrapper {
+      // 選択Formに対する指定
+      .searchSelect {
+        background: $searchBoxBgColor;
+        @include xs {
+        }
+        .searchSelectWrapper {
+          width: calc(100% - 24px);
+          max-width: $contentWidth;
+          margin: 0 auto;
+          padding: 50px 0 180px;
+          @include xs {
+            padding: 50px 0;
+          }
+        }
+      }
+      .search-container {
+        @include xs {
+          padding-bottom: 20px;
+        }
+
+        .search-function {
+          margin: 0 auto;
+          @include xs {
+            width: 100%;
+          }
+          .search-form__form {
+            .search-tab {
+              @include xs {
+                overflow: hidden;
+              }
+
+              .search-tab__btn {
+                letter-spacing: -.4em;
+                margin: 0 auto;
+                display: flex;
+
+                li {
+                  display: inline-block;
+                  letter-spacing: normal;
+                  width: calc(100% / 3);
+                  text-align: center;
+                  font-size: $fontSizeXLarge;
+                  color: $searchBoxTabInactiveTextColor;
+                  cursor: pointer;
+                  flex: 1 1 auto;
+                  height: 100%;
+                  border-top: 2px solid $searchBoxTabActiveBgColor;
+                  border-right: 2px solid $searchBoxTabActiveBgColor;
+                  border-bottom: 2px solid $searchBoxTabActiveBgColor;
+                  background: $searchBoxTabInactiveBgColor;
+                  @include minWidthXs {
+                    transition: all .3s;
+                    &:hover {
+                      color: $bgMainTextColor !important;
+                      background-color: $searchBoxTabActiveBgColor !important;
+                    }
+                  }
+
+                  @include xs {
+                    font-size: $fontSizeSmall;
+                  }
+                  
+                  &:first-child p {
+                    border-left: 2px solid $searchBoxTabActiveBgColor;
+                  }
+
+                  &:not(:last-child) p {
+                    //border-right: 2px solid $searchBoxTabActiveBgColor;
+                    //height: 100%;
+                  }
+
+                  .tabIconWrapper { //タブアイコン
+                    display: none;
+
+                    //width: 52px;
+                    //height: 52px;
+                    //
+                    //@include xs {
+                    //  width: 38px;
+                    //  height: 38px;
+                    //}
+                    //.tabIconImg{
+                    //  @include imgCenter;
+                    //}
+
+                  }
+                  //sbTabIcon
+
+                  p {
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px 10px;
+                    line-height: 1.4;
+                    @include xs {
+                      width: 100%;
+                      font-size: 0.88rem;
+                      text-align: center;
+                    }
+                  }
+                }
+              }
+            }
+
+            .search-box {
+              margin: 0 auto;
+              padding: 32px 0 80px 0;
+              @include xs {
+                padding: 0 0 20px 0;
+              }
+
+              .info-area__list {
+                .area__list {
+                  display: inline-block;
+                  letter-spacing: normal;
+                  margin-right: 20px;
+                  color: #555;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  dt { //検索項目の小見出しスタイル
+                    margin-top: 20px;
+                    margin-bottom: 5px; //見出しの下間隔
+                    padding: 0 0 0 0; //見出しの左スペースなし
+                    color: $searchBoxBtnTextColor;
+                    @include xs {
+                      margin-top: 10px;
+                      margin-bottom: 0;
+                    }
+                  }
+                  //dt
+                  dd {
+                    text-align: left;
+                    display: inline-block;
+                    @include xs {
+                      padding: 5px 4px;
+                    }
+
+                    &:nth-child(n+2) {
+                      margin-right: 0;
+                    }
+                    .area__btn {
+                      font-size: 1rem;
+                      font-weight: 600;
+                      color: #555;
+                      padding: 10px 20px;
+                      border: 1px solid transparent;
+                      background-color: $white;
+                      margin: 0 0 2px 2px;
+                      &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hgroup-other {
+    h4 {
+      padding: 10px 20px;
+      //font-weight: 400;
+      font-weight: 500;
+    }
+  }
+
+  .js-clicked__grey {
+    color: $invertBaseTextColor !important;
+    background: $searchBoxTabActiveBgColor !important;
+  }
+
+  .js-clicked__blue {
+    color: $searchBoxTabActiveTextColor !important;
+    background: $searchBoxTabActiveBgColor !important;
+  }
+
+  .search-box,
+  .search-all { //検索ボタン初期状態は非表示
+    display: none;
+  }
+
+  .search-all {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    @include xs {
+      padding: 0 10px;
+    }
+    .search-all__btn {
+      width: 500px;
+      font-size: 1rem;
+      margin-bottom: 100px;
+      padding: 15px 0;
+      font-weight: 600;
+      color: $searchSubmitBtnFontColor;
+      background-color: $searchSubmitBtnColor;
+      @include xs {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  //検索カテゴリ別アイコン設定、表示設定
+  .search-box {
+    .hgroup-other { //エリアアイコン設定
+      h4 {
+        padding: 16px 0;
+        font-weight: 500;
+        color: $searchBoxTitleColor;
+      }
+    }
+    .areaWrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      .areaMap {
+        display: $searchBoxMap !important;
+        padding: 0;
+        margin: -15px auto 0;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 980px;
+        position: relative; //下層配置用
+        overflow: hidden;
+        @include xs {
+          display: none !important;
+        }
+        
+        @if $searchBoxMap == 'block' {
+          &.areaMap {
+            + .areaList {
+              display: none;
+              @include xs {
+                display: block;
+              }
+            }
+          }
+        }
+        
+        .areaMapBg {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-top: calc(100% * (625 / 980));
+          transform: rotate(15deg);
+        }
+        
+        .areaMapIllust {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 52%;
+          width: 125%;
+          height: 125%;
+          vertical-align: middle;
+          transform: translateX(-50%) translateY(-50%);
+          z-index: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+        .areaMapInner {
+          position: absolute;
+          height: auto;
+          width: 100%;
+          padding-bottom: calc(100% * (625 / 980));
+          top: 0;
+          left: 0;
+
+          a {
+            display: block;
+            position: relative;
+            background-size: cover;
+            background: $searchBoxMapBtnBgColor;
+            border: 1px solid $searchBoxMapBtnBorderColor;
+            width: 90px;
+            height: 30px;
+            box-sizing: border-box;
+            float: left;
+            &:nth-child(2n) {
+              border-left: none;
+            }
+            &:nth-child(n+3) {
+              border-top: none;
+            }
+            &[href]:hover {
+              //opacity: .8;
+            }
+            &:before {
+              color: $searchBoxMapBtnTextColor;
+              font-size: 16px;
+              position: absolute;
+              top: 3px;
+              left: 0;
+              right: 0;
+              text-align: center;
+              font-weight: normal;
+            }
+            &.hasHref {
+              background: $searchBoxMapBtnActiveBgColor;
+              transition: background, .3s;
+              &[href]:hover {
+                background: mix($searchBoxMapBtnActiveBgColor, $white, 50%);
+              }
+              &::before {
+                color: $searchBoxMapBtnActiveTextColor;
+              }
+            }
+            &:after {
+              display: none;
+              position: absolute;
+              right: 7px;
+              top: 2px;
+              content: "\f138";
+              font-family: "Font Awesome 5 Free";
+              color: $searchBoxBtnBgColor;
+              font-weight: bold;
+              font-size: 0.8rem;
+            }
+            &#mapImg_area1 {
+              &:before {
+                content: "北海道";
+              }
+            }
+            &#mapImg_area2 {
+              &:before {
+                content: "青森県";
+              }
+            }
+            &#mapImg_area3 {
+              &:before {
+                content: "岩手県";
+              }
+            }
+            &#mapImg_area4 {
+              &:before {
+                content: "宮城県";
+              }
+            }
+            &#mapImg_area5 {
+              &:before {
+                content: "秋田県";
+              }
+            }
+            &#mapImg_area6 {
+              &:before {
+                content: "山形県";
+              }
+            }
+            &#mapImg_area7 {
+              &:before {
+                content: "福島県";
+              }
+            }
+            &#mapImg_area8 {
+              &:before {
+                content: "茨城県";
+              }
+            }
+            &#mapImg_area9 {
+              &:before {
+                content: "栃木県";
+              }
+            }
+            &#mapImg_area10 {
+              &:before {
+                content: "群馬県";
+              }
+            }
+            &#mapImg_area11 {
+              &:before {
+                content: "埼玉県";
+              }
+            }
+            &#mapImg_area12 {
+              &:before {
+                content: "千葉県";
+              }
+            }
+            &#mapImg_area13 {
+              &:before {
+                content: "東京都";
+              }
+            }
+            &#mapImg_area14 {
+              &:before {
+                content: "神奈川県";
+              }
+            }
+            &#mapImg_area15 {
+              &:before {
+                content: "新潟県";
+              }
+            }
+            &#mapImg_area16 {
+              &:before {
+                content: "富山県";
+              }
+            }
+            &#mapImg_area17 {
+              &:before {
+                content: "石川県";
+              }
+            }
+            &#mapImg_area18 {
+              &:before {
+                content: "福井県";
+              }
+            }
+            &#mapImg_area19 {
+              &:before {
+                content: "山梨県";
+              }
+            }
+            &#mapImg_area20 {
+              &:before {
+                content: "長野県";
+              }
+            }
+            &#mapImg_area21 {
+              &:before {
+                content: "岐阜県";
+              }
+            }
+            &#mapImg_area22 {
+              &:before {
+                content: "静岡県";
+              }
+            }
+            &#mapImg_area23 {
+              &:before {
+                content: "愛知県";
+              }
+            }
+            &#mapImg_area24 {
+              &:before {
+                content: "三重県";
+              }
+            }
+            &#mapImg_area25 {
+              &:before {
+                content: "滋賀県";
+              }
+            }
+            &#mapImg_area26 {
+              &:before {
+                content: "京都府";
+              }
+            }
+            &#mapImg_area27 {
+              &:before {
+                content: "大阪府";
+              }
+            }
+            &#mapImg_area28 {
+              &:before {
+                content: "兵庫県";
+              }
+            }
+            &#mapImg_area29 {
+              &:before {
+                content: "奈良県";
+              }
+            }
+            &#mapImg_area30 {
+              &:before {
+                content: "和歌山県";
+              }
+            }
+            &#mapImg_area31 {
+              &:before {
+                content: "鳥取県";
+              }
+            }
+            &#mapImg_area32 {
+              &:before {
+                content: "島根県";
+              }
+            }
+            &#mapImg_area33 {
+              &:before {
+                content: "岡山県";
+              }
+            }
+            &#mapImg_area34 {
+              &:before {
+                content: "広島県";
+              }
+            }
+            &#mapImg_area35 {
+              &:before {
+                content: "山口県";
+              }
+            }
+            &#mapImg_area36 {
+              &:before {
+                content: "徳島県";
+              }
+            }
+            &#mapImg_area37 {
+              &:before {
+                content: "香川県";
+              }
+            }
+            &#mapImg_area38 {
+              &:before {
+                content: "愛媛県";
+              }
+            }
+            &#mapImg_area39 {
+              &:before {
+                content: "高知県";
+              }
+            }
+            &#mapImg_area40 {
+              &:before {
+                content: "福岡県";
+              }
+            }
+            &#mapImg_area41 {
+              &:before {
+                content: "佐賀県";
+              }
+            }
+            &#mapImg_area42 {
+              &:before {
+                content: "長崎県";
+              }
+            }
+            &#mapImg_area43 {
+              &:before {
+                content: "熊本県";
+              }
+            }
+            &#mapImg_area44 {
+              &:before {
+                content: "大分県";
+              }
+            }
+            &#mapImg_area45 {
+              &:before {
+                content: "宮崎県";
+              }
+            }
+            &#mapImg_area46 {
+              &:before {
+                content: "鹿児島県";
+              }
+            }
+            &#mapImg_area47 {
+              &:before {
+                content: "沖縄県";
+              }
+            }
+          }
+          div {
+            display: block;
+            position: absolute;
+            width: 185px; //県名16px版
+            height: auto;
+
+            &#mapGroup_1 {
+              top: 39%;
+              left: 73.5%;
+            }
+            &#mapGroup_2 {
+              top: 70%;
+              left: 64.2%;
+            }
+            &#mapGroup_3 {
+              top: 40%;
+              left: 45.8%;
+            }
+            &#mapGroup_4 {
+              top: 84%;
+              left: 41.5%;
+            }
+            &#mapGroup_5 {
+              top: 63.5%;
+              left: 31.3%;
+            }
+            &#mapGroup_6 {
+              top: 39.2%;
+              left: 23.8%;
+            }
+            &#mapGroup_7 {
+              top: 83%;
+              left: 18%;
+            }
+            &#mapGroup_8 {
+              top: 58.8%;
+              left: 1%;
+            }
+            &#mapGroup_9 {
+              left: 0;
+              top: 95%;
+              width: 72px;
+            }
+          }
+        }
+      }
+    }
+    div > .topmod1-bc,
+    div > .topmod1-area,
+    div > .topmod2-jobbc { //エリア名見出しスタイル
+      @include searchBtnHeaderA(); //検索項目見出しスタイル ボーダーなし
+      margin: 12px 0 8px;
+      padding: 0;
+      transition: all .3s;
+      &:hover {
+        opacity: .5;
+        @include xs {
+          opacity: 1;
+        }
+      }
+    }
+    .sub-search-list {
+      display: flex;
+      flex-flow: wrap;
+      flex-direction: row;
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0 6px 6px 0;
+        .topmod1-area,
+        .topmod1-city,
+        .topmod2-job,
+        .topmod3-koyo { //県名項目スタイル
+          @include searchBtnItemsA(); //検索項目ボタンスタイル 小さ目版
+        }
+        a {
+          transition: all .3s;
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+    }
+
+    &.search-area { //エリアで検索
+      display: block; //初期表示設定
+      }
+  }
+
+  .search-box-form {
+    margin: 0 auto;
+    @include xs {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      //padding: 0 10px;
+    }
+
+    .hgroup-other {
+      line-height: 1.4;
+      .headerIconWrapper {
+        display: none;
+        //@include xs {
+        //  display: block;
+        //  width: 24px;
+        //  height: 18px;
+        //}
+      }
+      h4 {
+        margin-bottom: 10px;
+        padding: 0; //見出し位置
+        color: $searchBoxTitleColor;
+        //font-weight: 600;
+        font-weight: 500;
+        @include xs {
+          text-align: center;
+        }
+      }
+    }
+    .search-form__form {
+      margin-top: 20px;
+    }
+  }
+
+  .is-vishidden { //フリーワード入力の見えないラベル要素
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .search-box-form__inner {
+    display: flex;
+    justify-content: space-between;
+    @include xs {
+      display: block;
+    }
+  }
+  .search-form__form {
+    position: relative;
+  }
+  input {
+    display: block;
+  }
+  input[type=search] {
+    @extend %formReset;
+    position: relative;
+    top: 0;
+    background: white;
+    border-radius: 0;
+    border: 1px solid $black;
+    //width: 800px;
+    //width: 850px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc(100% - 110px);
+    height: 50px;
+    padding: 10px 20px;
+    color: $baseTextColor;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    @include xs {
+      width: 100%;
+      margin: 0;
+      padding: 5px 10px;
+    }
+  }
+  .search-form__search {
+    font-size: 1rem;
+    height: 52px;
+    background-color: #fff;
+  }
+  input[type=submit] { //フリーワード検索ボタン
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: .5em;
+    z-index: 1;
+    width: 6em;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .search-form__submit { //検索ボックスの検索submitボタン
+    font-size: inherit;
+    background: $searchSubmitBtnColor;
+    height: 50px;
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: .5em;
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    color: $searchSubmitBtnFontColor;
+    display: inline-block;
+    flex: 0 1 110px; //flex-basisで幅指定
+    border: solid 2px $searchSubmitBtnBorderColor;
+    outline: none;
+    transition: all .3s;
+    &:hover {
+      opacity: .5;
+    }
+
+    > img { //虫眼鏡画像を消す
+      display: none;
+    }
+    @include xs {
+      width: 100%;
+      margin: 10px 0 0 0;
+    }
+  }
+}
+
+#areaMapIllust {
+  .d {
+    fill: $searchBoxMapBgColor;
+  }
+}

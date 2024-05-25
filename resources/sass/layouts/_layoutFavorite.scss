@@ -1,0 +1,78 @@
+////////////////////////////////////////
+// お気に入りページのStyle
+// layout level の markupに対してのStyleもしくはページ固有のStyleを使用しているModuleに適用したい場合に指定をする
+
+#favoriteLayout {
+  min-width:$defInnerWidthPc;//navとコンテンツの合計幅でスクロールバーを出す設定
+  @include xs {
+    min-width:320px;//navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template://グリッドの定義
+        "favoriteNav" $defMenuHeightPc
+        "favoriteTopImgBox" auto
+        "favoriteBody" auto
+        "maintenanceNotice" 1fr
+        "favoriteFooter" auto / minmax($defInnerWidthPc, 100%);
+
+    @include xs {
+      grid-template:
+        "favoriteNav" $defMenuHeightSp
+        "favoriteTopImgBox" auto
+        "favoriteBody" auto
+        "maintenanceNotice" 1fr
+        "favoriteFooter" auto / 100%;
+    }
+  }
+
+  #favoriteTopImgBox{
+    grid-area: favoriteTopImgBox;
+    min-width:825px;//PC時の最小幅設定（IEで崩れないように）
+    margin: -($defMenuHeightPc) 0 0 0;//メニューに重ねる
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+      margin: -($defMenuHeightSp) 0 0 0;//メニューに重ねる
+    }
+
+    #topImg {
+      .topImgWrapper {
+        .topMv {
+          background-image: url("#{$imgDir}common/favorite_h1_pc.jpg");
+          @include varBgImg(1920, 400); //varBgImg(表示画像の幅,高さ）
+          @include xs {
+            background-image: url("#{$imgDir}common/favorite_h1_sp.jpg");
+            @include varBgImg(750, 400); //varBgImg(表示画像の幅,高さ）
+          }
+        }
+      }
+    }
+
+  }//favoriteTopImgBox
+
+  #favoriteNav {
+    grid-area: favoriteNav; //表示エリアの名前
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #favoriteBody{
+    grid-area: favoriteBody ;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #maintenanceNotice {
+    grid-area: maintenanceNotice;
+  }
+
+  #cmnFooter{
+    grid-area: favoriteFooter;
+  }
+}//favoriteLayout

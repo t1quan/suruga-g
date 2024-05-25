@@ -1,0 +1,368 @@
+//////////////////////////////////////////////////
+//placeHolder
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////
+//Mixin
+//////////////////////////////////////////////////
+
+//レスポンシブイメージ用
+//サイズ可変、センター表示
+@mixin imgCenter(){
+  width:100%;
+  text-align:center;
+  //display:block;
+}
+
+//可変幅背景の高さを自動セットして表示
+@mixin varBgImg ($bgWidth,$bgHeight){
+  /* 背景Imageを可変の幅・高さで表示 */
+  width: 100%;
+  height: 0;
+  //background-size:contain;
+  /* 表示する画像の高さ ÷ 画像の幅 × 100 で、可変高さの背景画像表示が可能*/
+  padding-bottom: calc( ( #{$bgHeight} / #{$bgWidth} ) * 100% );
+  //padding-top: $bgWidth*(calc( ( #{$bgHeight} / #{$bgWidth} ) * 100% ));
+  background-size: 100% auto;
+}
+
+
+//テキストあふれ省略表示
+// @include textEllipsis(フォントサイズ単位(px),ラインハイト,ライン数,背景色）
+// 例 @include textEllipsis(16,1.6,1,$lightGray)
+//swiper表示で使えるかも
+@mixin textEllipsis($font-size, $line-height, $line, $bg) {
+    position: relative;
+    max-height: $font-size * $line-height * $line + px;
+    font-size: $font-size + px;
+    line-height: $line-height;
+    word-break: break-all;
+    overflow: hidden;
+    &::before,
+    &::after {
+      position: absolute;
+      background: $bg;
+    }
+    &::before {
+      content: '...';
+      top: $font-size * $line-height * ($line - 1) + px;
+      right: 0;
+      width: 1em;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+//テキストあふれ1行版
+@mixin textEllipsis1Line{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*============================
+//ページャーの数字スタイル共通パーツ
+  ============================*/
+%pagerBoxBase { //ページャー数字を入れるBOXスタイル共通
+  height: auto;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+  width: auto;
+  @include xs {
+    display: block;
+    float: left;
+  }
+}
+%pagerNumberBase { //ページャーの数字スタイル共通パーツ
+  border: 1px solid #D9D9D9;
+  font-size: $fontSizeNomal;
+  min-width: 1.438rem; //23pxジャストの値指定
+  margin: 0 2px;
+  float: left;
+  overflow: hidden;
+  @include xs {
+    margin: 0 1px;
+  }
+}
+%formReset {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+%backBtnBase { //戻るボタンのベース
+  font-size: 1.15rem;
+  display: block;
+  float: left;
+  background-color: $backBtnColor;
+  color: $black;
+  width: 260px;
+  margin: 0 20px 0 0; //戻るボタンの右余白
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+  @include xs {
+    width: 300px;
+    position: relative;
+    font-size: $fontSizeNomal;
+  }
+}
+%submitBtnBase { //サブミットボタンのベース
+  @extend %backBtnBase; //戻るボタンを下敷き
+  margin: 0 0 0 0;
+  background: none;
+  background: $submitBtnBgColor;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+
+%btnGrayBase { //灰色のボタンベース
+  display: inline-block;
+  background: $gray;
+  color: white;
+  width: 260px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+  box-shadow: none;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.15rem;
+  &:hover {
+    opacity: 0.7;
+  }
+  @include xs {
+    padding: 12px;
+    width: 300px;
+    margin-top: 20px;
+    font-size: $fontSizeNomal;
+  }
+}
+
+%quickSearchAppearanceNoneBase {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+%searchHeaderH3 {
+  //検索BOX　H3のスタイル
+  text-align: center;
+  font-size: 36px;
+  color: $baseColor;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  padding: 5px 0;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: $baseColor;
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+    left: 18px;
+  }
+  &:after {
+    bottom: 0;
+    left: -18px;
+  }
+  @include xs { //sp時にH3ヘッダーの上下マージンをなくす
+    margin: 0 auto 20px;
+  }
+}
+
+/*============================
+//検索Boxリスト用の共通パーツ
+//#sec ul li dl dt
+  ============================*/
+%searchEachBoxBase { //#sec毎共通のスタイル（入れ物）
+  overflow: hidden;
+  display: block;
+  padding: 30px;
+  margin: auto;
+  @include xs {
+    padding: 0;
+    width: 100%;
+  }
+}
+%searchListDlBase { //DLの共通ベース
+  border: none;
+}
+%searchListDtBase { //検索リストのDl>Dtスタイルベース
+  color: $baseColor;
+  font-size: 1rem;
+  font-weight: bold;
+  float: left;
+  //margin-top: 0px;
+  line-height: 2;
+  @include xs {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  a {
+    color: $baseColor;
+    display: block;
+    clear: both;
+    float: right;
+  }
+}
+//dtBase
+%searchListDdBase { //検索リストのDL>DDスタイルベース
+  font-size: $fontSizeNomal;
+  line-height: 2;
+  //回り込み対策
+  display: block;
+  clear: both;
+  overflow: hidden;
+  @include xs {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  ul {
+    li {
+      float: left;
+      margin-left: 20px;
+      a {
+        display: block;
+      }
+    }
+  }
+}
+%searchHrStyleBase {
+  //区切り線の設定
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #cccccc;
+  margin: 5px 0 5px 0; //再調整
+  @include xs {
+    margin: 4px 0 7px 0;
+  }
+}
+
+@mixin searchBtnHeaderA{//検索項目見出しスタイル ボーダーなし
+  color: $searchBoxTitleColor;
+  font-size: $fontSizeXLarge;
+  font-weight: 700;
+  padding: 12px 32px 8px 0;
+  width: auto;
+  display: inline-block;
+  @include xs {
+    margin-bottom: 0;
+    font-size: $fontSizeLarge;
+  }
+
+}
+@mixin searchBtnHeaderB{//検索項目見出しスタイル 左ボーダー版
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-left: 4px solid $baseColor;
+  padding: 0 0 0 10px;
+  color: #000;
+  font-weight: 500;
+  display: block;
+}
+
+@mixin searchBtnItemsA{//検索項目ボタンスタイル灰色背景 小さ目版
+  display: flex;
+  width: auto;
+  margin: 0;
+  padding: 8px 32px;
+  background: $searchBoxBtnBgColor;
+  color: $searchBoxBtnTextColor;
+  font-size: $fontSizeLarge;
+  font-weight: 700;
+  line-height: 2;
+  @include xs {
+    font-size: $fontSizeNomal;
+    padding: 8px 24px;
+  }
+}
+@mixin searchBtnItemsB{//検索項目ボタンスタイル 小さ目版
+  display: flex;
+  width: auto;
+  border: 1px solid blue;
+  background: white;
+  padding: 5px 30px;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+@mixin searchBoxHeader_styleD{//SearchBox見出しAボーダー版
+  display: flex;
+  align-items: center;
+  @include xs {
+    margin: 20px 0 0 0;
+    border: none;
+    width: 100%;
+  }
+  .headerIconWrapper{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    @include xs { //SP時
+      width: 38px;
+      height: 38px;
+    }
+    .headerIconImg{
+      @include imgCenter;
+    }
+  }
+
+  h4{
+    display: block;
+    border-left: 2px $baseColor solid;
+    color: $baseTextColor;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 20px;
+    @include xs {//sp用見出しマージン下
+      width: auto;
+      background: none;
+      font-size: 1.0rem;
+      font-weight: 600;
+      padding: 0 10px;
+    }
+  }
+}

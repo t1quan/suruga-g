@@ -1,0 +1,358 @@
+// =======================================================
+// recommendJob
+// =======================================================
+.recommendJob {
+  display: none;
+  padding: 30px 0 34px;
+  position: relative;
+  z-index: 0;
+  @include minWidthXs {
+    padding: 0 0 96px;
+  }
+
+  &::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: calc(100% - 64px);
+    bottom: 0;
+    left: 0;
+    background-color: #F4FAFE;
+    z-index: -1;
+    @include minWidthXs{
+      //height: calc(100% - 83px);
+      height: 100%;
+    }
+  }
+}
+
+.recommendJobInner {
+  width: calc(100% - 24px);
+  margin: 0 auto;
+  @include minWidthXs {
+    width: calc(100% - 48px);
+  }
+}
+
+.recommendJobTitle {
+  max-width: $contentWidth;
+  margin: 0 auto 25px;
+  padding-top: 15px;
+  text-align: center;
+  @include minWidthXs {
+    margin-bottom: 50px;
+  }
+  .en,
+  .ja {
+    display: block;
+    color: $recommendJobTitleColor;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .en {
+    font-family: "prohibition", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    margin-bottom: 5px;
+    font-size: rem(38);
+    @include minWidthXs {
+      font-size: rem(54);
+      margin-bottom: 24px;
+    }
+  }
+  .ja {
+    font-size: rem(15);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    @include minWidthXs {
+      font-size: rem(22);
+    }
+  }
+}
+
+.recommendJobBox {
+  position: relative;
+  width: 80%;
+  max-width: 280px;
+  margin: 0 auto;
+  @include minWidthXs {
+    width: calc(100% - 24px);
+    //max-width: $contentWidth;
+    max-width: 980px;
+  }
+}
+
+.recommendJobSlide {
+  overflow: hidden;
+}
+
+.recommendJobList {
+  .swiper-slide {
+    height: auto;
+    @include minWidthXs {
+      width: 300px;
+      &:hover {
+        .recommendJobImg {
+          img {
+            transform: scale(1.05) rotate(.1deg);
+          }
+        }
+
+        .recommendJobInfoAdd {
+          //background: rgba($recommendJobInfoAddBgColor, .5);
+          background: $subColor;
+
+        }
+      }
+    }
+    & > a {
+      display: block;
+      height: 100%;
+    }
+  }
+}
+
+.recommendJobCols {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: $white;
+  font-size: rem(13);
+  &:hover {
+    opacity: 1 !important;
+  }
+  @include minWidthXs {
+    font-size: rem(13);
+  }
+}
+
+.recommendJobImg {
+  position: relative;
+  min-height: 178px;
+  overflow: hidden;
+  padding-bottom: 30px;
+  @include minWidthXs{
+    min-height: 200px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    vertical-align: middle;
+    transform: scale(1) rotate(.1deg);
+    transform-origin: center center;
+    transition: transform .3s;
+    will-change: contents;
+    z-index: 0;
+  }
+}
+
+.recommendJobInfo {
+  min-height: calc(100% - (200px + 40px)); //高さ固定用プロパティ　(img + ボタン)を除いた高さ
+  padding: 10px 16px 25px;
+  position: relative;
+  @include minWidthXs{
+    padding: 10px 20px 30px;
+  }
+  .koyktyName {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 6px 10px 5px;
+    border-radius: 0;
+    color: $white;
+    font-size: rem(12);
+    z-index: 1;
+    height: 30px;
+    @include minWidthXs {
+      font-size: rem(13);
+    }
+    &.indicator1 { //正社員
+      background-color: $seisyainColor;
+    }
+    &.indicator2 { //契約社員
+      background-color: $keiyakusyainColor;
+    }
+    &.indicator3 { //パートアルバイト
+      background-color: $parttimeColor;
+    }
+    &.indicator4 { //派遣社員
+      background-color: $hakensyainColor;
+    }
+    &.indicator5 { //紹介予定派遣
+      background-color: $syoukaiyoteiColor;
+    }
+    &.indicator6 { //特定派遣
+      background-color: $tokuteihakenColor;
+    }
+    &.indicator7 { //職業紹介
+      background-color: $syokugyousyoukaiColor;
+    }
+    &.indicator8 { //インターンシップ
+      background-color: $internColor;
+    }
+    &.indicator99 { //その他
+      background-color: $etcColor;
+    }
+  }
+
+  .jobTitle {
+    margin-bottom: 14px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E1DEDA;
+    font-size: rem(14);
+    font-weight: 700;
+    @include minWidthXs {
+      font-size: rem(16);
+    }
+  }
+
+  .jobSyksy,
+  .jobMoney,
+  .jobTime {
+    margin-top: 8px;
+  }
+
+  .jobArea, .jobSyksy, .jobMoney, .jobTime {
+    padding-left: 32px;
+    line-height: 1.6;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @include minWidthXs{
+      line-height: 2;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      margin-right: -20px;
+      left: -32px;
+    }
+  }
+
+  .jobArea {
+    &::before {
+      background-image: url("#{$imgDir}/recommendJob/top_recommendjob_area_icon.png");
+    }
+  }
+  .jobSyksy {
+    &::before {
+      background-image: url("#{$imgDir}/recommendJob/top_recommendjob_Syksy_icon.png");
+    }
+  }
+  .jobMoney {
+    &::before {
+      background-image: url("#{$imgDir}/recommendJob/top_recommendjob_Money_icon.png");
+    }
+  }
+  .jobTime {
+    &::before {
+      background-image: url("#{$imgDir}/recommendJob/top_recommendjob_Time_icon.png");
+    }
+  }
+}
+
+.recommendJobInfoAdd {
+  min-height: 0;
+  margin-top: auto;
+  //padding: 12px;
+  background: $recommendJobInfoAddBgColor;
+  color: $recommendJobInfoAddTextColor;
+  text-align: right;
+  transition: background .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include minWidthXs{
+    width: 30px;
+    height: 30px;
+  }
+
+  .letter {
+    display: none;
+    font-size: rem(14);
+    line-height: 1;
+    &::after {
+      //content: '\f067';
+      position: relative;
+      top: -.1em;
+      padding-left: 1em;
+      font-family: "Font Awesome 5 Free";
+      font-size: rem(11);
+      font-weight: 600;
+    }
+    @include minWidthXs {
+      font-size: rem(16);
+      &::after {
+        font-size: rem(13);
+      }
+    }
+  }
+}
+
+[class*="recommendJobButton"] {
+  position: absolute;
+  top: 50%;
+  border: none;
+  outline: none;
+  background: none;
+  transform: translateY(-50%);
+  transition: opacity .3s;
+  z-index: 1;
+  @include minWidthXs {
+    &:hover {
+      cursor: pointer;
+      //opacity: .5;
+    }
+  }
+
+  .fas {
+    color: $recommendJobButtonColor;
+    font-size: rem(32);
+    line-height: 1;
+    @include minWidthXs {
+      font-size: rem(70);
+    }
+  }
+}
+
+.recommendJobButtonPrev {
+  left: -10vw;
+  transform: scale(-1,1);
+  &.tablet {
+    left: -30px;
+  }
+  @include minWidthXs {
+    left: -100px;
+  }
+}
+
+.recommendJobButtonNext {
+  right: -10vw;
+  &.tablet {
+    right: -30px;
+  }
+  @include minWidthXs {
+    right: -100px;
+  }
+}

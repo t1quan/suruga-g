@@ -1,0 +1,733 @@
+/*------------------------------------------------------------
+header
+------------------------------------------------------------*/
+body.modalOn {/* モーダルON時にbody要素のスクロールを止める＆解除のJS用 */
+  //overflow: hidden;
+}
+
+#headerMenu {
+  &.headerMenu {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .PCbr {
+    display: none;
+    @include minWidthXs {
+      display: inline;
+    }
+  }
+
+  @include minWidthXs {
+    .SPbr {
+      display: none;
+    }
+  }
+
+  .headerNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $defMenuHeightSp;
+    margin: 0 auto;
+    background: $headerBgColor;
+    z-index: 9999;
+    &.modalOn {
+      top: 0 !important;
+    }
+  }
+
+  .headerLogo {
+    flex: 0 1 auto;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      transition: opacity .3s;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    a {
+      @include minWidthXs {
+        &:hover {
+          img {
+            opacity: .5;
+          }
+        }
+      }
+    }
+
+    .noLogoText {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+        color: $noLogoTextColor;
+        font-size: rem(15);
+        transition: opacity .3s;
+        @include minWidthXs {
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+
+      .corpUrl {
+        display: inline-block;
+        margin-right: .5em;
+      }
+    }
+    &::after {
+      content: "採用サイト";
+      font-size: rem(18);
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+      margin-left: 20px;
+      @include xs {
+        margin-left: 0;
+        font-size: rem(14);
+      }
+    }
+    @include minWidthXs {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .navItems {
+    display: block;
+    flex: 0 1 auto;
+    margin-left: auto;
+    padding-left: 1em;
+    &.modalOn {
+      top: 0 !important;
+    }
+  }
+
+  .navItemList {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: $spHeaderMenuBgColor;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  .navItemListInner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+  }
+
+  .navItemFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .navItem {
+    flex: 0 1 140px;
+    width: 100%;
+    margin: 0;
+    //padding: 12px;
+    padding-top: 24px;
+    //border-bottom: solid 1px $spHeaderMenuBorderColor;
+
+    a {
+      transition: opacity .3s;
+      cursor: pointer;
+      @include minWidthXs {
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+
+    [class*="letter"] {
+      display: block;
+      min-height: 0;
+      color: $spHeaderMenuTextColor;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .letterTop {
+      font-size: rem(12);
+    }
+
+    .letterBottom {
+      display: block;
+      margin-top: 2px;
+      font-family: "prohibition", sans-serif;
+      font-weight: 400;
+      font-size: rem(25);
+      font-style: normal;
+      line-height: 1.24;
+      letter-spacing: 0.04em;
+    }
+
+    &#memberNav {
+      display: $memberNav;
+      order: $memberNavOrder;
+    }
+
+    &#dataNav {
+      display: $dataNav;
+      order: $dataNavOrder;
+    }
+
+    &#welfareNav {
+      display: $welfareNav;
+      order: $welfareNavOrder;
+    }
+
+    &#onedayNav {
+      display: $onedayNav;
+      order: $onedayNavOrder;
+    }
+
+    &#workplaceNav {
+      display: $workplaceNav;
+      order: $workplaceNavOrder;
+    }
+
+    &#faqNav {
+      display: $faqNav;
+      order: $faqNavOrder;
+    }
+
+    &#externalPageNav01 {
+      order: 9;
+    }
+
+    &#externalPageNav02 {
+      order: 10;
+    }
+
+    &#externalPageNav03 {
+      display: none;
+      //order: 11;
+    }
+  }
+
+  .navItemFavorite {
+    padding: 0;
+    border: none;
+
+    .heartBox {
+      background-image: url("#{$imgDir}icon/favo_ico.svg");
+      background-size: contain;
+      background-position: center;
+      //width: 36px;
+      //height: 36px;
+      width: 28px;
+      height: 28px;
+      margin: 0 auto;
+      position: relative;
+
+      .heartIcon {
+        overflow: inherit;
+
+        .cls-1 {
+          fill: transparent;
+          stroke: $favoriteHeartColor;
+          stroke-width: 30px;
+        }
+      }
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      //right: -2px;
+      //bottom: 2px;
+      right: -5px;
+      bottom: -5px;
+      width: 16px;
+      height: 16px;
+      //background: $favoriteCountBgColor;
+      //border-radius: 50%;
+      color: $favoriteCountTextColor;
+      //font-size: rem(10);
+      font-size: rem(12);
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      z-index: 1;
+    }
+
+    [class*="letter"] {
+      min-height: 0;
+      color: $favoriteMenuTextColor;
+      font-size: rem(10);
+      line-height: 1;
+    }
+
+    .letterBottom {
+      display: block;
+      font-size: 1rem;
+    }
+  }
+
+  .navItemLINE {
+    display: flex;
+    flex: 0 0 40px;
+    height: $defMenuHeightSp;
+    padding: 0;
+    border-bottom: none;
+    align-items: center;
+    .navItemFlex {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-image: url("#{$imgDir}common/LINE_001_0_sp.png");
+      background-position: center;
+      background-size: contain;
+      .blankIcon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .blankIconImg {
+    display: inline-block;
+    padding: 5px 0 0 10px;
+    color: $spHeaderMenuTextColor;
+    font-size: rem(12);
+    line-height: 1;
+    vertical-align: top;
+  }
+
+  .blankIcon { // todo アイコンつけたい場合とつけたくない場合を制御できるようにすること
+    display: flex;
+    &::after {
+      height: 13px;
+      width: 15px;
+      font-family: "Font Awesome 5 Free";
+      //content: '\f35d';
+      font-weight: 600;
+      font-size: .81rem;
+    }
+  }
+
+  .hamburger {
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: $defMenuHeightSp;
+    height: $defMenuHeightSp;
+    background: $mainColor;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .hamburger-box::after {
+    color: $white;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background: $white;
+  }
+
+
+  .navItemListSp{
+    display: none;
+  }
+
+  /**
+    * スマホ表示
+    */
+  @include xs {
+    .navItem{
+      flex: auto;
+    }
+    .navItemList{
+      .navItem:first-of-type {
+        //border-top: solid 1px $spHeaderMenuBorderColor; // メニューアイテムの最初だけにライン付ける
+      }
+      .navItemFavorite{
+        display: none;
+      }
+      .navItemLINE{
+        display: none;
+      }
+    }
+
+    .navItemBg {
+      &.navItemSearch {
+        .js-clickitem {
+          background-color: $mainColor;
+          border: 1px solid $white;
+        }
+      }
+      &.navItemEntry {
+        padding-top: 10px;
+        .js-clickitem {
+          background-color: $accentColor;
+          border: 1px solid $white;
+        }
+      }
+      &.navListFavorite {
+        padding-top: 10px;
+        .js-clickitem {
+          background-color: $subColor;
+          border: 1px solid $white;
+        }
+      }
+      .navItemFlex {
+        .js-clickitem {
+          display: flex;
+          justify-content: center;
+          align-items : center;
+          width: 300px;
+          height: 50px;
+          padding: 9px 0;
+          .letterTop {
+            margin: 0 10px 0 0;
+            line-height: 1;
+          }
+          .letterBottom {
+            margin: 0;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    .navItemListSp {
+      display: flex;
+      .navItem{
+        border: none;
+        padding: 0 0 0 12px;
+      }
+      .navItemFavorite{
+        .letterBottom{
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+}
+
+.PConly {
+  .modalOn {/* PC閲覧時は無効 */
+    overflow: auto;
+  }
+
+  #headerMenu {
+    .headerNav {
+      height: $defMenuHeightPc;
+      background: $headerBgColor;
+      min-width: $defInnerWidthPc;
+    }
+
+    .headerLogo {
+      flex: 0 1 auto;
+    }
+
+    .navItems {
+      display: block;
+      flex: 1 1 auto;
+      padding-left: 1em;
+    }
+
+    .navItemList {
+      display: block;
+      position: static;
+      background: transparent;
+      visibility: visible;
+      overflow: auto;
+    }
+
+    .navItemListInner {
+      flex-wrap: nowrap;
+      align-content: stretch;
+      justify-content: flex-end;
+    }
+
+    .navItem {
+      flex: 0 1 auto;
+      width: auto;
+      height: $defMenuHeightPc;
+      margin-right: 40px; // アンダーライン入れたい場合にメニューごとの間に余白を追加する
+      padding: 0;
+      border: none;
+
+      [class*="letter"] {
+        color: $bgBaseTextColor;
+      }
+
+      .letterTop {
+        font-size: rem(16);
+        transition: all 0.3s;
+      }
+      .letterBottom {
+        display: none;
+      }
+
+      .js-clickitem {
+        &:hover {
+          opacity: 1;
+          [class*="letter"] {
+            color: $mainColor;
+          }
+        }
+      }
+
+    }
+
+    .navItemBg {
+      flex: 0 1 140px;
+      //margin-left: .5em;
+      margin-right: 0;
+      padding: 0;
+      @media (max-width: calc(#{$defInnerWidthPc + 100px})) {
+        flex: 0 1 120px;
+      }
+    }
+
+    .navItemBgBlack {
+      padding: 0 5px;
+      [class*="letter"] {
+        color: $pcLastMenuTextColor;
+      }
+    }
+
+    .navItemSearch, .navItemEntry {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .navItemFlex {
+        flex-basis: 120px;
+        height: 48px;
+        border-left: 1px solid $pcLastMenuBorderColor;
+        transition: all 0.3s ease;
+        span {
+          transition: all 0.3s ease;
+        }
+      }
+      .js-clickitem {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:hover {
+        .navItemFlex {
+          background: $white;
+        }
+      }
+    }
+
+    .navItemSearch {
+      .navItemFlex {
+        background: $mainColor;
+      }
+      &:hover {
+        .navItemFlex {
+          border: 1px solid $mainColor;
+        }
+      }
+    }
+
+    .navItemEntry {
+      .navItemFlex {
+        background: $accentColor;
+      }
+      &:hover {
+        .navItemFlex {
+          border: 1px solid $accentColor;
+          [class*="letter"] {
+            color: $accentColor;
+          }
+        }
+      }
+    }
+
+    .navItemLINE {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 2 100px;
+      margin-right: 0;
+      @media (max-width: calc(#{$defInnerWidthPc + 100px})) {
+        flex: 0 1 80px;
+      }
+      .navItemFlex {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        transition: all 0.3s ease;
+        background-image: url("#{$imgDir}common/LINE_001_0_pc.png");
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition-duration: 0.3s;
+          opacity: 0;
+          background-size: contain;
+          background-image: url("#{$imgDir}common/LINE_001_hover_pc.png");
+        }
+        .blankIcon {
+          position: relative;
+          z-index: 1;
+        }
+
+        &:hover {
+          cursor: pointer;
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .navItemBgGray {
+      border: none;
+      //background: $favoriteMenuBgColor;
+      flex: 0 1 auto;
+      margin: 0 26px 0 0;
+    }
+
+    .navItemSp {
+      display: none;
+    }
+  }
+}
+
+/*------------------------------------------------------------
+hamburger
+------------------------------------------------------------*/
+.hamburger {
+  transition-property: opacity, filter;
+  transition-duration: .15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  border: 0;
+  outline: none;
+  margin: 0;
+  overflow: visible;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.hamburger-box {
+  display: block;
+  position: absolute;
+  top: 30%;
+  width: 25px;
+  height: 25px;
+  transform: translateY(-50%);
+}
+
+.hamburger-box::after {
+  font-family: "prohibition", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  content: "MENU";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: rem(14);
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: .15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+  height: 2px;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  display: none;
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration:.13s;
+  transition-delay: .13s;
+  transition-timing-function:cubic-bezier(.55, .055, .675, .19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top .2s .2s cubic-bezier(.33333, .66667, .66667, 1), opacity .1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+  transition:top .12s .2s cubic-bezier(.33333, .66667, .66667, 1), transform .13s cubic-bezier(.55, .055, .675, .19);
+}
+
+.hamburger--collapse.js-hb-active .hamburger-inner {
+  transform: translate3d(0, -5px, 0) rotate(-45deg);
+  transition-delay: .22s;
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+
+.hamburger--collapse.js-hb-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top .2s cubic-bezier(.33333, 0, .66667, .33333), opacity .1s .22s linear;
+}
+
+.hamburger--collapse.js-hb-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top .1s .16s cubic-bezier(.33333, 0, .66667, .33333), transform .13s .25s cubic-bezier(.215, .61, .355, 1);
+}

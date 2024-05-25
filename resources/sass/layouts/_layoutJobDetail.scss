@@ -1,0 +1,79 @@
+//_box_layoutSearchList
+//レイアウトスタイル　Box版　job（求人詳細内容）ページ
+//レイアウトスタイルはページごとに用意する
+
+#jobLayout {
+  min-width:$defInnerWidthPc;//navとコンテンツの合計幅でスクロールバーを出す設定
+
+  @include xs { //
+    min-width:320px;//navとコンテンツの合計幅でスクロールバーを出す設定
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+
+    grid-template://グリッドの定義
+        "jobDetailNav" $defMenuHeightPc
+        "jobDetailContent" auto
+        "sameAreaJob" auto
+        "jobDetailSearchBox" auto
+        "maintenanceNotice" 1fr
+        "jobDetailFooter" auto / minmax($defInnerWidthPc, 100%);
+
+    @include xs { //sp時nav領域をなくす
+      grid-template:
+        "jobDetailNav" $defMenuHeightSp
+        "jobDetailContent" auto
+        "sameAreaJob" auto
+        "jobDetailSearchBox" auto
+        "maintenanceNotice" 1fr
+        "jobDetailFooter" auto / 100%;
+    }
+  }
+
+  #jobDetailNav {//nav部分
+    grid-area: jobDetailNav; //表示エリアの名前
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+
+  #jobDetailContent{
+    grid-area: jobDetailContent;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #sameAreaJob{
+    grid-area: sameAreaJob;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:100%;
+    }
+  }
+
+  #jobDetailSearchBox{
+    grid-area: jobDetailSearchBox;
+    min-width:825px;//PC時の最小幅設定
+    @include xs { //sp時最小幅を解放
+      min-width:98%;
+    }
+  }
+
+  #maintenanceNotice {
+    grid-area: maintenanceNotice;
+  }
+
+  #cmnFooter{
+    grid-area: jobDetailFooter;
+  }
+
+  #searchJobsBtn {
+    display: none !important;
+  }
+}

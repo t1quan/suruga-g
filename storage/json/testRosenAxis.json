@@ -1,0 +1,59 @@
+{
+
+  "code": 200,
+  "message": "検索軸を取得しました。",
+  "data":
+
+  {
+
+    "rosen":
+    [
+      {
+        "name": "JR総武線",
+        "value": 4500,
+        "cnt": 30,
+        "parent": 13,
+        "children":
+        [
+          {
+            "name": "阿佐ヶ谷",
+            "value": 1490,
+            "cnt": 5,
+            "parent": 4500
+          },
+
+          {
+            "name": "吉祥寺",
+            "value": 1978,
+            "cnt": 12,
+            "parent": 4500
+          }
+        ]
+      },
+
+      {
+        "name": "JR総武線",
+        "value": 4500,
+        "cnt": 30,
+        "parent": 12,
+        "children":
+        [
+          {
+            "name": "津田沼",
+            "value": 2560,
+            "cnt": 5,
+            "parent": 4500
+          },
+
+          {
+            "name": "船橋",
+            "value": 2976,
+            "cnt": 8,
+            "parent": 4500
+          }
+        ]
+      }
+    ]
+  }
+
+}

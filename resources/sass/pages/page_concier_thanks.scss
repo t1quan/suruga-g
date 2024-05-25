@@ -1,0 +1,140 @@
+#concier_thanks {
+
+  #concierArea {
+    margin: 60px 0 40px;
+    @include xs {
+      margin: 12px 0 40px;
+    }
+  }
+
+  .inner {
+    width: calc(100% - 24px);
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    header {
+      .entry-title { //応募タイトル
+        background: $applyBgColor;
+        color: $bgMainTextColor;
+        border-radius: 0;
+        border: none;
+        margin: 0;
+        padding: 5px 0 5px 15px;
+        width: 100%;
+        @include xs {
+          padding: 10px;
+          font-weight: 600;
+          font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+          img{//タイトルの画像レスポンシブイメージ
+            width:100%;
+            text-align: center;
+          }
+        }
+      }
+      //entry-title
+      .concier_navi { //ページの進捗ナビ部分
+        margin: 10px auto 0 auto;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          li {
+            box-sizing: border-box;
+            width: calc(((100% - 28px) / 3) - .01px);
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            &.text {
+              color: $black;
+              background: $gray;
+              font-size: $fontSizeNomal;//14px;
+              font-weight: 700;
+              text-align: center;
+              padding: 5px 0 5px 0;
+              @include xs {
+                font-size: $fontSizeXxSmall;
+              }
+              &.current {
+                color: $bgMainTextColor;
+                background: $applyBgColor;
+                background-image: none;
+              }
+              //&current
+            }
+            //&text
+            &.navi_sep {
+              text-align: center;
+              width: 0;
+              height: 0;
+              margin: 0 5px;
+              border-style: solid;
+              border-width: 5.5px 0 5.5px 9px;
+              border-color: transparent transparent transparent #757575;
+              //xs
+            }
+            //navi_sep
+          }
+          //li
+        }
+        //ul
+      }
+      //concier_navi
+      div {
+        h3 {
+          font-size: $fontSizeXLarge;//18px<108%;
+          font-weight: bold;
+          color: $bgBaseTextColor;
+          padding: 10px 0;
+          @include xs {
+            font-size: $fontSizeNomal;
+            //padding:0;
+          }//xs
+
+          a {
+            border-left: 5px solid $applyBgColor;
+            font-size: $fontSizeXxLarge;//1.25rem<1.2rem;
+            padding-left: 10px;
+            font-weight: bold;
+            color: $bgBaseTextColor;
+            display: block;
+            margin: 0;
+            @include xs {
+              font-size: inherit;
+              margin: 10px 0;
+              padding: 5px;
+            }//xs
+          }//a
+        }//h3
+      }//div
+      small { //必須項目注意書きテキスト
+        //float: right;
+        @include xs {
+          float: none;
+          text-align: right;
+          display: block;
+          //xs
+        }
+        //small
+      }
+      //header
+    }
+
+    i {
+      margin: 0;
+      font-weight: bold;
+      font-size: $fontSizeNomal;//93%;
+      display: inline-block;
+      padding: 0 10px;
+      @include xs {
+        padding: 0;
+      }
+    }
+  }
+
+  @import "resources/sass/styles/formThanks"; //apply,concier用の汎用完了フォームスタイル
+
+}

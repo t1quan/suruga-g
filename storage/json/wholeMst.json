@@ -1,0 +1,287 @@
+{
+  "area":
+  [
+    {
+      "name": "北海道・東北",
+      "value": 1,
+      "children": [
+        {
+          "name": "北海道",
+          "value": 1,
+          "parent": 1
+        }
+      ]
+    },
+
+    {
+      "name": "関東",
+      "value": 2,
+      "children": [
+        {
+          "name": "東京都",
+          "value": 13,
+          "parent": 2
+        },
+        {
+          "name": "神奈川県",
+          "value": 14,
+          "parent": 2
+        }
+      ]
+    },
+
+    {
+      "name": "甲信越・北陸",
+      "value": 3,
+      "children": [
+        {
+          "name": "長野県",
+          "value": 20,
+          "parent": 3
+        }
+      ]
+    }
+  ],
+
+  "pref":
+  [
+    {
+      "name": "北海道",
+      "value": 1,
+      "parent": 1,
+      "children": [
+        {
+          "name": "函館市",
+          "value": 202,
+          "parent": 1
+        }
+      ]
+
+    },
+
+    {
+      "name": "東京都",
+      "value": 13,
+      "parent": 2,
+      "children": [
+        {
+          "name": "千代田区",
+          "value": 101,
+          "parent": 13
+        },
+
+        {
+          "name": "港区",
+          "value": 103,
+          "parent": 13
+        }
+      ]
+    },
+
+    {
+      "name": "神奈川県",
+      "value": 14,
+      "parent": 2,
+      "children": [
+        {
+          "name": "藤沢市",
+          "value": 205,
+          "parent": 14
+        }
+      ]
+    },
+
+    {
+      "name": "長野県",
+      "value": 20,
+      "parent": 3,
+      "children": [
+        {
+          "name": "長野市",
+          "value": 201,
+          "parent": 20
+        }
+      ]
+    }
+  ],
+
+  "city":
+  [
+    {
+      "name": "函館市",
+      "value": 202,
+      "parent": 1
+    },
+
+    {
+      "name": "千代田区",
+      "value": 101,
+      "parent": 13
+    },
+
+    {
+      "name": "港区",
+      "value": 103,
+      "parent": 13
+    },
+
+    {
+      "name": "藤沢市",
+      "value": 205,
+      "parent": 14
+    },
+
+    {
+      "name": "長野市",
+      "value": 201,
+      "parent": 20
+    }
+  ],
+
+  "jobbc":
+  [
+    {
+      "name": "営業",
+      "value": 1,
+      "children": [
+        {
+          "name": "代理店営業",
+          "value": 130,
+          "parent": 1
+        }
+      ]
+    },
+
+    {
+      "name": "医療・介護・福祉",
+      "value": 11,
+      "children": [
+        {
+          "name": "薬剤師",
+          "value": 930,
+          "parent": 11
+        }
+      ]
+    },
+
+    {
+      "name": "物流・配送・軽作業",
+      "value": 12,
+      "children": [
+        {
+          "name": "軽作業",
+          "value": 1213,
+          "parent": 12
+        }
+      ]
+    }
+  ],
+
+  "job":
+  [
+    {
+      "name": "代理店営業",
+      "value": 130,
+      "parent": 1
+    },
+
+    {
+      "name": "薬剤師",
+      "value": 930,
+      "parent": 11
+    },
+
+    {
+      "name": "軽作業",
+      "value": 1213,
+      "parent": 12
+    }
+  ],
+
+  "koy":
+  [
+    {
+      "name": "正社員",
+      "value": 1
+    },
+
+    {
+      "name": "契約社員",
+      "value": 2
+    },
+
+    {
+      "name": "アルバイト・パート",
+      "value": 3
+    },
+
+    {
+      "name": "派遣社員",
+      "value": 4
+    }
+  ],
+
+  "tokucho":
+  [
+    {
+      "name": "未経験者歓迎",
+      "value": 1
+    },
+
+    {
+      "name": "第2新卒歓迎",
+      "value": 2
+    },
+
+    {
+      "name": "育児・介護休暇あり",
+      "value": 3
+    },
+
+    {
+      "name": "土日祝休み",
+      "value": 25
+    }
+  ],
+
+  "kyuyo":
+  [
+    {
+      "name": "時給",
+      "value": 1
+    },
+
+    {
+      "name": "日給",
+      "value": 2
+    },
+
+    {
+      "name": "月給",
+      "value": 3
+    }
+  ],
+
+  "eki":
+  [
+    {
+      "name": "総武線",
+      "value": 1234,
+      "parent": 14,
+      "children":
+      [
+        {
+          "name": "吉祥寺",
+          "value": "1234:5678",
+          "parent": 1234
+        },
+
+        {
+          "name": "船橋",
+          "value": "1234:7890",
+          "parent": 1234
+        }
+      ]
+    }
+  ]
+}

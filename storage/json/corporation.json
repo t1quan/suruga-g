@@ -1,0 +1,1098 @@
+{
+  "clientId": 123456789,
+  "releaseDate": "2022-01-01 09:30:00",
+  "corporations": [
+    {
+      "corpCd": 205901,
+      "corpShortName": "天職市場",
+      "corpFullName": "株式会社天職市場",
+      "applyTel": "99-9999-9999",
+      "ga": "UA-99999999-99",
+      "title": "天職市場",
+      "description": "株式会社天職市場は企業の生産性向上と個人の職能向上に役立つ直接採用支援プログラムを推進します。",
+      "zip": "〒999-9999",
+      "address": "東京都新宿区西新宿",
+      "tel": "99-9999-9999",
+      "fax": "0120-51-1049",
+      "links": [
+        {
+          "type": "corpSite",
+          "url": "https://www.1049.cc",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "about",
+          "url": "https://www.1049.cc/about/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "privacy",
+          "url": "https://www.1049.cc/privacy/",
+          "blank": "target",
+          "class": "navItem",
+          "icon": ""
+        },
+        {
+          "type": "contact",
+          "url": "https://www.1049.cc/contact/",
+          "blank": "target",
+          "class": "navItem",
+          "icon": ""
+        }
+      ],
+      "mainVisual": {
+        "type": "slider",
+        "images": [
+          {
+            "page": "top",
+            "filePath": "/path/to/image1"
+          },
+          {
+            "page": "top",
+            "filePath": "/path/to/image2"
+          }
+        ]
+      },
+      "style": {
+        "type": "s101",
+        "css": "/path/to/file"
+      },
+      "form": {
+        "apply": {
+          "formtype": 1,
+          "type": "register",
+          "jobId": "ApplyはRequestから参照",
+          "mailSettings": {
+            "templateUser": 1,
+            "templateManager": 2
+          }
+        },
+        "contact": {
+          "type": "mail or register",
+          "jobId": 78901,
+          "formtype": 1,
+          "validator": {
+
+          },
+          "mailSettings": {
+            "templateUser": 7,
+            "templateManager": 8
+          }
+        }
+      }
+    },
+    {
+      "corpCd": 99999,
+      "corpShortName": "テスト環境",
+      "corpFullName": "株式会社テスト環境",
+      "applyTel": "99-0000-0000",
+      "ga": "UA-99999999-99",
+      "title": "天職市場",
+      "description": "株式会社テスト環境の採用情報サイトです。当社は、採用事業を行っています。一緒に働きませんか？",
+      "zipCode": "〒160-0023",
+      "address": "東京都新宿区西新宿1丁目8-1 新宿ビルディング",
+      "tel": "0120-52-1049",
+      "fax": "0120-51-1049",
+      "links": [
+        {
+          "type": "corpSite",
+          "url": "https://www.1049.cc",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "about",
+          "url": "https://www.1049.cc/about/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "privacy",
+          "url": "https://www.1049.cc/privacy/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        },
+        {
+          "type": "contact",
+          "url": "https://www.1049.cc/contact/",
+          "blank": "target",
+          "class": "navItem homeIcon",
+          "icon": ""
+        }
+      ],
+      "mainVisual": {
+        "type": "simple",
+        "images": [
+          {
+            "page": "top",
+            "filePath": "/path/to/image3"
+          }
+        ]
+      },
+      "style": {
+        "type": "s101",
+        "css": "/path/to/file"
+      },
+      "concierAddress": "sample@example.com",
+      "concierJobId": 12345,
+      "formtype": 1
+    }
+  ],
+  "frontendSettings": {
+    "version": "1.0.0",
+    "title": "タイトル",
+    "sub": {
+      "title": "サブタイトル"
+    },
+    "cpnameType": 1,
+    "arrayCorpCd": [
+      205901,
+      99999
+    ],
+    "logo": "/images/common/logo.png",
+    "plan": 1,
+    "cssStyle": {
+      "type": "speed",
+      "css": "custom.css"
+    },
+    "searchAxisRequiredList": [
+      "pref",
+      "city",
+      "jobbc",
+      "job",
+      "koy"
+    ],
+    "isCustomArea": false,
+    "customAreaSections": [
+      {
+        "type": "pref",
+        "list": [
+          {
+            "name": "北信",
+            "value": "20101[]20207[]20212",
+            "type": "city",
+            "children": [
+              {
+                "name": "長野市",
+                "value": 20101,
+                "type": "city"
+              },
+              {
+                "name": "須坂市",
+                "value": 20207,
+                "type": "city"
+              },
+              {
+                "name": "飯山市",
+                "value": 20212,
+                "type": "city"
+              }
+            ]
+          },
+          {
+            "name": "東信",
+            "value": "20103[]20208",
+            "type": "city",
+            "children": [
+              {
+                "name": "上田市",
+                "value": 20103,
+                "type": "city"
+              },
+              {
+                "name": "小諸市",
+                "value": 20208,
+                "type": "city"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "isCustomJob": false,
+    "customJobSections": [
+      {
+        "type": "jobbc",
+        "list": [
+          {
+            "name": "薬剤師",
+            "value": "930[]940[]950[]1199",
+            "type": "job",
+            "children": [
+              {
+                "name": "薬剤師",
+                "value": 930,
+                "type": "job"
+              },
+              {
+                "name": "技術(化学・医療・食品)",
+                "value": 940,
+                "type": "job"
+              },
+              {
+                "name": "品質・生産管理(化学・医療・食品)",
+                "value": 950,
+                "type": "job"
+              },
+              {
+                "name": "その他",
+                "value": 1199,
+                "type": "job"
+              }
+            ]
+          },
+          {
+            "name": "医療系フリーワード",
+            "value": "医療 医師 薬剤師 看護助手",
+            "type": "kw",
+            "children": [
+              {
+                "name": "医療",
+                "value": "医療",
+                "type": "kw"
+              },
+              {
+                "name": "医師",
+                "value": "医師",
+                "type": "kw"
+              },
+              {
+                "name": "薬剤師",
+                "value": "薬剤師",
+                "type": "kw"
+              },
+              {
+                "name": "看護助手",
+                "value": "看護助手",
+                "type": "kw"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "areaSearchType": true,
+    "quickTypes": {
+      "list":  ["pref", "jobbc", "freeword"]
+    },
+    "isDispLatestJob": true,
+    "isDispRecommendJob": true,
+    "isDispEqualJob": true,
+    "isTelChanged": true,
+    "formPattern": 1,
+    "policy": {
+      "isSetUrl": false,
+      "url": "https://www.1049.cc/privacy",
+      "text": "【個人情報保護方針】\n１．個人情報の取得と利用目的\n　弊社は、個人情報保護方針に定めた事項（個人情報に関する法令及び個人情報保護方針に基づくコンプライアンス･プログラ\n　ム）を遵守し、利用者の個人情報の適切な保護と利用に努めます。\n　また、必要に応じてコンプライアンス・プログラムの継続的な見直し改善を行います。"
+    },
+    "favoriteJobManagerCodes": "123[]456[]789",
+    "nav": [
+      {
+        "url": "/",
+        "target": "",
+        "class": "homeIcon",
+        "label": {
+          "top": {
+            "text": "トップ",
+            "class": "letterTop"
+          },
+          "bottom":  {
+            "text": "TOP",
+            "class": "letterBottom"
+          }
+        }
+      },
+      {
+        "url": "/",
+        "target": "",
+        "class": "",
+        "label": {
+          "top": {
+            "text": "オフィス",
+            "class": "letterTop"
+          },
+          "bottom":  {
+            "text": "Office",
+            "class": "letterBottom"
+          }
+        }
+      },
+      {
+        "url": "https://www.1049.cc/about",
+        "target": "_blank",
+        "class": "",
+        "label": {
+          "top": {
+            "text": "会社概要",
+            "class": "letterTop"
+          },
+          "bottom":  {
+            "text": "COMPANY",
+            "class": "letterBottom"
+          }
+        }
+      },
+      {
+        "url": "/favorite",
+        "target": "",
+        "class": "navItemBgGray navItemFavorite",
+        "label": {
+          "top": {
+            "text": "",
+            "class": "letterTop heartBox"
+          },
+          "bottom":  {
+            "text": "お気に入り",
+            "class": "letterBottom"
+          }
+        }
+      },
+      {
+        "url": "/search",
+        "target": "",
+        "class": "navItemBg navItemBgBlack",
+        "label": {
+          "top": {
+            "text": "お仕事検索",
+            "class": "letterTop"
+          },
+          "bottom":  {
+            "text": "SEARCH",
+            "class": "letterBottom"
+          }
+        }
+      }
+    ],
+    "header": {
+      "displayLogo": true,
+      "img": "/images/common/logo.png"
+    },
+    "footer": {
+      "displayTitle": true,
+      "displayAddress": true,
+      "displayCopyright": true,
+      "displayNavigation": true,
+      "corpInfo": {
+        "type": "image",
+        "text": "天職市場",
+        "img": "/images/common/logo.png"
+      },
+      "nav": [
+        {
+          "url": "/",
+          "target": "",
+          "class": "",
+          "text": "トップ"
+        },
+        {
+          "url": "/search",
+          "target": "",
+          "class": "",
+          "text": "お仕事検索"
+        },
+        {
+          "url": "https://www.1049.cc/about",
+          "target": "_blank",
+          "class": "",
+          "text": "会社概要"
+        },
+        {
+          "url": "https://www.1049.cc/recruit",
+          "target": "_blank",
+          "class": "",
+          "text": "採用情報"
+        },
+        {
+          "url": "https://www.1049.cc/privacy",
+          "target": "_blank",
+          "class": "",
+          "text": "プライバシーポリシー"
+        }
+      ]
+    },
+    "favorite": {
+      "title": {
+        "ja": "お気に入りの仕事",
+        "en": "MY FAVORITE"
+      }
+    },
+    "pager": {
+      "linkMax": 3
+    }
+  },
+  "backendSettings": {
+    "version": "1.0.9",
+    "news": {
+      "term": 7,
+      "limit": 3,
+      "sort": [
+        {
+          "field": "updatedAt",
+          "order": "desc"
+        },
+        {
+          "field": "jobId",
+          "order": "asc"
+        }
+      ]
+    },
+    "equal": {
+      "limit": 3,
+      "sort": [
+        {
+          "field": "updatedAt",
+          "order": "desc"
+        },
+        {
+          "field": "jobId",
+          "order": "asc"
+        }
+      ]
+    },
+    "recommend": {
+      "limit": 5,
+      "sort": [
+        {
+          "field": "recommend",
+          "order": "desc"
+        }
+      ]
+    },
+    "form": {
+      "apply": {
+
+        "profile": {
+          "name": {
+            "index": 1,
+            "lastName": {
+              "index": 1,
+              "required": true,
+              "type": "string",
+              "rule": "max:16"
+            },
+            "firstName": {
+              "index": 2,
+              "required": true,
+              "type": "string",
+              "rule": "max:16"
+            }
+          },
+
+          "nameRuby": {
+            "index": 2,
+            "lastKana": {
+              "index": 1,
+              "required": true,
+              "type": "string",
+              "rule": "max:32"
+            },
+            "firstKana": {
+              "index": 2,
+              "required": true,
+              "type": "string",
+              "rule": "max:32"
+            }
+          },
+
+          "birthday": {
+            "index": 3,
+            "dobYear": {
+              "index": 1,
+              "required": true,
+              "type": null,
+              "rule": "max:4"
+            },
+            "dobMonth": {
+              "index": 2,
+              "required": true,
+              "type": null,
+              "rule": "max:2"
+            },
+            "dobDay": {
+              "index": 3,
+              "required": true,
+              "type": null,
+              "rule": "max:2"
+            }
+          },
+
+          "gender": {
+            "index": 4,
+            "gender": {
+              "required": true,
+              "type": "string",
+              "rule": null
+            }
+          },
+
+          "address": {
+            "index": 5,
+            "zipCode": {
+              "index": 1,
+              "required": true,
+              "type": null,
+              "rule": "max:7"
+            },
+            "prefecture": {
+              "index": 2,
+              "required": true,
+              "type": "numeric",
+              "rule": null
+            },
+            "city": {
+              "index": 3,
+              "required": true,
+              "type": "numeric",
+              "rule": null
+            },
+            "street": {
+              "index": 4,
+              "required": false,
+              "type": "string",
+              "rule": null
+            }
+          },
+
+          "telNumber": {
+            "index": 6,
+            "telNumber": {
+              "required": true,
+              "type": "string",
+              "rule": "max:13"
+            }
+          },
+
+          "mailAddress": {
+            "index": 7,
+            "mailAddress": {
+              "required": true,
+              "type": "email",
+              "rule": "max:256"
+            }
+          },
+
+          "currentOccupation": {
+            "index": 8,
+            "currentOccupation": {
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            }
+          }
+        },
+
+        "skill": {
+            "language": {
+              "index": 1,
+              "englishConversation": {
+                "index": 1,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "businessEnglish": {
+                "index": 2,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "toeicScore": {
+                "index": 3,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "toeflScore": {
+                "index": 4,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "stepScore": {
+                "index": 5,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "otherLanguage": {
+                "index": 6,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "otherConversation": {
+                "index": 7,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "otherBusiness": {
+                "index": 8,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              }
+            },
+
+            "pcSkill": {
+              "index": 2,
+              "wordSkill": {
+                "index": 1,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "excelSkill": {
+                "index": 2,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "accessSkill": {
+                "index": 3,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "powerpointSkill": {
+                "index": 4,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "webSkill": {
+                "index": 5,
+                "required": false,
+                "type": "numeric",
+                "rule": null
+              },
+              "otherPCSkill": {
+                "index": 6,
+                "required": false,
+                "type": "string",
+                "rule": "max:1000"
+              }
+            },
+
+            "qualification": {
+              "index": 3,
+              "qualification": {
+                "required": false,
+                "type": "string",
+                "rule": "max:1000"
+              }
+            }
+          },
+
+        "career": {
+
+          "changeNumber": {
+            "index": 1,
+            "changeNumber": {
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            }
+          },
+
+          "occupation": {
+            "index": 2,
+            "occupation1": {
+              "index": 1,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "period1": {
+              "index": 2,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "occupation2": {
+              "index": 3,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "period2": {
+              "index": 4,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "occupation3": {
+              "index": 5,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "period3": {
+              "index": 6,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "occupation4": {
+              "index": 7,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "period4": {
+              "index": 8,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "occupation5": {
+              "index": 9,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "period5": {
+              "index": 10,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            }
+          },
+
+        "industry": {
+          "index": 3,
+          "industry1": {
+            "index": 1,
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "industry2": {
+            "index": 2,
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "industry3": {
+            "index": 3,
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          }
+        },
+
+        "managementExperience": {
+          "index": 4,
+          "managementExperience": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          }
+        },
+
+        "managementNumber": {
+          "index": 5,
+          "managementNumber": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          }
+        },
+
+        "jobHistories": {
+          "index": 6,
+          "companyNameA": {
+            "required": false,
+            "type": "string",
+            "rule": null
+          },
+          "startYearA": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "startMonthA": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "endYearA": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "endMonthA": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "employmentStatusA": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "jobDescriptionA": {
+            "required": false,
+            "type": "string",
+            "rule": "max:5000"
+          },
+
+
+          "companyNameB": {
+            "required": false,
+            "type": "string",
+            "rule": null
+          },
+          "startYearB": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "startMonthB": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "endYearB": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "endMonthB": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "employmentStatusB": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "jobDescriptionB": {
+            "required": false,
+            "type": "string",
+            "rule": "max:5000"
+          },
+
+
+          "companyNameC": {
+            "required": false,
+            "type": "string",
+            "rule": null
+          },
+          "startYearC": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "startMonthC": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "endYearC": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "endMonthC": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "employmentStatusC": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "jobDescriptionC": {
+            "required": false,
+            "type": "string",
+            "rule": "max:5000"
+          },
+
+
+          "companyNameD": {
+            "required": false,
+            "type": "string",
+            "rule": null
+          },
+          "startYearD": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "startMonthD": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "endYearD": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "endMonthD": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "employmentStatusD": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "jobDescriptionD": {
+            "required": false,
+            "type": "string",
+            "rule": "max:5000"
+          },
+
+          "companyNameE": {
+            "required": false,
+            "type": "string",
+            "rule": null
+          },
+          "startYearE": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "startMonthE": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "endYearE": {
+            "required": false,
+            "type": null,
+            "rule": "max:4"
+          },
+          "endMonthE": {
+            "required": false,
+            "type": null,
+            "rule": "max:2"
+          },
+          "employmentStatusE": {
+            "required": false,
+            "type": "numeric",
+            "rule": null
+          },
+          "jobDescriptionE": {
+            "required": false,
+            "type": "string",
+            "rule": "max:5000"
+          }
+        }
+      },
+
+        "pr": {
+          "pr": {
+            "pr": {
+              "required": false,
+              "type": "string",
+              "rule": "max:1000"
+            }
+          }
+        },
+
+        "others": {
+          "maritalStatus": {
+            "index": 1,
+            "maritalStatus": {
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            }
+          },
+
+          "currentAddress": {
+            "index": 2,
+            "station": {
+              "required": false,
+              "type": "string",
+              "rule": null
+            }
+          },
+
+          "educationBackground": {
+            "index": 3,
+            "educationLevel": {
+              "index": 1,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "graduationYear": {
+              "index": 2,
+              "required": false,
+              "type": null,
+              "rule": "max:4"
+            },
+            "graduationStatus": {
+              "index": 3,
+              "required": false,
+              "type": "numeric",
+              "rule": null
+            },
+            "schoolName": {
+              "index": 4,
+              "required": false,
+              "type": "string",
+              "rule": null
+            },
+            "departmentName": {
+              "index": 5,
+              "required": false,
+              "type": "string",
+              "rule": null
+            }
+          }
+        },
+
+        "custom": {
+
+          "profile": {
+            "salary": {
+              "index": 9,
+              "label": "現在の年収（万円）",
+              "salary": {
+                "index": 1,
+                "required": true,
+                "type": null,
+                "rule": null,
+                "fieldType": "select",
+                "hidden": false,
+                "value": "hidden項目内容",
+                "master": ["300","500","800","1000"]
+              }
+            }
+          },
+          "others": {
+            "wishSalary": {
+              "index": 4,
+              "label": "ご希望の年収（万円）",
+              "wishSalary": {
+                "index": 1,
+                "required": false,
+                "type": "numeric",
+                "rule": null,
+                "fieldType": "input",
+                "hidden": false,
+                "value": "hidden項目内容",
+                "master": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

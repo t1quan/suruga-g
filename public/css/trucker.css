@@ -1,0 +1,2106 @@
+#work1, #UACJ_work{
+    font-family: 'Noto Sans JP', 'Century Gothic', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 游ゴシック体 , YuGothic, "Yu Gothic Medium", 游ゴシック, 'Yu Gothic', メイリオ, Meiryo, sans-serif;
+    position: relative;
+}
+#UACJ_work .js-fadein {
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition-property: opacity, transform;
+    transition-duration: 1s;
+}
+#UACJ_work .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+#UACJ_work .aven{
+    /*font-family: aven;*/
+}
+#work1 .wt, #UACJ_work .wt{
+    color:#fff;
+}
+#UACJ_work a:hover{
+    text-decoration: none;
+}
+#UACJ_work .wrap1{
+    max-width: 1200px;
+    margin:auto;
+}
+#UACJ_work .wrap2{
+    max-width: 940px;
+    margin:auto;
+}
+#UACJ_work img, #UACJ_work img{
+    max-width: 100%;
+}
+#work1 p, #UACJ_work p {
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+#work1 section, #UACJ_work section {
+    padding: 30px 0px;
+}
+#UACJ_work .pc-only{
+    display: none;
+}
+#UACJ_work .mb-only{
+    display:block;
+}
+
+#work1 .fl,  #UACJ_work .fl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#UACJ_work picture{
+    display: grid;
+}
+#work1 .pro, #UACJ_work .pro{
+    font-family: "prohibition", sans-serif;
+}
+
+
+/*BANNER*/
+
+#UACJ_work .banner .heading {
+    position: relative;
+    top:-8px;
+}
+#UACJ_work .banner .heading .ttl-en {
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    letter-spacing: 3px;
+    padding-left: 3px;
+    margin-bottom: 11px;
+}
+#UACJ_work .banner .heading .ttl-ja {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#UACJ_work .banner .heading:after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/trucker/dots@2x.png);
+    background-size: 100%;
+    width: 25px;
+    height: 5px;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#work1 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+#work1 .banner .banner-img .inner{
+    position: relative;
+    height: 26px;
+}
+#work1 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work1 .banner .banner-img .text-box{
+    width: 84%;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work1 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work1 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work1 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work1 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work1 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work1 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work1 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work1 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work1 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work1 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work1 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+#work1 .job-des .job-list .job-item .pdl2{
+    padding-left: 0;
+    padding-right: 0;
+}
+#work1 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work1 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work1 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work1 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work1 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work1 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work1 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work1 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 81px);
+}
+#work1 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work1 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+
+/*WORK*/
+#UACJ_work .work .content-inner .hs{
+    font-size: 25px;
+    line-height: 31px;
+    color: black;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+#UACJ_work .work .content-inner .work-list{
+    margin-top:22px;
+    margin-bottom: 60px;
+}
+
+#UACJ_work .work .content-inner .work-list .work-item{
+    width: calc(100% / 2);
+}
+#UACJ_work .work .content-inner .work-list .work-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#UACJ_work .work .content-inner .work-list .work-item a .ar-icon{
+    width: 15px;
+    position: absolute;
+    right:12px;
+    top:50%;
+    transform: translateY(-50%);
+    transition: .4s;
+}
+#UACJ_work .work .content-inner .work-list .work-item a:hover .ar-icon{
+    width: 20px;
+}
+#UACJ_work .work .content-inner .work-list .work-item a:hover .box-text .bg{
+    height: 100%;
+}
+#UACJ_work .work .content-inner .work-list .work-item .box-text{
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+#UACJ_work .work .content-inner .work-list .work-item .box-text .bg{
+    background: #000000b3;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 55px;
+    z-index: -1;
+    transition: .4s;
+}
+#UACJ_work .work .content-inner .work-list .work-item:first-child .box-text .bg{
+    height: 68px;
+}
+#UACJ_work .work .content-inner .work-list .work-item:first-child .ar-icon{
+    top:56%;
+}
+#UACJ_work .work .content-inner .work-list .work-item .box-text .inner{
+    padding-left: 17px;
+}
+
+#UACJ_work .work .content-inner .work-list .work-item .box-text .ttl{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 1.44px;
+    margin-bottom:5px;
+}
+#UACJ_work .work .content-inner .work-list .work-item .box-text .sub-t{
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/*WORK2*/
+/*BANNER*/
+#work2 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+
+#work2 .banner .banner-img .inner{
+    position: relative;
+    height: 26px;
+}
+#work2 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work2 .banner .banner-img .text-box{
+    width: 138px;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work2 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work2 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work2 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work2 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work2 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work2 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work2 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work2 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work2 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work2 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work2 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+#work2 .job-des .job-list .job-item .pdl2{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#work2 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work2 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work2 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work2 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work2 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work2 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work2 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work2 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 81px);
+}
+#work2 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work2 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+
+/*WORK3*/
+/*BANNER*/
+#work3 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+
+#work3 .banner .banner-img .inner{
+    position: relative;
+    height: 53px;
+}
+#work3 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work3 .banner .banner-img .text-box{
+    width: 93.6%;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work3 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work3 .banner .banner-img .text-box .ttl span{
+    font-size: 15px;
+}
+#work3 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work3 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work3 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work3 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work3 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work3 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work3 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work3 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work3 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work3 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+#work3 .job-des .job-list .job-item .pdl2{
+    padding-left: 0;
+    padding-right: 0;
+}
+#work3 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work3 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work3 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work3 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work3 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work3 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work3 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work3 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 83px);
+}
+#work3 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work3 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+/*WORK4*/
+/*BANNER*/
+#work4 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+
+#work4 .banner .banner-img .inner{
+    position: relative;
+    height: 26px;
+}
+#work4 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work4 .banner .banner-img .text-box{
+    width: 118px;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work4 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work4 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work4 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work4 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work4 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work4 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work4 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work4 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work4 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work4 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work4 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+#work4 .job-des .job-list .job-item .pdl2{
+    padding-left: 0;
+    padding-right: 0;
+}
+#work4 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work4 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work4 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work4 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work4 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work4 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work4 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work4 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 82px);
+}
+#work4 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work4 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+/*WORK5*/
+/*BANNER*/
+#work5 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+
+#work5 .banner .banner-img .inner{
+    position: relative;
+    height: 26px;
+}
+#work5 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work5 .banner .banner-img .text-box{
+    width: 158px;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work5 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work5 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work5 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work5 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work5 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work5 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work5 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work5 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work5 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work5 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work5 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+
+#work5 .job-des .job-list .job-item .pdl2{
+    padding-left:0px;
+    padding-right: 0;
+}
+
+#work5 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work5 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work5 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work5 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work5 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work5 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work5 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work5 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 81px);
+}
+#work5 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work5 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+/*WORK6*/
+/*BANNER*/
+#work6 .banner .title{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    flex-direction: column;
+}
+
+#work6 .banner .banner-img .inner{
+    position: relative;
+    height: 26px;
+}
+#work6 .banner .banner-img .text-box .inner-t{
+    padding: 10px 20px 20px;
+}
+#work6 .banner .banner-img .text-box{
+    width: 98%;
+    background: #fff;
+    position: relative;
+    top:-66px;
+    left:17px;
+}
+#work6 .banner .banner-img .text-box .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom:5px;
+}
+#work6 .banner .banner-img .text-box .ttl span{
+    font-size: 15px;
+}
+#work6 .banner .banner-img .text-box .sub-t{
+    font-size: 15px;
+    line-height: 30px;
+    color: #665ABF;
+}
+
+/*JOB DESCRIPTION*/
+#work6 .job-des .content-inner{
+    padding:0px 0 13px 0;
+}
+#work6 .job-des .job-list .job-item{
+    row-gap: 30px;
+}
+#work6 .job-des .job-list .job-item:first-child{
+    margin-bottom: 30px;
+}
+#work6 .job-des .job-list .job-item .od1{
+    order:2;
+}
+
+#work6 .job-des .job-list .job-item .od2{
+    order:1;
+}
+#work6 .job-des .job-list .job-item .box-text{
+    width: 100%;
+}
+#work6 .job-des .job-list .job-item .box-text .inner{
+    padding: 0 37.5px;
+}
+#work6 .job-des .job-list .job-item .box-image{
+    width: calc(100%);
+}
+
+#work6 .job-des .job-list .job-item .pdl{
+    padding-left:0px;
+}
+#work6 .job-des .job-list .job-item .pdl2{
+    padding-left:0px;
+    padding-right: 0;
+}
+#work6 .job-des .job-list .job-item .sub-t{
+    line-height: 17px;
+    color:#665ABF;
+    font-weight: 700;
+    position: relative;
+    font-size: 12px;
+}
+
+#work6 .job-des .job-list .job-item .sub-t:before{
+    content: "";
+    width: 4px;
+    position: absolute;
+    height: 8px;
+    background-image: url(../images/trucker/mark@2x.png);
+    background-size: contain;
+    left: -18px;
+    top: 5px;
+}
+
+#work6 .job-des .job-list .job-item .ttl{
+    font-size: 19px;
+    line-height: 27px;
+    margin:10px 0 20px 0;
+}
+#work6 .job-des .job-list .job-item .mgb{
+    margin-bottom:0px;
+}
+#work6 .job-des .job-list .job-item .text-inner{
+    margin-top:10px;
+}
+#work6 .job-des .job-list .job-item .text-inner .img-b{
+    text-align: center;
+    width: 64px;
+}
+
+#work6 .job-des .job-list .job-item .text-inner .img-b .note{
+    font-size: 12px;
+    text-align: center;
+}
+#work6 .job-des .job-list .job-item .text-inner .text{
+    width: calc(100% - 81px);
+}
+#work6 .job-des .job-list .senior{
+    padding: 25px 37px;
+    background-color: #f7f8fc;
+    margin-top:30px;
+    position: relative;
+}
+
+#work6 .job-des .job-list .senior .mess{
+    width: 121px;
+    bottom: -23px;
+    right: 12px;
+    left: unset;
+    position: absolute;
+}
+
+/*PC SCREEN*/
+
+@media(min-width:768px){
+    #UACJ_work .banner .heading{
+        top:-8px;
+    }
+    #UACJ_work .banner .heading .ttl-en {
+        font-size: 60px;
+        line-height: 75px;
+        letter-spacing: 5px;
+        padding-left: 5px;
+        margin-bottom: 19px;
+    }
+    #UACJ_work .banner .heading .ttl-ja {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 2px;
+    }
+
+    #UACJ_work .banner .heading:after {
+        background-image: url(../images/trucker/dots@2x.png);
+        width: 47px;
+        height: 8px;
+        bottom: -27px;
+    }
+    #UACJ_work .pc-only {
+        display: block;
+    }
+
+    #UACJ_work .mb-only {
+        display: none;
+    }
+    #UACJ_work .wt{
+        color:#fff;
+    }
+    #UACJ_work section{
+        padding:30px 0px;
+    }
+
+    #UACJ_work p{
+        font-size:18px;
+        line-height: 45px;
+        margin-bottom: 0;
+    }
+    #UACJ_work .mg20{
+        margin-top:20px;
+    }
+
+
+    /*BANNER*/
+    #work1 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work1 .banner .banner-img .inner{
+        position: relative;
+        height: 43px;
+    }
+    #work1 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work1 .banner .banner-img .text-box{
+        width: 613px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work1 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work1 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work1 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work1 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work1 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work1 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work1 .job-des .job-list .job-item .pdl, #work1 .job-des .job-list .job-item .pdl2{
+        padding-left:70px !important;
+    }
+
+    #work1 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work1 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work1 .job-des .job-list .job-item:first-child{
+        margin-bottom: 70px;
+    }
+
+    #work1 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work1 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work1 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work1 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work1 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work1 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work1 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work1 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 170px);
+    }
+    #work1 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work1 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+
+    /*WORK*/
+    #UACJ_work .work .content-inner .hs{
+        font-size: 60px;
+        line-height: 75px;
+        color: black;
+        text-align: center;
+    }
+
+    #UACJ_work .work .content-inner .work-list{
+        margin-top:42px;
+        margin-bottom: 90px;
+    }
+
+    #UACJ_work .work .content-inner .work-list .work-item{
+        width: calc(100% / 3);
+    }
+    #UACJ_work .work .content-inner .work-list .work-item a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item a .ar-icon{
+        width: 30px;
+        position: absolute;
+        right:5px;
+        top:50%;
+        transform: translateY(-50%);
+        transition: .4s;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item a:hover .ar-icon{
+        width: 45px;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item a:hover .box-text .bg{
+        height: 100%;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item .box-text{
+
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top:50%;
+        transform: translateY(-50%);
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    #UACJ_work .work .content-inner .work-list .work-item .box-text .bg{
+        background: #000000b3;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 89px;
+        z-index: -1;
+        transition: .4s;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item:first-child .box-text .bg{
+        height: 135px;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item:first-child .ar-icon{
+        top:60%;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item .box-text .inner{
+        padding-left: 32px;
+    }
+
+    #UACJ_work .work .content-inner .work-list .work-item .box-text .ttl{
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: bold;
+        margin-bottom:14px;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item:first-child .box-text .ttl{
+        font-size: 18px;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item .box-text .sub-t{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /*WORK2*/
+    /*BANNER*/
+    #work2 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work2 .banner .banner-img .inner{
+        position: relative;
+        height: 56px;
+    }
+    #work2 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work2 .banner .banner-img .text-box{
+        width: 580px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work2 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work2 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work2 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work2 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work2 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work2 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work2 .job-des .job-list .job-item .pdl, #work2 .job-des .job-list .job-item .pdl2{
+        padding-left:70px !important;
+    }
+
+
+    #work2 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work2 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work2 .job-des .job-list .job-item:first-child{
+        margin-bottom: 79px;
+    }
+
+    #work2 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work2 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work2 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work2 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work2 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work2 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work2 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work2 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 170px);
+    }
+    #work2 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work2 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+    
+    
+    /*WORK3*/
+    /*BANNER*/
+    #work3 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work3 .banner .banner-img .inner{
+        position: relative;
+        height: 56px;
+    }
+    #work3 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work3 .banner .banner-img .text-box{
+        width: 930px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work3 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work3 .banner .banner-img .text-box .ttl span{
+        font-size: 30px;
+    }
+    #work3 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work3 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work3 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work3 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work3 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work3 .job-des .job-list .job-item .pdl, #work3 .job-des .job-list .job-item .pdl2{
+        padding-left:70px !important;
+    }
+    #work3 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work3 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work3 .job-des .job-list .job-item:first-child{
+        margin-bottom: 79px;
+    }
+
+    #work3 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work3 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work3 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work3 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work3 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work3 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work3 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work3 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 170px);
+    }
+    #work3 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work3 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+    
+    /*WORK4*/
+    /*BANNER*/
+    #work4 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work4 .banner .banner-img .inner{
+        position: relative;
+        height: 56px;
+    }
+    #work4 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work4 .banner .banner-img .text-box{
+        width: 547px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work4 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work4 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work4 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work4 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work4 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work4 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work4 .job-des .job-list .job-item .pdl{
+        padding-left:70px !important;
+    }
+    #work4 .job-des .job-list .job-item .pdl2{
+        padding-left: 50px !important;
+        padding-right: 20px !important;
+    }
+
+    #work4 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work4 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work4 .job-des .job-list .job-item:first-child{
+        margin-bottom: 79px;
+    }
+
+    #work4 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work4 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work4 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work4 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work4 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work4 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work4 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work4 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 168px);
+    }
+    #work4 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work4 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+    
+    /*WORK5*/
+    /*BANNER*/
+    #work5 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work5 .banner .banner-img .inner{
+        position: relative;
+        height: 56px;
+    }
+    #work5 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work5 .banner .banner-img .text-box{
+        width: 613px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work5 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work5 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work5 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work5 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work5 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work5 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work5 .job-des .job-list .job-item .pdl, #work5 .job-des .job-list .job-item .pdl2{
+        padding-left:70px !important;
+    }
+
+    #work5 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work5 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work5 .job-des .job-list .job-item:first-child{
+        margin-bottom: 79px;
+    }
+
+    #work5 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work5 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work5 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work5 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work5 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work5 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work5 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work5 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 169px);
+    }
+    #work5 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work5 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+    /*BANNER*/
+    #work6 .banner .title{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        flex-direction: column;
+    }
+
+    #work6 .banner .banner-img .inner{
+        position: relative;
+        height: 56px;
+    }
+    #work6 .banner .banner-img .text-box .inner-t{
+        padding:20px;
+    }
+    #work6 .banner .banner-img .text-box{
+        width: 763px;
+        background: #fff;
+        position: relative;
+        top:-57px;
+        left:40px;
+    }
+    #work6 .banner .banner-img .text-box .ttl{
+        font-size: 32px;
+        line-height: 46px;
+        margin-bottom:10px;
+    }
+    #work6 .banner .banner-img .text-box .ttl span{
+        font-size: 30px;
+    }
+    #work6 .banner .banner-img .text-box .sub-t{
+        font-size: 24px;
+        line-height: 60px;
+        color: #665ABF;
+    }
+
+
+    /*JOB DESCRIPTION*/
+    #work6 .job-des .content-inner{
+        padding:70px 40px 110px 40px;
+    }
+    #work6 .job-des .job-list .job-item .box-text{
+        width: 100%;
+    }
+    #work6 .job-des .job-list .job-item .box-text .inner{
+        padding: unset;
+    }
+
+    #work6 .job-des .job-list .job-item .box-image{
+        width: calc(100%);
+    }
+
+    #work6 .job-des .job-list .job-item .pdl, #work6 .job-des .job-list .job-item .pdl2{
+        padding-left:70px !important;
+    }
+    #work6 .job-des .job-list .job-item .od1{
+        order:2;
+    }
+
+    #work6 .job-des .job-list .job-item .od2{
+        order:1;
+    }
+    #work6 .job-des .job-list .job-item:first-child{
+        margin-bottom: 79px;
+    }
+
+    #work6 .job-des .job-list .job-item .sub-t{
+        line-height: 40px;
+        color:#665ABF;
+        font-weight: 700;
+        position: relative;
+        font-size: 18px;
+    }
+
+    #work6 .job-des .job-list .job-item .sub-t:before{
+        content: "";
+        width: 8px;
+        position: absolute;
+        height: 16px;
+        background-image: url(../images/trucker/mark@2x.png);
+        background-size: contain;
+        left: -49px;
+        top: 13px;
+    }
+
+    #work6 .job-des .job-list .job-item .ttl{
+        font-size: 30px;
+        line-height: 50px;
+        margin:40px 0;
+    }
+    #work6 .job-des .job-list .job-item .mgb{
+        margin-bottom:0px;
+    }
+    #work6 .job-des .job-list .job-item .text-inner{
+        margin-top:38px;
+    }
+    #work6 .job-des .job-list .job-item .text-inner .img-b{
+        text-align: center;
+        width: 120px;
+    }
+
+    #work6 .job-des .job-list .job-item .text-inner .img-b .note{
+        font-size: 14px;
+    }
+    #work6 .job-des .job-list .job-item .text-inner .text{
+        width: calc(100% - 170px);
+    }
+    #work6 .job-des .job-list .senior{
+        padding: 60px 125px 48px 112px;
+        background-color: #f7f8fc;
+        margin-top:100px;
+        position: relative;
+    }
+
+    #work6 .job-des .job-list .senior .mess{
+        width: 243px;
+        position: absolute;
+        bottom: -50px;
+        left: 112px;
+        right: unset;
+    }
+}
+
+
+@media(min-width: 1200px){
+    #UACJ_work .work .content-inner .work-list .work-item{
+        width: calc(100% / 6);
+    }
+    #UACJ_work .banner .banner-img .text-box{
+        left:20px !important;
+        top: -118px !important;
+    }
+    #UACJ_work .banner .banner-img .text-box .ttl{
+        letter-spacing: 1px;
+    }
+    #UACJ_work .banner .banner-img .text-box .sub-t {
+        font-size: 24px;
+        line-height: 29px;
+        color: #665ABF;
+        letter-spacing: 1px;
+    }
+    #work1 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work1 .banner .banner-img .text-box{
+        left: unset;
+        top: -122px;
+    }
+    #work1 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work1 .job-des .job-list .job-item .box-text {
+        width: 704px;
+    }
+    #work1 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 774px);
+    }
+    #work1 .job-des .job-list .job-item .mgb {
+        margin-bottom: 56px;
+    }
+    #work1 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work1 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+    #work1 .job-des .job-list .job-item:first-child{
+        margin-bottom: unset;
+    }
+    #work1 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+    #work1 .job-des .job-list .job-item .pdl2{
+        padding-left:50px !important;
+        padding-right:20px !important;
+    }
+
+    #work2 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work2 .banner .banner-img .text-box{
+        left:unset;
+        top: -122px;
+    }
+    #work2 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work2 .job-des .job-list .job-item .box-text {
+        width: 703px;
+    }
+    #work2 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 773px);
+    }
+    #work2 .job-des .job-list .job-item .mgb {
+        margin-bottom: 0px;
+    }
+    #work2 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work2 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+
+    #work2 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+    #work2 .job-des .job-list .job-item .pdl2{
+        padding-left:50px !important;
+        padding-right:20px !important;
+    }
+
+    #work3 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work3 .banner .banner-img .text-box{
+        left:unset;
+        top: -122px;
+    }
+    #work3 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work3 .job-des .job-list .job-item .box-text {
+        width: 703px;
+    }
+    #work3 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 773px);
+    }
+    #work3 .job-des .job-list .job-item .mgb {
+        margin-bottom: 0px;
+    }
+    #work3 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work3 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+
+    #work3 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+    #work3 .job-des .job-list .job-item .pdl2{
+        padding-right: 20px !important;
+        padding-left: 50px !important;
+    }
+    #work4 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work4 .banner .banner-img .text-box{
+        left:unset;
+        top: -122px;
+    }
+    #work4 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work4 .job-des .job-list .job-item .box-text {
+        width: 703px;
+    }
+    #work4 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 773px);
+    }
+    #work4 .job-des .job-list .job-item .mgb {
+        margin-bottom: 0px;
+    }
+    #work4 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work4 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+
+    #work4 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+
+    #work5 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work5 .banner .banner-img .text-box{
+        left:unset;
+        top: -122px;
+    }
+    #work5 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work5 .job-des .job-list .job-item .box-text {
+        width: 703px;
+    }
+    #work5 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 773px);
+    }
+    #work5 .job-des .job-list .job-item .mgb {
+        margin-bottom: 0px;
+    }
+    #work5 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work5 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+
+    #work5 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+    #work5 .job-des .job-list .job-item .pdl2{
+        padding-right: 20px !important;
+        padding-left: 50px !important;
+    }
+    #work6 .work .content-inner .work-list .work-item{
+        width: calc(100% / 6);
+    }
+    #work6 .banner .banner-img .text-box .inner-t {
+        padding: 30px 0 30px 50px;
+    }
+    #work6 .banner .banner-img .text-box{
+        left:unset;
+        top: -122px;
+    }
+    #work6 .job-des .content-inner {
+        padding: 70px 0 110px 0;
+    }
+    #work6 .job-des .job-list .job-item .box-text {
+        width: 703px;
+    }
+    #work6 .job-des .job-list .job-item .box-image{
+        width: calc(100% - 773px);
+    }
+    #work6 .job-des .job-list .job-item .mgb {
+        margin-bottom: 0px;
+    }
+    #work6 .job-des .job-list .job-item .od1{
+        order:1;
+    }
+
+    #work6 .job-des .job-list .job-item .od2{
+        order:2;
+    }
+
+    #work6 .job-des .job-list .job-item .text-inner .text {
+        width: calc(100% - 160px);
+    }
+    #work6 .job-des .job-list .job-item .pdl2{
+        padding-left:50px !important;
+        padding-right:20px !important;
+    }    
+}
+
+/*IPHONE SE*/
+@media(max-width: 374px){
+    #work1 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #UACJ_work .work .content-inner .work-list .work-item .box-text .inner {
+        padding-left: 10px;
+    }
+    #work1 .banner .banner-img .text-box .ttl{
+        font-size: 16px;
+    }
+
+    #work2 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #work2 .content-inner .work-list .work-item .box-text .inner {
+        padding-left: 10px;
+    }
+    #work2 .banner .banner-img .text-box .ttl{
+        font-size: 16px;
+    }
+    #work3 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #work3 .banner .banner-img .text-box .ttl{
+        font-size: 16px;
+    }
+    #work4 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #work4 .banner .banner-img .text-box .ttl{
+        font-size: 16px;
+    }
+    #work5 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #work5 .banner .banner-img .text-box .ttl{
+        font-size: 16px;
+    }
+    #work6 .job-des .job-list .senior {
+        padding: 25px 30px;
+    }
+    #work6 .work .content-inner .work-list .work-item .box-text .inner {
+        padding-left: 10px;
+    }
+
+    #work6 .banner .banner-img .text-box .ttl span{
+        font-size: 13px;
+    }
+    #work6 .banner .banner-img .text-box .ttl{
+        font-size: 15px;
+    }
+    #work6 .banner .banner-img .text-box{
+        left:6px;
+    }
+}
+

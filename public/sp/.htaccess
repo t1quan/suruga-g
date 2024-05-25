@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /sp/
+
+RewriteRule ^(.*)$ /$1 [NE,R=301,L]
+
+</IfModule>
