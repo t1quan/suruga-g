@@ -30,6 +30,7 @@
         }
     }
 
+    // all
     .container_inner {
         padding: 0 30px;
         width: 100%;
@@ -39,6 +40,7 @@
 
     .content_title {
         text-align: center;
+        margin-bottom: 32px;
         .en {
             font-family: "Poppins";
             color: $mainColor;
@@ -64,8 +66,59 @@
                 line-height: 51px;
             }
         }
+        @include minWidthXs {
+            margin-bottom: 56px;
+        }
     }
 
+    .link-page_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fec400;
+        border: 1px solid #777777;
+        height: 44px;
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+        color: #1b1d22;
+        font-size: 15px;
+        font-weight: 700;
+        position: relative;
+        @include minWidthXs {
+            height: 70px;
+            max-width: 400px;
+            background: #363a44;
+            color: #fff;
+            font-size: 22px;
+            span {
+                position: relative;
+                z-index: 2;
+                transition: all 0.3s;
+            }
+            &::before {
+                content: "";
+                width: 0;
+                height: 100%;
+                display: block;
+                position: absolute;
+                background: #fec400;
+                left: 0;
+                top: 0;
+                transition: all 0.3s;
+            }
+            &:hover {
+                span {
+                    color: #000;
+                }
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // section work ------------------------------------------
     .sc-work {
         background: #3591ff;
         padding: 146px 0 60px 0;
@@ -73,8 +126,11 @@
             padding: 211px 0 99px 0;
         }
         .work_container {
+            margin: 0 auto;
+            max-width: 500px;
             @include minWidthXs {
                 display: flex;
+                max-width: 100%;
             }
             .work_content {
                 padding-bottom: 40px;
@@ -87,10 +143,6 @@
                 }
                 .content_title {
                     text-align: left;
-                    margin-bottom: 32px;
-                    @include minWidthXs {
-                        margin-bottom: 56px;
-                    }
                     .en {
                         color: #fff;
                     }
@@ -108,62 +160,11 @@
                         line-height: 36px;
                     }
                 }
-                .work_btn {
-                    margin: 0 auto;
-                    display: block;
-                    height: 44px;
-                    border: 1px solid #777;
-                    background: #fec400;
-                    text-align: center;
-                    width: 100%;
-                    max-width: 240px;
-                    line-height: 44px;
+                .link-page_btn {
                     margin-top: 35px;
-                    font-size: 15px;
-                    font-weight: 700;
-                    padding: 0 10px;
-                    transition: all 0.3s;
-                    position: relative;
-                    &::after {
-                        content: "";
-                        display: inline-block;
-                        width: 14px;
-                        height: 8px;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOC44NjQiIGhlaWdodD0iMTIuMDIxIiB2aWV3Qm94PSIwIDAgMjguODY0IDEyLjAyMSI+DQogIDxnIGlkPSJHcm91cF8yMzE0OCIgZGF0YS1uYW1lPSJHcm91cCAyMzE0OCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc2NC41IC0xODMyLjg0MykiPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkyIiBkYXRhLW5hbWU9IkxpbmUgOTIiIHgyPSIyNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzY2LjUgMTg0Mi41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWIxZDIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkzIiBkYXRhLW5hbWU9IkxpbmUgOTMiIHgyPSI5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3ODQuMTcyIDE4MzUuNjcyKSByb3RhdGUoNDUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMxYjFkMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+DQogIDwvZz4NCjwvc3ZnPg0K");
-                        margin-left: 13px;
-                        position: relative;
-                        top: -1px;
-                        transition: all 0.25s;
-                    }
                     @include minWidthXs {
-                        background: #363a44;
-                        max-width: 400px;
-                        height: 70px;
-                        line-height: 70px;
-                        margin: 76px 0 0 0;
-                        color: #fff;
-                        font-size: 22px;
-                        padding-right: 32px;
-                        &::after {
-                            display: block;
-                            width: 25px;
-                            height: 8px;
-                            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi43NDMiIGhlaWdodD0iOC40ODUiIHZpZXdCb3g9IjAgMCAyNi43NDMgOC40ODUiPg0KICA8ZyBpZD0iR3JvdXBfMjMxNDgiIGRhdGEtbmFtZT0iR3JvdXAgMjMxNDgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03NjUuNSAtMTgzNS4yNTgpIj4NCiAgICA8bGluZSBpZD0iTGluZV85MiIgZGF0YS1uYW1lPSJMaW5lIDkyIiB4Mj0iMjMuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzY2LjUgMTg0Mi41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkzIiBkYXRhLW5hbWU9IkxpbmUgOTMiIHgyPSI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3ODUuMTcyIDE4MzYuNjcyKSByb3RhdGUoNDUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDwvZz4NCjwvc3ZnPg0K");
-                            margin-left: 0;
-                            position: absolute;
-                            top: 31px;
-                            right: 56px;
-                            opacity: 0;
-                        }
-                        &:hover {
-                            background: #fec400;
-                            color: #000000;
-                            &::after {
-                                opacity: 1;
-                            }
-                        }
+                        margin: 0;
+                        margin-top: 76px;
                     }
                 }
             }
@@ -175,7 +176,6 @@
                         margin-top: 20px;
                     }
                     img {
-                        width: 100%;
                         transition: all 0.3s;
                         @include minWidthXs {
                             filter: grayscale(90%);
@@ -248,6 +248,276 @@
                     flex-basis: 50%;
                     width: 50%;
                 }
+            }
+        }
+    }
+
+    // section oneday ----------------------------------------
+    .sc-oneday {
+        padding: 48px 0 61px 0;
+        background: #e4e4e6;
+        position: relative;
+        &::before {
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #eeeeef;
+            z-index: 1;
+        }
+        .oneday_container {
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+            max-width: 500px;
+            .oneday_head {
+                margin-bottom: 49px;
+                .text {
+                    font-size: 15px;
+                    line-height: 27px;
+                    font-weight: 500;
+                    color: #1b1d22;
+                    text-align: center;
+                    @include minWidthXs {
+                        font-size: 18px;
+                        line-height: 36px;
+                    }
+                }
+                @include minWidthXs {
+                    margin-bottom: 76px;
+                }
+            }
+            .oneday_content {
+                .oneday_box {
+                    & + .oneday_box {
+                        margin-top: 61px;
+                        @include minWidthXs {
+                            margin-top: 0;
+                        }
+                    }
+                    .oneday_box-img {
+                        position: relative;
+                        .oneday_box-img_inner {
+                            width: 100%;
+                            aspect-ratio: 1.864;
+                            overflow: hidden;
+                            img {
+                                transition: all 0.3s;
+                            }
+                        }
+                        .num {
+                            font-family: "Poppins";
+                            position: absolute;
+                            top: -27px;
+                            left: 10px;
+                            font-size: 50px;
+                            line-height: 50px;
+                            font-style: italic;
+                            color: #fec400;
+                            font-weight: 500;
+                            @include minWidthXs {
+                                font-size: 80px;
+                                line-height: 80px;
+                                top: -35px;
+                            }
+                        }
+                    }
+                    .oneday_box-text {
+                        padding-top: 9px;
+                        .position {
+                            font-size: 13px;
+                            font-weight: 700;
+                            line-height: 18px;
+                            color: #1b1d22;
+                            margin-bottom: 6px;
+                            @include minWidthXs {
+                                font-size: 18px;
+                                line-height: 36px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                        .name_ja {
+                            display: inline-block;
+                            font-size: 18px;
+                            line-height: 18px;
+                            color: #1b1d22;
+                            font-weight: 700;
+                            margin-bottom: 4px;
+                            position: relative;
+                            transition: all 0.3s;
+                            .join {
+                                font-size: 12px;
+                                display: inline-block;
+                                margin-left: 1px;
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 7px;
+                                left: 109%;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOC44MjgiIGhlaWdodD0iMTQuNjU3IiB2aWV3Qm94PSIwIDAgMjguODI4IDE0LjY1NyI+DQogIDxnIGlkPSJHcm91cF8yMzI1NyIgZGF0YS1uYW1lPSJHcm91cCAyMzI1NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTcyNC41IC0xODMwLjY3MikiPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkyIiBkYXRhLW5hbWU9IkxpbmUgOTIiIHgyPSIyNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzI2LjUgMTg0Mi41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWIxZDIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkzIiBkYXRhLW5hbWU9IkxpbmUgOTMiIHgyPSI5IiB5Mj0iOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzQxLjUgMTgzMy41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWIxZDIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iNCIvPg0KICA8L2c+DQo8L3N2Zz4NCg==");
+                                width: 14px;
+                                height: 8px;
+                                transition: all 0.3s;
+                            }
+                            @include minWidthXs {
+                                font-size: 26px;
+                                .join {
+                                    font-size: 16px;
+                                    margin-left: 4px;
+                                }
+                                &::after {
+                                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNi43NDMiIGhlaWdodD0iOC40ODUiIHZpZXdCb3g9IjAgMCAzNi43NDMgOC40ODUiPg0KICA8ZyBpZD0iR3JvdXBfMjMyNTgiIGRhdGEtbmFtZT0iR3JvdXAgMjMyNTgiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MjUuNSAtMTgzNS4yNTgpIj4NCiAgICA8bGluZSBpZD0iTGluZV85MiIgZGF0YS1uYW1lPSJMaW5lIDkyIiB4Mj0iMzQuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzI2LjUgMTg0Mi41KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWIxZDIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgIDxsaW5lIGlkPSJMaW5lXzkzIiBkYXRhLW5hbWU9IkxpbmUgOTMiIHgyPSI4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NTUuMTcyIDE4MzYuNjcyKSByb3RhdGUoNDUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMxYjFkMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogIDwvZz4NCjwvc3ZnPg0K");
+                                    width: 35px;
+                                    height: 9px;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        .name_en {
+                            font-family: "Poppins";
+                            font-size: 13px;
+                            line-height: 18px;
+                            font-style: italic;
+                            font-weight: 500;
+                            color: #0376ff;
+                            margin-bottom: 6px;
+                            @include minWidthXs {
+                                font-size: 19px;
+                                line-height: 36px;
+                                margin-bottom: 3px;
+                            }
+                        }
+                        .company {
+                            font-size: 13px;
+                            font-weight: 500;
+                            line-height: 18px;
+                            color: #1b1d22;
+                            .space {
+                                padding-left: 6px;
+                            }
+                            @include minWidthXs {
+                                font-size: 18px;
+                                line-height: 36px;
+                                .space {
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                        @include minWidthXs {
+                            padding-top: 15px;
+                        }
+                    }
+                    @include minWidthXs {
+                        flex-basis: 50%;
+                        width: 50%;
+                        &:hover {
+                            .oneday_box-img {
+                                .oneday_box-img_inner {
+                                    img {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                            .oneday_box-text {
+                                .name_ja {
+                                    &::after {
+                                        opacity: 1;
+                                        left: 113%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @include minWidthXs {
+                    display: flex;
+                    gap: 60px;
+                }
+            }
+            @include minWidthXs {
+                max-width: 100%;
+            }
+        }
+        @include minWidthXs {
+            padding: 48px 0 103px 0;
+        }
+    }
+
+    // section welafre ---------------------------------------
+    .sc-welfare {
+        padding: 58px 0 40px;
+        margin-bottom: 75px;
+        background-color: #fff;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 153px;
+            background: #363a44;
+            z-index: 1;
+        }
+        .welfare_container {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            .welfare_head {
+                margin-bottom: 34px;
+                .content_title {
+                    @include minWidthXs {
+                        margin-bottom: 68px;
+                    }
+                }
+                .text {
+                    font-size: 15px;
+                    line-height: 27px;
+                    font-weight: 500;
+                    @include minWidthXs {
+                        font-size: 18px;
+                        line-height: 36px;
+                        width: 100%;
+                        max-width: 76.3%;
+                        margin: 0 auto;
+                    }
+                }
+                @include minWidthXs {
+                    margin-bottom: 64px;
+                }
+            }
+            .welfare_content {
+                .welfare_img {
+                    display: flex;
+                    gap: 3px;
+                    margin: 0 -18px;
+                    margin-bottom: 40px;
+                    @include minWidthXs {
+                        gap: 30px;
+                        margin: 0 -10px;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+            @include minWidthXs {
+                max-width: 100%;
+            }
+        }
+        @include minWidthXs {
+            padding: 117px 0 67px 0;
+            margin-bottom: 92px;
+            &::before {
+                height: 320px;
             }
         }
     }

@@ -81,7 +81,7 @@
                     <span class="ja">部門紹介</span>
                 </h2>
                 <p class="text">駿河生産プラットフォームは、ミスミグループのマザー工場として商品の製造を担っています。商品のほとんどが受注生産で、ほぼ単品での設計製造販売でありながら、高品質・低コスト・確実短納期でお客様にお届けできる点が強みです。</p>
-                <a href="{{Route('work')}}" class="work_btn">部門紹介をすべて見る</a>
+                <a href="{{Route('work')}}" class="link-page_btn"><span>部門紹介をすべて見る</span></a>
             </div>
             <div class="work_img">
                 <div class="work_img-item">

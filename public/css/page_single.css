@@ -1,0 +1,133 @@
+/* all --------------------------------------------*/
+.container_inner {
+    padding: 0 30px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.page_container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* banner ------------------------------------------*/
+.sc-page_banner {
+    background: #363A44;
+}
+
+.sc-page_banner .banner_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+}
+
+.sc-page_banner .banner_title {
+    font-size: 33px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: italic;
+    line-height: 50px;
+    color: #FEC400;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.sc-page_banner .text {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* movie ----------------------------------------- */
+.sc-page_movie {
+    padding: 44px 0 74px 0;
+}
+
+.sc-page_movie .movie_head {
+    margin-bottom: 20px;
+}
+
+.sc-page_movie .movie_head .sub-title {
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    font-style: italic;
+    color: #0376FF;
+    margin-bottom: 2px;
+}
+
+.sc-page_movie .movie_head .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #1B1D22;
+    border-bottom: 2px solid #777;
+    padding-bottom: 9px;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+    /* all ----------------------------------------*/
+    .page_container {
+        max-width: 100%;
+    }
+
+    /* banner -------------------------------------*/
+    .sc-page_banner .banner_container {
+        height: 355px;
+    }
+
+    .sc-page_banner .banner_container {
+        padding-top: 25px;
+    }
+
+    .sc-page_banner .banner_title {
+        font-size: 66px;
+        line-height: 99px;
+        margin-bottom: -20px;
+    }
+
+    .sc-page_banner .text {
+        font-size: 30px;
+        line-height: 51px;
+    }
+
+
+    /* movie -------------------------------------*/
+    .sc-page_movie {
+        padding: 88px 0 151px 0;
+    }
+
+    .sc-page_movie .movie_head {
+        margin-bottom: 51px;
+    }
+
+    .sc-page_movie .movie_head .sub-title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 2px;
+    }
+
+    .sc-page_movie .movie_head .title {
+        font-size: 28px;
+        line-height: 36px;
+        padding-bottom: 18px;
+    }
+
+    .sc-page_movie .movie_video-inner {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 81%;
+    }
+}

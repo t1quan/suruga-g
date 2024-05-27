@@ -1,0 +1,147 @@
+/* intro ----------------------------------------- */
+.sc-page_intro {
+    margin-top: -29px;
+    padding-bottom: 40px;
+}
+
+.sc-page_intro .intro_img {
+    display: flex;
+    gap: 3px;
+    margin: 0 -18px;
+}
+
+.sc-page_intro .intro_text {
+    padding-top: 54px;
+}
+
+.sc-page_intro .intro_text .text {
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 500;
+    color: #1B1D22;
+}
+
+/* info ---------------------------------------------- */
+.sc-page_info {
+    background: #3591FF;
+    padding: 50px 0 75px 0;
+}
+
+.sc-page_info.sc-gray {
+    background: #E4E4E6;
+}
+
+.sc-page_info .info_head {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.sc-page_info .info_head-img {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 65px;
+}
+
+.sc-page_info .info_head-text {
+    width: 100%;
+}
+
+.sc-page_info .info_head-text_sub {
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    font-style: italic;
+    color: #CCE3FF;
+    margin-bottom: 2px;
+}
+
+.sc-page_info.sc-gray .info_head-text_sub {
+    color: #0376FF;
+}
+
+.sc-page_info .info_head-text_title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+}
+
+.sc-page_info.sc-gray .info_head-text_title {
+    color: #1B1D22;
+    border-bottom-color: #777;
+}
+
+.sc-page_info .info_box {
+    background: #fff;
+    padding: 15px 20px 20px 20px;
+}
+
+.sc-page_info .info_box+.info_box {
+    margin-top: 15px;
+}
+
+.sc-page_info .info_box .info_box-img {
+    margin: 0 auto 13px auto;
+    width: 100%;
+    max-width: 40px;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.sc-page_info .info_box .info_box-img::before {
+    content: '';
+    width: 10px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #0376FF;
+}
+
+.sc-page_info .info_box .info_box-title {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 11px;
+}
+
+.sc-page_info .info_box .text {
+    font-size: 13px;
+    line-height: 23px;
+    color: #1B1D22;
+    font-weight: 500;
+}
+
+
+@media (min-width: 768px) {
+
+    /* intro ----------------------------------------- */
+    .sc-page_intro {
+        margin-top: -45px;
+    }
+
+    .sc-page_intro .intro_img {
+        gap: 30px;
+        margin: 0 -10px;
+    }
+
+    .sc-page_intro .intro_text {
+        width: 100%;
+        max-width: 68%;
+        margin: 0 auto;
+        padding-top: 71px;
+    }
+
+    .sc-page_intro .intro_text .text {
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
