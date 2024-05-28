@@ -1,20 +1,20 @@
 /* intro ----------------------------------------- */
-.sc-page_intro {
+.sc-welfare_intro {
     margin-top: -29px;
     padding-bottom: 40px;
 }
 
-.sc-page_intro .intro_img {
+.sc-welfare_intro .intro_img {
     display: flex;
     gap: 3px;
     margin: 0 -18px;
 }
 
-.sc-page_intro .intro_text {
+.sc-welfare_intro .intro_text {
     padding-top: 54px;
 }
 
-.sc-page_intro .intro_text .text {
+.sc-welfare_intro .intro_text .text {
     font-size: 15px;
     line-height: 27px;
     font-weight: 500;
@@ -22,33 +22,33 @@
 }
 
 /* info ---------------------------------------------- */
-.sc-page_info {
+.sc-welfare_info {
     background: #3591FF;
     padding: 50px 0 75px 0;
 }
 
-.sc-page_info.sc-gray {
+.sc-welfare_info.sc-gray {
     background: #E4E4E6;
 }
 
-.sc-page_info .info_head {
+.sc-welfare_info .info_head {
     display: flex;
     gap: 10px;
     align-items: end;
     margin-bottom: 20px;
 }
 
-.sc-page_info .info_head-img {
+.sc-welfare_info .info_head-img {
     flex-shrink: 0;
     width: 100%;
     max-width: 65px;
 }
 
-.sc-page_info .info_head-text {
+.sc-welfare_info .info_head-text {
     width: 100%;
 }
 
-.sc-page_info .info_head-text_sub {
+.sc-welfare_info .info_head-text_sub {
     font-family: "Poppins";
     font-size: 13px;
     font-weight: 600;
@@ -58,11 +58,11 @@
     margin-bottom: 2px;
 }
 
-.sc-page_info.sc-gray .info_head-text_sub {
+.sc-welfare_info.sc-gray .info_head-text_sub {
     color: #0376FF;
 }
 
-.sc-page_info .info_head-text_title {
+.sc-welfare_info .info_head-text_title {
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -71,21 +71,21 @@
     padding-bottom: 8px;
 }
 
-.sc-page_info.sc-gray .info_head-text_title {
+.sc-welfare_info.sc-gray .info_head-text_title {
     color: #1B1D22;
     border-bottom-color: #777;
 }
 
-.sc-page_info .info_box {
+.sc-welfare_info .info_box {
     background: #fff;
     padding: 15px 20px 20px 20px;
 }
 
-.sc-page_info .info_box+.info_box {
+.sc-welfare_info .info_box+.info_box {
     margin-top: 15px;
 }
 
-.sc-page_info .info_box .info_box-img {
+.sc-welfare_info .info_box .info_box-img {
     margin: 0 auto 13px auto;
     width: 100%;
     max-width: 40px;
@@ -93,7 +93,7 @@
     padding-bottom: 6px;
 }
 
-.sc-page_info .info_box .info_box-img::before {
+.sc-welfare_info .info_box .info_box-img::before {
     content: '';
     width: 10px;
     display: block;
@@ -104,7 +104,7 @@
     border-top: 1px solid #0376FF;
 }
 
-.sc-page_info .info_box .info_box-title {
+.sc-welfare_info .info_box .info_box-title {
     font-size: 15px;
     line-height: 18px;
     text-align: center;
@@ -113,7 +113,7 @@
     margin-bottom: 11px;
 }
 
-.sc-page_info .info_box .text {
+.sc-welfare_info .info_box .text {
     font-size: 13px;
     line-height: 23px;
     color: #1B1D22;
@@ -124,24 +124,98 @@
 @media (min-width: 768px) {
 
     /* intro ----------------------------------------- */
-    .sc-page_intro {
+    .sc-welfare_intro {
         margin-top: -45px;
     }
 
-    .sc-page_intro .intro_img {
+    .sc-welfare_intro .intro_img {
         gap: 30px;
         margin: 0 -10px;
     }
 
-    .sc-page_intro .intro_text {
+    .sc-welfare_intro .intro_text {
         width: 100%;
         max-width: 68%;
         margin: 0 auto;
         padding-top: 71px;
     }
 
-    .sc-page_intro .intro_text .text {
+    .sc-welfare_intro .intro_text .text {
         font-size: 18px;
         line-height: 36px;
+    }
+
+
+    /* info ----------------------------------------- */
+    .sc-welfare_info {
+        padding: 100px 0;
+    }
+
+    .sc-welfare_info .info_head {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .sc-welfare_info .info_head-img {
+        max-width: 150px;
+    }
+
+    .sc-welfare_info .info_head-text_sub {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .sc-welfare_info .info_head-text_title {
+        font-size: 28px;
+        line-height: 36px;
+        padding-bottom: 18px;
+    }
+
+    .sc-welfare_info .info_content {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sc-welfare_info.sc-welfare_info_col .info_content {
+        flex-wrap: wrap;
+    }
+
+    .sc-welfare_info .info_box {
+        width: calc(100% / 3);
+        padding: 30px 30px 47px 30px;
+    }
+
+    .sc-welfare_info.sc-welfare_info_col .info_box {
+        width: calc((100% / 2) - 10px);
+    }
+
+    .sc-welfare_info .info_box+.info_box {
+        margin-top: 0;
+    }
+
+    .sc-welfare_info .info_box .info_box-img {
+        margin: 0 auto 19px auto;
+        max-width: 80px;
+        padding-bottom: 11px;
+    }
+
+    .sc-welfare_info .info_box .info_box-img::before {
+        width: 20px;
+        border-top-width: 2px;
+    }
+
+    .sc-welfare_info .info_box .info_box-title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 13px;
+    }
+
+    .sc-welfare_info .info_box .info_box-title small {
+        font-size: 18px;
+    }
+
+    .sc-welfare_info .info_box .text {
+        font-size: 16px;
+        line-height: 30px;
     }
 }

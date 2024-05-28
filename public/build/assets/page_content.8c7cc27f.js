@@ -1,0 +1,1 @@
+import"./favorite.f0e41b88.js";$(document).ready(function(){$(".scroll").click(function(t){t.preventDefault();var r=$(this).attr("href"),e=r.split("#"),a=e[1],o=$("#"+a).offset(),l=o.top;return $("html, body").animate({scrollTop:l},500,"swing"),!1})});
