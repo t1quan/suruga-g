@@ -16,7 +16,7 @@
         <div class="sc-page_banner">
             <div class="container_inner">
                 <div class="banner_container page_container">
-                    <div class="banner_container-inner">
+                    <div class="banner_container-inner js-fadein">
                         <h1 class="banner_title">WELFARE</h1>
                         <p class="text">福利厚生</p>
                     </div>
@@ -28,30 +28,30 @@
         <div class="sc-welfare_intro">
             <div class="container_inner">
                 <div class="intro_container page_container">
-                    <div class="intro_img">
+                    <div class="intro_img js-fadein">
                         <div class="intro_img-item">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_01_sp.png')}}">
-                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_01_pc.png')}}">
-                                <img src="{{asset('images/contentBox/welfare/topWelfare_01_pc.png')}}" alt="">
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_01_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_01_pc.png')}}">
+                                <img src="{{asset('images/contentBox/welfare/welfareIntro_01_pc.png')}}" alt="">
                             </picture>
                         </div>
                         <div class="intro_img-item">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_02_sp.png')}}">
-                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_02_pc.png')}}">
-                                <img src="{{asset('images/contentBox/welfare/topWelfare_02_pc.png')}}" alt="">
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_02_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_02_pc.png')}}">
+                                <img src="{{asset('images/contentBox/welfare/welfareIntro_02_pc.png')}}" alt="">
                             </picture>
                         </div>
                         <div class="intro_img-item">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_03_sp.png')}}">
-                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_03_pc.png')}}">
-                                <img src="{{asset('images/contentBox/welfare/topWelfare_03_pc.png')}}" alt="">
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_03_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/welfareIntro_03_pc.png')}}">
+                                <img src="{{asset('images/contentBox/welfare/welfareIntro_03_pc.png')}}" alt="">
                             </picture>
                         </div>
                     </div>
-                    <div class="intro_text">
+                    <div class="intro_text js-fadein">
                         <p class="text">従業員の健康と働きやすい環境を考え、様々な福利厚生を用意しております。<br />
                             あわせて、仕事と家庭の両立を支援する制度や、継続した業務改善による生産性向上などで、従業員のワークライフバランスを充実させ、これら福利厚生を利用しやすい環境作りに力を入れています。</p>
                     </div>
@@ -63,11 +63,11 @@
         <div class="sc-page_movie">
             <div class="container_inner">
                 <div class="movie_container page_container">
-                    <div class="movie_head">
+                    <div class="movie_head js-fadein">
                         <p class="sub-title">30 SECONDS MOVIE</p>
                         <h2 class="title">動画で知るサクセスストーリー</h2>
                     </div>
-                    <div class="movie_video">
+                    <div class="movie_video js-fadein">
                         <div class="movie_video-inner">
                             <script type="text/javascript">
                                 var Eviry = Eviry || {};
@@ -85,7 +85,7 @@
         <div class="sc-welfare_info sc-welfare_info_col">
             <div class="container_inner">
                 <div class="info_container page_container">
-                    <div class="info_head">
+                    <div class="info_head js-fadein">
                         <div class="info_head-img">
                             <picture>
                                 <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfare_icon_01_sp.png')}}">
@@ -98,7 +98,7 @@
                             <h2 class="info_head-text_title">将来への備え</h2>
                         </div>
                     </div>
-                    <div class="info_content">
+                    <div class="info_content js-fadein">
                         <div class="info_box">
                             <div class="info_box-img">
                                 <picture>
@@ -156,7 +156,7 @@
         <div class="sc-welfare_info sc-gray">
             <div class="container_inner">
                 <div class="info_container page_container">
-                    <div class="info_head">
+                    <div class="info_head js-fadein">
                         <div class="info_head-img">
                             <picture>
                                 <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfare_icon_02_sp.png')}}">
@@ -169,7 +169,7 @@
                             <h2 class="info_head-text_title">健康管理</h2>
                         </div>
                     </div>
-                    <div class="info_content">
+                    <div class="info_content js-fadein">
                         <div class="info_box">
                             <div class="info_box-img">
                                 <picture>
@@ -212,7 +212,7 @@
         <div class="sc-welfare_info">
             <div class="container_inner">
                 <div class="info_container page_container">
-                    <div class="info_head">
+                    <div class="info_head js-fadein">
                         <div class="info_head-img">
                             <picture>
                                 <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfare_icon_03_sp.png')}}">
@@ -225,7 +225,7 @@
                             <h2 class="info_head-text_title">キャリアアップ制度</h2>
                         </div>
                     </div>
-                    <div class="info_content">
+                    <div class="info_content js-fadein">
                         <div class="info_box">
                             <div class="info_box-img">
                                 <picture>
@@ -268,7 +268,7 @@
         <div class="sc-welfare_info sc-gray">
             <div class="container_inner">
                 <div class="info_container page_container">
-                    <div class="info_head">
+                    <div class="info_head js-fadein">
                         <div class="info_head-img">
                             <picture>
                                 <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/welfare_icon_04_sp.png')}}">
@@ -281,7 +281,7 @@
                             <h2 class="info_head-text_title">休暇制度など</h2>
                         </div>
                     </div>
-                    <div class="info_content">
+                    <div class="info_content js-fadein">
                         <div class="info_box">
                             <div class="info_box-img">
                                 <picture>

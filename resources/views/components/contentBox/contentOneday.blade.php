@@ -43,9 +43,9 @@
                         <div class="oneday_box-img">
                             <div class="oneday_box-img_inner">
                                 <picture>
-                                    <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/oneday/topOneday_01_sp.png')}}">
-                                    <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/oneday/topOneday_01_pc.png')}}">
-                                    <img src="{{asset('images/contentBox/oneday/topOneday_01_pc.png')}}" alt="">
+                                    <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topOneday_01_sp.png')}}">
+                                    <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topOneday_01_pc.png')}}">
+                                    <img src="{{asset('images/contentBox/topOneday_01_pc.png')}}" alt="">
                                 </picture>
                             </div>
                             <span class="num">01</span>
@@ -65,9 +65,9 @@
                         <div class="oneday_box-img">
                             <div class="oneday_box-img_inner">
                                 <picture>
-                                    <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/oneday/topOneday_02_sp.png')}}">
-                                    <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/oneday/topOneday_02_pc.png')}}">
-                                    <img src="{{asset('images/contentBox/oneday/topOneday_02_pc.png')}}" alt="">
+                                    <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topOneday_02_sp.png')}}">
+                                    <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topOneday_02_pc.png')}}">
+                                    <img src="{{asset('images/contentBox/topOneday_02_pc.png')}}" alt="">
                                 </picture>
                             </div>
                             <span class="num">02</span>

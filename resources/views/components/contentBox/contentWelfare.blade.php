@@ -12,23 +12,23 @@
                 <div class="welfare_img">
                     <div class="welfare_img-item">
                         <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_01_pc.png')}}">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_01_pc.png')}}">
-                            <img src="{{asset('images/contentBox/welfare/topWelfare_01_pc.png')}}" alt="">
+                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWelfare_01_pc.png')}}">
+                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWelfare_01_pc.png')}}">
+                            <img src="{{asset('images/contentBox/topWelfare_01_pc.png')}}" alt="">
                         </picture>
                     </div>
                     <div class="welfare_img-item">
                         <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_02_pc.png')}}">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_02_pc.png')}}">
-                            <img src="{{asset('images/contentBox/welfare/topWelfare_02_pc.png')}}" alt="">
+                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWelfare_02_pc.png')}}">
+                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWelfare_02_pc.png')}}">
+                            <img src="{{asset('images/contentBox/topWelfare_02_pc.png')}}" alt="">
                         </picture>
                     </div>
                     <div class="welfare_img-item">
                         <picture>
-                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/welfare/topWelfare_03_pc.png')}}">
-                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/welfare/topWelfare_03_pc.png')}}">
-                            <img src="{{asset('images/contentBox/welfare/topWelfare_03_pc.png')}}" alt="">
+                            <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWelfare_03_pc.png')}}">
+                            <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWelfare_03_pc.png')}}">
+                            <img src="{{asset('images/contentBox/topWelfare_03_pc.png')}}" alt="">
                         </picture>
                     </div>
                 </div>

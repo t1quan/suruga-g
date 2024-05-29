@@ -86,33 +86,33 @@
             <div class="work_img">
                 <div class="work_img-item">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_01_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_01_pc.png')}}">
-                        <img src="{{asset('images/contentBox/work/topWork_01_pc.png')}}" alt="">
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_01_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_01_pc.png')}}">
+                        <img src="{{asset('images/contentBox/topWork_01_pc.png')}}" alt="">
                     </picture>
                     <a class="work_img-link" href="{{Route('work')}}">FA部品事業</a>
                 </div>
                 <div class="work_img-item">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_02_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_02_pc.png')}}">
-                        <img src="{{asset('images/contentBox/work/topWork_02_pc.png')}}" alt="">
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_02_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_02_pc.png')}}">
+                        <img src="{{asset('images/contentBox/topWork_02_pc.png')}}" alt="">
                     </picture>
                     <a class="work_img-link" href="{{Route('work')}}">金型部品事業</a>
                 </div>
                 <div class="work_img-item">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_03_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_03_pc.png')}}">
-                        <img src="{{asset('images/contentBox/work/topWork_03_pc.png')}}" alt="">
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_03_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_03_pc.png')}}">
+                        <img src="{{asset('images/contentBox/topWork_03_pc.png')}}" alt="">
                     </picture>
                     <a class="work_img-link" href="{{Route('work')}}">meviy部品事業</a>
                 </div>
                 <div class="work_img-item">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/work/topWork_04_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/work/topWork_04_pc.png')}}">
-                        <img src="{{asset('images/contentBox/work/topWork_04_pc.png')}}" alt="">
+                        <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_04_sp.png')}}">
+                        <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_04_pc.png')}}">
+                        <img src="{{asset('images/contentBox/topWork_04_pc.png')}}" alt="">
                     </picture>
                     <a class="work_img-link" href="{{Route('work')}}">製造サポート部</a>
                 </div>
