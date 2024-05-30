@@ -21,7 +21,8 @@
         margin: 0 auto;
         @include minWidthXs {
             margin-top: -174px;
-            max-width: $defInnerWidthPc;
+            // max-width: $defInnerWidthPc;
+            max-width: 1180px;
             height: 100px;
         }
         @include xs {

@@ -1,104 +1,150 @@
-#mvSlider { //全頁共通の設定
-
-  overflow: hidden;
-  width: 100%;
-
-  .mvWrapper {
-    position: relative;
-    @include xs {
-      margin: 0;
-    }
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 800;
-      bottom: 0;
-      width: 100%;
-      height: 124px;
-      background: $bodyBgColor;
-      @include xs {
-        display: none;
-      }
-    }
-
-    .mvInner {//メインビジュアルの配置用BOX
-      width:100%;
-      overflow: hidden;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-
-      .mvPicture, .mvVideo {
-        @include imgCenter;
-        min-width:$defInnerWidthPc;//画像の縮小時最小幅（このサイズで止まる）
-        height: auto;
-        vertical-align: middle;
-
-        @include xs { //sp時
-          min-width:320px;//縮小時最小幅
-        }
-      }
-
-      .scrollDownGuide {
-        display: none;
-        @include minWidthXs {
-          display: inline-block;
-          position: absolute;
-          bottom: 174px;
-          left: calc(100vw / 1920 * 60);
-          width: 150px;
-          height: 40px;
-          border-bottom: 2px solid $white;
-          font-family: "prohibition", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-          color: $white;
-          letter-spacing: 0.03em;
-          line-height: 1.25;
-          transform: rotate(90deg);
-        }
-      }
-    }
-
-  }
-  .mainVisualTitleBox{
-    background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg.png);
-    background-size: contain;
-    background-position: left bottom;
+#mvSlider {
+    //全頁共通の設定
 
     overflow: hidden;
-    position: absolute;
-    margin: auto;
-    bottom: 5%;
-    width: 90%;
-    height: auto;
+    width: 100%;
 
-    z-index: 1;
-    @include varBgImg(1621,263);
+    .mvWrapper {
+        position: relative;
+        @include xs {
+            margin: 0;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 800;
+            bottom: 0;
+            width: 100%;
+            height: 124px;
+            background: $bodyBgColor;
+            @include xs {
+                display: none;
+            }
+        }
 
+        .mvInner {
+            //メインビジュアルの配置用BOX
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
 
-    @include xs { //sp時
-      background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg_sp.png);
-      @include varBgImg(728,171);
-      bottom: 10%;
+            .mvPicture,
+            .mvVideo {
+                @include imgCenter;
+                min-width: $defInnerWidthPc; //画像の縮小時最小幅（このサイズで止まる）
+                height: auto;
+                vertical-align: middle;
+
+                @include xs {
+                    //sp時
+                    min-width: 320px; //縮小時最小幅
+                }
+            }
+
+            .scrollDownGuide {
+                display: none;
+                @include minWidthXs {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 174px;
+                    left: calc(100vw / 1920 * 60);
+                    width: 150px;
+                    height: 40px;
+                    border-bottom: 2px solid $white;
+                    font-family: "prohibition", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $white;
+                    letter-spacing: 0.03em;
+                    line-height: 1.25;
+                    transform: rotate(90deg);
+                }
+            }
+        }
     }
+    .mainVisualTitleBox {
+        background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg.png);
+        background-size: contain;
+        background-position: left bottom;
 
-    img{//レスポンシブイメージ
-      @include imgCenter;
+        overflow: hidden;
+        position: absolute;
+        margin: auto;
+        bottom: 5%;
+        width: 90%;
+        height: auto;
+
+        z-index: 1;
+        @include varBgImg(1621, 263);
+
+        @include xs {
+            //sp時
+            background-image: url(#{$imgDir}mvSlider/mainVisualTitleBoxBg_sp.png);
+            @include varBgImg(728, 171);
+            bottom: 10%;
+        }
+
+        img {
+            //レスポンシブイメージ
+            @include imgCenter;
+        }
+
+        .mainVisualTitleLead {
+            width: 50%;
+            margin: 12% auto 6% auto;
+        }
+
+        .mainVisualTitleBody {
+            width: 70%;
+            margin: auto;
+        }
     }
-
-    .mainVisualTitleLead{
-      width: 50%;
-      margin: 12% auto 6% auto;
-    }
-
-    .mainVisualTitleBody{
-      width: 70%;
-      margin: auto;
-    }
-
-  }
-
 }
 
+// .sc-topSlide {
+//     background: #f7f8fc;
+//     padding: 49px 0;
+//     .topSlide_text {
+//         width: 100%;
+//         max-width: 335px;
+//         margin: 0 auto;
+//         .slide_sub {
+//             font-size: 13px;
+//             line-height: 22px;
+//             font-weight: 700;
+//             color: #1b1d22;
+//             text-align: right;
+//             padding: 0 16px;
+//             margin-bottom: 14px;
+//             position: relative;
+//             .text {
+//                 background: #f7f8fc;
+//                 position: relative;
+//                 padding-left: 10px;
+//             }
+//             &::before {
+//                 content: "";
+//                 width: calc(100% - 32px);
+//                 border-top: 1px solid #1b1d22;
+//                 top: 13px;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 display: block;
+//                 position: absolute;
+//             }
+//         }
+//         .slide_title {
+//             font-size: 33px;
+//             line-height: 44px;
+//             letter-spacing: 2px;
+//             color: #1b1d22;
+//             text-align: center;
+//             margin-bottom: 11px;
+//         }
+//         .slide_logo {
+//         }
+//     }
+// }

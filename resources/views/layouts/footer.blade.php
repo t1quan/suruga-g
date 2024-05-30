@@ -83,10 +83,12 @@ $imgSrcSP = url($imgSrcSP);
                     $footerFax = $frontendSettings['footer']['corpInfo']['fax'] ?? $corporations[0]['fax'] ?? '';
                     @endphp
                     @if($footerZipCode)
-                    <p>{{$footerZipCode}}</p>
+                    {{--<p>{{$footerZipCode}}</p>--}}
+                    <p>〒651-1516</p>
                     @endif
                     @if($footerAddress)
-                    <p>{!! nl2br(e($footerAddress)) !!}</p>
+                    {{--<p>{!! nl2br(e($footerAddress)) !!}</p>--}}
+                    <p>兵庫県神戸市北区赤松台2-3-2<br />ミスミ生産パーク内</p>
                     @endif
                     {{-- @if($footerTel)--}}
                     {{-- <p>TEL：{{$footerTel}}</p>--}}
@@ -96,15 +98,15 @@ $imgSrcSP = url($imgSrcSP);
                     {{-- @endif--}}
 
                     <div class="corpTelBox">
-                        <p><span class="corpNm-im">IM製造部</span><span class="corpTel-im">TEL：078-940-0113 / FAX：078-940-0114</span></p>
-                        <p><span class="corpNm-kane">金型製造部</span><span class="corpTel-kane">TEL：078-940-0281 / FAX：078-986-6590</span></p>
-                        <p><span class="corpNm-meviy">meviy製造部</span><span class="corpTel-meviy">TEL：078-986-0652 / FAX：078-986-0653</span></p>
+                        <p><span class="corpNm corpNm-im">IM製造部</span><br class="SPbr" /><span class="corpTel-im">TEL：078-940-0113 / FAX：078-940-0114</span></p>
+                        <p><span class="corpNm corpNm-kane">金型製造部</span><br class="SPbr" /><span class="corpTel-kane">TEL：078-940-0281 / FAX：078-986-6590</span></p>
+                        <p><span class="corpNm corpNm-meviy">meviy製造部</span><br class="SPbr" /><span class="corpTel-meviy">TEL：078-986-0652 / FAX：078-986-0653</span></p>
                     </div>
                 </div>
                 @endif
                 @if(isset($frontendSettings['footer']['displayCopyright']) && $frontendSettings['footer']['displayCopyright'])
                 <p class="copyright">
-                    <small>&#169; {{$corporations[0]['corpFullName']??$frontendSettings['title'] ?? ''}} All rights reserved.</small>
+                    <small>&#169;{{$corporations[0]['corpFullName']??$frontendSettings['title'] ?? ''}} All rights reserved.</small>
                 </p>
                 @endif
             </div>
@@ -126,6 +128,14 @@ $imgSrcSP = url($imgSrcSP);
                     <x-navigation.footerNavItem :navItem="$item" />
                     @endforeach
                 </ul>
+                <div class="musimi">
+                    <div class="misumi_img">
+                        <img src="{{asset('images/common/misumi_logo.png')}}" alt="">
+                    </div>
+                    <div class="misumi_text">
+                        <h4 class="misumi_name">ミスミ関西生産パーク<br />採用サイト</h4>
+                    </div>
+                </div>
                 @if(count($blankRemoteNavTargetList) > 0)
                 <ul class="footerBlankRemoteNavList">
                     @foreach($blankRemoteNavTargetList as $item)

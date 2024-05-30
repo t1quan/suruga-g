@@ -175,7 +175,7 @@
     padding: 10px 16px 27px;
     position: relative;
     @include minWidthXs {
-        padding: 10px 20px 30px;
+        padding: 10px 32px 30px;
     }
     .koyktyName {
         position: absolute;
@@ -189,8 +189,11 @@
         z-index: 1;
         height: 25px;
         line-height: 26px;
+        font-weight: 400;
         @include minWidthXs {
-            font-size: rem(13);
+            // font-size: rem(13);
+            font-size: 14px;
+            padding: 0 10px;
         }
         &.indicator1 {
             //正社員
@@ -240,7 +243,9 @@
         line-height: 19px;
         font-weight: 500;
         @include minWidthXs {
-            font-size: rem(16);
+            // font-size: rem(16);
+            font-size: 16px;
+            line-height: 27px;
         }
     }
 

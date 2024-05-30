@@ -74,12 +74,12 @@
                 slidesPerView: 3,
                 spaceBetween: 30,
                 centeredSlides: false,
-                // autoplay: {
-                //     delay: 3000,
-                //     stopOnLastSlide: false,
-                //     disableOnInteraction: false,
-                //     reverseDirection: false
-                // },
+                autoplay: {
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                    reverseDirection: false
+                },
                 navigation: {
                     nextEl: '.recommendJobButtonNext',
                     prevEl: '.recommendJobButtonPrev'

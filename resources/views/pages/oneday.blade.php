@@ -109,7 +109,63 @@
 
         <!-- timeline 01 -->
         <div class="sc-oneday_timeline">
-            <div class="container_inner"></div>
+            <div class="timeline_inner">
+                <div class="timeline_flex">
+                    <div class="timeline_box">
+                        <h3 class="time"><span>9:00</span>出勤</h3>
+                        <p class="text">家からたった約15分で会社に到着。出勤後、前日の生産実績・受注量を確認し生産の準備をします。</p>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>9:30</span>朝礼</h3>
+                        <p class="text">各エリア管理者が集まり、昨日の生産実績と今日の予定や安全・品質状況について共有しています。</p>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>10:00</span>生産管理</h3>
+                        <p class="text">各エリアのミーティングに参加し、メンバーの体調を確認しながら必要な情報を共有します。</p>
+                        <div class="img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}">
+                                <img src="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>12:00</span>お昼休憩</h3>
+                        <p class="text">お昼ご飯を食べて、車の中で仮眠を取り、ゆったりとした時間を過ごします。</p>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>13:00</span>上司との打ち合わせ</h3>
+                        <p class="text">日常の業務だけではなく、生産や改善活動の進捗を共有し指導・アドバイスを受け計画の見直しを行います。</p>
+                        <div class="img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}">
+                                <img src="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>15:00</span>技術担当者と打ち合わせ</h3>
+                        <p class="text">新しい工具の選定・方法の見直し、改善活動に繋がる打ち合わせをします。</p>
+                        <div class="img">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_sp.png')}}">
+                                <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}">
+                                <img src="{{asset('images/contentBox/oneday/onedayIntro_01_pc.png')}}" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>17:00</span>生産進捗確認</h3>
+                        <p class="text">当日納期の進捗状況を確認し、翌日の計画を各エリア管理者と協議しています。メンバーとのコミュニケーションを取るように意識しています。</p>
+                    </div>
+                    <div class="timeline_box">
+                        <h3 class="time"><span>18:00</span>退勤</h3>
+                        <p class="text">夜勤出勤メンバーに必要な情報を共有し退勤。その後はフィットネスジムにてトレーニングを行いパンプアップするのが日課です。</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- info 02 -->
@@ -139,7 +195,7 @@
 
         <!-- timeline 02 -->
         <div class="sc-oneday_timeline">
-            <div class="container_inner"></div>
+            <div class="timeline_inner"></div>
         </div>
 
     </main>
