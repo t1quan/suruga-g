@@ -75,7 +75,7 @@
 <div class="sc-work">
     <div class="container_inner">
         <div class="work_container">
-            <div class="work_content">
+            <div class="work_content js-fadein">
                 <h2 class="content_title">
                     <span class="en">OUR WORK</span>
                     <span class="ja">部門紹介</span>
@@ -84,37 +84,37 @@
                 <a href="{{Route('work')}}" class="link-page_btn"><span>部門紹介をすべて見る</span></a>
             </div>
             <div class="work_img">
-                <div class="work_img-item">
+                <div class="work_img-item js-fadein">
                     <picture>
                         <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_01_sp.png')}}">
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_01_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_01_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}">FA部品事業</a>
+                    <a class="work_img-link" href="{{Route('work')}}"><span>FA部品事業</span></a>
                 </div>
-                <div class="work_img-item">
+                <div class="work_img-item js-fadein">
                     <picture>
                         <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_02_sp.png')}}">
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_02_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_02_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}">金型部品事業</a>
+                    <a class="work_img-link" href="{{Route('work')}}"><span>金型部品事業</span></a>
                 </div>
-                <div class="work_img-item">
+                <div class="work_img-item js-fadein">
                     <picture>
                         <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_03_sp.png')}}">
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_03_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_03_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}">meviy部品事業</a>
+                    <a class="work_img-link" href="{{Route('work')}}"><span>meviy部品事業</span></a>
                 </div>
-                <div class="work_img-item">
+                <div class="work_img-item js-fadein">
                     <picture>
                         <source media="(max-width: 767px)" srcset="{{asset('images/contentBox/topWork_04_sp.png')}}">
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_04_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_04_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}">製造サポート部</a>
+                    <a class="work_img-link" href="{{Route('work')}}"><span>製造サポート部</span></a>
                 </div>
             </div>
         </div>

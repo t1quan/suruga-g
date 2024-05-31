@@ -159,7 +159,107 @@
 /* timeline -------------------------------------------- */
 .sc-oneday_timeline {
     background: #fff;
-    padding: 30px 0 75px 0;
+    padding: 0 0 75px 0;
+}
+
+.sc-oneday_timeline .timeline_inner {
+    padding: 0 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1204px;
+}
+
+.sc-oneday_timeline .timeline_flex {
+    padding: 30px 0 0 47px;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sc-oneday_timeline .timeline_flex::before {
+    content: '';
+    height: 95px;
+    display: block;
+    position: absolute;
+    border-left: 5px solid #E4E4E6;
+    left: 10px;
+    top: 0;
+}
+
+.sc-oneday_timeline .timeline_box {
+    border: 2px solid #86888E;
+    padding: 15px 16px 27px 16px;
+    position: relative;
+}
+
+.sc-oneday_timeline .timeline_box+.timeline_box {
+    margin-top: 30px;
+}
+
+.sc-oneday_timeline .timeline_box::before {
+    content: '';
+    height: calc(100% + 35px);
+    display: block;
+    position: absolute;
+    border-left: 5px solid #E4E4E6;
+    left: -38.5px;
+    top: 60px;
+}
+
+.sc-oneday_timeline .timeline_flex .timeline_box:last-child:before {
+    display: none;
+}
+
+.sc-oneday_timeline .timeline_box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    aspect-ratio: 1/1;
+    background: #0376FF;
+    border-radius: 99px;
+    top: 49px;
+    left: -49px;
+}
+
+.sc-oneday_timeline .timeline_box .time {
+    color: #0376FF;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 14.5px;
+    margin-bottom: 11px;
+    position: relative;
+}
+
+.sc-oneday_timeline .timeline_box .time::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% + 45px);
+    border-top: 2px solid #0376FF;
+    left: -45px;
+    bottom: 0;
+}
+
+.sc-oneday_timeline .timeline_box .time span {
+    font-family: "Poppins";
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 500;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.sc-oneday_timeline .timeline_box .text {
+    color: #1B1D22;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.sc-oneday_timeline .timeline_box .img {
+    margin-top: 21px;
 }
 
 
@@ -314,5 +414,109 @@
     .sc-onday_info .info_img img {
         object-fit: cover;
         height: 100%;
+    }
+
+
+    /* timeline ------------------------------------------------- */
+    .sc-oneday_timeline {
+        padding: 0 0 310px 0;
+    }
+
+    .sc-oneday_timeline .timeline_flex {
+        padding: 78px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 140px;
+        max-width: 100%;
+        align-items: flex-end;
+    }
+
+    .sc-oneday_timeline .timeline_flex::before {
+        height: 150px;
+        border-left-width: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+
+    .sc-oneday_timeline .timeline_box {
+        width: calc(50% - 70px);
+        padding: 24px 38px 37px 38px;
+    }
+
+    .sc-oneday_timeline .timeline_box+.timeline_box {
+        margin-top: 0;
+    }
+
+    .sc-oneday_timeline .timeline_box::before {
+        content: '';
+        height: calc(100% + 35px);
+        border-left-width: 6px;
+        left: -74.2px;
+        top: 82px;
+    }
+
+    .sc-oneday_timeline .timeline_box::after {
+        width: 30px;
+        top: 69px;
+        left: -86.5px;
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:nth-child(odd) {
+        margin-top: 107px;
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:first-child {
+        margin-top: 0;
+    }
+
+    .sc-oneday_timeline.sc-oneday_timeline_02 .timeline_flex .timeline_box:first-child {
+        margin-bottom: 322px;
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:nth-child(odd):before {
+        right: -74.2px;
+        left: auto;
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:nth-last-child(2):before {
+        height: calc(100% - 75px);
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:nth-child(odd)::after {
+        right: -86.5px;
+        left: auto;
+    }
+
+    .sc-oneday_timeline .timeline_flex .timeline_box:nth-child(even) {
+        margin-bottom: -157px;
+    }
+
+
+    .sc-oneday_timeline .timeline_box .time {
+        font-size: 26px;
+        padding-bottom: 16.5px;
+        margin-bottom: 21px;
+    }
+
+    .sc-oneday_timeline .timeline_box .time::before {
+        left: -112px;
+        width: calc(100% + 130px);
+    }
+
+    .sc-oneday_timeline .timeline_box:nth-child(odd) .time::before {
+        left: auto;
+        right: -112px;
+    }
+
+    .sc-oneday_timeline .timeline_box .time span {
+        font-size: 30px;
+        margin-right: 21px;
+        top: 1px;
+    }
+
+    .sc-oneday_timeline .timeline_box .text {
+        font-size: 16px;
+        line-height: 30px;
     }
 }

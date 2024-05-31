@@ -1,14 +1,14 @@
 <div class="sc-welfare">
     <div class="container_inner">
         <div class="welfare_container">
-            <div class="welfare_head">
+            <div class="welfare_head js-fadein">
                 <h2 class="content_title">
                     <span class="en">WELFARE</span>
                     <span class="ja">福利厚生</span>
                 </h2>
                 <p class="text">従業員の健康と働きやすい環境を考え、様々な福利厚生を用意しております。あわせて、仕事と家庭の両立を支援する制度や、継続した業務改善による生産性向上などで、従業員のワークライフバランスを充実させ、これら福利厚生を利用しやすい環境作りに力を入れています。</p>
             </div>
-            <div class="welfare_content">
+            <div class="welfare_content js-fadein">
                 <div class="welfare_img">
                     <div class="welfare_img-item">
                         <picture>
@@ -32,7 +32,7 @@
                         </picture>
                     </div>
                 </div>
-                <a href="{{Route('welfare')}}" class="link-page_btn">
+                <a href="{{Route('welfare')}}" class="link-page_btn js-fadein">
                     <span>福利厚生を見る</span>
                 </a>
             </div>

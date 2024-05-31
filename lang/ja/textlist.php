@@ -19,7 +19,7 @@ return [
     'webApply' => 'WEBから応募する',  //求人詳細
     'telApply' => '電話で応募する',   //求人詳細
 
-    'backDirectText' => '戻る',   //求人詳細
+    'backDirectText' => '求人の一覧へ戻る',   //求人詳細
     'backSearchText' => '求人検索画面に戻る',   //求人詳細
 
 ];

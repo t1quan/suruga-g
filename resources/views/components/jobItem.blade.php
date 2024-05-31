@@ -5,11 +5,15 @@
 
             @if($fEntJob->corpMei)
             <div class="corpMei">
-                <a class="corpMei" href="{{Route('top')}}/job/{{ $fEntJob->jobId ?? '' }}"><h3>{{$fEntJob->corpMei}}</h3></a>
+                <a class="corpMei" href="{{Route('top')}}/job/{{ $fEntJob->jobId ?? '' }}">
+                    <h3>{{$fEntJob->corpMei}}</h3>
+                </a>
             </div>
             @endif
             <div class="jobTitle">
-                <a class="title" href="{{Route('top')}}/job/{{ $fEntJob->jobId ?? '' }}"><h3>{{$fEntJob->jobTitle}}</h3></a>
+                <a class="title" href="{{Route('top')}}/job/{{ $fEntJob->jobId ?? '' }}">
+                    <h3>{{$fEntJob->jobTitle}}</h3>
+                </a>
             </div>
             <div class="koy">
                 <i class="indicator{{$fEntJob->koyKeitaiCode}}">{{$fEntJob->koyKeitaiName}}</i>
@@ -35,9 +39,9 @@
                     <li class="data">
                         <span class="item">給与</span>
                         <span class="text">
-							@if($fEntJob->kyuyoKbnName && $fEntJob->kyuyoMin)
-                                【{{$fEntJob->kyuyoKbnName}}】
-                                <x-atoms.salary :kyuyoMin="$fEntJob->kyuyoMin" :kyuyoMax="$fEntJob->kyuyoMax" dispType="char" />
+                            @if($fEntJob->kyuyoKbnName && $fEntJob->kyuyoMin)
+                            【{{$fEntJob->kyuyoKbnName}}】
+                            <x-atoms.salary :kyuyoMin="$fEntJob->kyuyoMin" :kyuyoMax="$fEntJob->kyuyoMax" dispType="char" />
                             @endif
                         </span>
                     </li>
@@ -65,9 +69,11 @@
         <div class="summaryJobBtns">
             <div class="detailBtn">
                 <a class="goJob" href="{{Route('top')}}/job/{{ $fEntJob->jobId ?? '' }}">詳しく見る<i class="fas fa-chevron-right"></i></a>
+                {{--
                 @if($fEntJob->jisyaKoukokuNum)
                     <x-molecules.favoriteBtn :favoriteList="$favoriteList" :code="$fEntJob->jisyaKoukokuNum" :jobId="$fEntJob->jobId" />
                 @endif
+                --}}
             </div>
             @if($fEntJob->jisyaKoukokuNum)
             <div class="adNumField">お仕事No.{{$fEntJob->jisyaKoukokuNum}}</div>

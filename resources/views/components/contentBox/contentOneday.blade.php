@@ -30,14 +30,14 @@
 <div class="sc-oneday">
     <div class="container_inner">
         <div class="oneday_container">
-            <div class="oneday_head">
+            <div class="oneday_head js-fadein">
                 <h2 class="content_title">
                     <span class="en">ONEDAY</span>
                     <span class="ja">社員の1日</span>
                 </h2>
                 <p class="text">駿河生産プラットフォームで働く<br class="SPbr" />社員の1日をご紹介します。</p>
             </div>
-            <div class="oneday_content">
+            <div class="oneday_content js-fadein">
                 <div class="oneday_box">
                     <a href="{{Route('oneday')}}">
                         <div class="oneday_box-img">

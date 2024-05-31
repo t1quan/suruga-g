@@ -1,3 +1,18 @@
+<div class="sc-topSlide">
+    <div class="topSlide_container">
+        <div class="topSlide_text js-fadein">
+            <p class="slide_sub"><span class="text">スペシャリストな個性派エンジニア集団</span></p>
+            <h1 class="slide_title">今までにないものを創れる会社</h1>
+            <div class="slide_logo">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="{{asset('images/common/topSlide_logo_sp.png')}}">
+                    <source media="(min-width: 768px)" srcset="{{asset('images/common/topSlide_logo_pc.png')}}">
+                    <img src="{{asset('images/common/topSlide_logo_pc.png')}}" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
 <?php
 $sliderImgList = array(
     'pc' => array(
@@ -95,89 +110,3 @@ $mvCatchCopy = ''; //メインビジュアルのキャッチコピーを「''」
 </div>
 
 @endif
-
-
-{{--
-<div class="sc-topSlide">
-    <div class="topSlide_container">
-        <div class="topSlide_text">
-            <p class="slide_sub"><span class="text">スペシャリストな個性派エンジニア集団</span></p>
-            <h1 class="slide_title">今までにないものを創れる会社</h1>
-            <div class="slide_logo">
-                <picture>
-                    <source media="(max-width: 767px)" srcset="{{asset('images/common/topSlide_logo_sp.png')}}">
-<source media="(min-width: 768px)" srcset="{{asset('images/common/topSlide_logo_pc.png')}}">
-<img src="{{asset('images/common/topSlide_logo_pc.png')}}" alt="">
-</picture>
-</div>
-</div>
-<div class="topSlide_slide">
-    <div class="swiper topSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slide-img">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/mvSlider/topSlide_01_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/mvSlider/topSlide_01_pc.png')}}">
-                        <img src="{{asset('images/mvSlider/topSlide_01_pc.png')}}" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slide-img">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/mvSlider/topSlide_02_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/mvSlider/topSlide_02_pc.png')}}">
-                        <img src="{{asset('images/mvSlider/topSlide_02_pc.png')}}" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slide-img">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="{{asset('images/mvSlider/topSlide_03_sp.png')}}">
-                        <source media="(min-width: 768px)" srcset="{{asset('images/mvSlider/topSlide_03_pc.png')}}">
-                        <img src="{{asset('images/mvSlider/topSlide_03_pc.png')}}" alt="">
-                    </picture>
-                </div>
-            </div>
-        </div>
-        <script>
-            $(function() {
-                var topSwiper = new Swiper('.topSwiper', {
-                    loop: true,
-                    // effect: 'fade',
-                    speed: 3000,
-                    autoplay: {
-                        delay: 3000,
-                        stopOnLastSlide: false,
-                        disableOnInteraction: false,
-                        reverseDirection: false
-                    },
-                    breakpoints: {
-                        767: {
-                            speed: 3000,
-                            autoplay: {
-                                delay: 3000,
-                            }
-                        }
-                    },
-                    slidesPerView: 1.6,
-                    spaceBetween: 30,
-                    centeredSlides: true,
-                    simulateTouch: false,
-                    autoResize: false,
-                    autoHeight: false,
-                    resizeReInit: true,
-                    watchOverflow: true
-                });
-                $('.topSwiper .swiper-slide').on('touchmove', function() {
-                    return true;
-                });
-            });
-        </script>
-    </div>
-</div>
-</div>
-</div>
---}}
