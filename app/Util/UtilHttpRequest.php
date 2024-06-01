@@ -86,6 +86,13 @@ class UtilHttpRequest
         string $token = null,
         array|object $data = null
     ): bool|string {
+        //remove
+        $result = \Illuminate\Support\Facades\Cache::store('file')->get($endpoint);
+        if ($result != null) {
+            return $result;
+        }
+        //remove
+
         if (!self::checkMethod($method)) {
             return false;
         }
@@ -136,6 +143,10 @@ class UtilHttpRequest
         if (!$json || !isset($json->code) || !isset($json->message)) {
             return false;
         }
+
+        //remove
+        \Illuminate\Support\Facades\Cache::store('file')->put($endpoint, $result, 36000);
+        //remove
 
         return $result;
     }

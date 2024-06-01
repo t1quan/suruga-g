@@ -129,12 +129,16 @@ $imgSrcSP = url($imgSrcSP);
                     @endforeach
                 </ul>
                 <div class="musimi">
-                    <div class="misumi_img">
-                        <img src="{{asset('images/common/misumi_logo.png')}}" alt="">
-                    </div>
-                    <div class="misumi_text">
-                        <h4 class="misumi_name">ミスミ関西生産パーク<br />採用サイト</h4>
-                    </div>
+                    <a href="#">
+                        <div class="musimi_inner">
+                            <div class="misumi_img">
+                                <img src="{{asset('images/common/misumi_logo.png')}}" alt="">
+                            </div>
+                            <div class="misumi_text">
+                                <h4 class="misumi_name">ミスミ関西生産パーク<br />採用サイト</h4>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 @if(count($blankRemoteNavTargetList) > 0)
                 <ul class="footerBlankRemoteNavList">

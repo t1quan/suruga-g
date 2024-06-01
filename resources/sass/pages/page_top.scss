@@ -20,14 +20,18 @@
         z-index: 900;
         margin: 0 auto;
         @include minWidthXs {
-            margin-top: -174px;
+            margin-top: -60px;
             // max-width: $defInnerWidthPc;
             max-width: 1180px;
-            height: 100px;
+            height: 90px;
+            margin-bottom: -30px;
         }
         @include xs {
-            margin-top: -25px;
-            width: calc(100% - (100vw / 750 * 70));
+            margin-top: -43px;
+            // width: calc(100% - (100vw / 750 * 70));
+            width: calc(100% - 24px);
+            max-width: 524px;
+            margin-bottom: -103px;
         }
     }
 

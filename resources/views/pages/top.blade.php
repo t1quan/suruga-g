@@ -7,13 +7,13 @@
 <div id="topMvSlider">
     <x-mainVisual />
 </div>
-{{--
+
 @if($page->fEntConfig->frontendSettings['isDispLatestJob']??null)
 <div id="topLatestJob">
     <x-latestJob.oneLineStyle />
 </div>
 @endif
---}}
+
 <div id="template01" class="topContentBox">
     {{--<x-contentBox.contentMovie />
     <x-contentBox.contentData />

@@ -90,7 +90,7 @@
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_01_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_01_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}"><span>FA部品事業</span></a>
+                    <a class="work_img-link" href="{{Route('work')}}/#work01"><span>FA部品事業</span></a>
                 </div>
                 <div class="work_img-item js-fadein">
                     <picture>
@@ -98,7 +98,7 @@
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_02_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_02_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}"><span>金型部品事業</span></a>
+                    <a class="work_img-link" href="{{Route('work')}}/#work02"><span>金型部品事業</span></a>
                 </div>
                 <div class="work_img-item js-fadein">
                     <picture>
@@ -106,7 +106,7 @@
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_03_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_03_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}"><span>meviy部品事業</span></a>
+                    <a class="work_img-link" href="{{Route('work')}}/#work03"><span>meviy部品事業</span></a>
                 </div>
                 <div class="work_img-item js-fadein">
                     <picture>
@@ -114,7 +114,7 @@
                         <source media="(min-width: 768px)" srcset="{{asset('images/contentBox/topWork_04_pc.png')}}">
                         <img src="{{asset('images/contentBox/topWork_04_pc.png')}}" alt="">
                     </picture>
-                    <a class="work_img-link" href="{{Route('work')}}"><span>製造サポート部</span></a>
+                    <a class="work_img-link" href="{{Route('work')}}/#work04"><span>製造サポート部</span></a>
                 </div>
             </div>
         </div>

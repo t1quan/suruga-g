@@ -61,6 +61,7 @@ $mvCatchCopy = ''; //メインビジュアルのキャッチコピーを「''」
                             </div>
                         <?php endforeach; ?>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             <?php endif; ?>
             {{--
@@ -76,8 +77,10 @@ $mvCatchCopy = ''; //メインビジュアルのキャッチコピーを「''」
     <script>
         $(function() {
             var mySwiperTop = new Swiper('#mvSlider .js-mvSlider', { // Swiperオプション
+                slidesPerView: 1.57,
+                spaceBetween: 60,
                 loop: true,
-                effect: 'slide', // アニメーションを指定（'slide' 'fade' 'coverflow' 'flip'）
+                // effect: 'slide', // アニメーションを指定（'slide' 'fade' 'coverflow' 'flip'）
                 speed: 3000, // 移動速度（3000=3秒）
                 autoplay: {
                     delay: 3000, // スライド間の間隔（3000=3秒）
@@ -85,22 +88,24 @@ $mvCatchCopy = ''; //メインビジュアルのキャッチコピーを「''」
                     disableOnInteraction: false,
                     reverseDirection: false
                 },
-                breakpoints: {
-                    767: { // スマホのみ
-                        speed: 3000, // 移動速度（3000=3秒）
-                        autoplay: {
-                            delay: 3000, // スライド間の間隔（3000=3秒）
-                        }
-                    }
-                },
-                slidesPerView: 1.6,
-                spaceBetween: 60,
+                loopAdditionalSlides: 1,
                 centeredSlides: true,
                 simulateTouch: false,
                 autoResize: false,
                 autoHeight: false,
                 resizeReInit: true,
-                watchOverflow: true
+                watchOverflow: true,
+
+                breakpoints: {
+                    767: { // スマホのみ
+                        spaceBetween: 15,
+                        slidesPerView: 1.18,
+                    }
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
             });
             $('#mvSlider .mvMultiple .swiper-slide').on('touchmove', function() {
                 return true;

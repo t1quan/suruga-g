@@ -4,10 +4,10 @@
 // =======================================================
 .latestJob {
     display: none;
-    padding: 15px calc(100vw / 750 * 40) 35px;
+    padding: 7px calc(100vw / 750 * 40) 55px;
     background: $baseBgColor;
     @include minWidthXs {
-        padding: 35px 0;
+        padding: 22px 0;
     }
 }
 
@@ -27,36 +27,45 @@
 
 .latestJobTitle {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 8.5px;
     @include minWidthXs {
-        width: 120px;
+        width: 135px;
         margin-bottom: 0;
     }
 
     .en,
     .ja {
-        display: block;
+        // display: block;
         color: $bgBaseTextColor;
         line-height: 1;
     }
 
     .en {
-        font-family: "prohibition", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 0.05em;
-        font-size: rem(16);
+        font-family: "Poppins";
+        font-weight: 600;
+        font-style: italic;
+        // letter-spacing: 0.05em;
+        // font-size: rem(16);
+        font-size: 18px;
         @include minWidthXs {
-            font-size: rem(24);
+            // font-size: rem(24);
+            font-size: 26px;
+            color: #777;
+            display: block;
+            margin-bottom: -8px;
         }
     }
 
     .ja {
         // display: none;
-        font-size: rem(12);
+        // font-size: rem(12);
+        font-size: 13px;
         font-weight: 500;
+        position: relative;
+        top: -1px;
         @include minWidthXs {
-            font-size: rem(14);
+            // font-size: rem(14);
+            font-size: 16px;
         }
     }
 }
@@ -65,8 +74,11 @@
     //width: calc(100% - (70px + 20px));
     width: 100%;
     overflow: hidden;
+    margin: 0 -2px;
     @include minWidthXs {
         width: calc(100% - (180px * 2));
+        position: relative;
+        top: -5px;
     }
 }
 
@@ -94,35 +106,42 @@
 .latestJobDate {
     display: block;
     width: 100%;
+    font-size: 12px;
     @include minWidthXs {
-        display: inline;
+        // display: inline;
         width: auto;
         margin-right: 1em;
+        font-size: 14px;
+        margin-bottom: 4px;
     }
 }
 
 .latestJobMoreButton {
     display: block;
     width: 70px;
+    height: 24px;
     //padding: 6px 4px;
     padding: 0 4px;
     //border: solid 1px $latestJobMoreButtonBgColor;
-    color: $bgBaseTextColor;
-    font-family: "prohibition", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
+    color: $white;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: italic;
+    // letter-spacing: 0.05em;
+    // line-height: 1.5;
     text-align: center;
     //transition-property: background, color;
     //transition-duration: .3s;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
+    background: #363a44;
+    border: 1px solid #777;
+    line-height: 21px;
     &:hover {
         //background: $latestJobMoreButtonBgColor;
         //color: $latestJobMoreButtonTextColor;
         cursor: pointer;
         .buttonText {
-            opacity: 0.6;
+            // opacity: 0.6;
             &::after {
                 transform: translateX(30px);
                 @include xs {
@@ -132,28 +151,53 @@
         }
     }
     @include minWidthXs {
-        width: 90px;
+        width: 86px;
+        height: 30px;
         border-width: 2px;
+        line-height: 26px;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #fec400;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        &:hover {
+            color: #1b1d22;
+            &::before {
+                width: 100%;
+                opacity: 1;
+            }
+        }
     }
     @include xs {
         position: absolute;
-        right: 0;
-        top: -5px;
+        left: 50%;
+        bottom: -40px;
+        transform: translateX(-50%);
     }
 
     .buttonText {
-        font-size: rem(13);
-        &::after {
-            content: "\f061";
-            display: inline-block;
-            position: relative;
-            top: -2px;
-            transform: translateX(20px);
-            font-family: "Font Awesome 5 Free";
-            font-size: rem(11);
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+        // font-size: rem(13);
+        font-size: 14px;
+        position: relative;
+        // &::after {
+        //     content: "\f061";
+        //     display: inline-block;
+        //     position: relative;
+        //     top: -2px;
+        //     transform: translateX(20px);
+        //     font-family: "Font Awesome 5 Free";
+        //     font-size: rem(11);
+        //     font-weight: 600;
+        //     transition: all 0.3s ease;
+        // }
         @include minWidthXs {
             font-size: rem(16);
             transition: all 0.3s ease;

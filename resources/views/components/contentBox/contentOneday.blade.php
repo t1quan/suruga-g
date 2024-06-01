@@ -39,7 +39,7 @@
             </div>
             <div class="oneday_content js-fadein">
                 <div class="oneday_box">
-                    <a href="{{Route('oneday')}}">
+                    <a href="{{Route('oneday')}}/#oneday01">
                         <div class="oneday_box-img">
                             <div class="oneday_box-img_inner">
                                 <picture>
@@ -61,7 +61,7 @@
                     </a>
                 </div>
                 <div class="oneday_box">
-                    <a href="{{Route('oneday')}}">
+                    <a href="{{Route('oneday')}}/#oneday02">
                         <div class="oneday_box-img">
                             <div class="oneday_box-img_inner">
                                 <picture>
